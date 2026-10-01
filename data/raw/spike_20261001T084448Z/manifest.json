@@ -1,0 +1,87 @@
+{
+  "run_id": "20261001T084448Z",
+  "retrieved_at": "2026-10-01T08:44:52.741459+00:00",
+  "catalog_path": "config/data_catalog.yaml",
+  "results": [
+    {
+      "source_id": "ura_non_landed_price_index",
+      "status": "pass",
+      "http_status": 200,
+      "content_type": "application/json",
+      "bytes_received": 47654,
+      "raw_snapshot_path": "data/raw/spike_20261001T084448Z/ura_non_landed_price_index.json",
+      "sha256": "bc5706937c186504c8f766e14f5be3ae9f993148c88391587176f88058e6b003",
+      "detail": "618 records; 206 match selector"
+    },
+    {
+      "source_id": "ura_non_landed_rental_index",
+      "status": "pass",
+      "http_status": 200,
+      "content_type": "application/json",
+      "bytes_received": 56160,
+      "raw_snapshot_path": "data/raw/spike_20261001T084448Z/ura_non_landed_rental_index.json",
+      "sha256": "83b9cc2091b8f56e7dd9323316fe8b772634d791922d7676f1855840cd836fa6",
+      "detail": "520 records; 90 match selector"
+    },
+    {
+      "source_id": "private_residential_pipeline_supply",
+      "status": "pass",
+      "http_status": 200,
+      "content_type": "application/json",
+      "bytes_received": 26531,
+      "raw_snapshot_path": "data/raw/spike_20261001T084448Z/private_residential_pipeline_supply.json",
+      "sha256": "f095d6e78baa050d53f5a6b0b9dce599fdf0411ba3587f923ac98f21429e9c17",
+      "detail": "10 records; 10 match selector"
+    },
+    {
+      "source_id": "non_resident_population",
+      "status": "pass",
+      "http_status": 200,
+      "content_type": "application/json",
+      "bytes_received": 35086,
+      "raw_snapshot_path": "data/raw/spike_20261001T084448Z/non_resident_population.json",
+      "sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+      "detail": "29 records; 29 match selector"
+    },
+    {
+      "source_id": "non_resident_employment_change",
+      "status": "pass",
+      "http_status": 200,
+      "content_type": "text/html",
+      "bytes_received": 63882,
+      "raw_snapshot_path": "data/raw/spike_20261001T084448Z/non_resident_employment_change.html",
+      "sha256": "49f5eb6d981b7ec132016bbf8d7d81772267bd6f21bc8bd6bb99a2d38600bd40",
+      "detail": "report terms present; candidate non-resident values=['9,200,']"
+    },
+    {
+      "source_id": "private_non_landed_vacancy_rate",
+      "status": "fail",
+      "http_status": null,
+      "content_type": null,
+      "bytes_received": 0,
+      "raw_snapshot_path": null,
+      "sha256": null,
+      "detail": "No DataSeries label contains all required terms: ['available', 'vacant', 'non-landed']"
+    },
+    {
+      "source_id": "three_month_compounded_sora",
+      "status": "pass",
+      "http_status": 200,
+      "content_type": "application/json",
+      "bytes_received": 77712,
+      "raw_snapshot_path": "data/raw/spike_20261001T084448Z/three_month_compounded_sora.json",
+      "sha256": "51dc6f246693b96e61307b2d5d54ce35226467632daa4e1bddfae03636325947",
+      "detail": "8 records; 8 match selector"
+    },
+    {
+      "source_id": "real_gdp_growth",
+      "status": "fail",
+      "http_status": 429,
+      "content_type": "application/json",
+      "bytes_received": 0,
+      "raw_snapshot_path": null,
+      "sha256": null,
+      "detail": "HTTP Error 429: Too Many Requests"
+    }
+  ]
+}

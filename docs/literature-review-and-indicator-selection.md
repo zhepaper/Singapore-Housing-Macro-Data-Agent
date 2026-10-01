@@ -13,7 +13,7 @@ Singapore's residential market comprises institutionally distinct public and pri
 The predictor set is organised as follows:
 
 - Shared supply factor: **Private residential pipeline supply**
-- Rent-specific factors: **Non-resident population growth** and **Private residential vacancy rate**
+- Rent-specific factors: **Non-resident rental demand** and **Private residential vacancy rate**
 - Sale-specific factors: **3-month Compounded SORA** and **Real GDP growth**
 
 ## 2. Shared Supply Factor
@@ -30,13 +30,15 @@ Pipeline supply is retained as the only factor shared by the sale and rental ana
 
 Rental conditions are analysed through tenant demand and the current availability of completed housing.
 
-### **Non-Resident Population Growth**
+### **Non-Resident Rental Demand**
 
-Non-resident population growth is selected as the demographic demand indicator because changes in the number of foreigners living and working in Singapore may generate demand for accommodation without an immediate corresponding increase in home ownership. [Chia, Li and Tang (2017)](https://ideas.repec.org/a/eee/jhouse/v36y2017icp44-61.html) identify demographics as an important fundamental in Singapore's private housing market. [Ji and Bhandari (2022)](https://ideas.repec.org/a/eme/ijhmap/ijhma-02-2021-0023.html) further discuss the association between non-resident population growth, constrained housing supply, and rental-market pressure.
+Non-resident rental demand is selected as a rent-specific factor because foreigners living and working in Singapore are more likely than citizens and permanent residents to depend on rental accommodation. [Chia, Li and Tang (2017)](https://ideas.repec.org/a/eee/jhouse/v36y2017icp44-61.html) identify demographics as an important fundamental in Singapore's private housing market, while [Ji and Bhandari (2022)](https://ideas.repec.org/a/eme/ijhmap/ijhma-02-2021-0023.html) discuss the importance of non-residents to Singapore's rental market. The factor is represented by two distinct but complementary official measures.
 
-- **Rent mechanism:** Growth in the non-resident population expands the pool of potential tenants and may increase demand for private rental accommodation.
-- **Interpretation constraint:** The indicator is not a direct count of private-condominium tenants because some non-residents occupy HDB flats, dormitories, employer-provided housing, or other accommodation.
-- **Analytical role:** It is treated as a proxy for foreign-facing rental demand rather than as a sale-market predictor.
+- **Structural measure — Annual non-resident population growth:** The annual population series measures changes in the overall number of non-residents living in Singapore and therefore captures the size of the broader foreign-facing rental-demand base.
+- **Timely signal — Quarterly non-resident employment change:** The quarterly series measures the quarter-on-quarter change in employed non-residents. It provides a more recent indication of the direction of foreign labour demand between annual population observations.
+- **Measurement distinction:** Quarterly non-resident employment change is employment data, not population data. It excludes non-working groups such as students and dependants and may include workers living in dormitories, employer-provided accommodation, HDB flats, or other housing outside the private non-landed market. It must not be interpreted as quarterly non-resident population growth.
+- **Evidence constraint:** The literature supports the underlying relationship between non-resident presence and rental demand but does not directly test quarterly non-resident employment change as a predictor of private rents. The employment series is therefore a timely operational signal rather than a literature-validated standalone predictor.
+- **Reporting treatment:** The annual population series and quarterly employment series are retained at their native frequencies and reported separately. The workflow neither interpolates annual population nor combines the two measures into a synthetic indicator.
 
 ### **Private Residential Vacancy Rate**
 
@@ -56,7 +58,7 @@ Sale prices are analysed through financing conditions and aggregate purchasing c
 The 3-month Compounded SORA is selected as the financing indicator because higher borrowing costs can reduce mortgage affordability and leveraged investment demand. [Tu (2004)](https://journals.sagepub.com/doi/10.1080/0042098042000178708) finds that housing user cost contributes to short-run private price dynamics, while the [IMF (2018)](https://www.imf.org/-/media/files/publications/cr/2018/cr18245.pdf) reports a generally negative long-run relationship between real interest rates and private residential prices. [Rangel and Ng (2017)](https://www.mfa.com.my/wp-content/uploads/2017/12/vol252_pp.15-31-Rangel-Ng.pdf) find that the real prime lending rate is not consistently significant across market regimes.
 
 - **Sale mechanism:** Tighter financing conditions raise the cost of mortgage-funded purchases and may weaken owner-occupier purchasing capacity and leveraged investment demand.
-- **Operational choice:** The earlier studies use user cost, real interest rates, or prime lending rates rather than SORA. The workflow uses SORA as a contemporary, official, and publicly accessible proxy for short-term Singapore-dollar financing conditions.
+- **Operational choice:** The earlier studies use user cost, real interest rates, or prime lending rates rather than SORA. The workflow uses the monthly end-of-period 3-month Compounded SORA series in SingStat table `M700071`, whose original source is the Monetary Authority of Singapore, as a contemporary and publicly accessible proxy for short-term Singapore-dollar financing conditions. The final available month-end observation in each quarter is used for quarterly comparison.
 - **Interpretation constraint:** SORA is neither an individual borrower's mortgage rate nor a deterministic predictor of sale-price changes. It is not used as a primary rental predictor.
 
 ### **Real GDP Growth**
@@ -72,7 +74,7 @@ Real GDP growth is selected as the sale-side macroeconomic indicator because eco
 | Classification | Predictor | Primary mechanism |
 |---|---|---|
 | Shared | **Private residential pipeline supply** | Expected future supply for Sale; completed supply with a lag for Rent |
-| Rent-specific | **Non-resident population growth** | Foreign-facing tenant demand |
+| Rent-specific | **Non-resident rental demand** | Foreign-facing tenant demand, measured by annual population growth and supplemented by quarterly employment change |
 | Rent-specific | **Private residential vacancy rate** | Current rental-market tightness |
 | Sale-specific | **3-month Compounded SORA** | Financing conditions and mortgage affordability |
 | Sale-specific | **Real GDP growth** | Purchasing capacity and buyer confidence |

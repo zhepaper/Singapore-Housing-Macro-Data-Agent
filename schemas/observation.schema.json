@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/observation.schema.json",
+  "title": "Normalized public-data observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "series_id",
+    "series_label",
+    "period",
+    "frequency",
+    "value",
+    "unit",
+    "market",
+    "role",
+    "observation_status"
+  ],
+  "properties": {
+    "source_id": {"type": "string", "minLength": 1},
+    "series_id": {"type": "string", "minLength": 1},
+    "series_label": {"type": "string", "minLength": 1},
+    "period": {
+      "type": "string",
+      "description": "Canonical period: YYYY-Qn, YYYY-MM, or YYYY."
+    },
+    "frequency": {"enum": ["monthly", "quarterly", "annual"]},
+    "value": {"type": ["number", "null"]},
+    "unit": {"type": "string", "minLength": 1},
+    "market": {"enum": ["sale", "rent", "shared"]},
+    "role": {"enum": ["benchmark", "predictor", "derived"]},
+    "observation_status": {
+      "enum": ["observed", "missing_at_source", "derived", "incomplete_period"]
+    },
+    "release_date": {"type": ["string", "null"], "format": "date"},
+    "source_observation_period": {"type": ["string", "null"]},
+    "quarter_incomplete": {"type": "boolean"},
+    "derivation": {"type": ["string", "null"]}
+  }
+}

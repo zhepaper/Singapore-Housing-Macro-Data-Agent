@@ -1,0 +1,27 @@
+{
+  "run_id": "20261001T084622Z",
+  "retrieved_at": "2026-10-01T08:46:23.749910+00:00",
+  "catalog_path": "config/data_catalog.yaml",
+  "results": [
+    {
+      "source_id": "private_non_landed_vacancy_rate",
+      "status": "pass",
+      "http_status": 200,
+      "content_type": "application/json",
+      "bytes_received": 21565,
+      "raw_snapshot_path": "data/raw/spike_20261001T084622Z/private_non_landed_vacancy_rate.json",
+      "sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+      "detail": "6 records; 6 match selector"
+    },
+    {
+      "source_id": "real_gdp_growth",
+      "status": "pass",
+      "http_status": 200,
+      "content_type": "application/json",
+      "bytes_received": 185827,
+      "raw_snapshot_path": "data/raw/spike_20261001T084622Z/real_gdp_growth.json",
+      "sha256": "695aae88e47d1683639b57cd05936d428346b9ca248d8c928dbf74acf739b203",
+      "detail": "58 records; 58 match selector"
+    }
+  ]
+}

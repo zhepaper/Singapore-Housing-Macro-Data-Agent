@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/run-manifest.schema.json",
+  "title": "Workflow run manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "reporting_as_of_date", "started_at", "sources"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "reporting_as_of_date": {"type": "string", "format": "date"},
+    "started_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": ["string", "null"], "format": "date-time"},
+    "status": {"enum": ["running", "complete", "partial", "failed"]},
+    "sources": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/sourceRun"}
+    }
+  },
+  "$defs": {
+    "sourceRun": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_url",
+        "retrieved_at",
+        "retrieval_status",
+        "validation_status"
+      ],
+      "properties": {
+        "source_id": {"type": "string", "minLength": 1},
+        "source_url": {"type": "string", "format": "uri"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "http_status": {"type": ["integer", "null"]},
+        "raw_snapshot_path": {"type": ["string", "null"]},
+        "raw_file_sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "latest_available_period": {"type": ["string", "null"]},
+        "retrieval_status": {"enum": ["success", "failed"]},
+        "freshness_status": {
+          "enum": ["current", "stale", "not_yet_released", "unavailable"]
+        },
+        "validation_status": {"enum": ["pass", "fail", "not_run"]},
+        "record_count": {"type": "integer", "minimum": 0},
+        "error_message": {"type": ["string", "null"]}
+      }
+    }
+  }
+}
+

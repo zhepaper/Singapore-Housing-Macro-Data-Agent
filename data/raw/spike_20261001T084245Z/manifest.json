@@ -1,0 +1,87 @@
+{
+  "run_id": "20261001T084245Z",
+  "retrieved_at": "2026-10-01T08:42:45.237625+00:00",
+  "catalog_path": "config/data_catalog.yaml",
+  "results": [
+    {
+      "source_id": "ura_non_landed_price_index",
+      "status": "fail",
+      "http_status": null,
+      "content_type": null,
+      "bytes_received": 0,
+      "raw_snapshot_path": null,
+      "sha256": null,
+      "detail": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "source_id": "ura_non_landed_rental_index",
+      "status": "fail",
+      "http_status": null,
+      "content_type": null,
+      "bytes_received": 0,
+      "raw_snapshot_path": null,
+      "sha256": null,
+      "detail": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "source_id": "private_residential_pipeline_supply",
+      "status": "fail",
+      "http_status": null,
+      "content_type": null,
+      "bytes_received": 0,
+      "raw_snapshot_path": null,
+      "sha256": null,
+      "detail": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "source_id": "non_resident_population",
+      "status": "fail",
+      "http_status": null,
+      "content_type": null,
+      "bytes_received": 0,
+      "raw_snapshot_path": null,
+      "sha256": null,
+      "detail": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "source_id": "non_resident_employment_change",
+      "status": "fail",
+      "http_status": null,
+      "content_type": null,
+      "bytes_received": 0,
+      "raw_snapshot_path": null,
+      "sha256": null,
+      "detail": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "source_id": "private_non_landed_vacancy_rate",
+      "status": "fail",
+      "http_status": null,
+      "content_type": null,
+      "bytes_received": 0,
+      "raw_snapshot_path": null,
+      "sha256": null,
+      "detail": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "source_id": "three_month_compounded_sora",
+      "status": "fail",
+      "http_status": null,
+      "content_type": null,
+      "bytes_received": 0,
+      "raw_snapshot_path": null,
+      "sha256": null,
+      "detail": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "source_id": "real_gdp_growth",
+      "status": "fail",
+      "http_status": null,
+      "content_type": null,
+      "bytes_received": 0,
+      "raw_snapshot_path": null,
+      "sha256": null,
+      "detail": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    }
+  ]
+}
