@@ -207,6 +207,8 @@ runs/<run_id>/
 - [ ] Test report-number mismatch detection.
 - [ ] Add one live integration test that is excluded from the default offline suite.
 
+The first production-layer integration check was run manually on 1 October 2026: data.gov.sg succeeded, while MOM returned an explicit HTTP 403 diagnostic. An automated opt-in live test remains to be added.
+
 **Exit criterion:** Both successful and expected-failure paths are covered, and live-source changes do not make the offline suite nondeterministic.
 
 ### Phase 10 — Submission packaging

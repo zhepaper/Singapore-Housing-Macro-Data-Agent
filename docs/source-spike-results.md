@@ -20,3 +20,7 @@ The read-only spike confirmed that all eight required source series can be retri
 Direct calls to the SingStat TableBuilder endpoints returned HTTP 502 during the spike, while the official data.gov.sg mirrors were available. The implementation therefore uses the mirrors as its machine-readable retrieval path and retains the SingStat pages as definition references. The unauthenticated data.gov.sg endpoint also returned HTTP 429 when more than five calls were made in quick succession. The production adapter must implement bounded retry/backoff, preserve the error in provenance when retries fail, and never silently present a previous snapshot as newly retrieved data.
 
 The successful targeted verification is recorded in `data/raw/spike_20261001T084622Z/manifest.json`. Earlier spike manifests are retained as evidence of the failed direct-endpoint and rate-limit tests.
+
+## Production retrieval follow-up
+
+A later live integration check of the production retrieval layer successfully downloaded the URA non-landed price-index JSON response, but direct requests to both the versioned and unversioned MOM report URLs returned HTTP 403. The retrieval layer correctly classified this as a non-retryable HTTP failure and did not substitute another value. The previously preserved official MOM snapshot remains suitable for offline parser tests, but a live run must halt or use an explicitly approved, visibly labelled cached fallback until a stable official machine-access path is confirmed.
