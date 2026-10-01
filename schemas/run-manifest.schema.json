@@ -4,13 +4,33 @@
   "title": "Workflow run manifest",
   "type": "object",
   "additionalProperties": false,
-  "required": ["run_id", "reporting_as_of_date", "started_at", "sources"],
+  "required": [
+    "run_id",
+    "reporting_as_of_date",
+    "catalog_version",
+    "prompt_version",
+    "started_at",
+    "status",
+    "sources",
+    "artifacts"
+  ],
   "properties": {
     "run_id": {"type": "string", "minLength": 1},
     "reporting_as_of_date": {"type": "string", "format": "date"},
+    "catalog_version": {"type": "string", "minLength": 1},
+    "prompt_version": {"type": "string", "minLength": 1},
     "started_at": {"type": "string", "format": "date-time"},
     "completed_at": {"type": ["string", "null"], "format": "date-time"},
     "status": {"enum": ["running", "complete", "partial", "failed"]},
+    "validation_errors": {"type": "array", "items": {"type": "string"}},
+    "counts": {
+      "type": "object",
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": {"type": "string"}
+    },
     "sources": {
       "type": "array",
       "items": {"$ref": "#/$defs/sourceRun"}
@@ -49,4 +69,3 @@
     }
   }
 }
-

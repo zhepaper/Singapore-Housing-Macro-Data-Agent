@@ -78,11 +78,11 @@ flowchart LR
 
 - [ ] Install project dependencies in `.venv`.
 - [ ] Compile and invoke a minimal LangGraph successfully.
-- [ ] Finalize the typed `AgentState` contract.
-- [ ] Add `run_id`, `reporting_as_of_date`, catalogue version, and prompt version to state.
-- [ ] Create an immutable per-run directory structure.
+- [x] Finalize the typed `AgentState` contract.
+- [x] Add `run_id`, `reporting_as_of_date`, catalogue version, and prompt version to state.
+- [x] Create an immutable per-run directory structure.
 - [ ] Add checkpoint/resume support.
-- [ ] Define terminal statuses: `complete`, `partial`, `blocked`, and `failed`.
+- [x] Define terminal statuses: `complete`, `partial`, `blocked`, and `failed`.
 
 **Required artifacts:**
 
@@ -101,16 +101,16 @@ runs/<run_id>/
 ### Phase 3 — Live retrieval tools
 
 - [ ] Implement a data.gov.sg retrieval tool with pagination.
-- [ ] Implement the MOM final-report retrieval tool.
-- [ ] Restrict normal retrieval to approved official domains.
-- [ ] Add connect and read timeouts.
-- [ ] Add bounded retry for 429, 502, 503, and network timeouts.
-- [ ] Honour `Retry-After` when present.
-- [ ] Limit request concurrency to avoid public API quotas.
-- [ ] Save response content before parsing.
-- [ ] Record HTTP status, content type, retrieval time, byte count, and checksum.
-- [ ] Distinguish retryable network errors from non-retryable schema errors.
-- [ ] Never silently reuse an old snapshot as a new retrieval.
+- [x] Implement the MOM final-report retrieval tool.
+- [x] Restrict normal retrieval to approved official domains.
+- [x] Add connect and read timeouts.
+- [x] Add bounded retry for 429, 502, 503, and network timeouts.
+- [x] Honour `Retry-After` when present.
+- [x] Limit request concurrency to avoid public API quotas.
+- [x] Save response content before parsing.
+- [x] Record HTTP status, content type, retrieval time, byte count, and checksum.
+- [x] Distinguish retryable network errors from non-retryable schema errors.
+- [x] Never silently reuse an old snapshot as a new retrieval.
 
 **Exit criterion:** A live run retrieves every source into a new run directory or returns explicit source-level diagnostics.
 

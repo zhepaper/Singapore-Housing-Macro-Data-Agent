@@ -17,13 +17,17 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--as-of", required=True, dest="as_of")
     parser.add_argument("--output", type=Path, default=Path("outputs/report.md"))
+    parser.add_argument("--mode", choices=("live", "snapshots"), default="live")
+    parser.add_argument("--request-interval", type=float, default=13.0)
     args = parser.parse_args()
 
     result = build_graph().invoke({
         "reporting_as_of_date": args.as_of,
         "project_root": str(PROJECT_ROOT),
+        "execution_mode": args.mode,
+        "request_interval_seconds": args.request_interval,
     })
-    if result["workflow_status"] == "blocked":
+    if result["run_status"] == "failed":
         for error in result.get("validation_errors", []):
             print(f"ERROR: {error}", file=sys.stderr)
         return 1
@@ -36,4 +40,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

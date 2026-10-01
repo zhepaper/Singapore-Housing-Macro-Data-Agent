@@ -4,11 +4,13 @@ import json
 import calendar
 from datetime import date
 from pathlib import Path
-from typing import Any, TypedDict
+from typing import Any, Literal, TypedDict
 
 from housing_agent.adapters.datagov import normalize_datagov
 from housing_agent.adapters.mom import parse_mom_non_resident_employment
 from housing_agent.models import Observation
+from housing_agent.run_context import RunPaths, finalize_manifest, initialize_run, save_checkpoint
+from housing_agent.retrieval import retrieve_catalog_sources
 from housing_agent.transforms import (
     absolute_change,
     derive_pipeline_under_construction_share,
@@ -18,17 +20,33 @@ from housing_agent.transforms import (
 )
 
 
-class WorkflowState(TypedDict, total=False):
+class AgentState(TypedDict, total=False):
+    run_id: str
     reporting_as_of_date: str
     project_root: str
+    catalog_version: str
+    prompt_version: str
+    run_paths: dict[str, str]
+    started_at: str
+    completed_at: str | None
     catalog: dict[str, Any]
     snapshot_paths: dict[str, str]
+    execution_mode: Literal["live", "snapshots"]
+    request_interval_seconds: float
+    retrieval_results: list[dict[str, Any]]
     observations: list[dict[str, Any]]
     derived_observations: list[dict[str, Any]]
     validation_errors: list[str]
     evidence: dict[str, dict[str, Any]]
     report_markdown: str
-    workflow_status: str
+    run_status: Literal[
+        "initializing", "running", "validated", "reported",
+        "blocked", "partial", "failed", "complete"
+    ]
+
+
+# Compatibility alias while callers migrate to the final state name.
+WorkflowState = AgentState
 
 
 REPORT_SERIES_IDS = {
@@ -57,7 +75,30 @@ REPORT_SERIES_IDS = {
 def load_catalog_node(state: WorkflowState) -> WorkflowState:
     root = Path(state.get("project_root", "."))
     catalog = json.loads((root / "config/data_catalog.yaml").read_text())
-    return {"catalog": catalog, "validation_errors": []}
+    return {
+        "catalog": catalog,
+        "catalog_version": str(catalog["catalog_version"]),
+        "validation_errors": [],
+        "run_status": "initializing",
+    }
+
+
+def initialize_run_node(state: AgentState) -> AgentState:
+    run_id, paths, manifest = initialize_run(
+        project_root=Path(state.get("project_root", ".")),
+        reporting_as_of_date=state["reporting_as_of_date"],
+        catalog_version=state["catalog_version"],
+        prompt_version=state.get("prompt_version", "deterministic-v1"),
+        run_id=state.get("run_id"),
+    )
+    return {
+        "run_id": run_id,
+        "run_paths": paths.to_dict(),
+        "started_at": manifest["started_at"],
+        "completed_at": None,
+        "prompt_version": manifest["prompt_version"],
+        "run_status": "running",
+    }
 
 
 def discover_snapshots_node(state: WorkflowState) -> WorkflowState:
@@ -72,6 +113,34 @@ def discover_snapshots_node(state: WorkflowState) -> WorkflowState:
         else:
             paths[source["source_id"]] = str(candidates[-1])
     return {"snapshot_paths": paths, "validation_errors": errors}
+
+
+def retrieve_sources_node(state: AgentState) -> AgentState:
+    paths = RunPaths(**state["run_paths"])
+    results = retrieve_catalog_sources(
+        state["catalog"]["sources"],
+        Path(paths.raw),
+        request_interval_seconds=state.get("request_interval_seconds", 13.0),
+    )
+    snapshots = {
+        result.source_id: result.raw_snapshot_path
+        for result in results
+        if result.retrieval_status == "success" and result.raw_snapshot_path
+    }
+    errors = [
+        f"{result.source_id}: {result.error_category}: {result.error_message}"
+        for result in results
+        if result.retrieval_status != "success"
+    ]
+    return {
+        "retrieval_results": [result.to_dict() for result in results],
+        "snapshot_paths": snapshots,
+        "validation_errors": errors,
+    }
+
+
+def route_execution_mode(state: AgentState) -> str:
+    return "retrieve_sources" if state.get("execution_mode", "live") == "live" else "discover_snapshots"
 
 
 def normalize_node(state: WorkflowState) -> WorkflowState:
@@ -171,7 +240,7 @@ def validate_node(state: WorkflowState) -> WorkflowState:
         seen.add(key)
     return {
         "validation_errors": errors,
-        "workflow_status": "blocked" if errors else "validated",
+        "run_status": "blocked" if errors else "validated",
     }
 
 
@@ -217,11 +286,43 @@ def draft_report_node(state: WorkflowState) -> WorkflowState:
                 f"in {item['period']}{source_period}{incomplete}."
             )
         lines.append("")
-    return {"report_markdown": "\n".join(lines) + "\n", "workflow_status": "reported"}
+    return {"report_markdown": "\n".join(lines) + "\n", "run_status": "reported"}
 
 
 def halt_node(state: WorkflowState) -> WorkflowState:
-    return {"workflow_status": "blocked"}
+    return {"run_status": "blocked"}
+
+
+def checkpoint_node(state: AgentState) -> AgentState:
+    paths = RunPaths(**state["run_paths"])
+    stage = state["run_status"]
+    checkpoint_state = {
+        key: value for key, value in state.items()
+        if key not in {"catalog"}
+    }
+    save_checkpoint(paths, stage, checkpoint_state)
+    return {}
+
+
+def finalize_run_node(state: AgentState) -> AgentState:
+    paths = RunPaths(**state["run_paths"])
+    blocked = bool(state.get("validation_errors"))
+    terminal_status = "failed" if blocked else "complete"
+    manifest = finalize_manifest(
+        paths,
+        status=terminal_status,
+        sources=state.get("retrieval_results", []),
+        validation_errors=state.get("validation_errors", []),
+        counts={
+            "observations": len(state.get("observations", [])),
+            "derived_observations": len(state.get("derived_observations", [])),
+            "evidence_series": len(state.get("evidence", {})),
+        },
+    )
+    return {
+        "completed_at": manifest["completed_at"],
+        "run_status": "failed" if blocked else "complete",
+    }
 
 
 def build_graph():
@@ -230,6 +331,8 @@ def build_graph():
 
     graph = StateGraph(WorkflowState)
     graph.add_node("load_catalog", load_catalog_node)
+    graph.add_node("initialize_run", initialize_run_node)
+    graph.add_node("retrieve_sources", retrieve_sources_node)
     graph.add_node("discover_snapshots", discover_snapshots_node)
     graph.add_node("normalize", normalize_node)
     graph.add_node("transform", transform_node)
@@ -237,8 +340,15 @@ def build_graph():
     graph.add_node("build_evidence", build_evidence_node)
     graph.add_node("draft_report", draft_report_node)
     graph.add_node("halt", halt_node)
+    graph.add_node("checkpoint", checkpoint_node)
+    graph.add_node("finalize_run", finalize_run_node)
     graph.add_edge(START, "load_catalog")
-    graph.add_edge("load_catalog", "discover_snapshots")
+    graph.add_edge("load_catalog", "initialize_run")
+    graph.add_conditional_edges(
+        "initialize_run", route_execution_mode,
+        {"retrieve_sources": "retrieve_sources", "discover_snapshots": "discover_snapshots"},
+    )
+    graph.add_edge("retrieve_sources", "normalize")
     graph.add_edge("discover_snapshots", "normalize")
     graph.add_edge("normalize", "transform")
     graph.add_edge("transform", "validate")
@@ -247,6 +357,8 @@ def build_graph():
         {"build_evidence": "build_evidence", "halt": "halt"},
     )
     graph.add_edge("build_evidence", "draft_report")
-    graph.add_edge("draft_report", END)
-    graph.add_edge("halt", END)
+    graph.add_edge("draft_report", "checkpoint")
+    graph.add_edge("halt", "checkpoint")
+    graph.add_edge("checkpoint", "finalize_run")
+    graph.add_edge("finalize_run", END)
     return graph.compile()

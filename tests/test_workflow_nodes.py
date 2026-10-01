@@ -21,7 +21,7 @@ class WorkflowNodeTests(unittest.TestCase):
         state.update(transform_node(state))
         state.update(validate_node(state))
         self.assertEqual(state["validation_errors"], [])
-        self.assertEqual(state["workflow_status"], "validated")
+        self.assertEqual(state["run_status"], "validated")
         state.update(build_evidence_node(state))
         self.assertIn("private_non_landed_vacancy_rate__rate", state["evidence"])
         self.assertNotIn(
