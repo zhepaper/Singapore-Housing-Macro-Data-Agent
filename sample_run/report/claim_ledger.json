@@ -1,0 +1,182 @@
+[
+  {
+    "claim_id": "claim-001",
+    "completeness": "complete",
+    "metric_id": "private_residential_pipeline_supply__under_construction_share",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_055b6549444dedb341c50805d9682a41/view",
+    "unit": "percent",
+    "value_text": "64.075"
+  },
+  {
+    "claim_id": "claim-002",
+    "completeness": "complete",
+    "metric_id": "private_residential_pipeline_supply__total_non_landed_properties",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_055b6549444dedb341c50805d9682a41/view",
+    "unit": "dwelling units",
+    "value_text": "51,677"
+  },
+  {
+    "claim_id": "claim-003",
+    "completeness": "complete",
+    "metric_id": "private_residential_pipeline_supply__total_non_landed_properties__qoq_absolute_change",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_055b6549444dedb341c50805d9682a41/view",
+    "unit": "dwelling units",
+    "value_text": "3,566"
+  },
+  {
+    "claim_id": "claim-004",
+    "completeness": "complete",
+    "metric_id": "private_residential_pipeline_supply__total_non_landed_properties__yoy_pct",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_055b6549444dedb341c50805d9682a41/view",
+    "unit": "percent",
+    "value_text": "6.608"
+  },
+  {
+    "claim_id": "claim-005",
+    "completeness": "complete",
+    "metric_id": "ura_non_landed_rental_index__non_landed_whole_island",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_8e4c50283fb7052a391dfb746a05c853/view",
+    "unit": "index; 2009-Q1=100",
+    "value_text": "162.500"
+  },
+  {
+    "claim_id": "claim-006",
+    "completeness": "complete",
+    "metric_id": "ura_non_landed_rental_index__non_landed_whole_island__qoq_pct",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_8e4c50283fb7052a391dfb746a05c853/view",
+    "unit": "percent",
+    "value_text": "0.371"
+  },
+  {
+    "claim_id": "claim-007",
+    "completeness": "complete",
+    "metric_id": "ura_non_landed_rental_index__non_landed_whole_island__yoy_pct",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_8e4c50283fb7052a391dfb746a05c853/view",
+    "unit": "percent",
+    "value_text": "1.753"
+  },
+  {
+    "claim_id": "claim-008",
+    "completeness": "complete",
+    "metric_id": "non_resident_population__non_resident_population",
+    "period": "2025",
+    "source_url": "https://data.gov.sg/datasets/d_3d227e5d9fdec73f3bcadce671c333a6/view",
+    "unit": "persons",
+    "value_text": "1,906,660"
+  },
+  {
+    "claim_id": "claim-009",
+    "completeness": "complete",
+    "metric_id": "non_resident_population__non_resident_population__yoy_pct",
+    "period": "2025",
+    "source_url": "https://data.gov.sg/datasets/d_3d227e5d9fdec73f3bcadce671c333a6/view",
+    "unit": "percent",
+    "value_text": "2.730"
+  },
+  {
+    "claim_id": "claim-010",
+    "completeness": "complete",
+    "metric_id": "non_resident_employment_change__quarterly_change",
+    "period": "2026-Q2",
+    "source_url": "https://stats.mom.gov.sg/Pages/Labour-Market-Report-2Q-2026.aspx",
+    "unit": "persons",
+    "value_text": "9,200"
+  },
+  {
+    "claim_id": "claim-011",
+    "completeness": "complete",
+    "metric_id": "private_non_landed_vacancy_rate__rate",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view",
+    "unit": "percent",
+    "value_text": "5.390"
+  },
+  {
+    "claim_id": "claim-012",
+    "completeness": "complete",
+    "metric_id": "private_non_landed_vacancy_rate__rate__qoq_pp_change",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view",
+    "unit": "percentage points",
+    "value_text": "0.021"
+  },
+  {
+    "claim_id": "claim-013",
+    "completeness": "complete",
+    "metric_id": "private_non_landed_vacancy_rate__rate__yoy_pp_change",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view",
+    "unit": "percentage points",
+    "value_text": "-1.486"
+  },
+  {
+    "claim_id": "claim-014",
+    "completeness": "incomplete",
+    "metric_id": "three_month_compounded_sora__compounded_singapore_overnight_rate_average_sora_3_month__quarter_end",
+    "period": "2026-Q3",
+    "source_url": "https://data.gov.sg/datasets/d_5fe5a4bb4a1ecc4d8a56a095832e2b24/view",
+    "unit": "percent per annum",
+    "value_text": "1.135"
+  },
+  {
+    "claim_id": "claim-015",
+    "completeness": "incomplete",
+    "metric_id": "three_month_compounded_sora__compounded_singapore_overnight_rate_average_sora_3_month__quarter_end__qoq_pp_change",
+    "period": "2026-Q3",
+    "source_url": "https://data.gov.sg/datasets/d_5fe5a4bb4a1ecc4d8a56a095832e2b24/view",
+    "unit": "percentage points",
+    "value_text": "0.053"
+  },
+  {
+    "claim_id": "claim-016",
+    "completeness": "complete",
+    "metric_id": "real_gdp_growth__gdp_in_chained_2015_dollars",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_a5ff719648a0e6d4b4c623ee383ab686/view",
+    "unit": "year-on-year percent change",
+    "value_text": "5.900"
+  },
+  {
+    "claim_id": "claim-017",
+    "completeness": "complete",
+    "metric_id": "real_gdp_growth__gdp_in_chained_2015_dollars__previous_quarter_pp_change",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_a5ff719648a0e6d4b4c623ee383ab686/view",
+    "unit": "percentage points",
+    "value_text": "-0.400"
+  },
+  {
+    "claim_id": "claim-018",
+    "completeness": "complete",
+    "metric_id": "ura_non_landed_price_index__non_landed",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_97f8a2e995022d311c6c68cfda6d034c/view",
+    "unit": "index; 2009-Q1=100",
+    "value_text": "210.600"
+  },
+  {
+    "claim_id": "claim-019",
+    "completeness": "complete",
+    "metric_id": "ura_non_landed_price_index__non_landed__qoq_pct",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_97f8a2e995022d311c6c68cfda6d034c/view",
+    "unit": "percent",
+    "value_text": "-0.095"
+  },
+  {
+    "claim_id": "claim-020",
+    "completeness": "complete",
+    "metric_id": "ura_non_landed_price_index__non_landed__yoy_pct",
+    "period": "2026-Q2",
+    "source_url": "https://data.gov.sg/datasets/d_97f8a2e995022d311c6c68cfda6d034c/view",
+    "unit": "percent",
+    "value_text": "1.838"
+  }
+]

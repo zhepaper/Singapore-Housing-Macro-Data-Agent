@@ -72,10 +72,11 @@ class ReportingTests(unittest.TestCase):
             "### Shared supply\n\nSupply expanded.\n\n"
             "### Rental market\n\nRental conditions tightened.\n\n"
             "### Sale market\n\nSale conditions softened."
-        )))
+        ), usage_metadata={"input_tokens": 10, "output_tokens": 8, "total_tokens": 18}))
         result = LangChainWriter(model).write(evidence_fixture())
         self.assertIn("Rental market", result.narrative)
         self.assertEqual(result.metadata["writer"], "langchain")
+        self.assertEqual(result.metadata["token_usage"]["total_tokens"], 18)
 
     def test_openai_writer_without_key_routes_to_halt(self):
         with patch.dict("os.environ", {}, clear=True):

@@ -108,18 +108,22 @@ class LangChainWriter:
             )),
             ("human", "Evidence:\n{evidence}\n\nVerifier feedback:\n{feedback}"),
         ])
-        chain = prompt | self.model | StrOutputParser()
-        narrative = chain.invoke({
+        prompt_value = prompt.invoke({
             "evidence": json.dumps(qualitative_context(evidence), indent=2),
             "feedback": json.dumps(feedback or []),
         })
-        response_metadata = getattr(self.model, "response_metadata", {})
+        response = self.model.invoke(prompt_value)
+        narrative = StrOutputParser().invoke(response)
+        response_metadata = getattr(response, "response_metadata", {}) or {}
+        token_usage = getattr(response, "usage_metadata", None)
+        if token_usage is None:
+            token_usage = response_metadata.get("token_usage")
         return WriterResult(narrative=narrative.strip(), metadata={
             "writer": "langchain",
             "prompt_version": PROMPT_VERSION,
             "model": getattr(self.model, "model_name", type(self.model).__name__),
             "feedback_count": len(feedback or []),
-            "token_usage": response_metadata.get("token_usage") if response_metadata else None,
+            "token_usage": token_usage,
             "response_timestamp": datetime.now(timezone.utc).isoformat(),
         })
 

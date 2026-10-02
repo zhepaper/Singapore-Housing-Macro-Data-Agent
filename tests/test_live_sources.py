@@ -16,12 +16,12 @@ class LiveSourceTests(unittest.TestCase):
             "source_id": "live_ura_price",
             "source_type": "datagov_json",
             "retrieval_url": (
-            "https://data.gov.sg/api/action/datastore_search?resource_id="
-                "d_97f8a2e995022d311c6c68cfda6d034c&limit=1"
+                "https://data.gov.sg/api/action/datastore_search?resource_id="
+                "d_97f8a2e995022d311c6c68cfda6d034c&limit=5000"
             ),
         }
         with tempfile.TemporaryDirectory() as temporary:
-            result = retrieve_source(source, Path(temporary), max_retries=1)
+            result = retrieve_source(source, Path(temporary), max_retries=2)
         self.assertEqual(result.retrieval_status, "success", result.error_message)
         self.assertEqual(len(result.raw_file_sha256 or ""), 64)
 

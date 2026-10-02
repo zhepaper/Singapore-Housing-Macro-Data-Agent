@@ -1,0 +1,2 @@
+# Official raw snapshots are immutable byte evidence; do not normalize or whitespace-check them.
+sample_run/raw/* -diff

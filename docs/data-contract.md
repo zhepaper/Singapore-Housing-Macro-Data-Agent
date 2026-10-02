@@ -10,6 +10,8 @@ One row represents one named series in one source period. Required fields are de
 
 | Field | Meaning |
 |---|---|
+| `run_id` | Immutable workflow run that produced the persisted record |
+| `provenance_id` | Join key from the record to its source entry in that run manifest |
 | `source_id` | Stable source identifier from `config/data_catalog.yaml` |
 | `series_id` | Stable normalized series name, independent of the provider's display label |
 | `series_label` | Exact provider label retained for auditability |
@@ -40,4 +42,4 @@ For sources that do not expose historical release dates, the workflow can reprod
 
 Provider values such as `na`, blank strings, and non-numeric footnote markers become `null` with `observation_status = missing_at_source`. They do not become zero. A source fails validation when an expected series label disappears, periods are duplicated, period formats are invalid, numeric parsing is ambiguous, or a derived denominator is zero or missing.
 
-The run-level provenance contract is defined in `schemas/run-manifest.schema.json`. A partially successful run may produce diagnostics and raw snapshots, but the report-generation node must not describe a failed required source as current.
+The run-level provenance contract is defined in `schemas/run-manifest.schema.json`, the reportable metric contract in `schemas/evidence.schema.json`, and writer boundaries in `schemas/writer-input.schema.json` and `schemas/writer-output.schema.json`. A partially successful run may produce diagnostics and raw snapshots, but the report-generation node must not describe a failed required source as current.

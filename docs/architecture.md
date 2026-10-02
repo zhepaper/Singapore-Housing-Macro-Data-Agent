@@ -1,38 +1,62 @@
 # Workflow Architecture
 
-## Why LangGraph
+## Design boundary
 
-LangGraph is used as a stateful orchestration layer, not as a substitute for data engineering. Retrieval, parsing, transformations, and validation are deterministic Python nodes. This makes every reported number reproducible and testable. An LLM may later rewrite the validated evidence brief for readability, but it is not permitted to fetch hidden data, calculate indicators, choose unverified values, or override a failed validation.
+LangGraph orchestrates a stateful data workflow; it does not replace data engineering. Retrieval, parsing, transformations, validation, evidence selection, numeric rendering, and report verification are deterministic Python. The optional LLM receives only a reduced qualitative view of validated evidence and can write prose, but cannot retrieve data, calculate indicators, add numbers, or override a failed gate.
 
 ```mermaid
 flowchart LR
-    A[Load catalogue] --> B[Retrieve or discover raw snapshots]
-    B --> C[Normalize official sources]
-    C --> D[Apply deterministic transformations]
-    D --> E[Validate contracts and as-of rules]
-    E -->|pass| F[Build evidence bundle]
-    E -->|fail| H[Halt with diagnostics]
-    F --> G[Draft concise report]
-    G --> I[Verify citations and values]
+    A[Load catalogue] --> B[Initialize immutable run]
+    B --> C{Execution mode}
+    C -->|live| D[Retrieve official sources]
+    C -->|snapshots| E[Copy preserved snapshots]
+    D --> F[Checkpoint raw evidence]
+    E --> F
+    F --> G[Normalize]
+    G --> H[Transform]
+    H --> I[Validate quality and as-of rules]
+    I -->|fail| J[Persist diagnostics and halt]
+    I -->|pass| K[Build evidence bundle]
+    K --> L[Writer]
+    L --> M[Compose numeric evidence]
+    M --> N[Deterministic verifier]
+    N -->|bounded revision| L
+    N -->|pass| O[Persist final artifacts]
+    N -->|max revisions| J
 ```
 
 ## Node responsibilities
 
-| Node | Input and output | Reliability boundary |
+| Node | Responsibility | Failure behavior |
 |---|---|---|
-| `load_catalog` | Loads source definitions and exact series-selection rules | Fails on an invalid or missing catalogue |
-| `discover_snapshots` | Resolves the newest preserved raw response per source | Does not invent or silently substitute a source |
-| `normalize` | Converts the two official JSON layouts and the MOM report into one observation schema | Rejects ambiguous numerics and unexpected report wording; applies the reporting cut-off |
-| `transform` | Computes benchmark changes, vacancy, pipeline share, quarterly SORA selection, and GDP changes | Pure calculations; no LLM calls |
-| `validate` | Checks required-source coverage and duplicate series-period keys | Routes failures to `halt` |
-| `build_evidence` | Selects latest validated observations for each series | Keeps value, unit, period, and source-period context together |
-| `draft_report` | Produces the evidence brief | Currently deterministic; optional LLM rewriting must consume only the evidence bundle |
+| `load_catalog` | Load official URLs, exact labels, units, mechanisms, and freshness rules | Invalid catalogue stops the run |
+| `retrieve_sources` | Serial HTTP retrieval, pagination, retry, raw preservation, SHA-256 | Required failure blocks reporting; optional cached reuse must be explicit |
+| `discover_snapshots` | Copy one preserved official snapshot per source into the new run | Missing snapshot blocks reporting |
+| `normalize` | Parse data.gov.sg long/wide layouts and the MOM final report | Unknown schema, label, number, or report wording fails closed |
+| `transform` | Compute index changes, vacancy, pipeline metrics, SORA quarter-end values, and GDP changes | Zero/missing denominators and invalid inputs fail |
+| `validate` | Enforce coverage, units, periods, duplicates, history length, freshness, and cut-off | Schema drift is flagged for human review |
+| `build_evidence` | Whitelist reportable metrics and attach mechanism plus provenance | Intermediate calculation rows are excluded |
+| `writer` | Produce separate shared, rental, and sale qualitative sections | Missing credentials or invocation failures halt cleanly |
+| `compose_report` | Render deterministic numeric evidence and claim ledger | LLM never controls quantitative statements |
+| `verify_report` | Match value/unit/period/URL, disclosures, section semantics, and language rules | At most the configured number of revisions, then halt |
 
-## State and branching
+## State, checkpoints, and terminal status
 
-`WorkflowState` carries the reporting cut-off, catalogue, raw paths, normalized observations, derived observations, validation errors, evidence, and report text. The graph has one conditional branch: after validation, a clean state proceeds to evidence construction; any error halts report generation. This prevents a polished narrative from hiding missing or invalid source data.
+`AgentState` contains run identity, information cut-off, source catalogue, run-local raw paths, normalized and derived observations, validation output, evidence, writer metadata, claim ledger, and verifier output. Checkpoints after retrieval, normalization, transformation, and validation allow a running job to resume without repeating successful upstream work.
 
-## LLM boundary
+Terminal status is `complete` when all official sources and checks pass, `partial` when an explicitly approved cached official snapshot was required, and `failed` when a required source, quality gate, writer, or verifier fails. Failed runs preserve diagnostics and raw evidence but do not fabricate a report.
 
-If an LLM node is added, its prompt will contain a compact JSON evidence bundle and explicit constraints: preserve all values and units, distinguish sale and rent mechanisms, state data limitations, make no causal or forecast claim, and cite only the supplied official URLs. Its output will be checked against the evidence bundle before publication. The workflow remains useful without an API key because the deterministic Markdown report is the default.
+## Writer and verifier contract
 
+The default deterministic writer makes the project runnable without credentials. The optional OpenAI writer is selected by command-line configuration through LangChain. Both return the same structured output shape with writer type, model, prompt version, token usage when available, and UTC response timestamp.
+
+The composer owns all report numbers. Each numeric bullet has a claim ID linked to one evidence metric. The verifier rejects unledgered numbers, mismatched values/units/periods/URLs, unsupported citations, missing incomplete-quarter disclosures, population/employment confusion, sale/rent mechanism leakage, causal language, and forecasts.
+
+## Key design decisions
+
+1. Official-source retrieval is allowlisted; normal runs do not perform open web search.
+2. Raw bytes are saved before parsing and tied to SHA-256 checksums.
+3. Snapshot mode copies evidence into the new run rather than pointing to mutable external files.
+4. Annual population is not interpolated, and quarterly employment change is not relabelled as population.
+5. Values whose source period ends after the reporting cut-off are excluded.
+6. Historical point-in-time claims remain limited where providers do not expose archived release vintages.
