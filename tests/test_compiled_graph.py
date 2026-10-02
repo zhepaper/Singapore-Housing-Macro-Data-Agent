@@ -3,15 +3,20 @@ import shutil
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from jsonschema import Draft202012Validator, FormatChecker
 
 from housing_agent.workflow import (
     build_graph,
     checkpoint_retrieved_node,
+    checkpoint_validated_node,
     discover_snapshots_node,
     initialize_run_node,
     load_catalog_node,
+    normalize_node,
+    transform_node,
+    validate_node,
 )
 
 
@@ -42,8 +47,14 @@ class CompiledGraphTests(unittest.TestCase):
             evidence_schema = json.loads((repository / "schemas/evidence.schema.json").read_text())
             manifest = json.loads((run_root / "run_manifest.json").read_text())
             Draft202012Validator(manifest_schema, format_checker=FormatChecker()).validate(manifest)
+            writer_metadata = json.loads((run_root / "report/writer_metadata.json").read_text())
+            self.assertEqual(manifest["prompt_version"], writer_metadata["prompt_version"])
             self.assertTrue(all(not Path(path).is_absolute() for path in manifest["artifacts"].values()))
             self.assertEqual(len(list((run_root / "raw").glob("*"))), 8)
+            for source in manifest["sources"]:
+                self.assertIsNotNone(source["latest_available_period"])
+                self.assertEqual(source["validation_status"], "pass")
+                self.assertGreater(source["record_count"], 0)
             observation_validator = Draft202012Validator(
                 observation_schema, format_checker=FormatChecker()
             )
@@ -79,6 +90,55 @@ class CompiledGraphTests(unittest.TestCase):
             resumed = build_graph(resume_from="normalize").invoke(state)
             self.assertEqual(resumed["run_status"], "complete")
             self.assertTrue(Path(resumed["run_paths"]["report"]).joinpath("report.md").is_file())
+
+    def test_transform_failure_is_persisted_instead_of_raising(self):
+        repository = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            shutil.copytree(repository / "config", root / "config")
+            shutil.copytree(repository / "data", root / "data")
+            with patch(
+                "housing_agent.workflow.derive_vacancy_rate",
+                side_effect=ValueError("Zero available-unit denominator in 2026-Q2"),
+            ):
+                result = build_graph().invoke({
+                    "reporting_as_of_date": "2026-10-01",
+                    "project_root": str(root),
+                    "execution_mode": "snapshots",
+                    "request_interval_seconds": 0.0,
+                })
+            self.assertEqual(result["run_status"], "failed")
+            self.assertTrue(any(
+                "rate derivation failed" in error
+                for error in result["validation_errors"]
+            ))
+            diagnostics = Path(result["run_paths"]["root"]) / "failure_diagnostics.json"
+            self.assertTrue(diagnostics.is_file())
+
+    def test_graph_resumes_after_validation_checkpoint(self):
+        repository = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            shutil.copytree(repository / "config", root / "config")
+            shutil.copytree(repository / "data", root / "data")
+            state = {
+                "reporting_as_of_date": "2026-10-01",
+                "project_root": str(root),
+                "execution_mode": "snapshots",
+            }
+            for node in (
+                load_catalog_node,
+                initialize_run_node,
+                discover_snapshots_node,
+                normalize_node,
+                transform_node,
+                validate_node,
+            ):
+                state.update(node(state))
+            checkpoint_validated_node(state)
+
+            resumed = build_graph(resume_from="build_evidence").invoke(state)
+            self.assertEqual(resumed["run_status"], "complete")
 
 
 if __name__ == "__main__":

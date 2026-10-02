@@ -26,6 +26,8 @@ class Observation:
     source_observation_period: str | None = None
     quarter_incomplete: bool = False
     derivation: str | None = None
+    source_periods: tuple[str, ...] = ()
+    input_series_ids: tuple[str, ...] = ()
 
     def to_dict(self) -> dict[str, object]:
         return asdict(self)

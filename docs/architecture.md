@@ -33,7 +33,7 @@ flowchart LR
 | `retrieve_sources` | Serial HTTP retrieval, pagination, retry, raw preservation, SHA-256 | Required failure blocks reporting; optional cached reuse must be explicit |
 | `discover_snapshots` | Copy one preserved official snapshot per source into the new run | Missing snapshot blocks reporting |
 | `normalize` | Parse data.gov.sg long/wide layouts and the MOM final report | Unknown schema, label, number, or report wording fails closed |
-| `transform` | Compute index changes, vacancy, pipeline metrics, SORA quarter-end values, and GDP changes | Zero/missing denominators and invalid inputs fail |
+| `transform` | Compute calendar-aligned index changes, vacancy, pipeline metrics, SORA quarter-end values, and GDP changes | Missing comparison periods are not bridged; zero denominators and invalid inputs produce persisted validation errors |
 | `validate` | Enforce coverage, units, periods, duplicates, history length, freshness, and cut-off | Schema drift is flagged for human review |
 | `build_evidence` | Whitelist reportable metrics and attach mechanism plus provenance | Intermediate calculation rows are excluded |
 | `writer` | Produce separate shared, rental, and sale qualitative sections | Missing credentials or invocation failures halt cleanly |
@@ -42,7 +42,7 @@ flowchart LR
 
 ## State, checkpoints, and terminal status
 
-`AgentState` contains run identity, information cut-off, source catalogue, run-local raw paths, normalized and derived observations, validation output, evidence, writer metadata, claim ledger, and verifier output. Checkpoints after retrieval, normalization, transformation, and validation allow a running job to resume without repeating successful upstream work.
+`AgentState` contains run identity, information cut-off, source catalogue, run-local raw paths, normalized and derived observations, validation output, evidence, writer metadata, claim ledger, and verifier output. Checkpoints after retrieval, normalization, transformation, and validation allow a running job to resume without repeating successful upstream work, including continuing report generation from a validated checkpoint.
 
 Terminal status is `complete` when all official sources and checks pass, `partial` when an explicitly approved cached official snapshot was required, and `failed` when a required source, quality gate, writer, or verifier fails. Failed runs preserve diagnostics and raw evidence but do not fabricate a report.
 

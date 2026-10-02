@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 from dataclasses import replace
+import re
 from typing import Callable, Iterable
 
 from housing_agent.models import Observation
@@ -9,6 +10,21 @@ from housing_agent.models import Observation
 
 def _observed(items: Iterable[Observation]) -> list[Observation]:
     return sorted((item for item in items if item.value is not None), key=lambda item: item.period)
+
+
+def _period_ordinal(period: str, frequency: str) -> int:
+    """Return a monotonic period number so lags require true calendar continuity."""
+    if frequency == "annual" and re.fullmatch(r"\d{4}", period):
+        return int(period)
+    if frequency == "quarterly" and (
+        match := re.fullmatch(r"(\d{4})-Q([1-4])", period)
+    ):
+        return int(match.group(1)) * 4 + int(match.group(2)) - 1
+    if frequency == "monthly" and (
+        match := re.fullmatch(r"(\d{4})-(0[1-9]|1[0-2])", period)
+    ):
+        return int(match.group(1)) * 12 + int(match.group(2)) - 1
+    raise ValueError(f"Period {period!r} does not match frequency {frequency!r}")
 
 
 def lagged_metric(
@@ -22,19 +38,38 @@ def lagged_metric(
 ) -> list[Observation]:
     rows = _observed(items)
     output: list[Observation] = []
-    for index in range(lag, len(rows)):
-        current, previous = rows[index], rows[index - lag]
-        value = formula(float(current.value), float(previous.value))
-        output.append(replace(
-            current,
-            series_id=f"{current.series_id}__{suffix}",
-            series_label=f"{current.series_label} ({suffix})",
-            value=value,
-            unit=unit,
-            role="derived",
-            observation_status="derived",
-            derivation=derivation,
-        ))
+    by_series: dict[str, list[Observation]] = defaultdict(list)
+    for item in rows:
+        by_series[item.series_id].append(item)
+
+    for series_rows in by_series.values():
+        by_ordinal: dict[int, Observation] = {}
+        for item in series_rows:
+            ordinal = _period_ordinal(item.period, item.frequency)
+            if ordinal in by_ordinal:
+                raise ValueError(
+                    f"Duplicate period {item.period!r} for series {item.series_id!r}"
+                )
+            by_ordinal[ordinal] = item
+
+        for current_ordinal, current in sorted(by_ordinal.items()):
+            previous = by_ordinal.get(current_ordinal - lag)
+            if previous is None:
+                # A missing calendar period must not be silently treated as a valid lag.
+                continue
+            value = formula(float(current.value), float(previous.value))
+            output.append(replace(
+                current,
+                series_id=f"{current.series_id}__{suffix}",
+                series_label=f"{current.series_label} ({suffix})",
+                value=value,
+                unit=unit,
+                role="derived",
+                observation_status="derived",
+                derivation=derivation,
+                source_periods=(previous.period, current.period),
+                input_series_ids=(previous.series_id, current.series_id),
+            ))
     return output
 
 
@@ -86,6 +121,8 @@ def derive_vacancy_rate(items: Iterable[Observation]) -> list[Observation]:
             role="derived",
             observation_status="derived",
             derivation="vacant_non_landed / available_non_landed * 100",
+            source_periods=(denominator.period, numerator.period),
+            input_series_ids=(denominator.series_id, numerator.series_id),
         ))
     return output
 
@@ -112,6 +149,8 @@ def derive_pipeline_under_construction_share(items: Iterable[Observation]) -> li
             role="derived",
             observation_status="derived",
             derivation="under_construction_non_landed / total_pipeline_non_landed * 100",
+            source_periods=(denominator.period, numerator.period),
+            input_series_ids=(denominator.series_id, numerator.series_id),
         ))
     return output
 
@@ -146,5 +185,7 @@ def quarterly_last_month_end(items: Iterable[Observation]) -> list[Observation]:
             source_observation_period=selected.period,
             quarter_incomplete=incomplete,
             derivation="last available month-end observation in quarter",
+            source_periods=(selected.period,),
+            input_series_ids=(selected.series_id,),
         ))
     return output

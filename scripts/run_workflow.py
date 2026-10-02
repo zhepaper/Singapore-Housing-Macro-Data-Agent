@@ -33,7 +33,12 @@ def main() -> int:
         if manifest["status"] != "running":
             raise ValueError(f"Only a running workflow can resume; status={manifest['status']}")
         stage, initial_state = load_latest_checkpoint(paths)
-        next_node = {"retrieved": "normalize", "normalized": "transform", "transformed": "validate"}.get(stage)
+        next_node = {
+            "retrieved": "normalize",
+            "normalized": "transform",
+            "transformed": "validate",
+            "validated": "build_evidence",
+        }.get(stage)
         if next_node is None:
             raise ValueError(f"Checkpoint stage is not resumable: {stage}")
         result = build_graph(resume_from=next_node).invoke(initial_state)

@@ -21,11 +21,21 @@ def evidence_fixture():
         "value": 0.5,
         "unit": "percent",
         "factor": "rent_market_benchmark",
+        "definition": "Rental benchmark definition.",
+        "series_identifier": "example-series",
+        "observation_frequency": "quarterly",
+        "update_frequency": "quarterly",
         "mechanism": "Describes rental-market movement.",
+        "potential_lag": "Benchmark outcome.",
+        "point_in_time_availability": "Current-vintage history.",
         "limitations": ["Employment flow, not population stock."],
         "source_page_url": "https://data.gov.sg/example",
         "source_observation_period": None,
         "completeness": "complete",
+        "freshness_status": "current",
+        "derivation": "(value / prior_value - 1) * 100",
+        "source_periods": ["2026-Q1", "2026-Q2"],
+        "input_series_ids": ["rental", "rental"],
     }
     return {"rental__qoq_pct": {"metric_id": "rental__qoq_pct", **base}}
 
@@ -46,6 +56,9 @@ class ReportingTests(unittest.TestCase):
         )
         result = verify_report(report, ledger, evidence)
         self.assertEqual(result["status"], "pass")
+        self.assertIn("quarter on quarter", narrative)
+        self.assertIn("Observation / update frequency", report)
+        self.assertIn("Formula:", report)
 
     def test_tampered_claim_fails_verification(self):
         evidence = evidence_fixture()

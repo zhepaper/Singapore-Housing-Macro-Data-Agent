@@ -28,18 +28,32 @@ def qualitative_context(evidence: dict[str, dict[str, Any]]) -> list[dict[str, A
     change_items = [
         item for item in evidence.values()
         if any(token in item["metric_id"] for token in ("qoq", "yoy", "previous_quarter"))
+        or item["source_id"] == "non_resident_employment_change"
     ]
     output: list[dict[str, Any]] = []
-    seen: set[tuple[str, str]] = set()
-    for item in sorted(change_items, key=lambda row: (row["market"], row["series_label"])):
-        indicator = item["factor"].replace("_", " ")
-        key = (item["market"], indicator)
-        if key in seen:
-            continue
-        seen.add(key)
+    indicator_names = {
+        "private_residential_pipeline_supply": "the private non-landed supply pipeline",
+        "non_resident_rental_demand": "the non-resident demand signal",
+        "private_residential_vacancy_rate": "the private non-landed vacancy rate",
+        "financing_conditions": "the SORA financing-rate proxy",
+        "real_gdp_growth": "official year-on-year real GDP growth",
+        "sale_market_benchmark": "the private non-landed sale-price benchmark",
+        "rent_market_benchmark": "the private non-landed rental benchmark",
+    }
+    for item in sorted(change_items, key=lambda row: (row["market"], row["metric_id"])):
+        metric_id = item["metric_id"]
+        if "yoy" in metric_id:
+            horizon = "year on year"
+        elif "qoq" in metric_id:
+            horizon = "quarter on quarter"
+        elif "previous_quarter" in metric_id:
+            horizon = "relative to the previous quarter"
+        else:
+            horizon = "in the latest reported quarter"
         output.append({
             "market": item["market"],
-            "indicator": indicator,
+            "indicator": indicator_names.get(item["factor"], item["factor"].replace("_", " ")),
+            "horizon": horizon,
             "direction": _direction(float(item["value"])),
             "mechanism": item["mechanism"],
             "limitations": item["limitations"],
@@ -63,9 +77,14 @@ class DeterministicWriter:
             if not rows:
                 return fallback
             signals = "; ".join(
-                f"{row['indicator']} {row['direction']}" for row in rows[:3]
+                f"{row['indicator']} {row['direction']} {row['horizon']}"
+                f"{' using an incomplete quarter' if row['incomplete'] else ''}"
+                for row in rows
             )
-            return f"The validated evidence shows that {signals}. These are descriptive signals rather than causal estimates."
+            return (
+                f"The validated evidence shows that {signals}. The associated mechanisms "
+                "and lags are hypotheses from the indicator-selection framework, not causal estimates."
+            )
 
         narrative = "\n\n".join([
             "### Shared supply\n\n" + sentence(
@@ -134,6 +153,15 @@ def _format_value(value: float, unit: str) -> str:
     return f"{value:.3f}"
 
 
+def _freshness_label(status: str) -> str:
+    return {
+        "current": "current",
+        "not_yet_released": "current; next observation not yet due",
+        "stale": "stale",
+        "unavailable": "unavailable",
+    }.get(status, status.replace("_", " "))
+
+
 def compose_report(
     *, reporting_as_of_date: str, narrative: str, evidence: dict[str, dict[str, Any]],
     warnings: list[str] | None = None,
@@ -143,13 +171,63 @@ def compose_report(
         "",
         f"**Information cut-off:** {reporting_as_of_date}",
         "",
-        "This report presents descriptive public-data signals, not causal estimates or model forecasts.",
+        "## Scope",
+        "",
+        "This report monitors Singapore's private non-landed residential sale and rental markets. "
+        "It presents descriptive public-data signals, not causal estimates or model forecasts. "
+        "The sale and rental indices are outcome benchmarks; the remaining series are candidate predictors.",
+        "",
+        "The workflow preserves mixed frequencies: annual population is not interpolated, quarterly series "
+        "remain quarterly, and monthly SORA is represented by the last available month-end observation in each quarter.",
+        "",
+        "## Indicator definitions and mechanisms",
+        "",
+        "| Indicator | Market | Definition | Observation / update frequency | Mechanism and potential lag |",
+        "|---|---|---|---|---|",
+    ]
+    source_rows: dict[str, dict[str, Any]] = {}
+    for item in evidence.values():
+        source_rows.setdefault(item["source_id"], item)
+    indicator_names = {
+        "ura_non_landed_price_index": "URA non-landed price index",
+        "ura_non_landed_rental_index": "URA non-landed rental index",
+        "private_residential_pipeline_supply": "Private non-landed pipeline supply",
+        "non_resident_population": "Non-resident population",
+        "non_resident_employment_change": "Non-resident employment change",
+        "private_non_landed_vacancy_rate": "Private non-landed vacancy rate",
+        "three_month_compounded_sora": "Three-month Compounded SORA",
+        "real_gdp_growth": "Real GDP growth",
+    }
+    for item in sorted(source_rows.values(), key=lambda row: (row["market"], row["factor"])):
+        indicator = indicator_names.get(
+            item["source_id"], item["factor"].replace("_", " ").title()
+        )
+        observation_frequency = item["observation_frequency"].replace("_", " ")
+        lines.append(
+            f"| **{indicator}** (`{item['series_identifier']}`) | {item['market'].title()} | "
+            f"{item['definition']} | {observation_frequency} / {item['update_frequency']} | "
+            f"{item['mechanism']} {item['potential_lag']} |"
+        )
+    lines.extend([
+        "",
         "",
         "## Analysis",
         "",
         narrative.strip(),
         "",
-    ]
+        "## Data processing and reliability",
+        "",
+        "Official responses are preserved before parsing and tied to checksums. Exact series labels are selected, "
+        "periods and units are normalized, the information cut-off is applied, and deterministic formulas produce "
+        "changes and ratios. Validation checks required coverage, uniqueness, units, period formats, freshness, "
+        "formula lineage, and zero denominators before any report is written.",
+        "",
+        "Most data.gov.sg endpoints expose current-vintage histories rather than archived releases. Consequently, "
+        "period cut-offs are enforced, but historical point-in-time availability remains unverified where an official "
+        "release date or archived vintage is unavailable. The configured MOM final report is separately checked using "
+        "its published release date.",
+        "",
+    ])
     if warnings:
         lines.extend(["## Operational notes", ""])
         lines.extend(f"- {warning}" for warning in warnings)
@@ -172,10 +250,16 @@ def compose_report(
                 if item.get("source_observation_period") else ""
             )
             citation = f"[{item['source_id']}]({item['source_page_url']})"
+            lineage = ""
+            if item.get("derivation"):
+                input_periods = ", ".join(item.get("source_periods", []))
+                lineage = f" Formula: `{item['derivation']}`; input period(s): {input_periods}."
             lines.extend([
                 f"<!-- claim:{claim_id} -->",
                 f"- **{item['series_label']}**: {value_text} {item['unit']} in {item['period']}."
-                f"{source_month}{incomplete} Source: {citation}",
+                f"{source_month}{incomplete}{lineage} Freshness: "
+                f"{_freshness_label(item['freshness_status'])}. "
+                f"Source: {citation}",
             ])
             ledger.append({
                 "claim_id": claim_id,
@@ -195,5 +279,9 @@ def compose_report(
     })
     lines.extend(["## Limitations", ""])
     lines.extend(f"- {limitation}" for limitation in limitations)
+    point_in_time_notes = sorted({
+        item["point_in_time_availability"] for item in evidence.values()
+    })
+    lines.extend(f"- {note}" for note in point_in_time_notes)
     lines.append("")
     return "\n".join(lines), ledger

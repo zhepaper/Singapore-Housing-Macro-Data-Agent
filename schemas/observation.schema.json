@@ -39,6 +39,14 @@
     "release_date": {"type": ["string", "null"], "format": "date"},
     "source_observation_period": {"type": ["string", "null"]},
     "quarter_incomplete": {"type": "boolean"},
-    "derivation": {"type": ["string", "null"]}
+    "derivation": {"type": ["string", "null"]},
+    "source_periods": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 4}
+    },
+    "input_series_ids": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    }
   }
 }

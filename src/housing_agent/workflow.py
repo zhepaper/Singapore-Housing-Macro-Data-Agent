@@ -18,6 +18,7 @@ from housing_agent.retrieval import retrieve_catalog_sources, use_approved_cache
 from housing_agent.reporting import (
     DeterministicWriter,
     LangChainWriter,
+    PROMPT_VERSION,
     compose_report,
 )
 from housing_agent.verification import verify_report
@@ -96,6 +97,37 @@ REPORT_SERIES_IDS = {
     "real_gdp_growth__gdp_in_chained_2015_dollars__previous_quarter_pp_change",
 }
 
+REQUIRED_LATEST_DERIVED_IDS = {
+    "ura_non_landed_price_index": {
+        "ura_non_landed_price_index__non_landed__qoq_pct",
+        "ura_non_landed_price_index__non_landed__yoy_pct",
+    },
+    "ura_non_landed_rental_index": {
+        "ura_non_landed_rental_index__non_landed_whole_island__qoq_pct",
+        "ura_non_landed_rental_index__non_landed_whole_island__yoy_pct",
+    },
+    "non_resident_population": {
+        "non_resident_population__non_resident_population__yoy_pct",
+    },
+    "private_residential_pipeline_supply": {
+        "private_residential_pipeline_supply__total_non_landed_properties__qoq_absolute_change",
+        "private_residential_pipeline_supply__total_non_landed_properties__yoy_pct",
+        "private_residential_pipeline_supply__under_construction_share",
+    },
+    "private_non_landed_vacancy_rate": {
+        "private_non_landed_vacancy_rate__rate",
+        "private_non_landed_vacancy_rate__rate__qoq_pp_change",
+        "private_non_landed_vacancy_rate__rate__yoy_pp_change",
+    },
+    "three_month_compounded_sora": {
+        "three_month_compounded_sora__compounded_singapore_overnight_rate_average_sora_3_month__quarter_end",
+        "three_month_compounded_sora__compounded_singapore_overnight_rate_average_sora_3_month__quarter_end__qoq_pp_change",
+    },
+    "real_gdp_growth": {
+        "real_gdp_growth__gdp_in_chained_2015_dollars__previous_quarter_pp_change",
+    },
+}
+
 
 def load_catalog_node(state: WorkflowState) -> WorkflowState:
     root = Path(state.get("project_root", "."))
@@ -113,7 +145,7 @@ def initialize_run_node(state: AgentState) -> AgentState:
         project_root=Path(state.get("project_root", ".")),
         reporting_as_of_date=state["reporting_as_of_date"],
         catalog_version=state["catalog_version"],
-        prompt_version=state.get("prompt_version", "deterministic-v1"),
+        prompt_version=state.get("prompt_version", PROMPT_VERSION),
         run_id=state.get("run_id"),
     )
     return {
@@ -245,7 +277,7 @@ def normalize_node(state: WorkflowState) -> WorkflowState:
                     )
                     continue
                 observations.append(item.to_dict())
-        except (OSError, ValueError, json.JSONDecodeError) as exc:
+        except (OSError, KeyError, TypeError, ValueError, json.JSONDecodeError) as exc:
             errors.append(f"{source['source_id']}: {exc}")
     return {"observations": observations, "validation_errors": errors}
 
@@ -305,35 +337,77 @@ def _items(state: WorkflowState, source_id: str) -> list[Observation]:
 
 def transform_node(state: WorkflowState) -> WorkflowState:
     derived: list[Observation] = []
+    errors = list(state.get("validation_errors", []))
+
+    def add(source_id: str, transformation: str, producer: Any) -> None:
+        try:
+            derived.extend(producer())
+        except (KeyError, TypeError, ValueError) as exc:
+            errors.append(f"{source_id}: {transformation} failed: {exc}")
 
     for source_id in ("ura_non_landed_price_index", "ura_non_landed_rental_index"):
         items = _items(state, source_id)
-        derived.extend(percent_change(items, 1, "qoq_pct"))
-        derived.extend(percent_change(items, 4, "yoy_pct"))
+        add(source_id, "qoq_percent_change", lambda items=items: percent_change(items, 1, "qoq_pct"))
+        add(source_id, "yoy_percent_change", lambda items=items: percent_change(items, 4, "yoy_pct"))
 
     population = _items(state, "non_resident_population")
-    derived.extend(percent_change(population, 1, "yoy_pct"))
+    add(
+        "non_resident_population", "yoy_percent_change",
+        lambda: percent_change(population, 1, "yoy_pct"),
+    )
 
     pipeline = _items(state, "private_residential_pipeline_supply")
     total_pipeline = [item for item in pipeline if item.series_label == "Total Non-Landed Properties"]
-    derived.extend(absolute_change(total_pipeline, 1, "qoq_absolute_change", "dwelling units"))
-    derived.extend(percent_change(total_pipeline, 4, "yoy_pct"))
-    derived.extend(derive_pipeline_under_construction_share(pipeline))
+    add(
+        "private_residential_pipeline_supply", "qoq_absolute_change",
+        lambda: absolute_change(total_pipeline, 1, "qoq_absolute_change", "dwelling units"),
+    )
+    add(
+        "private_residential_pipeline_supply", "yoy_percent_change",
+        lambda: percent_change(total_pipeline, 4, "yoy_pct"),
+    )
+    add(
+        "private_residential_pipeline_supply", "under_construction_share",
+        lambda: derive_pipeline_under_construction_share(pipeline),
+    )
 
-    vacancy = derive_vacancy_rate(_items(state, "private_non_landed_vacancy_rate"))
-    derived.extend(vacancy)
-    derived.extend(absolute_change(vacancy, 1, "qoq_pp_change", "percentage points"))
-    derived.extend(absolute_change(vacancy, 4, "yoy_pp_change", "percentage points"))
+    vacancy: list[Observation] = []
+    try:
+        vacancy = derive_vacancy_rate(_items(state, "private_non_landed_vacancy_rate"))
+        derived.extend(vacancy)
+    except (KeyError, TypeError, ValueError) as exc:
+        errors.append(f"private_non_landed_vacancy_rate: rate derivation failed: {exc}")
+    if vacancy:
+        add(
+            "private_non_landed_vacancy_rate", "qoq_percentage_point_change",
+            lambda: absolute_change(vacancy, 1, "qoq_pp_change", "percentage points"),
+        )
+        add(
+            "private_non_landed_vacancy_rate", "yoy_percentage_point_change",
+            lambda: absolute_change(vacancy, 4, "yoy_pp_change", "percentage points"),
+        )
 
-    quarterly_sora = quarterly_last_month_end(_items(state, "three_month_compounded_sora"))
-    derived.extend(quarterly_sora)
-    derived.extend(absolute_change(
-        quarterly_sora, 1, "qoq_pp_change", "percentage points"
-    ))
+    quarterly_sora: list[Observation] = []
+    try:
+        quarterly_sora = quarterly_last_month_end(_items(state, "three_month_compounded_sora"))
+        derived.extend(quarterly_sora)
+    except (KeyError, TypeError, ValueError) as exc:
+        errors.append(f"three_month_compounded_sora: quarter-end conversion failed: {exc}")
+    if quarterly_sora:
+        add(
+            "three_month_compounded_sora", "qoq_percentage_point_change",
+            lambda: absolute_change(quarterly_sora, 1, "qoq_pp_change", "percentage points"),
+        )
 
     gdp = _items(state, "real_gdp_growth")
-    derived.extend(absolute_change(gdp, 1, "previous_quarter_pp_change", "percentage points"))
-    return {"derived_observations": [item.to_dict() for item in derived]}
+    add(
+        "real_gdp_growth", "previous_quarter_percentage_point_change",
+        lambda: absolute_change(gdp, 1, "previous_quarter_pp_change", "percentage points"),
+    )
+    return {
+        "derived_observations": [item.to_dict() for item in derived],
+        "validation_errors": errors,
+    }
 
 
 def validate_node(state: WorkflowState) -> WorkflowState:
@@ -354,6 +428,11 @@ def validate_node(state: WorkflowState) -> WorkflowState:
             _period_end(period)
         except (TypeError, ValueError):
             errors.append(f"Invalid or missing period for {key}: {period!r}")
+        if item.get("role") == "derived":
+            if not item.get("derivation"):
+                errors.append(f"Derived observation has no formula: {key}")
+            if not item.get("source_periods") or not item.get("input_series_ids"):
+                errors.append(f"Derived observation has incomplete lineage: {key}")
     expected_units = {
         source["source_id"]: source.get("unit") for source in state["catalog"]["sources"]
     }
@@ -363,6 +442,30 @@ def validate_node(state: WorkflowState) -> WorkflowState:
             errors.append(
                 f"{item['source_id']}: unexpected unit {item.get('unit')!r}; "
                 f"expected {expected_unit!r}"
+            )
+
+    derived_items = state.get("derived_observations", [])
+    for source_id, required_series in REQUIRED_LATEST_DERIVED_IDS.items():
+        source_items = [
+            item for item in state.get("observations", [])
+            if item.get("source_id") == source_id and item.get("value") is not None
+        ]
+        if not source_items:
+            continue
+        latest_source_period = max(item["period"] for item in source_items)
+        if source_id == "three_month_compounded_sora":
+            year, month = latest_source_period.split("-")
+            latest_period = f"{year}-Q{(int(month) - 1) // 3 + 1}"
+        else:
+            latest_period = latest_source_period
+        available_latest = {
+            item["series_id"] for item in derived_items
+            if item.get("source_id") == source_id and item.get("period") == latest_period
+        }
+        for missing_series in sorted(required_series - available_latest):
+            errors.append(
+                f"{source_id}: latest derived metric {missing_series} is unavailable for "
+                f"{latest_period}; a required comparison period or formula input is missing"
             )
     cutoff = date.fromisoformat(state["reporting_as_of_date"])
     freshness_results: dict[str, dict[str, Any]] = {}
@@ -443,7 +546,13 @@ def build_evidence_node(state: WorkflowState) -> WorkflowState:
             "run_id": state["run_id"],
             "provenance_id": f"{state['run_id']}:{item['source_id']}",
             "factor": source["factor"],
+            "definition": source["definition"],
+            "series_identifier": source["series_identifier"],
+            "observation_frequency": source["native_frequency"],
+            "update_frequency": source["update_frequency"],
             "mechanism": source["mechanism"],
+            "potential_lag": source["potential_lag"],
+            "point_in_time_availability": source["point_in_time_availability"],
             "limitations": source["limitations"],
             "source_url": run_source.get("source_url", source["retrieval_url"]),
             "source_page_url": source["page_url"],
@@ -636,10 +745,35 @@ def finalize_run_node(state: AgentState) -> AgentState:
         for result in state.get("retrieval_results", [])
     )
     terminal_status = "failed" if blocked else ("partial" if used_fallback else "complete")
+    observations_by_source: dict[str, list[dict[str, Any]]] = {}
+    for item in state.get("observations", []):
+        observations_by_source.setdefault(item["source_id"], []).append(item)
+    enriched_sources: list[dict[str, Any]] = []
+    for result in state.get("retrieval_results", []):
+        source_id = result["source_id"]
+        source_items = observations_by_source.get(source_id, [])
+        source_errors = [
+            error for error in state.get("validation_errors", [])
+            if error.startswith(f"{source_id}:")
+            or error.endswith(f": {source_id}")
+        ]
+        enriched_sources.append({
+            **result,
+            "latest_available_period": max(
+                (item["period"] for item in source_items), default=None
+            ),
+            "freshness_status": state.get("freshness_results", {}).get(
+                source_id, {}
+            ).get("status", "unavailable"),
+            "validation_status": "fail" if source_errors else (
+                "pass" if source_items else "not_run"
+            ),
+            "record_count": len(source_items),
+        })
     manifest = finalize_manifest(
         paths,
         status=terminal_status,
-        sources=state.get("retrieval_results", []),
+        sources=enriched_sources,
         validation_errors=(
             state.get("validation_errors", [])
             + state.get("verification_errors", [])
@@ -685,7 +819,7 @@ def build_graph(*, resume_from: str | None = None):
     if resume_from is None:
         graph.add_edge(START, "load_catalog")
         graph.add_edge("load_catalog", "initialize_run")
-    elif resume_from in {"normalize", "transform", "validate"}:
+    elif resume_from in {"normalize", "transform", "validate", "build_evidence"}:
         graph.add_edge(START, resume_from)
     else:
         raise ValueError(f"Unsupported resume entry point: {resume_from!r}")

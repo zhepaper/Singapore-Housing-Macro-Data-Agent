@@ -2,7 +2,7 @@
 
 **Project:** Singapore Housing Macro Data Agent  
 **Scope:** Singapore private non-landed residential sale and rental markets  
-**Last updated:** 1 October 2026
+**Last updated:** 2 October 2026
 
 ## 1. Objective
 
@@ -130,6 +130,8 @@ runs/<run_id>/
 - [x] Preserve GDP as official YoY growth and calculate the previous-quarter percentage-point change.
 - [x] Write normalized and derived records into the current run directory.
 - [x] Link each processed record to its source-run provenance.
+- [x] Record formula inputs and exact source periods for each derived observation.
+- [x] Require exact calendar continuity for monthly, quarterly, and annual lagged metrics.
 
 **Exit criterion:** The same raw snapshot always produces the same normalized observations and metrics.
 
@@ -204,6 +206,8 @@ runs/<run_id>/
 - [x] Test changed MOM report wording.
 - [x] Test unit changes and duplicate periods.
 - [x] Test `na`, zero denominator, and truncated history.
+- [x] Test missing quarters, missing years, and cross-series lag isolation.
+- [x] Test that transformation failures persist diagnostics instead of raising an uncaught exception.
 - [x] Test report-number mismatch detection.
 - [x] Add one live integration test that is excluded from the default offline suite.
 
@@ -226,9 +230,7 @@ The first production-layer integration check on 1 October 2026 recorded an expli
 
 ## 6. Immediate Next Work Session
 
-Complete these tasks in order:
-
-All planned implementation phases are complete. Future work should start from the extensions in `docs/limitations.md` rather than changing the frozen take-home scope.
+All planned implementation phases are complete. The final 2 October review additionally fixed calendar-lag alignment, graceful transformation failure routing, validated-checkpoint resume, fresh-copy test execution, evidence lineage, source-level manifest metadata, and report horizon clarity. Future work should start from the extensions in `docs/limitations.md` rather than changing the frozen take-home scope.
 
 ## 7. Definition of Done
 

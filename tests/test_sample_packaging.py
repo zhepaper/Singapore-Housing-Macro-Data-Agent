@@ -9,7 +9,9 @@ from pathlib import Path
 class SamplePackagingTests(unittest.TestCase):
     def test_script_rejects_non_complete_run(self):
         repository = Path(__file__).resolve().parents[1]
-        with tempfile.TemporaryDirectory(dir=repository / "runs") as temporary:
+        runs_directory = repository / "runs"
+        runs_directory.mkdir(parents=True, exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=runs_directory) as temporary:
             run_root = Path(temporary)
             (run_root / "run_manifest.json").write_text(json.dumps({"status": "failed"}))
             destination = run_root / "sample"

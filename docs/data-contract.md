@@ -24,6 +24,8 @@ One row represents one named series in one source period. Required fields are de
 | `observation_status` | Whether the value was observed, missing at source, derived, or belongs to an incomplete quarter |
 | `release_date` | Official release date when exposed by the source; otherwise `null` |
 | `derivation` | Formula or selection rule for derived values; otherwise `null` |
+| `source_periods` | Exact input periods used by a derived observation |
+| `input_series_ids` | Exact normalized input series used by a derived observation |
 
 ## As-of-date rule
 
@@ -40,6 +42,6 @@ For sources that do not expose historical release dates, the workflow can reprod
 
 ## Missing values and validation
 
-Provider values such as `na`, blank strings, and non-numeric footnote markers become `null` with `observation_status = missing_at_source`. They do not become zero. A source fails validation when an expected series label disappears, periods are duplicated, period formats are invalid, numeric parsing is ambiguous, or a derived denominator is zero or missing.
+Provider values such as `na`, blank strings, and non-numeric footnote markers become `null` with `observation_status = missing_at_source`. They do not become zero. A source fails validation when an expected series label disappears, periods are duplicated, period formats are invalid, numeric parsing is ambiguous, or a derived denominator is zero or missing. Lagged changes require exact calendar continuity: a missing quarter or year is not silently treated as the preceding period.
 
 The run-level provenance contract is defined in `schemas/run-manifest.schema.json`, the reportable metric contract in `schemas/evidence.schema.json`, and writer boundaries in `schemas/writer-input.schema.json` and `schemas/writer-output.schema.json`. A partially successful run may produce diagnostics and raw snapshots, but the report-generation node must not describe a failed required source as current.

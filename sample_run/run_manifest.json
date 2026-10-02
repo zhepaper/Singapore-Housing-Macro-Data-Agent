@@ -9,22 +9,24 @@
     "validation_report": "sample_run/validation_report.json"
   },
   "catalog_version": "1",
-  "completed_at": "2026-10-02T01:25:52.894847+00:00",
+  "completed_at": "2026-10-02T05:17:21.261672+00:00",
   "counts": {
-    "derived_observations": 1847,
+    "derived_observations": 1846,
     "evidence_series": 20,
     "observations": 2012
   },
-  "prompt_version": "deterministic-v1",
+  "prompt_version": "evidence-writer-v1",
   "reporting_as_of_date": "2026-10-01",
-  "run_id": "20261002T012420396906Z",
+  "run_id": "20261002T051548559956Z",
   "sources": [
     {
       "bytes_received": 47654,
       "content_type": "application/json",
       "error_category": null,
       "error_message": null,
+      "freshness_status": "not_yet_released",
       "http_status": 200,
+      "latest_available_period": "2026-Q2",
       "raw_file_sha256": "bc5706937c186504c8f766e14f5be3ae9f993148c88391587176f88058e6b003",
       "raw_page_paths": [
         "sample_run/raw/ura_non_landed_price_index.json"
@@ -33,18 +35,22 @@
         "bc5706937c186504c8f766e14f5be3ae9f993148c88391587176f88058e6b003"
       ],
       "raw_snapshot_path": "sample_run/raw/ura_non_landed_price_index.json",
+      "record_count": 206,
       "retrieval_status": "success",
-      "retrieved_at": "2026-10-02T01:24:21.002086+00:00",
+      "retrieved_at": "2026-10-02T05:15:49.307064+00:00",
       "retry_count": 0,
       "source_id": "ura_non_landed_price_index",
-      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_97f8a2e995022d311c6c68cfda6d034c&limit=5000"
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_97f8a2e995022d311c6c68cfda6d034c&limit=5000",
+      "validation_status": "pass"
     },
     {
       "bytes_received": 56160,
       "content_type": "application/json",
       "error_category": null,
       "error_message": null,
+      "freshness_status": "not_yet_released",
       "http_status": 200,
+      "latest_available_period": "2026-Q2",
       "raw_file_sha256": "83b9cc2091b8f56e7dd9323316fe8b772634d791922d7676f1855840cd836fa6",
       "raw_page_paths": [
         "sample_run/raw/ura_non_landed_rental_index.json"
@@ -53,18 +59,22 @@
         "83b9cc2091b8f56e7dd9323316fe8b772634d791922d7676f1855840cd836fa6"
       ],
       "raw_snapshot_path": "sample_run/raw/ura_non_landed_rental_index.json",
+      "record_count": 90,
       "retrieval_status": "success",
-      "retrieved_at": "2026-10-02T01:24:33.986557+00:00",
+      "retrieved_at": "2026-10-02T05:16:02.302172+00:00",
       "retry_count": 0,
       "source_id": "ura_non_landed_rental_index",
-      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8e4c50283fb7052a391dfb746a05c853&limit=5000"
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8e4c50283fb7052a391dfb746a05c853&limit=5000",
+      "validation_status": "pass"
     },
     {
       "bytes_received": 26531,
       "content_type": "application/json",
       "error_category": null,
       "error_message": null,
+      "freshness_status": "not_yet_released",
       "http_status": 200,
+      "latest_available_period": "2026-Q2",
       "raw_file_sha256": "f095d6e78baa050d53f5a6b0b9dce599fdf0411ba3587f923ac98f21429e9c17",
       "raw_page_paths": [
         "sample_run/raw/private_residential_pipeline_supply.json"
@@ -73,18 +83,22 @@
         "f095d6e78baa050d53f5a6b0b9dce599fdf0411ba3587f923ac98f21429e9c17"
       ],
       "raw_snapshot_path": "sample_run/raw/private_residential_pipeline_supply.json",
+      "record_count": 665,
       "retrieval_status": "success",
-      "retrieved_at": "2026-10-02T01:24:46.899964+00:00",
+      "retrieved_at": "2026-10-02T05:16:15.033278+00:00",
       "retry_count": 0,
       "source_id": "private_residential_pipeline_supply",
-      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_055b6549444dedb341c50805d9682a41&limit=500"
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_055b6549444dedb341c50805d9682a41&limit=500",
+      "validation_status": "pass"
     },
     {
       "bytes_received": 35086,
       "content_type": "application/json",
       "error_category": null,
       "error_message": null,
+      "freshness_status": "not_yet_released",
       "http_status": 200,
+      "latest_available_period": "2025",
       "raw_file_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
       "raw_page_paths": [
         "sample_run/raw/non_resident_population.json"
@@ -93,38 +107,46 @@
         "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e"
       ],
       "raw_snapshot_path": "sample_run/raw/non_resident_population.json",
+      "record_count": 76,
       "retrieval_status": "success",
-      "retrieved_at": "2026-10-02T01:24:59.999050+00:00",
+      "retrieved_at": "2026-10-02T05:16:28.091375+00:00",
       "retry_count": 0,
       "source_id": "non_resident_population",
-      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_3d227e5d9fdec73f3bcadce671c333a6&limit=500"
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_3d227e5d9fdec73f3bcadce671c333a6&limit=500",
+      "validation_status": "pass"
     },
     {
       "bytes_received": 63957,
       "content_type": "text/html",
       "error_category": null,
       "error_message": null,
+      "freshness_status": "not_yet_released",
       "http_status": 200,
-      "raw_file_sha256": "7516cacd08c3ba825be09d46d79cd8e01a1d5673681a75a07145a73a5c6129ee",
+      "latest_available_period": "2026-Q2",
+      "raw_file_sha256": "7e9dd3d4e0d7ec68c0d4541800a7d3f8df3b5a3d730f617334d8515a1dedceb2",
       "raw_page_paths": [
         "sample_run/raw/non_resident_employment_change.html"
       ],
       "raw_page_sha256s": [
-        "7516cacd08c3ba825be09d46d79cd8e01a1d5673681a75a07145a73a5c6129ee"
+        "7e9dd3d4e0d7ec68c0d4541800a7d3f8df3b5a3d730f617334d8515a1dedceb2"
       ],
       "raw_snapshot_path": "sample_run/raw/non_resident_employment_change.html",
+      "record_count": 2,
       "retrieval_status": "success",
-      "retrieved_at": "2026-10-02T01:25:12.732460+00:00",
+      "retrieved_at": "2026-10-02T05:16:40.964480+00:00",
       "retry_count": 0,
       "source_id": "non_resident_employment_change",
-      "source_url": "https://stats.mom.gov.sg/Pages/Labour-Market-Report-2Q-2026.aspx?PageVersion=512"
+      "source_url": "https://stats.mom.gov.sg/Pages/Labour-Market-Report-2Q-2026.aspx?PageVersion=512",
+      "validation_status": "pass"
     },
     {
       "bytes_received": 21565,
       "content_type": "application/json",
       "error_category": null,
       "error_message": null,
+      "freshness_status": "not_yet_released",
       "http_status": 200,
+      "latest_available_period": "2026-Q2",
       "raw_file_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
       "raw_page_paths": [
         "sample_run/raw/private_non_landed_vacancy_rate.json"
@@ -133,18 +155,22 @@
         "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b"
       ],
       "raw_snapshot_path": "sample_run/raw/private_non_landed_vacancy_rate.json",
+      "record_count": 308,
       "retrieval_status": "success",
-      "retrieved_at": "2026-10-02T01:25:25.803607+00:00",
+      "retrieved_at": "2026-10-02T05:16:54.025806+00:00",
       "retry_count": 0,
       "source_id": "private_non_landed_vacancy_rate",
-      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_01e3556fb916ca19a7e29fc39520fa78&limit=500"
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_01e3556fb916ca19a7e29fc39520fa78&limit=500",
+      "validation_status": "pass"
     },
     {
       "bytes_received": 77712,
       "content_type": "application/json",
       "error_category": null,
       "error_message": null,
+      "freshness_status": "not_yet_released",
       "http_status": 200,
+      "latest_available_period": "2026-07",
       "raw_file_sha256": "51dc6f246693b96e61307b2d5d54ce35226467632daa4e1bddfae03636325947",
       "raw_page_paths": [
         "sample_run/raw/three_month_compounded_sora.json"
@@ -153,18 +179,22 @@
         "51dc6f246693b96e61307b2d5d54ce35226467632daa4e1bddfae03636325947"
       ],
       "raw_snapshot_path": "sample_run/raw/three_month_compounded_sora.json",
+      "record_count": 463,
       "retrieval_status": "success",
-      "retrieved_at": "2026-10-02T01:25:39.071801+00:00",
+      "retrieved_at": "2026-10-02T05:17:07.355007+00:00",
       "retry_count": 0,
       "source_id": "three_month_compounded_sora",
-      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_5fe5a4bb4a1ecc4d8a56a095832e2b24&limit=500"
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_5fe5a4bb4a1ecc4d8a56a095832e2b24&limit=500",
+      "validation_status": "pass"
     },
     {
       "bytes_received": 185827,
       "content_type": "application/json",
       "error_category": null,
       "error_message": null,
+      "freshness_status": "not_yet_released",
       "http_status": 200,
+      "latest_available_period": "2026-Q2",
       "raw_file_sha256": "695aae88e47d1683639b57cd05936d428346b9ca248d8c928dbf74acf739b203",
       "raw_page_paths": [
         "sample_run/raw/real_gdp_growth.json"
@@ -173,14 +203,16 @@
         "695aae88e47d1683639b57cd05936d428346b9ca248d8c928dbf74acf739b203"
       ],
       "raw_snapshot_path": "sample_run/raw/real_gdp_growth.json",
+      "record_count": 202,
       "retrieval_status": "success",
-      "retrieved_at": "2026-10-02T01:25:52.567651+00:00",
+      "retrieved_at": "2026-10-02T05:17:20.583062+00:00",
       "retry_count": 0,
       "source_id": "real_gdp_growth",
-      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_a5ff719648a0e6d4b4c623ee383ab686&limit=500"
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_a5ff719648a0e6d4b4c623ee383ab686&limit=500",
+      "validation_status": "pass"
     }
   ],
-  "started_at": "2026-10-02T01:24:20.397638+00:00",
+  "started_at": "2026-10-02T05:15:48.560866+00:00",
   "status": "complete",
   "validation_errors": [],
   "warnings": []

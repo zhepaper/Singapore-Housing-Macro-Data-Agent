@@ -3,6 +3,7 @@ from datetime import date
 
 from housing_agent.models import Observation
 from housing_agent.transforms import derive_vacancy_rate
+from housing_agent.transforms import percent_change
 from housing_agent.workflow import freshness_status, validate_node
 
 
@@ -82,6 +83,41 @@ class QualityGateTests(unittest.TestCase):
         }
         result = validate_node(state)
         self.assertTrue(any("Duplicate observation" in error for error in result["validation_errors"]))
+
+    def test_latest_metric_does_not_fall_back_across_missing_quarter(self):
+        common = dict(
+            source_id="ura_non_landed_price_index",
+            series_id="ura_non_landed_price_index__non_landed",
+            series_label="Non-Landed",
+            frequency="quarterly",
+            unit="index; 2009-Q1=100",
+            market="sale",
+            role="benchmark",
+            observation_status="observed",
+        )
+        observations = [
+            Observation(period="2025-Q3", value=95, **common),
+            Observation(period="2026-Q1", value=100, **common),
+            Observation(period="2026-Q3", value=110, **common),
+        ]
+        derived = percent_change(observations, 4, "yoy_pct")
+        state = {
+            "reporting_as_of_date": "2026-10-01",
+            "catalog": {"sources": [{
+                "source_id": "ura_non_landed_price_index",
+                "unit": "index; 2009-Q1=100",
+                "minimum_normalized_observations": 1,
+                "freshness_rule": {"expected_lag_days": 35},
+            }]},
+            "observations": [item.to_dict() for item in observations],
+            "derived_observations": [item.to_dict() for item in derived],
+            "validation_errors": [],
+        }
+        result = validate_node(state)
+        self.assertTrue(any(
+            "qoq_pct is unavailable for 2026-Q3" in error
+            for error in result["validation_errors"]
+        ))
 
 
 if __name__ == "__main__":

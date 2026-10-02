@@ -6,8 +6,10 @@
   "additionalProperties": true,
   "required": [
     "metric_id", "source_id", "run_id", "provenance_id", "series_label", "market", "period", "value", "unit",
-    "factor", "mechanism", "limitations", "source_url", "source_page_url",
-    "raw_snapshot_path", "raw_sha256", "retrieved_at", "completeness"
+    "factor", "definition", "series_identifier", "observation_frequency", "update_frequency",
+    "mechanism", "potential_lag", "point_in_time_availability", "limitations", "source_url", "source_page_url",
+    "raw_snapshot_path", "raw_sha256", "retrieved_at", "completeness",
+    "source_periods", "input_series_ids"
   ],
   "properties": {
     "metric_id": {"type": "string", "minLength": 1},
@@ -20,7 +22,13 @@
     "value": {"type": "number"},
     "unit": {"type": "string", "minLength": 1},
     "factor": {"type": "string", "minLength": 1},
+    "definition": {"type": "string", "minLength": 1},
+    "series_identifier": {"type": "string", "minLength": 1},
+    "observation_frequency": {"type": "string", "minLength": 1},
+    "update_frequency": {"type": "string", "minLength": 1},
     "mechanism": {"type": "string", "minLength": 1},
+    "potential_lag": {"type": "string", "minLength": 1},
+    "point_in_time_availability": {"type": "string", "minLength": 1},
     "limitations": {
       "type": "array",
       "minItems": 1,
@@ -31,6 +39,14 @@
     "raw_snapshot_path": {"type": "string", "minLength": 1},
     "raw_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "retrieved_at": {"type": "string", "format": "date-time"},
+    "source_periods": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 4}
+    },
+    "input_series_ids": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
     "completeness": {"enum": ["complete", "incomplete", "provisional", "stale", "unavailable"]}
   }
 }

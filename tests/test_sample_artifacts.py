@@ -15,7 +15,7 @@ class SampleArtifactTests(unittest.TestCase):
         Draft202012Validator(schema, format_checker=FormatChecker()).validate(manifest)
         self.assertEqual(manifest["status"], "complete")
         self.assertEqual(manifest["counts"]["observations"], 2012)
-        self.assertEqual(manifest["counts"]["derived_observations"], 1847)
+        self.assertEqual(manifest["counts"]["derived_observations"], 1846)
         self.assertEqual(manifest["counts"]["evidence_series"], 20)
         self.assertTrue(all(not Path(path).is_absolute() for path in manifest["artifacts"].values()))
         for artifact in manifest["artifacts"].values():
@@ -26,6 +26,13 @@ class SampleArtifactTests(unittest.TestCase):
             self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), source["raw_file_sha256"])
         verification = json.loads((sample / "report/verification.json").read_text())
         validation = json.loads((sample / "validation_report.json").read_text())
+        evidence = json.loads((sample / "metrics/evidence.json").read_text())
+        evidence_schema = json.loads((repository / "schemas/evidence.schema.json").read_text())
+        evidence_validator = Draft202012Validator(
+            evidence_schema, format_checker=FormatChecker()
+        )
+        for item in evidence.values():
+            evidence_validator.validate(item)
         self.assertEqual(verification["status"], "pass")
         self.assertEqual(validation["status"], "pass")
 
