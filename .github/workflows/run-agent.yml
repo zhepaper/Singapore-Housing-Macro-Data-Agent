@@ -1,0 +1,67 @@
+name: Run Housing Data Agent
+
+on:
+  workflow_dispatch:
+    inputs:
+      as_of:
+        description: Information cut-off date (YYYY-MM-DD)
+        required: true
+        default: "2026-10-01"
+        type: string
+      mode:
+        description: Use packaged snapshots or retrieve current official sources
+        required: true
+        default: snapshots
+        type: choice
+        options:
+          - snapshots
+          - live
+
+permissions:
+  contents: read
+
+jobs:
+  run-agent:
+    name: Generate and verify report
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      REPORT_AS_OF: ${{ inputs.as_of }}
+      EXECUTION_MODE: ${{ inputs.mode }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Install project
+        run: python -m pip install -e '.[dev]'
+
+      - name: Run offline tests
+        run: PYTHONPATH=src python -m unittest discover -s tests -v
+
+      - name: Run agent
+        run: >-
+          python scripts/run_workflow.py
+          --mode "$EXECUTION_MODE"
+          --as-of "$REPORT_AS_OF"
+          --output outputs/github-report.md
+
+      - name: Show report in workflow summary
+        run: cat outputs/github-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload report and audit trail
+        uses: actions/upload-artifact@v7
+        with:
+          name: housing-agent-report-${{ inputs.as_of }}
+          path: |
+            outputs/github-report.md
+            runs/
+          if-no-files-found: error
+          retention-days: 14

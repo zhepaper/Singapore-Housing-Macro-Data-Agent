@@ -21,6 +21,18 @@ python3 -m venv .venv
 PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
 ```
 
+## Run in GitHub without local setup
+
+The repository includes a manually triggered GitHub Actions workflow, so a reviewer can run the agent entirely in the browser:
+
+1. Open the repository's **Actions** tab.
+2. Select **Run Housing Data Agent**.
+3. Click **Run workflow**, enter the reporting as-of date, and choose `snapshots` or `live`.
+4. Open the completed workflow run to read the report in the job summary.
+5. Download the `housing-agent-report-<date>` artifact for the report and complete run audit trail.
+
+`snapshots` is the recommended reproducible demonstration and requires no API key. `live` retrieves the configured official public sources and may fail if a public endpoint is temporarily unavailable. The optional OpenAI writer is intentionally not used by this browser workflow, so no repository secret is required.
+
 Run a fully offline, reproducible workflow over preserved official snapshots:
 
 ```bash
