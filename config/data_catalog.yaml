@@ -23,6 +23,9 @@
       "selector": {"property_type": "Non-Landed"},
       "transformations": ["qoq_percent_change", "yoy_percent_change"],
       "freshness_rule": {"expected_lag_days": 35}
+      ,"minimum_normalized_observations": 100
+      ,"mechanism": "Sale-market benchmark used to describe private non-landed price movements."
+      ,"limitations": ["Aggregate quality-adjusted index; not a transaction-price database."]
     },
     {
       "source_id": "ura_non_landed_rental_index",
@@ -41,6 +44,9 @@
       "selector": {"property_type": "Non-Landed", "locality": "Whole Island"},
       "transformations": ["qoq_percent_change", "yoy_percent_change"],
       "freshness_rule": {"expected_lag_days": 35}
+      ,"minimum_normalized_observations": 80
+      ,"mechanism": "Rental-market benchmark used to describe private non-landed rent movements."
+      ,"limitations": ["Based on registered tenancy agreements; not an asking-rent series."]
     },
     {
       "source_id": "private_residential_pipeline_supply",
@@ -61,6 +67,9 @@
       "series_group": "Total Non-Landed Properties",
       "transformations": ["latest_level", "qoq_absolute_change", "yoy_percent_change", "under_construction_share"],
       "freshness_rule": {"expected_lag_days": 45}
+      ,"minimum_normalized_observations": 100
+      ,"mechanism": "A larger future supply pipeline may moderate sale prices and, after completion, rental pressure."
+      ,"limitations": ["Pipeline units are not completed available stock.", "Project timing and status may be revised.", "Executive Condominiums are excluded."]
     },
     {
       "source_id": "non_resident_population",
@@ -81,7 +90,10 @@
       "selected_series_labels": ["Non-Resident Population"],
       "transformations": ["yoy_percent_change"],
       "freshness_rule": {"expected_lag_days": 100},
+      "minimum_normalized_observations": 50,
       "interpretation": "Population stock; do not interpolate to quarterly frequency."
+      ,"mechanism": "Growth in the non-resident population may expand the foreign-facing tenant base."
+      ,"limitations": ["Annual end-June population stock.", "Not all non-residents rent private non-landed homes.", "Must not be interpolated to quarterly frequency."]
     },
     {
       "source_id": "non_resident_employment_change",
@@ -98,7 +110,10 @@
       "required_text_terms": ["non-resident employment", "quarter"],
       "transformations": ["latest_quarterly_change", "previous_quarter_comparison"],
       "freshness_rule": {"expected_lag_days": 90},
+      "minimum_normalized_observations": 2,
       "interpretation": "Employment flow, not population data; final report only."
+      ,"mechanism": "Quarterly non-resident employment change is a timely signal of changes in foreign labour demand that may affect rental demand."
+      ,"limitations": ["Employment flow, not population stock.", "Excludes non-working non-residents.", "Includes workers who may live outside private non-landed housing.", "Literature supports the broader non-resident demand mechanism rather than this exact quarterly series."]
     },
     {
       "source_id": "private_non_landed_vacancy_rate",
@@ -126,6 +141,9 @@
       "formula": "vacant_non_landed / available_non_landed * 100",
       "transformations": ["qoq_percentage_point_change", "yoy_percentage_point_change"],
       "freshness_rule": {"expected_lag_days": 45}
+      ,"minimum_normalized_observations": 200
+      ,"mechanism": "Lower vacancy indicates tighter completed housing availability and may support rents."
+      ,"limitations": ["Derived from vacant and available units.", "Not an advertised-listings measure.", "Executive Condominiums are excluded."]
     },
     {
       "source_id": "three_month_compounded_sora",
@@ -147,7 +165,10 @@
       "selected_series_labels": ["Compounded Singapore Overnight Rate Average (SORA) - 3 Month"],
       "transformations": ["last_available_month_end_in_quarter"],
       "freshness_rule": {"expected_lag_days": 45},
+      "minimum_normalized_observations": 40,
       "interpretation": "Month-end financing proxy; not a daily or quarterly average and not an individual mortgage rate."
+      ,"mechanism": "Higher short-term financing costs may weaken mortgage affordability and leveraged purchase demand."
+      ,"limitations": ["Month-end financing proxy, not an individual mortgage rate.", "Quarterly representation uses the final available month-end observation.", "An incomplete quarter must be labelled."]
     },
     {
       "source_id": "real_gdp_growth",
@@ -168,6 +189,9 @@
       "selected_series_labels": ["GDP In Chained (2015) Dollars"],
       "transformations": ["official_yoy_growth", "previous_quarter_percentage_point_change"],
       "freshness_rule": {"expected_lag_days": 50}
+      ,"minimum_normalized_observations": 100
+      ,"mechanism": "Stronger real activity may support purchasing capacity and buyer confidence in the sale market."
+      ,"limitations": ["Aggregate GDP is broader than household income, disposable income, or GDP per capita.", "Published GDP values may be revised."]
     }
   ]
 }

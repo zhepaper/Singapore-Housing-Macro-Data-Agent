@@ -76,12 +76,12 @@ flowchart LR
 
 ### Phase 2 — Agent foundation
 
-- [ ] Install project dependencies in `.venv`.
-- [ ] Compile and invoke a minimal LangGraph successfully.
+- [x] Install project dependencies in `.venv`.
+- [x] Compile and invoke a minimal LangGraph successfully.
 - [x] Finalize the typed `AgentState` contract.
 - [x] Add `run_id`, `reporting_as_of_date`, catalogue version, and prompt version to state.
 - [x] Create an immutable per-run directory structure.
-- [ ] Add checkpoint/resume support.
+- [x] Add checkpoint/resume support.
 - [x] Define terminal statuses: `complete`, `partial`, `blocked`, and `failed`.
 
 **Required artifacts:**
@@ -100,7 +100,7 @@ runs/<run_id>/
 
 ### Phase 3 — Live retrieval tools
 
-- [ ] Implement a data.gov.sg retrieval tool with pagination.
+- [x] Implement a data.gov.sg retrieval tool with pagination.
 - [x] Implement the MOM final-report retrieval tool.
 - [x] Restrict normal retrieval to approved official domains.
 - [x] Add connect and read timeouts.
@@ -128,7 +128,7 @@ runs/<run_id>/
 - [x] Select the final available monthly SORA observation in each quarter.
 - [x] Mark incomplete SORA quarters.
 - [x] Preserve GDP as official YoY growth and calculate the previous-quarter percentage-point change.
-- [ ] Write normalized and derived records into the current run directory.
+- [x] Write normalized and derived records into the current run directory.
 - [ ] Link each processed record to its source-run provenance.
 
 **Exit criterion:** The same raw snapshot always produces the same normalized observations and metrics.

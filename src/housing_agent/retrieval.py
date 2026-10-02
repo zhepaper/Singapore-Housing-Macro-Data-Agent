@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import os
+import shutil
 import time
 import urllib.error
 import urllib.request
@@ -10,7 +12,7 @@ from datetime import datetime, timezone
 from email.message import Message
 from pathlib import Path
 from typing import Any, Callable
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 
 
 OFFICIAL_HOSTS = {
@@ -34,6 +36,8 @@ class RetrievalResult:
     content_type: str | None
     raw_snapshot_path: str | None
     raw_file_sha256: str | None
+    raw_page_paths: list[str]
+    raw_page_sha256s: list[str]
     bytes_received: int
     retry_count: int
     error_category: str | None
@@ -70,6 +74,52 @@ def _atomic_bytes_write(path: Path, content: bytes) -> None:
     os.replace(temporary, path)
 
 
+def _paginate_datagov(
+    initial_body: bytes,
+    initial_url: str,
+    *,
+    timeout: float,
+    opener: Callable[..., Any],
+) -> tuple[bytes, list[bytes]]:
+    payload = json.loads(initial_body)
+    result = payload.get("result")
+    if payload.get("success") is not True or not isinstance(result, dict):
+        raise ValueError("data.gov.sg response missing successful result object")
+    if not isinstance(result.get("records"), list):
+        raise ValueError("data.gov.sg response missing result.records")
+    records = list(result.get("records", []))
+    total = int(result.get("total", len(records)))
+    pages = [initial_body]
+    current_url = initial_url
+
+    while len(records) < total:
+        next_link = result.get("_links", {}).get("next")
+        if not next_link:
+            raise ValueError("Paginated data.gov.sg response has no next link")
+        next_url = urljoin(current_url, next_link)
+        validate_official_url(next_url)
+        request = urllib.request.Request(
+            next_url,
+            headers={"Accept": "application/json", "User-Agent": USER_AGENT},
+        )
+        with opener(request, timeout=timeout) as response:
+            page_body = response.read()
+        page_payload = json.loads(page_body)
+        page_result = page_payload.get("result", {})
+        page_records = page_result.get("records")
+        if not isinstance(page_records, list) or not page_records:
+            raise ValueError("Paginated data.gov.sg response returned an empty page")
+        records.extend(page_records)
+        pages.append(page_body)
+        result = page_result
+        current_url = next_url
+
+    payload["result"]["records"] = records
+    payload["result"]["total"] = total
+    payload["result"]["_links"] = result.get("_links", {})
+    return json.dumps(payload, separators=(",", ":")).encode("utf-8"), pages
+
+
 def _retry_delay(error: urllib.error.HTTPError, attempt: int, cap: float) -> float:
     retry_after = error.headers.get("Retry-After") if error.headers else None
     if retry_after:
@@ -97,7 +147,7 @@ def retrieve_source(
         validate_official_url(url)
     except ValueError as exc:
         return RetrievalResult(
-            source_id, url, retrieved_at, "failed", None, None, None, None, 0, 0,
+            source_id, url, retrieved_at, "failed", None, None, None, None, [], [], 0, 0,
             "disallowed_source", str(exc),
         )
 
@@ -115,8 +165,21 @@ def retrieve_source(
                 status = int(response.status)
                 content_type = _content_type(response.headers)
                 body = response.read()
+            raw_pages = [body]
+            if source["source_type"] == "datagov_json":
+                body, raw_pages = _paginate_datagov(
+                    body, url, timeout=timeout, opener=opener
+                )
             path = raw_dir / f"{source_id}{_suffix(content_type, source['source_type'])}"
             _atomic_bytes_write(path, body)
+            raw_page_paths: list[str] = []
+            if len(raw_pages) > 1:
+                for page_number, page_body in enumerate(raw_pages, start=1):
+                    page_path = raw_dir / f"{source_id}.page{page_number:03d}.json"
+                    _atomic_bytes_write(page_path, page_body)
+                    raw_page_paths.append(str(page_path))
+            else:
+                raw_page_paths.append(str(path))
             return RetrievalResult(
                 source_id=source_id,
                 source_url=url,
@@ -126,6 +189,8 @@ def retrieve_source(
                 content_type=content_type,
                 raw_snapshot_path=str(path),
                 raw_file_sha256=hashlib.sha256(body).hexdigest(),
+                raw_page_paths=raw_page_paths,
+                raw_page_sha256s=[hashlib.sha256(page).hexdigest() for page in raw_pages],
                 bytes_received=len(body),
                 retry_count=attempts,
                 error_category=None,
@@ -146,7 +211,7 @@ def retrieve_source(
             exc.close()
             return RetrievalResult(
                 source_id, url, datetime.now(timezone.utc).isoformat(), "failed",
-                exc.code, error_content_type, None, None, 0, attempts,
+                exc.code, error_content_type, None, None, [], [], 0, attempts,
                 category, error_message,
             )
         except (urllib.error.URLError, TimeoutError, OSError) as exc:
@@ -156,8 +221,14 @@ def retrieve_source(
                 continue
             return RetrievalResult(
                 source_id, url, datetime.now(timezone.utc).isoformat(), "failed",
-                None, None, None, None, 0, attempts,
+                None, None, None, None, [], [], 0, attempts,
                 "network_error_exhausted", str(exc),
+            )
+        except (ValueError, json.JSONDecodeError) as exc:
+            return RetrievalResult(
+                source_id, url, datetime.now(timezone.utc).isoformat(), "failed",
+                None, None, None, None, [], [], 0, attempts,
+                "schema_error", str(exc),
             )
 
 
@@ -198,3 +269,39 @@ def retrieve_catalog_sources(
             max_retries=max_retries,
         ))
     return results
+
+
+def use_approved_cached_fallback(
+    failed: RetrievalResult,
+    source: dict[str, Any],
+    *,
+    project_root: Path,
+    run_raw_dir: Path,
+) -> RetrievalResult:
+    suffix = "html" if source["source_type"] == "mom_report_html" else "json"
+    candidates = sorted(
+        (project_root / "data/raw").glob(f"spike_*/{source['source_id']}.{suffix}")
+    )
+    if not candidates:
+        return failed
+    selected = candidates[-1]
+    destination = run_raw_dir / f"{source['source_id']}.{suffix}"
+    shutil.copyfile(selected, destination)
+    body = destination.read_bytes()
+    digest = hashlib.sha256(body).hexdigest()
+    return RetrievalResult(
+        source_id=failed.source_id,
+        source_url=failed.source_url,
+        retrieved_at=datetime.now(timezone.utc).isoformat(),
+        retrieval_status="fallback",
+        http_status=failed.http_status,
+        content_type="text/html" if suffix == "html" else "application/json",
+        raw_snapshot_path=str(destination),
+        raw_file_sha256=digest,
+        raw_page_paths=[str(destination)],
+        raw_page_sha256s=[digest],
+        bytes_received=len(body),
+        retry_count=failed.retry_count,
+        error_category=f"cached_fallback_after_{failed.error_category}",
+        error_message=failed.error_message,
+    )

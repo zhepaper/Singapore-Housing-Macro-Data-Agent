@@ -73,7 +73,9 @@ def derive_vacancy_rate(items: Iterable[Observation]) -> list[Observation]:
     for period in periods:
         denominator = available[period]
         numerator = vacant[period]
-        if denominator.value in {None, 0} or numerator.value is None:
+        if denominator.value == 0:
+            raise ValueError(f"Zero available-unit denominator in {period}")
+        if denominator.value is None or numerator.value is None:
             continue
         output.append(replace(
             numerator,
@@ -97,7 +99,9 @@ def derive_pipeline_under_construction_share(items: Iterable[Observation]) -> li
     for period in sorted(set(total) & set(construction)):
         denominator = total[period]
         numerator = construction[period]
-        if denominator.value in {None, 0} or numerator.value is None:
+        if denominator.value == 0:
+            raise ValueError(f"Zero total-pipeline denominator in {period}")
+        if denominator.value is None or numerator.value is None:
             continue
         output.append(replace(
             numerator,
@@ -144,4 +148,3 @@ def quarterly_last_month_end(items: Iterable[Observation]) -> list[Observation]:
             derivation="last available month-end observation in quarter",
         ))
     return output
-

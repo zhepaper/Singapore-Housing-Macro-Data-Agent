@@ -14,7 +14,10 @@ from housing_agent.workflow import (
 class WorkflowNodeTests(unittest.TestCase):
     def test_real_snapshots_reach_validated_state(self):
         root = Path(__file__).resolve().parents[1]
-        state = {"project_root": str(root), "reporting_as_of_date": "2026-10-01"}
+        state = {
+            "project_root": str(root), "reporting_as_of_date": "2026-10-01",
+            "run_id": "node-test-run",
+        }
         state.update(load_catalog_node(state))
         state.update(discover_snapshots_node(state))
         state.update(normalize_node(state))

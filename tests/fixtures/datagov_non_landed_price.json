@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "result": {
+    "records": [
+      {"quarter": "2026-Q1", "property_type": "All Residential", "index": "198.0"},
+      {"quarter": "2026-Q1", "property_type": "Non-Landed", "index": "201.2"},
+      {"quarter": "2026-Q2", "property_type": "Non-Landed", "index": "202.4"}
+    ]
+  }
+}

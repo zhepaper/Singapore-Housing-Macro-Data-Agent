@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/writer-output.schema.json",
+  "title": "Writer output",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["narrative", "metadata"],
+  "properties": {
+    "narrative": {"type": "string", "minLength": 1},
+    "metadata": {
+      "type": "object",
+      "required": ["writer", "prompt_version", "model", "token_usage", "response_timestamp"],
+      "properties": {
+        "writer": {"type": "string"},
+        "prompt_version": {"type": "string"},
+        "model": {"type": ["string", "null"]},
+        "token_usage": {"type": ["object", "null"]},
+        "response_timestamp": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}

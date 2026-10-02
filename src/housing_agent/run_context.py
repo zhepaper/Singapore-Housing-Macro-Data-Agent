@@ -8,6 +8,9 @@ from pathlib import Path
 from typing import Any
 
 
+CHECKPOINT_ORDER = ("retrieved", "normalized", "transformed", "validated", "reported")
+
+
 @dataclass(frozen=True)
 class RunPaths:
     root: str
@@ -77,8 +80,12 @@ def initialize_run(
         "completed_at": None,
         "status": "running",
         "sources": [],
-        "artifacts": paths.to_dict(),
+        "artifacts": {
+            key: str(Path(value).relative_to(project_root))
+            for key, value in paths.to_dict().items()
+        },
         "validation_errors": [],
+        "warnings": [],
         "counts": {},
     }
     _atomic_json_write(Path(paths.manifest), manifest)
@@ -91,7 +98,10 @@ def load_run(project_root: Path, run_id: str) -> tuple[RunPaths, dict[str, Any]]
     if not manifest_path.is_file():
         raise FileNotFoundError(f"Run manifest not found: {manifest_path}")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    artifacts = manifest["artifacts"]
+    artifacts = {
+        key: str(project_root / value) if not Path(value).is_absolute() else value
+        for key, value in manifest["artifacts"].items()
+    }
     paths = RunPaths(**artifacts)
     return paths, manifest
 
@@ -107,6 +117,15 @@ def save_checkpoint(paths: RunPaths, stage: str, state: dict[str, Any]) -> str:
     return str(checkpoint_path)
 
 
+def load_latest_checkpoint(paths: RunPaths) -> tuple[str, dict[str, Any]]:
+    checkpoint_dir = Path(paths.checkpoints)
+    for stage in reversed(CHECKPOINT_ORDER):
+        path = checkpoint_dir / f"{stage}.json"
+        if path.is_file():
+            return stage, json.loads(path.read_text(encoding="utf-8"))
+    raise FileNotFoundError(f"No resumable checkpoint found in {checkpoint_dir}")
+
+
 def finalize_manifest(
     paths: RunPaths,
     *,
@@ -114,6 +133,7 @@ def finalize_manifest(
     sources: list[dict[str, Any]],
     validation_errors: list[str],
     counts: dict[str, int],
+    warnings: list[str] | None = None,
 ) -> dict[str, Any]:
     if status not in {"complete", "partial", "failed"}:
         raise ValueError(f"Invalid terminal status: {status!r}")
@@ -121,12 +141,32 @@ def finalize_manifest(
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     if manifest["status"] != "running":
         raise ValueError(f"Run is already terminal: {manifest['status']}")
+    project_root = Path(paths.root).resolve().parents[1]
+
+    def portable(value: str | None) -> str | None:
+        if not value:
+            return value
+        path = Path(value)
+        if not path.is_absolute():
+            return value
+        try:
+            return str(path.resolve().relative_to(project_root))
+        except ValueError:
+            return value
+
+    portable_sources = []
+    for source in sources:
+        item = dict(source)
+        item["raw_snapshot_path"] = portable(item.get("raw_snapshot_path"))
+        item["raw_page_paths"] = [portable(path) for path in item.get("raw_page_paths", [])]
+        portable_sources.append(item)
     manifest.update({
         "completed_at": datetime.now(timezone.utc).isoformat(),
         "status": status,
-        "sources": sources,
+        "sources": portable_sources,
         "validation_errors": validation_errors,
         "counts": counts,
+        "warnings": warnings or [],
     })
     _atomic_json_write(manifest_path, manifest)
     _atomic_json_write(Path(paths.validation_report), {

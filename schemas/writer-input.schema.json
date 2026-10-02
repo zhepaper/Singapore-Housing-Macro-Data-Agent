@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/schemas/writer-input.schema.json",
+  "title": "Writer input",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["evidence", "feedback"],
+  "properties": {
+    "evidence": {
+      "type": "object",
+      "additionalProperties": {"$ref": "evidence.schema.json"}
+    },
+    "feedback": {"type": "array", "items": {"type": "string"}}
+  }
+}

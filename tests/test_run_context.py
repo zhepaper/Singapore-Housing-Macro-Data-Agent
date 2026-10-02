@@ -8,6 +8,7 @@ from housing_agent.run_context import (
     finalize_manifest,
     generate_run_id,
     initialize_run,
+    load_latest_checkpoint,
     load_run,
     save_checkpoint,
 )
@@ -32,6 +33,9 @@ class RunContextTests(unittest.TestCase):
             self.assertTrue(Path(paths.raw).is_dir())
             checkpoint = save_checkpoint(paths, "normalized", {"run_id": run_id, "count": 3})
             self.assertEqual(json.loads(Path(checkpoint).read_text())["count"], 3)
+            stage, checkpoint_state = load_latest_checkpoint(paths)
+            self.assertEqual(stage, "normalized")
+            self.assertEqual(checkpoint_state["count"], 3)
 
             loaded_paths, loaded_manifest = load_run(root, run_id)
             self.assertEqual(loaded_paths, paths)

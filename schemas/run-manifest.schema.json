@@ -23,6 +23,7 @@
     "completed_at": {"type": ["string", "null"], "format": "date-time"},
     "status": {"enum": ["running", "complete", "partial", "failed"]},
     "validation_errors": {"type": "array", "items": {"type": "string"}},
+    "warnings": {"type": "array", "items": {"type": "string"}},
     "counts": {
       "type": "object",
       "additionalProperties": {"type": "integer", "minimum": 0}
@@ -44,21 +45,32 @@
         "source_id",
         "source_url",
         "retrieved_at",
-        "retrieval_status",
-        "validation_status"
+        "retrieval_status"
       ],
       "properties": {
         "source_id": {"type": "string", "minLength": 1},
         "source_url": {"type": "string", "format": "uri"},
         "retrieved_at": {"type": "string", "format": "date-time"},
         "http_status": {"type": ["integer", "null"]},
+        "content_type": {"type": ["string", "null"]},
         "raw_snapshot_path": {"type": ["string", "null"]},
         "raw_file_sha256": {
           "type": ["string", "null"],
           "pattern": "^[0-9a-f]{64}$"
         },
+        "raw_page_paths": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "raw_page_sha256s": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        },
         "latest_available_period": {"type": ["string", "null"]},
-        "retrieval_status": {"enum": ["success", "failed"]},
+        "retrieval_status": {"enum": ["success", "fallback", "failed"]},
+        "bytes_received": {"type": "integer", "minimum": 0},
+        "retry_count": {"type": "integer", "minimum": 0},
+        "error_category": {"type": ["string", "null"]},
         "freshness_status": {
           "enum": ["current", "stale", "not_yet_released", "unavailable"]
         },
