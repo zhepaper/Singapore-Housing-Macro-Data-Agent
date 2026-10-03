@@ -127,7 +127,7 @@ Concern-specific acceptance tests:
 - [x] Pass that exact plan directly into the Stage 3 processing interface without manual edits.
 - [x] Confirm Stage 3 produces `validated_evidence_bundle.json` for the newly onboarded
   source.
-- [ ] Confirm the report stage reads that evidence bundle rather than recalculating from
+- [x] Confirm the report stage reads that evidence bundle rather than recalculating from
   raw data.
 
 Current status:
@@ -212,8 +212,8 @@ Final acceptance checks:
 - [x] Unsupported causal or forecasting language is rejected.
 - [x] Report revision attempts are bounded.
 - [ ] Generate the final report from the complete newly approved portfolio.
-- [ ] Confirm every reported number, unit, period, and source against the evidence bundle.
-- [ ] Confirm that the report discloses as-of limitations, incomplete periods, and source
+- [x] Confirm every reported number, unit, period, and source against the evidence bundle.
+- [x] Confirm that the report discloses as-of limitations, incomplete periods, and source
   vintage limitations.
 - [ ] Complete a reviewer walkthrough from user scope to final report without manual code
   edits.
@@ -235,7 +235,8 @@ Final acceptance checks:
 Last recorded on 3 October 2026:
 
 ```text
-161 tests passed
+170 tests passed in the full regression checkpoint
+11 Stage 4 acceptance tests passed across targeted final-change runs
 1 optional live-source test skipped as designed
 Python compileall passed
 ```

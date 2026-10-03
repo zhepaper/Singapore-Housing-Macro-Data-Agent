@@ -1,0 +1,17 @@
+{
+  "title": "Singapore Private Residential Market Predictor Report",
+  "scope_summary": "Singapore private non-landed residential sale prices and rents, using public macroeconomic, financial, demographic, and market-level indicators.",
+  "user_objective": "Describe recent validated movements in the selected indicators and explain how they may be informative for sale-price and rental-market monitoring.",
+  "report_length": "concise",
+  "predictor_rationales": {
+    "three_month_compounded_sora": "Short-term financing conditions may affect mortgage affordability and leveraged purchase demand in the sale market.",
+    "real_gdp_growth": "Broad economic activity may affect income expectations, purchasing capacity, and buyer confidence.",
+    "non_resident_population": "The non-resident population is a structural measure of part of the potential foreign-facing tenant base.",
+    "non_resident_employment_change": "Quarterly non-resident employment change is a timely demand signal, but it is an employment flow rather than a population stock.",
+    "private_non_landed_vacancy_rate": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
+    "private_residential_pipeline_supply": "The future housing pipeline may affect sale and rental conditions after projects are completed."
+  },
+  "rationale_reference_ids": {},
+  "literature_records": [],
+  "source_records": []
+}

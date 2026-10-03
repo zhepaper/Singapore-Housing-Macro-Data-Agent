@@ -131,3 +131,30 @@ RUN_LIVE_TESTS=1 PYTHONPATH=src .venv/bin/python -m unittest tests.test_live_sou
 ```
 
 Start with [`SUBMISSION_REPORT.md`](SUBMISSION_REPORT.md) for the concise analytical and engineering summary. Supporting detail is in [`docs/architecture.md`](docs/architecture.md), [`docs/data-catalog.md`](docs/data-catalog.md), [`docs/data-contract.md`](docs/data-contract.md), [`docs/literature-review-and-indicator-selection.md`](docs/literature-review-and-indicator-selection.md), and [`docs/limitations.md`](docs/limitations.md).
+
+## Generate a report from Stage 3 evidence
+
+The new Stage 4 LangGraph reads `validated_evidence_bundle.json` directly. It does not read
+raw snapshots or recalculate metrics. The default writer is deterministic and requires no
+API key:
+
+```bash
+.venv/bin/python scripts/run_stage4_report.py \
+  --evidence outputs/stage3/evidence/validated_evidence_bundle.json \
+  --brief config/report_brief.example.json \
+  --output outputs/stage4 \
+  --provider deterministic \
+  --print-report
+```
+
+Add `--memory <compiled-memory.json> --plan <frozen-data-plan.json>` to carry the confirmed
+scope, reporting style, and predictor-selection rationale forward from the earlier stages.
+The plan is used only to map predictor IDs to final source and series IDs; numeric evidence
+still comes exclusively from the validated evidence bundle.
+
+The optional brief supplies scope wording, predictor rationales, literature identifiers,
+and source links; it cannot add numeric evidence. Use `--provider gemini`, `openai`,
+`anthropic`, or `deepseek` for LLM-written qualitative prose. All values, periods, units,
+lineage, and citations remain deterministically rendered and verified. A failed draft is
+revised at most three times and is otherwise saved as `blocked_report.md`, never as a final
+report. See [`docs/stage-4-report-generation-plan.md`](docs/stage-4-report-generation-plan.md).

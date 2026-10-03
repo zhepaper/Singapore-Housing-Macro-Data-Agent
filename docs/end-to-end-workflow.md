@@ -17,8 +17,10 @@ manifests support these stages but are not separate user tasks.
 ## Current Implementation Map
 
 The four stages describe the user experience. Adaptive onboarding now freezes a typed plan
-that the deterministic processor consumes directly; the remaining integration gap is the
-Stage 4 report writer's migration to the new validated evidence bundle.
+that the deterministic processor consumes directly, and Stage 4 now consumes the resulting
+validated evidence bundle. The remaining work is a live demonstration across the complete
+final portfolio and a single reviewer-facing command that chains all four stages after the
+two human approvals.
 
 | Workflow capability | Current implementation | Status |
 |---|---|---|
@@ -33,6 +35,7 @@ Stage 4 report writer's migration to the new validated evidence bundle.
 | Adaptive schema mapping and recovery for previously unseen sources | `AdaptiveMappingNode` | Implemented; repair bounded to three attempts |
 | Unified review and plan freeze | `UnifiedPlanReviewNode` | Implemented and tested |
 | Adaptive onboarding handoff to deterministic processing | `FrozenDataPlan` → Stage 3 | Implemented and tested |
+| Evidence-bound report generation and verification | `ValidatedEvidenceBundle` → Stage 4 LangGraph | Implemented and tested |
 
 ## Workflow Overview
 
@@ -556,11 +559,23 @@ The workflow selects reportable results and attaches:
 - official source and raw lineage;
 - limitations and as-of disclosures.
 
+The deterministic selector takes the latest eligible non-null observation for every
+reportable series. Predictive-lag views are excluded from the current-condition report
+because their displayed period is an outcome-alignment period rather than the original
+source period. Approved levels, quarterly comparison views, and changes remain distinct
+ledgered claims.
+
 ### 4.2 Write the report
 
 The LLM may organise and explain the validated evidence, distinguish sale and rental
 mechanisms, and produce concise qualitative interpretation. It cannot calculate new values,
 alter deterministic results, or introduce unsupported quantitative claims.
+
+The report writer receives a generated prompt containing the confirmed scope, objective,
+qualitative signal cards, predictor rationales, literature identifiers, and data-quality
+notes. All numeric text is rendered separately by deterministic code. Gemini, OpenAI,
+Anthropic, and DeepSeek writers share the same contract; a deterministic no-key writer is
+the reproducible default.
 
 ### 4.3 Verify the report
 
@@ -576,6 +591,11 @@ Deterministic checks verify:
 The workflow permits only bounded report revisions. If verification still fails, it returns
 diagnostics rather than an unverified report.
 
+The writer, composer, verifier, and revision router are compiled as a LangGraph subgraph.
+Each run preserves the exact final prompt, prompt and evidence checksums, claim ledger,
+writer metadata, verification result, and final or blocked report. Revision is capped at
+three attempts.
+
 ### Stage output
 
 - final concise analytical report;
@@ -583,6 +603,36 @@ diagnostics rather than an unverified report.
 - claim and source ledger;
 - report-verification result;
 - reproducibility artifacts.
+
+### Current command
+
+After Stage 3 has produced its evidence bundle:
+
+```bash
+.venv/bin/python scripts/run_stage4_report.py \
+  --evidence outputs/stage3/evidence/validated_evidence_bundle.json \
+  --brief config/report_brief.example.json \
+  --output outputs/stage4 \
+  --provider deterministic \
+  --print-report
+```
+
+To carry confirmed context forward automatically, also pass the compiled project-memory
+snapshot and the approved frozen plan:
+
+```bash
+  --memory outputs/project_memory/memory_vN.json \
+  --plan outputs/unified_review/frozen_data_plan.json
+```
+
+The frozen plan maps approved predictor IDs in memory to the source and series IDs found in
+the evidence bundle. A separate brief can still add reviewed literature citations and source
+page links.
+
+Use `--provider gemini`, `openai`, `anthropic`, or `deepseek` to use an LLM writer. The
+corresponding API key is read from the shell or local `.env`; it is never saved in an
+artifact. Provider choice changes only qualitative prose, not selected evidence or numeric
+claims.
 
 ## User Decision Points
 
