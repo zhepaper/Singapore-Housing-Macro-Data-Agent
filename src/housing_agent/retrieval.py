@@ -21,6 +21,7 @@ OFFICIAL_HOSTS = {
     "stats.mom.gov.sg",
     "www.ura.gov.sg",
     "www.mas.gov.sg",
+    "eservices.mas.gov.sg",
 }
 RETRYABLE_HTTP_STATUSES = {429, 500, 502, 503, 504}
 USER_AGENT = "Singapore-Housing-Macro-Data-Agent/0.1 (+public-data-research)"

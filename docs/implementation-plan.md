@@ -228,11 +228,45 @@ The first production-layer integration check on 1 October 2026 recorded an expli
 
 **Exit criterion:** A reviewer can clone the repository, run the documented command, inspect the evidence chain, and understand all material design choices.
 
+### Phase 11 — Human-governed adaptive onboarding
+
+- [x] Add append-only typed project memory and checksum manifests.
+- [x] Make SearchNode memory-aware without allowing it to choose data operations.
+- [x] Require predictor-selection rationale and memory writeback.
+- [x] Restrict DataDiscovery v2 to source structure and deterministic probes.
+- [x] Add a memory-aware DataPreparationAdvisorNode.
+- [x] Make preparation advice raw-first: re-download, checksum, preserve, and preview each approved source.
+- [x] Render one consolidated assignment-requirements table and concise recommendation.
+- [x] Support confirmed free-text user overrides before freezing deterministic contracts.
+- [x] Add deterministic semantic validation and explicit preparation review.
+- [x] Add approved-contract memory writeback and deterministic execution.
+- [x] Add reusable pre-mapping raw capture for JSON, CSV, and Excel.
+- [x] Add deterministic schema profiles without source-specific field names.
+- [x] Add multi-provider typed MappingAgent proposals.
+- [x] Execute mappings against complete snapshots and reconcile parsed observations.
+- [x] Bound deterministic mapping repair to three attempts.
+- [x] Add one unified source, mapping, preparation, and role review.
+- [x] Freeze checksummed `FrozenDataPlan` artifacts.
+- [x] Pass a repaired unseen mapping through plan freeze into Stage 3.
+- [ ] Onboard and approve verified source profiles for every selected predictor.
+- [ ] Demonstrate automatic fallback to another official representation after exhausted mapping repair.
+
+**Exit criterion:** A new supported predictor can move from literature research through
+verified source discovery and human-approved deterministic preparation without hard-coded
+LLM decisions entering production.
+
 ## 6. Immediate Next Work Session
 
-All planned implementation phases are complete. The final 2 October review additionally fixed calendar-lag alignment, graceful transformation failure routing, validated-checkpoint resume, fresh-copy test execution, evidence lineage, source-level manifest metadata, and report horizon clarity. Future work should start from the extensions in `docs/limitations.md` rather than changing the frozen take-home scope.
+Run the implemented adaptive sequence against the complete final official-source portfolio,
+record the human review, and freeze the first real `FrozenDataPlan`. Then migrate Stage 4 so
+the report generator reads only the new `validated_evidence_bundle.json`. Automatic
+representation fallback remains a separate robustness enhancement.
 
 ## 7. Definition of Done
+
+The detailed, evidence-based final test list is maintained in
+[`agent-acceptance-test-checklist.md`](agent-acceptance-test-checklist.md). An implementation
+checkbox in this plan does not replace acceptance testing in that checklist.
 
 The agent is complete only when all of the following are true:
 

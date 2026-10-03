@@ -62,6 +62,54 @@ Cached fallback is never silent. It must be explicitly enabled; a run that uses 
 
 The deterministic writer is the default and requires no API key. To use the optional LangChain OpenAI writer, set `OPENAI_API_KEY` outside the repository and pass `--writer openai`; all quantitative evidence remains deterministic and is verified after drafting.
 
+## Optional predictor-research node
+
+Before source discovery and catalog freezing, an isolated LangGraph SearchNode can research candidate predictors for a human-approved scope. It supports Gemini, OpenAI/ChatGPT, Anthropic/Claude, and DeepSeek. The node reads a compiled, human-governed project memory so it retains scope and preferences across stages. This step proposes literature-backed predictor concepts and source-frequency requirements; it does not choose aggregation, lag, interpolation, missing-value treatment, production endpoints, or approved predictors.
+
+Check the available providers and required environment variables:
+
+```bash
+.venv/bin/python scripts/run_research_search.py --list-providers
+```
+
+Create a local `.env` file from the safe template, then add the key for the provider you want to use:
+
+```bash
+cp .env.example .env
+```
+
+For Gemini, edit `.env` so that the relevant line contains your Google AI Studio key:
+
+```dotenv
+GEMINI_API_KEY=your_key_here
+```
+
+Then run the node:
+
+```bash
+.venv/bin/python scripts/run_research_search.py \
+  --provider gemini \
+  --request "Identify publicly accessible predictors for Singapore private residential sale prices and rents."
+```
+
+Use `--provider openai`, `--provider anthropic`, or `--provider deepseek` to select another provider. DeepSeek also requires `TAVILY_API_KEY` because its provider path uses Tavily for web retrieval before DeepSeek synthesis. The CLI loads `.env` from the repository root, while variables explicitly set in the calling shell take precedence. `.env` is Git-ignored and must never be committed. Detailed scope, validation, and output rules are documented in [`docs/search-node-review.md`](docs/search-node-review.md); memory and decision governance are documented in [`docs/project-memory.md`](docs/project-memory.md).
+
+SearchNode output does not enter production automatically. The human-governed onboarding
+path now supports predictor approval, bounded Gemini source discovery, independent official
+URL probing, versioned catalog-fragment approval, pre-mapping raw preservation, deterministic
+JSON/CSV/Excel schema profiling, multi-provider Mapping Contracts, bounded mapping repair,
+memory-aware preparation advice, unified approval, FrozenDataPlan creation, and deterministic
+Stage 3 execution. Start with
+[`docs/data-onboarding-workflow.md`](docs/data-onboarding-workflow.md). Discovery artifacts
+remain drafts and never overwrite `config/data_catalog.yaml`.
+
+Add `--print-summary` to print a citation-rich academic synthesis after a successful live run. To render an existing run without calling an API again:
+
+```bash
+.venv/bin/python scripts/show_research_search.py \
+  --output outputs/my_search_test
+```
+
 ## Outputs and audit trail
 
 Each run creates `runs/<run_id>/` with raw responses, checksums, normalized observations, derived metrics, checkpoints, an evidence bundle, a claim ledger, verification results, and the final report. Resume an interrupted running workflow with:

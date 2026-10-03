@@ -1,8 +1,27 @@
 # Workflow Architecture
 
+For the user-facing four-stage sequence, see
+[`end-to-end-workflow.md`](end-to-end-workflow.md).
+
 ## Design boundary
 
 LangGraph orchestrates a stateful data workflow; it does not replace data engineering. Retrieval, parsing, transformations, validation, evidence selection, numeric rendering, and report verification are deterministic Python. The optional LLM receives only a reduced qualitative view of validated evidence and can write prose, but cannot retrieve data, calculate indicators, add numbers, or override a failed gate.
+
+The governed onboarding path is separate from normal production execution:
+
+```mermaid
+flowchart LR
+    S["SearchNode: predictor research"] --> PR["Human predictor review"]
+    PR --> D["DataDiscovery: source structure only"]
+    D --> CR["Human source approval"]
+    CR --> RC["RawCapture: save response + checksum"]
+    RC --> PA["PreparationAdvisor: concise operation recommendations"]
+    PA --> HR["Human operation approval"]
+    HR --> EX["Deterministic contract execution"]
+```
+
+Project memory is available from the first research stage. Only confirmed decisions enter
+later prompts; pending questions remain visible but cannot authorize an operation.
 
 ```mermaid
 flowchart LR

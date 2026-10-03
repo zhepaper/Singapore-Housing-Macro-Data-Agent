@@ -1,0 +1,38 @@
+{
+  "excluded_channels": [
+    "hdb_bto",
+    "hdb_rental",
+    "hdb_resale"
+  ],
+  "factor_categories": [
+    "macroeconomic",
+    "financial",
+    "demographic",
+    "market_level"
+  ],
+  "geography": "Singapore",
+  "historical_start_date": "2016-01-01",
+  "housing_segments": [
+    "private_residential"
+  ],
+  "markets": [
+    "sale",
+    "rent"
+  ],
+  "preferred_frequencies": [
+    "quarterly",
+    "monthly",
+    "annual_context"
+  ],
+  "reporting_as_of_date": "2026-06-30",
+  "scope_notes": [
+    "Analyse private residential sale and rent mechanisms separately.",
+    "Annual series may be retained only as structural context.",
+    "Do not include HDB as an outcome market in this research scope."
+  ],
+  "transaction_channels": [
+    "private_new_sale",
+    "private_resale",
+    "private_rental"
+  ]
+}

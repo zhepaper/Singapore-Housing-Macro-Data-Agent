@@ -9,11 +9,21 @@ description = "Auditable public-data workflow for Singapore private non-landed h
 requires-python = ">=3.11"
 dependencies = [
   "langchain>=1.0,<2.0",
-  "langgraph>=1.0,<2.0"
+  "langgraph>=1.0,<2.0",
+  "openpyxl>=3.1,<4.0",
+  "pydantic>=2.11,<3.0",
+  "python-dotenv>=1.1,<2.0"
 ]
 
 [project.optional-dependencies]
-llm = ["langchain-openai>=1.0,<2.0"]
+llm = [
+  "anthropic>=1.0,<2.0",
+  "google-genai>=2.0,<3.0",
+  "json-repair>=0.55,<1.0",
+  "langchain-openai>=1.0,<2.0",
+  "openai>=3.0,<4.0",
+  "tavily-python>=0.7,<1.0"
+]
 dev = ["jsonschema>=4.23,<5.0"]
 
 [tool.setuptools.packages.find]
