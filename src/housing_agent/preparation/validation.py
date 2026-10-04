@@ -13,23 +13,11 @@ from housing_agent.preparation.models import (
     PreparationContract,
     PreparationValidation,
 )
+from housing_agent.processing.policy_registry import (
+    ALLOWED_CHANGE_METHODS,
+    quarterly_aggregation_allowed,
+)
 
-
-ALLOWED_CHANGE_METHODS = {
-    SeriesType.RATE: {
-        ChangeMethod.ABSOLUTE,
-        ChangeMethod.PERCENTAGE_POINT,
-        ChangeMethod.BASIS_POINT,
-        ChangeMethod.PUBLISHED_CHANGE,
-    },
-    SeriesType.INDEX: {ChangeMethod.ABSOLUTE, ChangeMethod.PERCENT},
-    SeriesType.STOCK: {ChangeMethod.ABSOLUTE, ChangeMethod.PERCENT},
-    SeriesType.FLOW: {
-        ChangeMethod.ABSOLUTE,
-        ChangeMethod.PERCENT,
-        ChangeMethod.PUBLISHED_CHANGE,
-    },
-}
 
 EXPECTED_LAGS = {
     "monthly": {"mom": 1, "qoq": 3, "yoy": 12, "period_change": 1},
@@ -65,14 +53,19 @@ def validate_preparation_contract(
             AggregationMethod.NOT_APPLICABLE,
         }:
             errors.append("A monthly-to-quarterly view requires last, mean, or sum")
-        if entry.series_type in {SeriesType.STOCK, SeriesType.INDEX} and (
-            comparison.aggregation_method == AggregationMethod.SUM
+        if not quarterly_aggregation_allowed(
+            entry.series_type, comparison.aggregation_method
         ):
-            errors.append("Stock and index levels cannot be summed across a quarter")
-        if entry.series_type == SeriesType.RATE and (
-            comparison.aggregation_method == AggregationMethod.SUM
-        ):
-            errors.append("Rates cannot be summed across a quarter")
+            if comparison.aggregation_method == AggregationMethod.SUM:
+                if entry.series_type == SeriesType.RATE:
+                    errors.append("Rates cannot be summed across a quarter")
+                elif entry.series_type in {SeriesType.STOCK, SeriesType.INDEX}:
+                    errors.append("Stock and index levels cannot be summed across a quarter")
+            else:
+                errors.append(
+                    f"{comparison.aggregation_method.value} is incompatible with "
+                    f"series_type={entry.series_type.value}"
+                )
 
     allowed_methods = ALLOWED_CHANGE_METHODS[entry.series_type]
     for calculation in contract.change_calculations:

@@ -52,7 +52,7 @@ LLM-assisted literature and source discovery
   -> report and run manifest
 ```
 
-The acquisition run stores the exact URL, retrieval timestamp, HTTP result, raw path, SHA-256 checksum, record count, latest available period, freshness status, and validation status. The frozen plan then pins the approved snapshot hash, definitions, units, observation and update frequencies, mappings, change methods, aggregation policy, and time window. Derived observations store the formula and exact source periods.
+The acquisition run stores the exact URL, retrieval timestamp, HTTP result, raw path, SHA-256 checksum, record count, latest available period, freshness status, and validation status. The frozen plan then pins the approved snapshot hash, definitions, units, observation and update frequencies, mappings, change methods, aggregation policy, and time window. A bounded policy registry permits only approved aggregation, change, and multi-series operations. Stage 3 calculates vacancy directly from the official vacant and available non-landed rows; derived observations store the formula, input series, raw-record references, and exact source periods.
 
 Lagged calculations use calendar periods rather than row positions. Quarter-on-quarter metrics require the actual preceding quarter, year-on-year quarterly metrics require the same quarter one year earlier, and annual growth requires the preceding year. Missing periods are not bridged. Annual population is not interpolated. Monthly SORA is represented by the last month-end observation only for a complete quarter. Under the approved policy, an incomplete quarter is recorded in the transformation trace and excluded from quarterly comparison.
 
@@ -68,7 +68,7 @@ The report writer never controls quantitative statements. The composer renders v
 
 An engineering review identified a non-trivial lag bug: the initial transformation function used the previous non-missing row. If 2026 Q2 were absent, it could incorrectly compare 2026 Q3 with 2026 Q1 and label the result quarter-on-quarter. The implementation now converts periods to calendar ordinals and requires the exact lagged period. Tests cover missing quarters, missing years, and accidental comparisons across different series.
 
-The same review found that a zero denominator in vacancy or pipeline calculations could raise an uncaught exception. Transformation errors are now converted into source-specific validation errors, routed through the LangGraph failure path, and persisted in diagnostics. A compiled-graph test confirms that this condition ends with a failed manifest instead of a traceback or fabricated report.
+The same review found that a zero denominator in vacancy or pipeline calculations could raise an uncaught exception. The Stage 3 derived-series contract now supports only `ratio`, `share_of_total`, `sum`, and `difference`; it rejects a zero denominator, mismatched input periods, or unapproved input labels. Errors are routed through the controlled recovery path rather than producing a fabricated rate.
 
 The offline suite additionally covers source adapters, missing labels, changed MOM wording, ambiguous and missing values, unit changes, duplicate periods, truncated history, freshness, incomplete SORA quarters, HTTP retry behavior, report tampering, checkpoint resume, schema conformance, and portable sample artifacts. A separate opt-in test checks current live endpoints.
 

@@ -36,7 +36,12 @@ def write_observations_csv(path: Path, observations: Iterable[CanonicalObservati
     path.parent.mkdir(parents=True, exist_ok=True)
     fieldnames = list(CanonicalObservation.model_fields)
     with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames, extrasaction="ignore")
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=fieldnames,
+            extrasaction="ignore",
+            lineterminator="\n",
+        )
         writer.writeheader()
         for row in rows:
             writer.writerow({

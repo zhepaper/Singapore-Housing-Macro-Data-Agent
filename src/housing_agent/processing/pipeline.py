@@ -12,7 +12,7 @@ from housing_agent.processing.models import (
     Stage3RunResult,
     ValidatedEvidenceBundle,
 )
-from housing_agent.processing.normalization import MappingFailure, normalize_plan
+from housing_agent.processing.normalization import MappingFailure, normalize_plan_with_trace
 from housing_agent.processing.persistence import (
     write_checkpoint,
     write_json,
@@ -69,7 +69,7 @@ def _run_stage3(plan: FrozenDataPlan, output_directory: str | Path) -> Stage3Run
         )
 
     try:
-        normalized = normalize_plan(plan)
+        normalized, derivation_traces = normalize_plan_with_trace(plan)
     except MappingFailure as exc:
         issue = ProcessingIssue(
             code="MAPPING_CONTRACT_FAILED",
@@ -114,7 +114,7 @@ def _run_stage3(plan: FrozenDataPlan, output_directory: str | Path) -> Stage3Run
     for item in resolved:
         grouped[(item.source_id, item.series_id)].append(item)
     transformed = []
-    traces = []
+    traces = list(derivation_traces)
     try:
         for series in sorted(plan.series, key=lambda item: (item.source_id, item.series_id)):
             output, trace = transform_series(

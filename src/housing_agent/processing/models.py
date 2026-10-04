@@ -12,6 +12,7 @@ from pydantic import ConfigDict, Field, field_validator, model_validator
 
 from housing_agent.onboarding.discovery_models import SeriesType
 from housing_agent.preparation.models import PreparationContract
+from housing_agent.processing.policy_registry import DerivedOperation
 from housing_agent.research.models import StrictModel
 
 
@@ -62,6 +63,26 @@ class MappingContract(FrozenStrictModel):
         return self
 
 
+class DerivedSeriesContract(FrozenStrictModel):
+    operation: DerivedOperation
+    input_series_filters: dict[str, str] = Field(min_length=2)
+    scale: Decimal = Decimal("1")
+    zero_denominator_policy: Literal["error"] = "error"
+
+    @model_validator(mode="after")
+    def operation_has_required_inputs(self) -> "DerivedSeriesContract":
+        names = set(self.input_series_filters)
+        if self.operation in {DerivedOperation.RATIO, DerivedOperation.SHARE_OF_TOTAL}:
+            if names != {"numerator", "denominator"}:
+                raise ValueError("ratio/share_of_total require numerator and denominator")
+        elif self.operation == DerivedOperation.DIFFERENCE:
+            if names != {"minuend", "subtrahend"}:
+                raise ValueError("difference requires minuend and subtrahend")
+        elif self.operation == DerivedOperation.SUM and len(names) < 2:
+            raise ValueError("sum requires at least two inputs")
+        return self
+
+
 class FrozenSeriesPlan(FrozenStrictModel):
     source_id: str = Field(min_length=2)
     series_id: str = Field(pattern=r"^[a-z0-9][a-z0-9_]*$")
@@ -69,6 +90,7 @@ class FrozenSeriesPlan(FrozenStrictModel):
     snapshot_path: str = Field(min_length=1)
     snapshot_sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
     mapping_contract: MappingContract
+    derived_series_contract: DerivedSeriesContract | None = None
     preparation_contract: PreparationContract
     definition: str = Field(min_length=10)
     unit: str = Field(min_length=1)
@@ -92,6 +114,15 @@ class FrozenSeriesPlan(FrozenStrictModel):
             raise ValueError("preparation contract source_id does not match series plan")
         if self.preparation_contract.native_frequency != self.observation_frequency:
             raise ValueError("preparation contract frequency does not match series plan")
+        if self.derived_series_contract is not None:
+            if self.mapping_contract.series_filter_field is None:
+                raise ValueError("derived series require a mapping series_filter_field")
+            if self.mapping_contract.series_filter_value not in set(
+                self.derived_series_contract.input_series_filters.values()
+            ):
+                raise ValueError(
+                    "mapping series_filter_value must identify one approved derived input"
+                )
         return self
 
 

@@ -5,11 +5,15 @@ from datetime import date
 from decimal import Decimal
 from typing import Iterable
 
-from housing_agent.onboarding.discovery_models import AggregationMethod, ChangeMethod, SeriesType
+from housing_agent.onboarding.discovery_models import AggregationMethod, ChangeMethod
 from housing_agent.processing.models import (
     CanonicalObservation,
     FrozenSeriesPlan,
     TransformationTrace,
+)
+from housing_agent.processing.policy_registry import (
+    change_method_allowed,
+    quarterly_aggregation_allowed,
 )
 
 
@@ -76,10 +80,12 @@ def aggregate_monthly_to_quarterly(
     if series.observation_frequency != "monthly":
         raise TransformationFailure("quarterly comparison is only valid for monthly inputs")
     method = view.aggregation_method
-    if method == AggregationMethod.SUM and series.series_type != SeriesType.FLOW:
-        raise TransformationFailure("quarterly sum is allowed only for flow series")
     if method == AggregationMethod.PRESERVE or method == AggregationMethod.NOT_APPLICABLE:
         raise TransformationFailure("monthly quarterly view requires mean, last, or sum")
+    if not quarterly_aggregation_allowed(series.series_type, method):
+        raise TransformationFailure(
+            f"{method.value} is not approved for {series.series_type.value} series"
+        )
     groups: dict[str, list[CanonicalObservation]] = defaultdict(list)
     for item in observations:
         if item.eligibility_status not in {"eligible", "missing_at_source"}:
@@ -145,18 +151,6 @@ def aggregate_monthly_to_quarterly(
     return output, traces
 
 
-def _allowed_change(series_type: SeriesType, method: ChangeMethod) -> bool:
-    if method == ChangeMethod.PUBLISHED_CHANGE:
-        return True
-    if series_type == SeriesType.RATE:
-        return method in {
-            ChangeMethod.ABSOLUTE,
-            ChangeMethod.PERCENTAGE_POINT,
-            ChangeMethod.BASIS_POINT,
-        }
-    return method in {ChangeMethod.ABSOLUTE, ChangeMethod.PERCENT}
-
-
 def calculate_changes(
     observations: Iterable[CanonicalObservation],
     series: FrozenSeriesPlan,
@@ -169,7 +163,7 @@ def calculate_changes(
     for calculation in series.preparation_contract.change_calculations:
         if calculation.method == ChangeMethod.PUBLISHED_CHANGE:
             continue
-        if not _allowed_change(series.series_type, calculation.method):
+        if not change_method_allowed(series.series_type, calculation.method):
             raise TransformationFailure(
                 f"{calculation.method.value} is not valid for {series.series_type.value} series"
             )

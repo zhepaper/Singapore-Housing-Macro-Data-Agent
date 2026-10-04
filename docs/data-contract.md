@@ -36,6 +36,11 @@ For sources that do not expose historical release dates, the workflow can reprod
 ## Frequency rules
 
 - Quarterly URA benchmarks, pipeline supply, vacancy inputs, and GDP remain quarterly.
+- Multi-series derivations are restricted to the registered `ratio`, `share_of_total`,
+  `sum`, and `difference` operations. Each contract names the exact approved input-series
+  filters and scale. Vacancy is calculated as `Vacant Non-Landed / Available Non-Landed ×
+  100` directly from the checksum-pinned official snapshot; zero denominators and mismatched
+  input-period coverage fail closed.
 - Annual non-resident population remains annual and is never forward-filled or interpolated into invented quarterly observations.
 - Quarterly non-resident employment change remains a separate employment-flow series.
 - Monthly end-of-period 3-month Compounded SORA is represented quarterly only by selecting the last available month-end value in the quarter. The actual observation month is retained; a missing quarter-end month sets `quarter_incomplete = true`.

@@ -11,8 +11,18 @@ from pathlib import Path
 from openpyxl import Workbook
 
 from housing_agent.onboarding.discovery_models import SeriesType
-from housing_agent.processing.models import FrozenDataPlan, FrozenSeriesPlan, MappingContract
-from housing_agent.processing.normalization import MappingFailure, normalize_series
+from housing_agent.processing.models import (
+    DerivedSeriesContract,
+    FrozenDataPlan,
+    FrozenSeriesPlan,
+    MappingContract,
+)
+from housing_agent.processing.normalization import (
+    MappingFailure,
+    normalize_series,
+    normalize_series_with_trace,
+)
+from housing_agent.processing.policy_registry import DerivedOperation
 from housing_agent.processing.validation import validate_series
 from tests.test_processing_integrity import _preparation
 
@@ -52,6 +62,131 @@ def _make_plan(path: Path, mapping: MappingContract, *, market: str = "sale") ->
 
 
 class ProcessingNormalizationTests(unittest.TestCase):
+    def test_ratio_is_derived_from_two_approved_raw_series_with_lineage(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            raw = Path(directory) / "vacancy.json"
+            raw.write_text(json.dumps({"result": {"records": [
+                {"series": "Available", "20261Q": "1000", "20262Q": "1200"},
+                {"series": "Vacant", "20261Q": "50", "20262Q": "72"},
+            ]}}), encoding="utf-8")
+            digest = hashlib.sha256(raw.read_bytes()).hexdigest()
+            source_id = "vacancy_source"
+            series_id = "vacancy_rate"
+            mapping = MappingContract(
+                contract_version="1",
+                source_id=source_id,
+                series_id=series_id,
+                source_format="json",
+                layout="wide",
+                records_path=("result", "records"),
+                series_filter_field="series",
+                series_filter_value="Available",
+                wide_period_pattern=r"\d{5}Q",
+            )
+            series = FrozenSeriesPlan(
+                source_id=source_id,
+                series_id=series_id,
+                series_label="Vacancy rate",
+                snapshot_path=str(raw),
+                snapshot_sha256=digest,
+                mapping_contract=mapping,
+                derived_series_contract=DerivedSeriesContract(
+                    operation=DerivedOperation.RATIO,
+                    input_series_filters={
+                        "numerator": "Vacant",
+                        "denominator": "Available",
+                    },
+                    scale=Decimal("100"),
+                ),
+                preparation_contract=_preparation(source_id, series_id, "quarterly"),
+                definition="Share of available housing units that are vacant.",
+                unit="percent",
+                observation_frequency="quarterly",
+                update_frequency="quarterly",
+                series_type=SeriesType.RATE,
+                portfolio_role="predictor",
+                market_role="rent",
+            )
+            draft = FrozenDataPlan(
+                plan_id="derived_ratio_test",
+                plan_version=1,
+                plan_sha256="0" * 64,
+                approval_status="approved",
+                approved_by="Test reviewer",
+                approved_at=datetime(2026, 6, 30, tzinfo=timezone.utc),
+                reporting_as_of_date=date(2026, 6, 30),
+                historical_start_date=date(2026, 1, 1),
+                historical_end_date=date(2026, 6, 30),
+                series=(series,),
+            )
+            plan = draft.model_copy(update={"plan_sha256": draft.computed_sha256()})
+
+            rows, traces = normalize_series_with_trace(plan, series)
+
+            self.assertEqual([item.value for item in rows], [Decimal("5.00"), Decimal("6.00")])
+            self.assertTrue(all(item.derivation == "ratio of approved input series; scale=100" for item in rows))
+            self.assertEqual(traces[0].operation, "derive_ratio")
+            self.assertEqual(
+                traces[0].parameters["input_series_filters"]["numerator"], "Vacant"
+            )
+
+    def test_derived_ratio_rejects_zero_denominator(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            raw = Path(directory) / "vacancy.json"
+            raw.write_text(json.dumps({"result": {"records": [
+                {"series": "Available", "20261Q": "0"},
+                {"series": "Vacant", "20261Q": "1"},
+            ]}}), encoding="utf-8")
+            digest = hashlib.sha256(raw.read_bytes()).hexdigest()
+            mapping = MappingContract(
+                contract_version="1",
+                source_id="vacancy_source",
+                series_id="vacancy_rate",
+                source_format="json",
+                layout="wide",
+                records_path=("result", "records"),
+                series_filter_field="series",
+                series_filter_value="Available",
+                wide_period_pattern=r"\d{5}Q",
+            )
+            series = FrozenSeriesPlan(
+                source_id="vacancy_source",
+                series_id="vacancy_rate",
+                series_label="Vacancy rate",
+                snapshot_path=str(raw),
+                snapshot_sha256=digest,
+                mapping_contract=mapping,
+                derived_series_contract=DerivedSeriesContract(
+                    operation="ratio",
+                    input_series_filters={"numerator": "Vacant", "denominator": "Available"},
+                    scale=Decimal("100"),
+                ),
+                preparation_contract=_preparation("vacancy_source", "vacancy_rate", "quarterly"),
+                definition="Share of available housing units that are vacant.",
+                unit="percent",
+                observation_frequency="quarterly",
+                update_frequency="quarterly",
+                series_type=SeriesType.RATE,
+                portfolio_role="predictor",
+                market_role="rent",
+            )
+            draft = FrozenDataPlan(
+                plan_id="zero_denominator_test",
+                plan_version=1,
+                plan_sha256="0" * 64,
+                approval_status="approved",
+                approved_by="Test reviewer",
+                approved_at=datetime(2026, 3, 31, tzinfo=timezone.utc),
+                reporting_as_of_date=date(2026, 3, 31),
+                historical_start_date=date(2026, 1, 1),
+                historical_end_date=date(2026, 3, 31),
+                series=(series,),
+            )
+            plan = draft.model_copy(update={"plan_sha256": draft.computed_sha256()})
+
+            with self.assertRaisesRegex(MappingFailure, "zero denominator"):
+                normalize_series(plan, series)
+
     def test_singstat_quarter_period_is_canonicalized(self) -> None:
         from housing_agent.processing.normalization import parse_period
 

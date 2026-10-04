@@ -13,7 +13,10 @@ from housing_agent.processing.models import (
     CanonicalObservation,
     FrozenDataPlan,
     FrozenSeriesPlan,
+    MappingContract,
+    TransformationTrace,
 )
+from housing_agent.processing.policy_registry import DerivedOperation
 
 
 class MappingFailure(ValueError):
@@ -200,10 +203,12 @@ def _emit(
     raw_value: Any,
     raw_reference: str,
     release_value: Any = None,
+    contract: MappingContract | None = None,
 ) -> CanonicalObservation:
+    active_contract = contract or series.mapping_contract
     period, period_end = parse_period(period_value, series.observation_frequency)
-    parsed = parse_decimal(raw_value, series.mapping_contract.missing_markers)
-    scaled = parsed * series.mapping_contract.unit_scale if parsed is not None else None
+    parsed = parse_decimal(raw_value, active_contract.missing_markers)
+    scaled = parsed * active_contract.unit_scale if parsed is not None else None
     release_date = _parse_release_date(release_value)
     available_date = release_date or period_end + timedelta(days=series.release_lag_days)
     return CanonicalObservation(
@@ -229,9 +234,14 @@ def _emit(
     )
 
 
-def normalize_series(plan: FrozenDataPlan, series: FrozenSeriesPlan) -> list[CanonicalObservation]:
-    records = load_raw_records(series)
-    contract = series.mapping_contract
+def _normalize_with_contract(
+    plan: FrozenDataPlan,
+    series: FrozenSeriesPlan,
+    contract: MappingContract,
+    *,
+    reference_prefix: str = "",
+) -> list[CanonicalObservation]:
+    records = load_mapping_records(series.snapshot_path, contract)
     output: list[CanonicalObservation] = []
     if contract.layout == "long":
         assert contract.date_field and contract.value_field
@@ -248,7 +258,10 @@ def normalize_series(plan: FrozenDataPlan, series: FrozenSeriesPlan) -> list[Can
                     get_record_value(record, contract.release_date_field)
                     if contract.release_date_field else None
                 ),
-                raw_reference=f"record:{index}/field:{contract.value_field}",
+                raw_reference=(
+                    f"{reference_prefix}record:{index}/field:{contract.value_field}"
+                ),
+                contract=contract,
             ))
     else:
         assert contract.wide_period_pattern
@@ -266,13 +279,153 @@ def normalize_series(plan: FrozenDataPlan, series: FrozenSeriesPlan) -> list[Can
                     series=series,
                     period_value=field,
                     raw_value=record.get(field),
-                    raw_reference=f"record:{index}/field:{field}",
+                    raw_reference=f"{reference_prefix}record:{index}/field:{field}",
+                    contract=contract,
                 ))
     return sorted(output, key=lambda item: (item.period, item.raw_record_reference))
 
 
-def normalize_plan(plan: FrozenDataPlan) -> list[CanonicalObservation]:
+def _derived_value(
+    operation: DerivedOperation,
+    values: dict[str, Decimal],
+    scale: Decimal,
+) -> Decimal:
+    if operation in {DerivedOperation.RATIO, DerivedOperation.SHARE_OF_TOTAL}:
+        denominator = values["denominator"]
+        if denominator == 0:
+            raise MappingFailure("derived ratio cannot use a zero denominator")
+        return values["numerator"] / denominator * scale
+    if operation == DerivedOperation.DIFFERENCE:
+        return (values["minuend"] - values["subtrahend"]) * scale
+    return sum(values.values(), Decimal("0")) * scale
+
+
+def _combine_eligibility(rows: list[CanonicalObservation]) -> str:
+    statuses = {item.eligibility_status for item in rows}
+    for status in ("before_window", "after_as_of", "missing_at_source"):
+        if status in statuses:
+            return status
+    return "eligible"
+
+
+def _normalize_derived_series(
+    plan: FrozenDataPlan,
+    series: FrozenSeriesPlan,
+) -> tuple[list[CanonicalObservation], list[TransformationTrace]]:
+    derived = series.derived_series_contract
+    assert derived is not None
+    inputs: dict[str, dict[str, CanonicalObservation]] = {}
+    for input_name, filter_value in derived.input_series_filters.items():
+        contract = series.mapping_contract.model_copy(
+            update={"series_filter_value": filter_value}
+        )
+        rows = _normalize_with_contract(
+            plan,
+            series,
+            contract,
+            reference_prefix=f"input:{input_name}/",
+        )
+        inputs[input_name] = {item.period: item for item in rows}
+
+    period_sets = {name: set(rows) for name, rows in inputs.items()}
+    all_periods = set().union(*period_sets.values())
+    for name, periods in period_sets.items():
+        if periods != all_periods:
+            missing = sorted(all_periods - periods)
+            raise MappingFailure(
+                f"derived input {name!r} is missing period(s): {missing[:5]}"
+            )
+
     output: list[CanonicalObservation] = []
+    traces: list[TransformationTrace] = []
+    for period in sorted(all_periods):
+        rows = [inputs[name][period] for name in derived.input_series_filters]
+        eligibility = _combine_eligibility(rows)
+        values = {
+            name: inputs[name][period].value
+            for name in derived.input_series_filters
+        }
+        value = None
+        if all(item is not None for item in values.values()):
+            value = _derived_value(
+                derived.operation,
+                {name: item for name, item in values.items() if item is not None},
+                derived.scale,
+            )
+        base = rows[0]
+        source_periods = tuple(item.period for item in rows)
+        input_ids = tuple(
+            f"{series.series_id}:{name}" for name in derived.input_series_filters
+        )
+        raw_reference = "|".join(item.raw_record_reference for item in rows)
+        original_value = ";".join(
+            f"{name}={values[name]}" for name in derived.input_series_filters
+        )
+        output.append(base.model_copy(update={
+            "series_id": series.series_id,
+            "series_label": series.series_label,
+            "value": value,
+            "unit": series.unit,
+            "eligibility_status": eligibility,
+            "raw_record_reference": raw_reference,
+            "original_value": original_value,
+            "release_date": max(
+                (item.release_date for item in rows if item.release_date is not None),
+                default=None,
+            ),
+            "available_date": max(
+                (item.available_date for item in rows if item.available_date is not None),
+                default=None,
+            ),
+            "derivation": (
+                f"{derived.operation.value} of approved input series; "
+                f"scale={derived.scale}"
+            ),
+            "source_periods": source_periods,
+            "input_series_ids": input_ids,
+        }))
+        traces.append(TransformationTrace(
+            operation_id=f"{series.series_id}:derive:{period}",
+            operation=f"derive_{derived.operation.value}",
+            source_id=series.source_id,
+            output_series_id=series.series_id,
+            parameters={
+                "operation": derived.operation.value,
+                "scale": str(derived.scale),
+                "input_series_filters": derived.input_series_filters,
+                "zero_denominator_policy": derived.zero_denominator_policy,
+            },
+            input_periods=source_periods,
+            output_period=period,
+        ))
+    return output, traces
+
+
+def normalize_series_with_trace(
+    plan: FrozenDataPlan, series: FrozenSeriesPlan
+) -> tuple[list[CanonicalObservation], list[TransformationTrace]]:
+    if series.derived_series_contract is not None:
+        return _normalize_derived_series(plan, series)
+    return _normalize_with_contract(plan, series, series.mapping_contract), []
+
+
+def normalize_series(plan: FrozenDataPlan, series: FrozenSeriesPlan) -> list[CanonicalObservation]:
+    observations, _ = normalize_series_with_trace(plan, series)
+    return observations
+
+
+def normalize_plan_with_trace(
+    plan: FrozenDataPlan,
+) -> tuple[list[CanonicalObservation], list[TransformationTrace]]:
+    output: list[CanonicalObservation] = []
+    traces: list[TransformationTrace] = []
     for series in sorted(plan.series, key=lambda item: (item.source_id, item.series_id)):
-        output.extend(normalize_series(plan, series))
-    return output
+        observations, series_traces = normalize_series_with_trace(plan, series)
+        output.extend(observations)
+        traces.extend(series_traces)
+    return output, traces
+
+
+def normalize_plan(plan: FrozenDataPlan) -> list[CanonicalObservation]:
+    observations, _ = normalize_plan_with_trace(plan)
+    return observations

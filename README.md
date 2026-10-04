@@ -32,6 +32,10 @@ Run the complete reviewer-facing workflow from the approved data plan to a verif
 This command is offline, deterministic, and requires no API key. It verifies every raw
 snapshot checksum, normalizes and validates all eight series, applies only the approved
 transformations, writes a validated evidence bundle, and generates a claim-checked report.
+The Stage 3 policy registry restricts aggregation, change, and derived-series operations to
+approved methods. For example, the vacancy rate is calculated inside Stage 3 directly from
+the official vacant and available non-landed rows, with both inputs and the ratio formula
+recorded in lineage; it is not read from a precomputed analytical file.
 The included plan uses an information cut-off of **2026-10-01** and excludes observations
 outside its approved historical window. To use a different cut-off or series selection,
 complete the discovery/review stages and freeze a new approved plan rather than silently

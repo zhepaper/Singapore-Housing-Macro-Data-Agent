@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "plan_id": "singapore_private_housing_submission",
   "plan_version": 1,
-  "plan_sha256": "2f0926d8a196ed1e3c92e6e38142e59856f4e6a83c3c717695c1e65f75d66f6b",
+  "plan_sha256": "686033f07ae4640a11078e65c0fbacd39b17e33c403bcf50470aef98333a8a36",
   "approval_status": "approved",
   "approved_by": "Project owner",
   "approved_at": "2026-10-04T11:30:00+08:00",
@@ -261,21 +261,31 @@
       "source_id": "private_non_landed_vacancy_rate",
       "series_id": "private_non_landed_vacancy_rate",
       "series_label": "Private non-landed vacancy rate",
-      "snapshot_path": "sample_run/stage3_inputs/private_non_landed_vacancy_rate.csv",
-      "snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+      "snapshot_path": "sample_run/raw/private_non_landed_vacancy_rate.json",
+      "snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
       "mapping_contract": {
         "contract_version": "1",
         "source_id": "private_non_landed_vacancy_rate",
         "series_id": "private_non_landed_vacancy_rate",
-        "source_format": "csv",
-        "layout": "long",
-        "records_path": [],
+        "source_format": "json",
+        "layout": "wide",
+        "records_path": ["result", "records"],
+        "series_filter_field": "DataSeries",
+        "series_filter_value": "    Available Non-Landed Properties",
         "additional_series_filters": {},
-        "date_field": "period",
-        "value_field": "value",
-        "period_format": "quarter",
+        "wide_period_pattern": "\\d{5}Q",
+        "period_format": "singstat_quarter",
         "missing_markers": ["", "-", "..", "na", "n.a.", "null"],
         "unit_scale": "1"
+      },
+      "derived_series_contract": {
+        "operation": "ratio",
+        "input_series_filters": {
+          "numerator": "    Vacant Non-Landed Properties",
+          "denominator": "    Available Non-Landed Properties"
+        },
+        "scale": "100",
+        "zero_denominator_policy": "error"
       },
       "preparation_contract": {
         "source_id": "private_non_landed_vacancy_rate",

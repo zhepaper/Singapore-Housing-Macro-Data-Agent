@@ -2,15 +2,6 @@
   "schema_version": "1.0",
   "records": [
     {
-      "source_id": "private_non_landed_vacancy_rate",
-      "official_raw_snapshot": "sample_run/raw/private_non_landed_vacancy_rate.json",
-      "official_raw_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
-      "stage3_input_snapshot": "sample_run/stage3_inputs/private_non_landed_vacancy_rate.csv",
-      "stage3_input_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
-      "extraction": "Select the official Available Non-Landed Properties and Vacant Non-Landed Properties rows, then calculate vacant / available * 100 for each quarter.",
-      "verification": "The extracted values match the committed deterministic derived-observation record."
-    },
-    {
       "source_id": "non_resident_employment_change",
       "official_raw_snapshot": "sample_run/raw/non_resident_employment_change.html",
       "official_raw_sha256": "7e9dd3d4e0d7ec68c0d4541800a7d3f8df3b5a3d730f617334d8515a1dedceb2",
