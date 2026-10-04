@@ -6,6 +6,8 @@
   "stage3_status": "success",
   "evidence_bundle": "stage3/evidence/validated_evidence_bundle.json",
   "stage4_status": "success",
+  "report_provider": "deterministic",
+  "report_model": null,
   "report": "stage4/final_report.md",
   "verification": "stage4/verification_report.json"
 }

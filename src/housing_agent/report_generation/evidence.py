@@ -14,7 +14,7 @@ from housing_agent.report_generation.models import (
 )
 
 
-PROMPT_VERSION = "stage4-evidence-writer-v1"
+PROMPT_VERSION = "stage4-grounded-academic-writer-v2"
 
 
 def evidence_sha256(bundle: ValidatedEvidenceBundle) -> str:
@@ -47,9 +47,21 @@ def _latest_by_series(
         if "__predictive_lag_" in item.series_id:
             continue
         grouped[(item.source_id, item.series_id)].append(item)
-    return [
+    latest = [
         sorted(rows, key=lambda item: item.period)[-1]
         for _, rows in sorted(grouped.items())
+    ]
+    quarterly_bases = {
+        item.series_id.split("__quarterly_", 1)[0]
+        for item in latest
+        if "__quarterly_" in item.series_id
+    }
+    return [
+        item for item in latest
+        if not (
+            item.observation_frequency == "monthly"
+            and item.series_id in quarterly_bases
+        )
     ]
 
 

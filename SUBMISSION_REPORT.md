@@ -62,7 +62,7 @@ The workflow fails closed when a snapshot hash does not match the approved plan,
 
 The discovery and acquisition stages use an official-domain allowlist, bounded retries, rate limiting, and `Retry-After` handling. The submitted deterministic reproduction performs no network call: it verifies and processes the pinned evidence already stored in the repository.
 
-The report writer never controls quantitative statements. The composer renders values directly from validated evidence and creates a claim ledger. The verifier checks every reported value, unit, period, source URL, and incomplete-quarter disclosure against that evidence.
+The report writer never controls quantitative statements. It creates continuous academic prose using immutable evidence anchors. The composer expands each anchor into a reader-facing sentence whose value, unit, period, and source come directly from validated evidence. The verifier rejects altered, duplicated, missing, or unledgered numerical statements.
 
 ## 6. Representative test and improvement
 
@@ -76,7 +76,7 @@ The offline suite additionally covers source adapters, missing labels, changed M
 
 Codex was used during development to help structure the literature review, inspect official-source formats, draft and review code, generate tests, and identify reliability gaps. Its suggestions were checked against official source pages, preserved raw responses, deterministic calculations, and automated tests before inclusion.
 
-The submitted sample report uses the default deterministic writer and requires no LLM credentials. Optional LangChain adapters support Gemini, OpenAI, Anthropic, DeepSeek, Groq, and local Ollama for research or qualitative prose. A report writer receives only validated evidence and cannot select indicators, calculate values, modify evidence, bypass failed validation, or write unverified quantitative claims. Its provider, model, prompt version, prompt hash, attempts, and available usage metadata are recorded.
+The submitted sample report uses the readable deterministic fallback and requires no LLM credentials. Optional LangChain adapters support Gemini, OpenAI, Anthropic, DeepSeek, Groq, and local Ollama for evidence-grounded academic prose. A report writer receives only validated evidence and can organise claims and explain mechanisms, but cannot select indicators, calculate values, modify evidence, bypass failed validation, or write unverified quantitative claims. Its provider, model, prompt version, prompt hash, attempts, and available usage metadata are recorded.
 
 ## 8. Limitations
 

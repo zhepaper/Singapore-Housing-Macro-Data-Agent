@@ -336,37 +336,6 @@
     },
     {
       "claim_id": "CLAIM-012",
-      "derivation": null,
-      "literature_reference_ids": [
-        "Tu2004",
-        "IMF2018",
-        "RangelNg2017"
-      ],
-      "market_role": "sale",
-      "observation_frequency": "monthly",
-      "period": "2026-06",
-      "portfolio_role": "predictor",
-      "quality_notes": [
-        "No observation-level release date was supplied; the workflow relies on the approved availability rule."
-      ],
-      "rationale": "Short-term financing conditions may affect mortgage affordability and leveraged purchase demand in the sale market.",
-      "raw_record_reference": "record:0/field:2026Jun",
-      "raw_snapshot_sha256": "51dc6f246693b96e61307b2d5d54ce35226467632daa4e1bddfae03636325947",
-      "series_id": "three_month_compounded_sora",
-      "series_label": "Three-month Compounded SORA",
-      "source_id": "three_month_compounded_sora",
-      "source_periods": [
-        "2026-06"
-      ],
-      "source_title": "Singapore dollar interest rate benchmarks (M700071)",
-      "source_url": "https://data.gov.sg/datasets/d_5fe5a4bb4a1ecc4d8a56a095832e2b24/view",
-      "unit": "percent per annum",
-      "update_frequency": "monthly",
-      "value": "1.0825",
-      "value_text": "1.083"
-    },
-    {
-      "claim_id": "CLAIM-013",
       "derivation": "monthly to quarterly last; policy=reject",
       "literature_reference_ids": [
         "Tu2004",
@@ -400,7 +369,7 @@
       "value_text": "1.083"
     },
     {
-      "claim_id": "CLAIM-014",
+      "claim_id": "CLAIM-013",
       "derivation": "basis_point_change using calendar lag 1",
       "literature_reference_ids": [
         "Tu2004",
@@ -433,7 +402,7 @@
       "value_text": "1.17"
     },
     {
-      "claim_id": "CLAIM-015",
+      "claim_id": "CLAIM-014",
       "derivation": null,
       "literature_reference_ids": [],
       "market_role": "sale",
@@ -460,7 +429,7 @@
       "value_text": "210.6"
     },
     {
-      "claim_id": "CLAIM-016",
+      "claim_id": "CLAIM-015",
       "derivation": "percentage_change using calendar lag 1",
       "literature_reference_ids": [],
       "market_role": "sale",
@@ -489,7 +458,7 @@
       "value_text": "-0.095"
     },
     {
-      "claim_id": "CLAIM-017",
+      "claim_id": "CLAIM-016",
       "derivation": "percentage_change using calendar lag 4",
       "literature_reference_ids": [],
       "market_role": "sale",
@@ -518,7 +487,7 @@
       "value_text": "1.838"
     },
     {
-      "claim_id": "CLAIM-018",
+      "claim_id": "CLAIM-017",
       "derivation": null,
       "literature_reference_ids": [
         "Tu2004",
@@ -548,7 +517,7 @@
       "value_text": "51,677"
     },
     {
-      "claim_id": "CLAIM-019",
+      "claim_id": "CLAIM-018",
       "derivation": "absolute_change using calendar lag 1",
       "literature_reference_ids": [
         "Tu2004",
@@ -580,7 +549,7 @@
       "value_text": "3,566"
     },
     {
-      "claim_id": "CLAIM-020",
+      "claim_id": "CLAIM-019",
       "derivation": "percentage_change using calendar lag 4",
       "literature_reference_ids": [
         "Tu2004",
@@ -650,7 +619,7 @@
       "url": "https://www.ura.gov.sg/news/media/pr26-03/"
     }
   ],
-  "prompt_version": "stage4-evidence-writer-v1",
+  "prompt_version": "stage4-grounded-academic-writer-v2",
   "quality_notes": [
     "Information is limited to data available by 2026-10-01.",
     "The report is descriptive and does not estimate causal effects or produce a formal forecast.",
@@ -710,6 +679,6 @@
       "url": "https://data.gov.sg/datasets/d_a5ff719648a0e6d4b4c623ee383ab686/view"
     }
   ],
-  "title": "Singapore Private Residential Market Predictor Report",
+  "title": "Singapore Private Non-Landed Residential Market: Indicator Analysis",
   "user_objective": "Describe recent validated movements in the selected indicators and explain how they may be informative for sale-price and rental-market monitoring."
 }

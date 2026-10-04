@@ -53,7 +53,7 @@ def compose_node(state: Stage4GraphState) -> Stage4GraphState:
 
 
 def verification_node(state: Stage4GraphState) -> Stage4GraphState:
-    result = verify_report(state["report"], state["context"])
+    result = verify_report(state["report"], state["context"], state["narrative"])
     return {"verification": result, "feedback": result.errors}
 
 

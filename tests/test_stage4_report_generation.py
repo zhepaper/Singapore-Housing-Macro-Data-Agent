@@ -9,7 +9,7 @@ from housing_agent.processing.pipeline import run_stage3
 from housing_agent.memory.compiler import compile_memory
 from housing_agent.memory.models import ApprovedPredictorMemory, DecisionEvent
 from housing_agent.research.models import AnalyticalRole, MarketRole
-from housing_agent.report_generation.composer import compose_report
+from housing_agent.report_generation.composer import claim_sentence, compose_report
 from housing_agent.report_generation.evidence import build_report_context
 from housing_agent.report_generation.models import (
     LiteratureRecord,
@@ -83,7 +83,11 @@ class Stage4ReportGenerationTests(unittest.TestCase):
             self.assertEqual(result.status, "success")
             self.assertEqual(result.attempts, 1)
             report = Path(result.report_path or "").read_text(encoding="utf-8")
-            self.assertIn("## Validated Evidence", report)
+            self.assertIn("## Rental-Market Findings", report)
+            self.assertIn("## Sale-Market Findings", report)
+            self.assertIn("## Data and Analytical Approach", report)
+            self.assertNotIn("## Validated Evidence", report)
+            self.assertNotIn("| Indicator |", report)
             self.assertIn("**Information cut-off:** 2026-06-30", report)
             verification = json.loads(Path(result.verification_path or "").read_text())
             self.assertEqual(verification["status"], "pass")
@@ -116,16 +120,13 @@ class Stage4ReportGenerationTests(unittest.TestCase):
             narrative = DeterministicReportWriter().write(context, attempt=1).narrative
             report = compose_report(context, narrative)
             first = context.claims[0]
-            tampered = report.replace(
-                f"{first.value_text} {first.unit} in {first.period}",
-                f"999 {first.unit} in {first.period}",
-                1,
-            )
+            rendered = claim_sentence(first)
+            tampered = report.replace(rendered, rendered.replace(first.value_text, "999", 1), 1)
 
             result = verify_report(tampered, context)
 
             self.assertEqual(result.status, "fail")
-            self.assertTrue(any("unmatched value" in item for item in result.errors))
+            self.assertTrue(any("altered deterministic evidence" in item for item in result.errors))
 
     def test_extra_unledgered_number_in_claim_block_fails(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -134,12 +135,13 @@ class Stage4ReportGenerationTests(unittest.TestCase):
             context = build_report_context(bundle)
             narrative = DeterministicReportWriter().write(context, attempt=1).narrative
             report = compose_report(context, narrative)
-            tampered = report.replace(" Frequency:", " An unsupported 999 was added. Frequency:", 1)
+            rendered = claim_sentence(context.claims[0])
+            tampered = report.replace(rendered, rendered + " An unsupported 999 was added.", 1)
 
             result = verify_report(tampered, context)
 
             self.assertEqual(result.status, "fail")
-            self.assertTrue(any("deterministic report rendering" in item for item in result.errors))
+            self.assertTrue(any("not rendered from the claim ledger" in item for item in result.errors))
 
     def test_source_records_are_rendered_and_ledgered(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -199,7 +201,9 @@ class Stage4ReportGenerationTests(unittest.TestCase):
             self.assertEqual(result.status, "success")
             prompt = (root / "stage4" / "report_prompt.txt").read_text()
             manifest = json.loads((root / "stage4" / "report_prompt_manifest.json").read_text())
-            self.assertIn("Do not write digits", prompt)
+            self.assertIn("exact anchor", prompt)
+            self.assertIn("Do not write any other digits", prompt)
+            self.assertIn("## Rental-Market Findings", prompt)
             self.assertEqual(manifest["evidence_sha256"], build_report_context(bundle).evidence_sha256)
 
     def test_rationale_citations_are_rendered_and_verified(self) -> None:
@@ -221,7 +225,7 @@ class Stage4ReportGenerationTests(unittest.TestCase):
 
             self.assertEqual(result.status, "success")
             self.assertIn("Macro conditions may affect both markets.", report)
-            self.assertIn("LIT-MACRO", report)
+            self.assertIn("Example academic source", report)
             self.assertIn("https://example.edu/paper", report)
 
     def test_confirmed_memory_and_frozen_plan_populate_report_context(self) -> None:

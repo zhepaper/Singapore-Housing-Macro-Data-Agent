@@ -2,7 +2,7 @@
   {
     "attempt": 1,
     "model": null,
-    "prompt_version": "stage4-evidence-writer-v1",
+    "prompt_version": "stage4-grounded-academic-writer-v2",
     "provider": "deterministic",
     "token_usage": null
   }

@@ -1,50 +1,85 @@
 SYSTEM
-You are a financial-data research analyst writing a concise report on
-Singapore's private residential market. You may interpret only the supplied validated
-evidence. The code, not you, renders every numerical claim.
+You are an applied social-science researcher writing a concise
+analytical report on Singapore's private non-landed residential sale and rental
+markets. Construct a coherent argument from the supplied validated evidence. The
+application, not you, renders every number, date, unit, source and citation.
+
+Return continuous academic prose under exactly these headings:
+## Introduction
+## Data and Analytical Approach
+## Rental-Market Findings
+## Sale-Market Findings
+## Discussion
+## Limitations
+## Conclusion
 
 Mandatory rules:
-1. Return only the qualitative Markdown narrative under the exact required headings.
-2. Do not write digits, numerical values, dates, percentages, basis points, or calculations.
-3. Do not retrieve, infer, estimate, or invent facts or sources.
-4. Distinguish sale-market, rental-market, and shared indicators.
-5. Distinguish observed evidence from possible economic interpretation.
-6. Never claim causality and never make a point forecast.
-7. Use calibrated language such as "may indicate", "is consistent with", and
-   "should be interpreted cautiously".
-8. Discuss conflicting or insufficient signals explicitly.
-9. Do not describe this analysis as a forecasting model.
-10. Preserve material limitations supplied in the context.
+1. Do not use tables, bullet points, an executive-summary list, or an outlook section.
+2. Do not discuss the agent, software, nodes, prompts, JSON, validation workflow, or code.
+3. Analyse rental and sale markets separately before comparing them.
+4. In each findings section, start with the market outcome, examine its predictors,
+   and end with a qualified synthesis.
+5. Insert empirical evidence only through an exact anchor such as
+   {{CLAIM:CLAIM-008}}. Use every supplied claim anchor exactly once. Never copy,
+   round, calculate, or type its numerical content yourself.
+6. Insert literature only through an exact anchor such as {{LIT:ReferenceId}}.
+   Never invent or alter a citation.
+7. Do not write any other digits, numerical values, dates, percentages, percentage
+   points, basis points, calculations, author years, or numbered lists.
+8. Clearly distinguish outcomes from predictors and observed evidence from possible
+   economic interpretation.
+9. Explain a mechanism only when supported by a supplied rationale or literature
+   record. Never claim causality and never make a point forecast.
+10. The Discussion should explain why sale and rental conditions may differ; it
+    should not repeat every result.
+11. Preserve material limitations, especially frequency mismatch, proxy limitations,
+    release timing and the distinction between pipeline and completed supply.
+12. The Conclusion must answer the research question without introducing new evidence.
+13. Use calibrated language such as "is consistent with", "may indicate", and
+    "does not establish". Do not write a generic "signals are mixed" conclusion;
+    identify the relevant mechanisms and direction of evidence.
 
 USER
 RESEARCH SCOPE
 Singapore private non-landed residential sale prices and rents, using public macroeconomic, financial, demographic, and market-level indicators.
 
-USER OBJECTIVE
+RESEARCH OBJECTIVE
 Describe recent validated movements in the selected indicators and explain how they may be informative for sale-price and rental-market monitoring.
 
-QUALITATIVE EVIDENCE
+VALIDATED EVIDENCE CATALOG
 [
   {
+    "anchor": "{{CLAIM:CLAIM-001}}",
+    "claim_id": "CLAIM-001",
     "series_id": "non_resident_employment_change",
     "series_label": "Non-resident employment change",
-    "market_role": "rent",
-    "portfolio_role": "predictor",
-    "qualitative_signal": "latest validated level available",
-    "rationale": "Quarterly non-resident employment change is a timely demand signal, but it is an employment flow rather than a population stock.",
-    "literature_reference_ids": [
+    "market": "rent",
+    "analytical_role": "predictor",
+    "period": "2026-Q2",
+    "validated_value": "9,200",
+    "unit": "persons",
+    "derivation": null,
+    "direction": "latest validated level",
+    "selection_rationale": "Quarterly non-resident employment change is a timely demand signal, but it is an employment flow rather than a population stock.",
+    "permitted_literature_ids": [
       "JiBhandari2022"
     ],
     "quality_notes": []
   },
   {
+    "anchor": "{{CLAIM:CLAIM-002}}",
+    "claim_id": "CLAIM-002",
     "series_id": "non_resident_population",
     "series_label": "Non-resident population",
-    "market_role": "rent",
-    "portfolio_role": "structural_context",
-    "qualitative_signal": "latest validated level available",
-    "rationale": "The non-resident population is a structural measure of part of the potential foreign-facing tenant base.",
-    "literature_reference_ids": [
+    "market": "rent",
+    "analytical_role": "structural_context",
+    "period": "2025",
+    "validated_value": "1,906,660",
+    "unit": "persons",
+    "derivation": null,
+    "direction": "latest validated level",
+    "selection_rationale": "The non-resident population is a structural measure of part of the potential foreign-facing tenant base.",
+    "permitted_literature_ids": [
       "ChiaLiTang2017",
       "JiBhandari2022"
     ],
@@ -53,13 +88,19 @@ QUALITATIVE EVIDENCE
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-003}}",
+    "claim_id": "CLAIM-003",
     "series_id": "non_resident_population__yoy_percentage_change",
     "series_label": "Non-resident population (yoy_percentage_change)",
-    "market_role": "rent",
-    "portfolio_role": "structural_context",
-    "qualitative_signal": "increased",
-    "rationale": "The non-resident population is a structural measure of part of the potential foreign-facing tenant base.",
-    "literature_reference_ids": [
+    "market": "rent",
+    "analytical_role": "structural_context",
+    "period": "2025",
+    "validated_value": "2.73",
+    "unit": "percent",
+    "derivation": "percentage_change using calendar lag 1",
+    "direction": "increase",
+    "selection_rationale": "The non-resident population is a structural measure of part of the potential foreign-facing tenant base.",
+    "permitted_literature_ids": [
       "ChiaLiTang2017",
       "JiBhandari2022"
     ],
@@ -69,13 +110,19 @@ QUALITATIVE EVIDENCE
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-004}}",
+    "claim_id": "CLAIM-004",
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
-    "market_role": "rent",
-    "portfolio_role": "predictor",
-    "qualitative_signal": "latest validated level available",
-    "rationale": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
-    "literature_reference_ids": [
+    "market": "rent",
+    "analytical_role": "predictor",
+    "period": "2026-Q2",
+    "validated_value": "5.39",
+    "unit": "percent",
+    "derivation": "ratio of approved input series; scale=100",
+    "direction": "latest validated level",
+    "selection_rationale": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
+    "permitted_literature_ids": [
       "DiPasqualeWheaton1992",
       "URAHDB2026"
     ],
@@ -85,13 +132,19 @@ QUALITATIVE EVIDENCE
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-005}}",
+    "claim_id": "CLAIM-005",
     "series_id": "private_non_landed_vacancy_rate__qoq_percentage_point_change",
     "series_label": "Private non-landed vacancy rate (qoq_percentage_point_change)",
-    "market_role": "rent",
-    "portfolio_role": "predictor",
-    "qualitative_signal": "increased",
-    "rationale": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
-    "literature_reference_ids": [
+    "market": "rent",
+    "analytical_role": "predictor",
+    "period": "2026-Q2",
+    "validated_value": "0.021",
+    "unit": "percentage points",
+    "derivation": "percentage_point_change using calendar lag 1",
+    "direction": "increase",
+    "selection_rationale": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
+    "permitted_literature_ids": [
       "DiPasqualeWheaton1992",
       "URAHDB2026"
     ],
@@ -101,13 +154,19 @@ QUALITATIVE EVIDENCE
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-006}}",
+    "claim_id": "CLAIM-006",
     "series_id": "private_non_landed_vacancy_rate__yoy_percentage_point_change",
     "series_label": "Private non-landed vacancy rate (yoy_percentage_point_change)",
-    "market_role": "rent",
-    "portfolio_role": "predictor",
-    "qualitative_signal": "decreased",
-    "rationale": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
-    "literature_reference_ids": [
+    "market": "rent",
+    "analytical_role": "predictor",
+    "period": "2026-Q2",
+    "validated_value": "-1.486",
+    "unit": "percentage points",
+    "derivation": "percentage_point_change using calendar lag 4",
+    "direction": "decrease",
+    "selection_rationale": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
+    "permitted_literature_ids": [
       "DiPasqualeWheaton1992",
       "URAHDB2026"
     ],
@@ -117,51 +176,75 @@ QUALITATIVE EVIDENCE
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-007}}",
+    "claim_id": "CLAIM-007",
     "series_id": "ura_non_landed_rental_index",
     "series_label": "URA private non-landed rental index",
-    "market_role": "rent",
-    "portfolio_role": "outcome",
-    "qualitative_signal": "latest validated level available",
-    "rationale": "The official URA non-landed whole-island rental index is the rental-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
-    "literature_reference_ids": [],
+    "market": "rent",
+    "analytical_role": "outcome",
+    "period": "2026-Q2",
+    "validated_value": "162.5",
+    "unit": "index; 2009-Q1=100",
+    "derivation": null,
+    "direction": "latest validated level",
+    "selection_rationale": "The official URA non-landed whole-island rental index is the rental-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
+    "permitted_literature_ids": [],
     "quality_notes": [
       "No observation-level release date was supplied; the workflow relies on the approved availability rule."
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-008}}",
+    "claim_id": "CLAIM-008",
     "series_id": "ura_non_landed_rental_index__qoq_percentage_change",
     "series_label": "URA private non-landed rental index (qoq_percentage_change)",
-    "market_role": "rent",
-    "portfolio_role": "outcome",
-    "qualitative_signal": "increased",
-    "rationale": "The official URA non-landed whole-island rental index is the rental-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
-    "literature_reference_ids": [],
+    "market": "rent",
+    "analytical_role": "outcome",
+    "period": "2026-Q2",
+    "validated_value": "0.371",
+    "unit": "percent",
+    "derivation": "percentage_change using calendar lag 1",
+    "direction": "increase",
+    "selection_rationale": "The official URA non-landed whole-island rental index is the rental-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
+    "permitted_literature_ids": [],
     "quality_notes": [
       "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
       "Derived deterministically from the recorded source periods."
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-009}}",
+    "claim_id": "CLAIM-009",
     "series_id": "ura_non_landed_rental_index__yoy_percentage_change",
     "series_label": "URA private non-landed rental index (yoy_percentage_change)",
-    "market_role": "rent",
-    "portfolio_role": "outcome",
-    "qualitative_signal": "increased",
-    "rationale": "The official URA non-landed whole-island rental index is the rental-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
-    "literature_reference_ids": [],
+    "market": "rent",
+    "analytical_role": "outcome",
+    "period": "2026-Q2",
+    "validated_value": "1.753",
+    "unit": "percent",
+    "derivation": "percentage_change using calendar lag 4",
+    "direction": "increase",
+    "selection_rationale": "The official URA non-landed whole-island rental index is the rental-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
+    "permitted_literature_ids": [],
     "quality_notes": [
       "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
       "Derived deterministically from the recorded source periods."
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-010}}",
+    "claim_id": "CLAIM-010",
     "series_id": "real_gdp_growth",
     "series_label": "Real GDP growth",
-    "market_role": "sale",
-    "portfolio_role": "predictor",
-    "qualitative_signal": "latest validated level available",
-    "rationale": "Broad economic activity may affect income expectations, purchasing capacity, and buyer confidence.",
-    "literature_reference_ids": [
+    "market": "sale",
+    "analytical_role": "predictor",
+    "period": "2026-Q2",
+    "validated_value": "5.9",
+    "unit": "year-on-year percent change",
+    "derivation": null,
+    "direction": "latest validated level",
+    "selection_rationale": "Broad economic activity may affect income expectations, purchasing capacity, and buyer confidence.",
+    "permitted_literature_ids": [
       "Tu2004",
       "IMF2018",
       "RangelNg2017"
@@ -171,13 +254,19 @@ QUALITATIVE EVIDENCE
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-011}}",
+    "claim_id": "CLAIM-011",
     "series_id": "real_gdp_growth__qoq_percentage_point_change",
     "series_label": "Real GDP growth (qoq_percentage_point_change)",
-    "market_role": "sale",
-    "portfolio_role": "predictor",
-    "qualitative_signal": "decreased",
-    "rationale": "Broad economic activity may affect income expectations, purchasing capacity, and buyer confidence.",
-    "literature_reference_ids": [
+    "market": "sale",
+    "analytical_role": "predictor",
+    "period": "2026-Q2",
+    "validated_value": "-0.4",
+    "unit": "percentage points",
+    "derivation": "percentage_point_change using calendar lag 1",
+    "direction": "decrease",
+    "selection_rationale": "Broad economic activity may affect income expectations, purchasing capacity, and buyer confidence.",
+    "permitted_literature_ids": [
       "Tu2004",
       "IMF2018",
       "RangelNg2017"
@@ -188,29 +277,19 @@ QUALITATIVE EVIDENCE
     ]
   },
   {
-    "series_id": "three_month_compounded_sora",
-    "series_label": "Three-month Compounded SORA",
-    "market_role": "sale",
-    "portfolio_role": "predictor",
-    "qualitative_signal": "latest validated level available",
-    "rationale": "Short-term financing conditions may affect mortgage affordability and leveraged purchase demand in the sale market.",
-    "literature_reference_ids": [
-      "Tu2004",
-      "IMF2018",
-      "RangelNg2017"
-    ],
-    "quality_notes": [
-      "No observation-level release date was supplied; the workflow relies on the approved availability rule."
-    ]
-  },
-  {
+    "anchor": "{{CLAIM:CLAIM-012}}",
+    "claim_id": "CLAIM-012",
     "series_id": "three_month_compounded_sora__quarterly_last",
     "series_label": "Three-month Compounded SORA (quarterly last)",
-    "market_role": "sale",
-    "portfolio_role": "predictor",
-    "qualitative_signal": "latest validated level available",
-    "rationale": "Short-term financing conditions may affect mortgage affordability and leveraged purchase demand in the sale market.",
-    "literature_reference_ids": [
+    "market": "sale",
+    "analytical_role": "predictor",
+    "period": "2026-Q2",
+    "validated_value": "1.083",
+    "unit": "percent per annum",
+    "derivation": "monthly to quarterly last; policy=reject",
+    "direction": "latest validated level",
+    "selection_rationale": "Short-term financing conditions may affect mortgage affordability and leveraged purchase demand in the sale market.",
+    "permitted_literature_ids": [
       "Tu2004",
       "IMF2018",
       "RangelNg2017"
@@ -221,13 +300,19 @@ QUALITATIVE EVIDENCE
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-013}}",
+    "claim_id": "CLAIM-013",
     "series_id": "three_month_compounded_sora__quarterly_last__qoq_basis_point_change",
     "series_label": "Three-month Compounded SORA (quarterly last) (qoq_basis_point_change)",
-    "market_role": "sale",
-    "portfolio_role": "predictor",
-    "qualitative_signal": "increased",
-    "rationale": "Short-term financing conditions may affect mortgage affordability and leveraged purchase demand in the sale market.",
-    "literature_reference_ids": [
+    "market": "sale",
+    "analytical_role": "predictor",
+    "period": "2026-Q2",
+    "validated_value": "1.17",
+    "unit": "basis points",
+    "derivation": "basis_point_change using calendar lag 1",
+    "direction": "increase",
+    "selection_rationale": "Short-term financing conditions may affect mortgage affordability and leveraged purchase demand in the sale market.",
+    "permitted_literature_ids": [
       "Tu2004",
       "IMF2018",
       "RangelNg2017"
@@ -238,51 +323,75 @@ QUALITATIVE EVIDENCE
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-014}}",
+    "claim_id": "CLAIM-014",
     "series_id": "ura_non_landed_price_index",
     "series_label": "URA private non-landed price index",
-    "market_role": "sale",
-    "portfolio_role": "outcome",
-    "qualitative_signal": "latest validated level available",
-    "rationale": "The official URA non-landed price index is the sale-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
-    "literature_reference_ids": [],
+    "market": "sale",
+    "analytical_role": "outcome",
+    "period": "2026-Q2",
+    "validated_value": "210.6",
+    "unit": "index; 2009-Q1=100",
+    "derivation": null,
+    "direction": "latest validated level",
+    "selection_rationale": "The official URA non-landed price index is the sale-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
+    "permitted_literature_ids": [],
     "quality_notes": [
       "No observation-level release date was supplied; the workflow relies on the approved availability rule."
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-015}}",
+    "claim_id": "CLAIM-015",
     "series_id": "ura_non_landed_price_index__qoq_percentage_change",
     "series_label": "URA private non-landed price index (qoq_percentage_change)",
-    "market_role": "sale",
-    "portfolio_role": "outcome",
-    "qualitative_signal": "decreased",
-    "rationale": "The official URA non-landed price index is the sale-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
-    "literature_reference_ids": [],
+    "market": "sale",
+    "analytical_role": "outcome",
+    "period": "2026-Q2",
+    "validated_value": "-0.095",
+    "unit": "percent",
+    "derivation": "percentage_change using calendar lag 1",
+    "direction": "decrease",
+    "selection_rationale": "The official URA non-landed price index is the sale-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
+    "permitted_literature_ids": [],
     "quality_notes": [
       "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
       "Derived deterministically from the recorded source periods."
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-016}}",
+    "claim_id": "CLAIM-016",
     "series_id": "ura_non_landed_price_index__yoy_percentage_change",
     "series_label": "URA private non-landed price index (yoy_percentage_change)",
-    "market_role": "sale",
-    "portfolio_role": "outcome",
-    "qualitative_signal": "increased",
-    "rationale": "The official URA non-landed price index is the sale-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
-    "literature_reference_ids": [],
+    "market": "sale",
+    "analytical_role": "outcome",
+    "period": "2026-Q2",
+    "validated_value": "1.838",
+    "unit": "percent",
+    "derivation": "percentage_change using calendar lag 4",
+    "direction": "increase",
+    "selection_rationale": "The official URA non-landed price index is the sale-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
+    "permitted_literature_ids": [],
     "quality_notes": [
       "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
       "Derived deterministically from the recorded source periods."
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-017}}",
+    "claim_id": "CLAIM-017",
     "series_id": "private_residential_pipeline_supply",
     "series_label": "Private non-landed residential pipeline",
-    "market_role": "shared",
-    "portfolio_role": "predictor",
-    "qualitative_signal": "latest validated level available",
-    "rationale": "The future housing pipeline may affect sale and rental conditions after projects are completed.",
-    "literature_reference_ids": [
+    "market": "shared",
+    "analytical_role": "predictor",
+    "period": "2026-Q2",
+    "validated_value": "51,677",
+    "unit": "dwelling units",
+    "derivation": null,
+    "direction": "latest validated level",
+    "selection_rationale": "The future housing pipeline may affect sale and rental conditions after projects are completed.",
+    "permitted_literature_ids": [
       "Tu2004",
       "IMF2018"
     ],
@@ -291,13 +400,19 @@ QUALITATIVE EVIDENCE
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-018}}",
+    "claim_id": "CLAIM-018",
     "series_id": "private_residential_pipeline_supply__qoq_absolute_change",
     "series_label": "Private non-landed residential pipeline (qoq_absolute_change)",
-    "market_role": "shared",
-    "portfolio_role": "predictor",
-    "qualitative_signal": "increased",
-    "rationale": "The future housing pipeline may affect sale and rental conditions after projects are completed.",
-    "literature_reference_ids": [
+    "market": "shared",
+    "analytical_role": "predictor",
+    "period": "2026-Q2",
+    "validated_value": "3,566",
+    "unit": "dwelling units",
+    "derivation": "absolute_change using calendar lag 1",
+    "direction": "increase",
+    "selection_rationale": "The future housing pipeline may affect sale and rental conditions after projects are completed.",
+    "permitted_literature_ids": [
       "Tu2004",
       "IMF2018"
     ],
@@ -307,13 +422,19 @@ QUALITATIVE EVIDENCE
     ]
   },
   {
+    "anchor": "{{CLAIM:CLAIM-019}}",
+    "claim_id": "CLAIM-019",
     "series_id": "private_residential_pipeline_supply__yoy_percentage_change",
     "series_label": "Private non-landed residential pipeline (yoy_percentage_change)",
-    "market_role": "shared",
-    "portfolio_role": "predictor",
-    "qualitative_signal": "increased",
-    "rationale": "The future housing pipeline may affect sale and rental conditions after projects are completed.",
-    "literature_reference_ids": [
+    "market": "shared",
+    "analytical_role": "predictor",
+    "period": "2026-Q2",
+    "validated_value": "6.608",
+    "unit": "percent",
+    "derivation": "percentage_change using calendar lag 4",
+    "direction": "increase",
+    "selection_rationale": "The future housing pipeline may affect sale and rental conditions after projects are completed.",
+    "permitted_literature_ids": [
       "Tu2004",
       "IMF2018"
     ],
@@ -324,7 +445,53 @@ QUALITATIVE EVIDENCE
   }
 ]
 
-DATA-QUALITY NOTES
+APPROVED LITERATURE CATALOG
+[
+  {
+    "reference_id": "ChiaLiTang2017",
+    "citation": "Chia, W.-M., Li, M. and Tang, Y. (2017). Public and private housing markets dynamics in Singapore: The role of fundamentals. Journal of Housing Economics, 36, 44-61.",
+    "url": "https://ideas.repec.org/a/eee/jhouse/v36y2017icp44-61.html",
+    "anchor": "{{LIT:ChiaLiTang2017}}"
+  },
+  {
+    "reference_id": "DiPasqualeWheaton1992",
+    "citation": "DiPasquale, D. and Wheaton, W. C. (1992). The Markets for Real Estate Assets and Space: A Conceptual Framework. Real Estate Economics, 20(2), 181-198.",
+    "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/1540-6229.00579",
+    "anchor": "{{LIT:DiPasqualeWheaton1992}}"
+  },
+  {
+    "reference_id": "IMF2018",
+    "citation": "International Monetary Fund (2018). Singapore: 2018 Article IV Consultation—Staff Report, Appendix VII.",
+    "url": "https://www.imf.org/-/media/files/publications/cr/2018/cr18245.pdf",
+    "anchor": "{{LIT:IMF2018}}"
+  },
+  {
+    "reference_id": "JiBhandari2022",
+    "citation": "Ji, P. I. and Bhandari, S. B. (2022). The price-rent dynamics and linkage of urban housing: evidence from Singapore. International Journal of Housing Markets and Analysis, 15(3), 504-520.",
+    "url": "https://ideas.repec.org/a/eme/ijhmap/ijhma-02-2021-0023.html",
+    "anchor": "{{LIT:JiBhandari2022}}"
+  },
+  {
+    "reference_id": "RangelNg2017",
+    "citation": "Rangel, G. J. and Ng, J. W. J. (2017). Macroeconomic Drivers of Singapore Private Residential Prices: A Markov-Switching Approach. Capital Markets Review, 25(2), 15-31.",
+    "url": "https://www.mfa.com.my/wp-content/uploads/2017/12/vol252_pp.15-31-Rangel-Ng.pdf",
+    "anchor": "{{LIT:RangelNg2017}}"
+  },
+  {
+    "reference_id": "Tu2004",
+    "citation": "Tu, Y. (2004). The Dynamics of the Singapore Private Housing Market. Urban Studies, 41(3), 605-619.",
+    "url": "https://journals.sagepub.com/doi/10.1080/0042098042000178708",
+    "anchor": "{{LIT:Tu2004}}"
+  },
+  {
+    "reference_id": "URAHDB2026",
+    "citation": "Urban Redevelopment Authority and Housing & Development Board (2026). Extension of temporary relaxation of occupancy cap for rental of HDB flats and private residential properties until 31 December 2028.",
+    "url": "https://www.ura.gov.sg/news/media/pr26-03/",
+    "anchor": "{{LIT:URAHDB2026}}"
+  }
+]
+
+MANDATORY DATA-QUALITY DISCLOSURES
 [
   "Information is limited to data available by 2026-10-01.",
   "The report is descriptive and does not estimate causal effects or produce a formal forecast.",
@@ -332,52 +499,14 @@ DATA-QUALITY NOTES
   "POTENTIAL_LOOK_AHEAD: Predictor was not available by the end of its aligned outcome quarter; the contemporaneous alignment is descriptive and must not be treated as a real-time forecasting feature."
 ]
 
-LITERATURE RECORDS
-[
-  {
-    "reference_id": "ChiaLiTang2017",
-    "citation": "Chia, W.-M., Li, M. and Tang, Y. (2017). Public and private housing markets dynamics in Singapore: The role of fundamentals. Journal of Housing Economics, 36, 44-61.",
-    "url": "https://ideas.repec.org/a/eee/jhouse/v36y2017icp44-61.html"
-  },
-  {
-    "reference_id": "DiPasqualeWheaton1992",
-    "citation": "DiPasquale, D. and Wheaton, W. C. (1992). The Markets for Real Estate Assets and Space: A Conceptual Framework. Real Estate Economics, 20(2), 181-198.",
-    "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/1540-6229.00579"
-  },
-  {
-    "reference_id": "IMF2018",
-    "citation": "International Monetary Fund (2018). Singapore: 2018 Article IV Consultation—Staff Report, Appendix VII.",
-    "url": "https://www.imf.org/-/media/files/publications/cr/2018/cr18245.pdf"
-  },
-  {
-    "reference_id": "JiBhandari2022",
-    "citation": "Ji, P. I. and Bhandari, S. B. (2022). The price-rent dynamics and linkage of urban housing: evidence from Singapore. International Journal of Housing Markets and Analysis, 15(3), 504-520.",
-    "url": "https://ideas.repec.org/a/eme/ijhmap/ijhma-02-2021-0023.html"
-  },
-  {
-    "reference_id": "RangelNg2017",
-    "citation": "Rangel, G. J. and Ng, J. W. J. (2017). Macroeconomic Drivers of Singapore Private Residential Prices: A Markov-Switching Approach. Capital Markets Review, 25(2), 15-31.",
-    "url": "https://www.mfa.com.my/wp-content/uploads/2017/12/vol252_pp.15-31-Rangel-Ng.pdf"
-  },
-  {
-    "reference_id": "Tu2004",
-    "citation": "Tu, Y. (2004). The Dynamics of the Singapore Private Housing Market. Urban Studies, 41(3), 605-619.",
-    "url": "https://journals.sagepub.com/doi/10.1080/0042098042000178708"
-  },
-  {
-    "reference_id": "URAHDB2026",
-    "citation": "Urban Redevelopment Authority and Housing & Development Board (2026). Extension of temporary relaxation of occupancy cap for rental of HDB flats and private residential properties until 31 December 2028.",
-    "url": "https://www.ura.gov.sg/news/media/pr26-03/"
-  }
-]
-
 VERIFIER FEEDBACK FROM THE PREVIOUS DRAFT
 []
 
 REQUIRED HEADINGS
-### Executive Summary
-### Sale-Market Interpretation
-### Rental-Market Interpretation
-### Shared Signals
-### Cross-Series Interpretation
-### Conclusion
+## Introduction
+## Data and Analytical Approach
+## Rental-Market Findings
+## Sale-Market Findings
+## Discussion
+## Limitations
+## Conclusion

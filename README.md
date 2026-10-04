@@ -171,9 +171,11 @@ Start with [`SUBMISSION_REPORT.md`](SUBMISSION_REPORT.md) for the concise analyt
 
 ## Generate a report from Stage 3 evidence
 
-The new Stage 4 LangGraph reads `validated_evidence_bundle.json` directly. It does not read
-raw snapshots or recalculate metrics. The default writer is deterministic and requires no
-API key:
+The Stage 4 LangGraph reads `validated_evidence_bundle.json` directly. It does not read raw
+snapshots or recalculate metrics. It produces a prose-only applied social-science report:
+introduction, data and analytical approach, rental findings, sale findings, discussion,
+limitations, conclusion, sources, and references. The default writer is a readable
+deterministic fallback and requires no API key:
 
 ```bash
 .venv/bin/python scripts/run_stage4_report.py \
@@ -191,8 +193,9 @@ still comes exclusively from the validated evidence bundle.
 
 The optional brief supplies scope wording, predictor rationales, literature identifiers,
 and source links; it cannot add numeric evidence. Use `--provider gemini`, `openai`,
-`anthropic`, `deepseek`, `groq`, or `ollama` for LLM-written qualitative prose. Ollama
-requires no API key and defaults to the local `qwen3:4b` model. All values, periods, units,
-lineage, and citations remain deterministically rendered and verified. A failed draft is
-revised at most three times and is otherwise saved as `blocked_report.md`, never as a final
-report. See [`docs/stage-4-report-generation-plan.md`](docs/stage-4-report-generation-plan.md).
+`anthropic`, `deepseek`, `groq`, or `ollama` for LLM-written academic prose. The writer
+organises evidence through immutable claim anchors; code expands those anchors into exact,
+reader-facing numerical sentences. Ollama requires no API key and defaults to the local
+`qwen3:4b` model. A failed draft is revised at most three times and is otherwise saved as
+`blocked_report.md`, never as a final report. See
+[`docs/stage-4-report-generation-plan.md`](docs/stage-4-report-generation-plan.md).

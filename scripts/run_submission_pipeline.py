@@ -8,6 +8,8 @@ import json
 import sys
 from pathlib import Path
 
+from dotenv import load_dotenv
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SRC = PROJECT_ROOT / "src"
@@ -42,12 +44,20 @@ def parse_args() -> argparse.Namespace:
         default="outputs/submission_run",
         help="Output directory for Stage 3 and Stage 4 artifacts.",
     )
+    parser.add_argument(
+        "--provider",
+        default="deterministic",
+        choices=("deterministic", "gemini", "openai", "anthropic", "deepseek", "groq", "ollama"),
+        help="Stage 4 academic writer. Deterministic requires no API key.",
+    )
+    parser.add_argument("--model", default=None, help="Optional provider-specific model override.")
     parser.add_argument("--print-report", action="store_true")
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
+    load_dotenv(PROJECT_ROOT / ".env", override=False)
     output_root = Path(args.output)
     plan = load_frozen_data_plan(args.plan)
 
@@ -64,7 +74,8 @@ def main() -> int:
         evidence,
         output_root / "stage4",
         brief=brief,
-        provider="deterministic",
+        provider=args.provider,
+        model=args.model,
         max_attempts=3,
     )
 
@@ -76,8 +87,12 @@ def main() -> int:
         "stage3_status": stage3.status,
         "evidence_bundle": "stage3/evidence/validated_evidence_bundle.json",
         "stage4_status": stage4.status,
-        "report": "stage4/final_report.md",
-        "verification": "stage4/verification_report.json",
+        "report_provider": args.provider,
+        "report_model": args.model,
+        "report": str(Path(stage4.report_path).resolve().relative_to(output_root.resolve()))
+        if stage4.report_path else None,
+        "verification": str(Path(stage4.verification_path).resolve().relative_to(output_root.resolve()))
+        if stage4.verification_path else None,
     }
     output_root.mkdir(parents=True, exist_ok=True)
     summary_path = output_root / "workflow_summary.json"
@@ -88,8 +103,10 @@ def main() -> int:
     print(f"Submission workflow status: {summary['status']}")
     print(f"Information cut-off: {summary['reporting_as_of_date']}")
     print(f"Evidence: {(output_root / summary['evidence_bundle']).resolve()}")
-    print(f"Report: {(output_root / summary['report']).resolve()}")
-    print(f"Verification: {(output_root / summary['verification']).resolve()}")
+    if summary["report"]:
+        print(f"Report: {(output_root / summary['report']).resolve()}")
+    if summary["verification"]:
+        print(f"Verification: {(output_root / summary['verification']).resolve()}")
     print(f"Summary: {summary_path.resolve()}")
     if args.print_report and stage4.report_path:
         print()

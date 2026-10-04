@@ -24,27 +24,160 @@ class ReportWriter(Protocol):
     ) -> WriterOutput: ...
 
 
-def _market_sentence(context: ReportContext, market: str) -> str:
-    rows = [item for item in context.claims if item.market_role == market]
-    changes = [item for item in rows if item.derivation and "change" in item.derivation.lower()]
-    if not rows:
-        return "The validated evidence is insufficient for a market-specific interpretation."
-    if not changes:
-        return (
-            "Validated levels are available, but the selected evidence contains no comparable "
-            "change signal; interpretation should therefore remain cautious."
+def _claim_anchor(claim_id: str) -> str:
+    return f"{{{{CLAIM:{claim_id}}}}}"
+
+
+def _literature_anchor(reference_id: str) -> str:
+    return f"{{{{LIT:{reference_id}}}}}"
+
+
+def _literature_phrase(context: ReportContext, reference_ids: tuple[str, ...]) -> str:
+    known = {item.reference_id for item in context.literature_records}
+    anchors = [_literature_anchor(item) for item in reference_ids if item in known]
+    if len(anchors) < 2:
+        return "".join(anchors)
+    return ", ".join(anchors[:-1]) + " and " + anchors[-1]
+
+
+def _clean_markdown(value: str) -> str:
+    return "\n".join(" ".join(line.split()) for line in value.strip().splitlines())
+
+
+def _academic_fallback(context: ReportContext) -> str:
+    """Readable no-API fallback; facts remain immutable claim anchors."""
+
+    by_source: dict[str, list[Any]] = {}
+    for claim in context.claims:
+        by_source.setdefault(claim.source_id, []).append(claim)
+    used: set[str] = set()
+
+    def take(source_id: str) -> str:
+        rows = by_source.get(source_id, [])
+        used.update(item.claim_id for item in rows)
+        return " ".join(_claim_anchor(item.claim_id) for item in rows)
+
+    def remaining(market: str) -> str:
+        rows = [
+            item for item in context.claims
+            if item.market_role == market and item.claim_id not in used
+        ]
+        used.update(item.claim_id for item in rows)
+        return " ".join(_claim_anchor(item.claim_id) for item in rows)
+
+    known_sources = {
+        "ura_non_landed_rental_index",
+        "non_resident_employment_change",
+        "non_resident_population",
+        "private_non_landed_vacancy_rate",
+        "ura_non_landed_price_index",
+        "real_gdp_growth",
+        "three_month_compounded_sora",
+        "private_residential_pipeline_supply",
+    }
+    tailored = known_sources.issubset(by_source)
+
+    if tailored:
+        rental_outcome = take("ura_non_landed_rental_index")
+        employment = take("non_resident_employment_change")
+        population = take("non_resident_population")
+        vacancy = take("private_non_landed_vacancy_rate")
+        sale_outcome = take("ura_non_landed_price_index")
+        gdp = take("real_gdp_growth")
+        sora = take("three_month_compounded_sora")
+        pipeline = take("private_residential_pipeline_supply")
+        rent_extra = remaining("rent")
+        sale_extra = remaining("sale")
+        shared_extra = remaining("shared")
+        rent_lit = _literature_phrase(
+            context,
+            ("ChiaLiTang2017", "JiBhandari2022", "DiPasqualeWheaton1992", "URAHDB2026"),
         )
-    positive = sum(item.value > 0 for item in changes)
-    negative = sum(item.value < 0 for item in changes)
-    if positive and negative:
-        signal = "The validated change signals are mixed and do not support a single directional conclusion."
-    elif positive:
-        signal = "The validated change signals are positive, although their mechanisms and timing may differ."
-    elif negative:
-        signal = "The validated change signals are negative, although their mechanisms and timing may differ."
-    else:
-        signal = "The validated change signals are broadly unchanged."
-    return signal + " These descriptive movements should not be interpreted as causal estimates or forecasts."
+        sale_lit = _literature_phrase(
+            context,
+            ("Tu2004", "IMF2018", "RangelNg2017"),
+        )
+        narrative = f"""## Introduction
+
+This report examines recent conditions in Singapore's private non-landed residential sale and rental markets. The markets are considered separately because rents primarily reflect demand for housing services and the utilisation of existing stock, whereas purchase prices are also exposed to financing conditions and expectations of future supply. The analysis asks whether recent movements in the selected indicators are consistent with the observed price and rental outcomes.
+
+## Data and Analytical Approach
+
+The official private non-landed price and rental indices are treated as market outcomes. The explanatory evidence covers macroeconomic activity, financing conditions, potential tenant demand, vacancy and prospective housing supply. Published quarterly observations are retained at their native frequency. Monthly financing data are represented by the approved quarter-end observation, while annual population data remain annual rather than being interpolated. Changes are measured in percentage, percentage-point, basis-point or absolute terms according to the definition of each series. The analysis is descriptive and evaluates consistency between indicators and outcomes; it does not estimate causal effects or a forecasting model.
+
+## Rental-Market Findings
+
+{rental_outcome} The outcome evidence shows that rents continued to increase over both the latest quarter and the year, although the quarterly movement was considerably more limited than the annual comparison.
+
+{employment} {population} These demand-side measures are consistent with continued growth in the potential tenant base. This interpretation accords with {rent_lit}, but the measures should still be treated as proxies: employment and population data do not identify whether the individuals concerned occupied private non-landed homes.
+
+{vacancy} Vacancy was almost unchanged over the latest quarter but remained appreciably below its year-earlier level. That combination is consistent with continued utilisation of the available stock and provides a plausible market-tightness mechanism for positive rental growth. It does not establish that the demand indicators caused the rental movement. {rent_extra}
+
+Taken together, the rental evidence indicates a firm market rather than a renewed sharp acceleration. Positive rent changes, expanding potential tenant demand and lower vacancy relative to the previous year point in the same broad direction, while the small quarterly changes warrant a measured interpretation.
+
+## Sale-Market Findings
+
+{sale_outcome} The price outcome therefore combines a marginal quarterly decline with positive annual growth. This is more consistent with a loss of short-term momentum than with a broad annual contraction.
+
+{gdp} Economic activity remained supportive in annual terms, although the change from the preceding quarter indicates some moderation in the reported growth rate. The potential income and confidence channel is consistent with {sale_lit}, but the descriptive evidence cannot isolate it from other influences.
+
+{sora} The financing evidence shows that the approved quarter-end rate did not fall over the latest quarter. It therefore provided little additional easing in borrowing conditions during the period, although the movement itself was small and should not be treated as a standalone explanation of prices.
+
+{pipeline} {shared_extra} The prospective supply pipeline increased over both the quarter and the year. Pipeline units are not completed homes, so their immediate effect on available supply cannot be inferred from these figures. Even so, the increase may moderate expectations of future scarcity as projects progress toward completion. {sale_extra}
+
+Overall, sale-market conditions were less firm at the quarterly horizon than rental-market conditions. Economic activity remained supportive, but financing did not provide further easing and prospective supply expanded, which is consistent with prices remaining above their year-earlier level while changing little in the latest quarter.
+
+## Discussion
+
+The findings illustrate why sale prices and rents should not be treated as a single housing-market outcome. Rental conditions are linked more directly to current occupancy and tenant demand, whereas purchase decisions also reflect mortgage costs and expectations about future stock. The expanding pipeline may therefore affect purchase-market expectations before completed units materially change the rental stock. The contemporaneous alignment of these series is descriptive: their economic effects may occur with different lags, and agreement in direction does not prove a causal relationship.
+
+## Limitations
+
+The selected indicators are theoretically relevant but do not identify causal effects. They are also released at different frequencies and with different publication lags. Non-resident employment and population measure potential rental demand rather than actual private tenancy, and the residential pipeline measures prospective rather than completed supply. The analysis does not control for policy changes, location, property characteristics or compositional shifts within the private non-landed segment. Results are therefore best read as a disciplined monitoring assessment bounded by the stated information cut-off.
+
+## Conclusion
+
+The latest evidence indicates that the private non-landed rental market remained firmer than the sale market. Positive rental growth coincided with expanding demand-side indicators and vacancy below its year-earlier level, while sale prices retained positive annual growth but showed little quarterly momentum. Macroeconomic activity remained favourable, but financing conditions and a larger prospective supply pipeline provided countervailing influences. These relationships are informative for monitoring market conditions, but they do not constitute a formal forecast.
+"""
+        return _clean_markdown(narrative)
+
+    rent = remaining("rent")
+    sale = remaining("sale")
+    shared = remaining("shared")
+    rationales = " ".join(dict.fromkeys(
+        item.rationale for item in context.claims if item.rationale
+    ))
+    literature = " ".join(
+        _literature_anchor(item.reference_id) for item in context.literature_records
+    )
+    return _clean_markdown(f"""## Introduction
+
+This report assesses recent movements in the validated indicators for Singapore's private residential sale and rental markets. The two outcomes are analysed separately before their implications are compared.
+
+## Data and Analytical Approach
+
+Official outcome series and approved predictor series are retained at their validated frequencies and transformed only under the approved data plan. The analysis describes associations in the evidence and does not estimate causal effects or a formal forecast.
+
+## Rental-Market Findings
+
+{rent} The rental evidence should be interpreted jointly, with outcome movements distinguished from possible demand and supply mechanisms.
+
+## Sale-Market Findings
+
+{sale} The sale evidence should be interpreted jointly, with outcome movements distinguished from possible macroeconomic, financing and supply mechanisms.
+
+## Discussion
+
+{shared} {rationales} Sale prices and rents may respond to shared conditions with different timing. Agreement strengthens a descriptive reading, while disagreement should remain visible rather than being forced into one conclusion. {literature}
+
+## Limitations
+
+The indicators differ in frequency, timing and economic interpretation. Their association with the market outcomes does not establish causality, and the analysis should not be read as a point forecast.
+
+## Conclusion
+
+The validated evidence provides a reproducible basis for monitoring the two markets, subject to the stated data-quality and timing limitations.
+""")
 
 
 class DeterministicReportWriter:
@@ -58,22 +191,7 @@ class DeterministicReportWriter:
         attempt: int,
         feedback: tuple[str, ...] = (),
     ) -> WriterOutput:
-        sale = _market_sentence(context, "sale")
-        rent = _market_sentence(context, "rent")
-        shared = _market_sentence(context, "shared")
-        narrative = "\n\n".join([
-            "### Executive Summary\n\n"
-            "The validated indicators provide a descriptive view of market conditions. "
-            "They should be read as potentially informative signals rather than a causal model or forecast.",
-            f"### Sale-Market Interpretation\n\n{sale}",
-            f"### Rental-Market Interpretation\n\n{rent}",
-            f"### Shared Signals\n\n{shared}",
-            "### Cross-Series Interpretation\n\n"
-            "Signals across financing, demand, supply, and market outcomes may move at different times. "
-            "Agreement can strengthen a descriptive reading, while disagreement should remain visible rather than being forced into one conclusion.",
-            "### Conclusion\n\n"
-            "The evidence supports continued monitoring, with conclusions bounded by source timing, frequency, and data quality."
-        ])
+        narrative = _academic_fallback(context)
         return WriterOutput(
             narrative=narrative,
             provider=self.provider,

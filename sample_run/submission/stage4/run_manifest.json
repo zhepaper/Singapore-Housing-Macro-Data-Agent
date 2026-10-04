@@ -1,11 +1,11 @@
 {
   "attempts": 1,
   "evidence_sha256": "65cdefc3c662d346f780e66a3ac54bcefa76e7e520f780efb2715da2f7f2e936",
-  "generated_at": "2026-10-04T05:36:00.775072+00:00",
+  "generated_at": "2026-10-04T06:21:38.059734+00:00",
   "model": null,
-  "prompt_version": "stage4-evidence-writer-v1",
+  "prompt_version": "stage4-grounded-academic-writer-v2",
   "provider": "deterministic",
-  "report_sha256": "e8b502ac1fbc3e0169145c1d62f397e49a8969b14b62772e900b344c9324df2c",
+  "report_sha256": "c36295d5f439e7a6c2758fad2e12c44fc9822987124f7add9473f9acb676f187",
   "stage": "report_generation",
   "status": "success"
 }

@@ -4,12 +4,12 @@
     {
       "attempt": 1,
       "path": "prompts/attempt_1.txt",
-      "prompt_sha256": "af204f98a96a7a62c8f8eed0f9bafe6d30e15e0fcf973d0c8e10ec8ffdb6df36"
+      "prompt_sha256": "67689c1f6c240c3f16a7690281fd27d4ad7c103b2b8dd9aab4df50b152f4f5ae"
     }
   ],
   "evidence_sha256": "65cdefc3c662d346f780e66a3ac54bcefa76e7e520f780efb2715da2f7f2e936",
   "model": null,
-  "prompt_sha256": "af204f98a96a7a62c8f8eed0f9bafe6d30e15e0fcf973d0c8e10ec8ffdb6df36",
-  "prompt_version": "stage4-evidence-writer-v1",
+  "prompt_sha256": "67689c1f6c240c3f16a7690281fd27d4ad7c103b2b8dd9aab4df50b152f4f5ae",
+  "prompt_version": "stage4-grounded-academic-writer-v2",
   "provider": "deterministic"
 }

@@ -3,8 +3,9 @@
 ## Objective
 
 Stage 4 converts the immutable `ValidatedEvidenceBundle` produced by Stage 3 into a
-concise, auditable analytical report. Code controls what the report may claim. An optional
-LLM controls only how validated qualitative signals are explained.
+concise, auditable applied social-science report. Code controls what the report may claim.
+An optional LLM controls the organisation, interpretation, transitions, and calibrated
+academic language around immutable evidence anchors.
 
 The stage never retrieves data, remaps a source, changes a transformation, or calculates a
 new statistic. Any such change must return to the appropriate earlier workflow stage.
@@ -64,45 +65,39 @@ bridge carries the confirmed scope, report style, and predictor-selection ration
 brief. The plan maps memory predictor IDs to the final source and series IDs; memory never
 overrides evidence values.
 
-The prompt instructs the writer to:
-
-- distinguish sale, rent, and shared signals;
-- distinguish observed evidence from interpretation;
-- discuss agreement, conflict, and insufficiency;
-- avoid new calculations, numerical claims, causal claims, and forecasts;
-- retain limitations and the reporting as-of boundary; and
-- return the required Markdown headings.
+The prompt instructs the writer to produce continuous prose under Introduction, Data and
+Analytical Approach, Rental-Market Findings, Sale-Market Findings, Discussion, Limitations,
+and Conclusion. Each findings section must proceed from outcome to predictors to a qualified
+synthesis. The writer may place only supplied `{{CLAIM:...}}` and `{{LIT:...}}` anchors; it
+may not copy numbers, invent citations, expose workflow internals, claim causality, or add an
+unsupported outlook.
 
 The prompt text, prompt version, evidence checksum, provider, model, and response metadata
 are persisted.
 
 ## Numeric claims and report composition
 
-All numerical sentences and tables are rendered deterministically from selected claims. The
-LLM-written section is qualitative and cannot introduce numbers. This makes value, unit,
-period, source, lineage, and incomplete-period verification exact rather than probabilistic.
+All numerical sentences are rendered deterministically from selected claim anchors. The LLM
+sees the structured evidence so it can organise a substantive argument, but it cannot type,
+round, calculate, or modify a value. Monthly native observations are omitted from report
+selection when an approved quarterly comparison view exists, avoiding duplicate evidence
+while retaining the native series in Stage 3 artifacts.
 
-The final report contains:
-
-1. executive summary and qualitative interpretation;
-2. scope, method, and information cut-off;
-3. deterministic validated-evidence tables;
-4. data-quality and limitation disclosures;
-5. source records; and
-6. a statement that the output is an indicator-monitoring report, not a forecasting model.
+The final report contains only the market analysis, its prose methodology, limitations,
+data sources, and references. Mapping contracts, checksums, claim ledgers, prompts, and
+lineage remain in companion artifacts rather than interrupting the reader-facing report.
 
 ## Verification and recovery
 
 Deterministic verification checks:
 
-- every claim marker occurs exactly once;
-- every rendered value, unit, period, source ID, and lineage matches the claim ledger;
-- the ledger contains exactly the selected evidence;
-- the as-of date and required sections are present;
-- the qualitative narrative contains no numerical claims;
+- every evidence anchor occurs exactly once and resolves to an approved claim;
+- every rendered evidence sentence exactly matches the claim ledger;
+- numerical text outside deterministic evidence or literature rendering is rejected;
+- the as-of date and academic sections are present;
 - prohibited causal and forecasting phrases are absent;
-- sale, rent, and shared headings are present; and
-- material quality disclosures are included.
+- source and literature records are retained; and
+- causal, forecast, proxy, frequency, and timing boundaries are disclosed.
 
 On failure, the writer receives only the verifier errors and the already approved context.
 The complete draft may be revised at most three times. Continued failure produces a blocked

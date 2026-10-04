@@ -23,7 +23,7 @@ class LiteratureRecord(FrozenStrictModel):
 
 
 class ReportBrief(FrozenStrictModel):
-    title: str = "Singapore Private Residential Market Predictor Report"
+    title: str = "Singapore Private Non-Landed Residential Market: Indicator Analysis"
     scope_summary: str = (
         "Singapore private residential sale prices and rents, using public market-level "
         "predictors and outcome benchmarks."
