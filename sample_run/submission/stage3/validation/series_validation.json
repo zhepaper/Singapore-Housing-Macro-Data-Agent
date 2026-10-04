@@ -25,9 +25,9 @@
     "eligible_observation_count": 42,
     "issues": [],
     "missing_periods": [],
-    "observation_count": 42,
+    "observation_count": 154,
     "period_end": "2026-Q2",
-    "period_start": "2016-Q1",
+    "period_start": "1988-Q1",
     "series_id": "private_non_landed_vacancy_rate",
     "source_id": "private_non_landed_vacancy_rate",
     "status": "pass"

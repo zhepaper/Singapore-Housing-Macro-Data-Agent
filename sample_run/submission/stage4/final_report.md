@@ -89,7 +89,7 @@ The evidence supports continued monitoring, with conclusions bounded by source t
 - **Non-resident population (yoy_percentage_change)**: 2.73 percent in 2025. Frequency: annual; update frequency: annual. Derivation: `percentage_change using calendar lag 1`; input period(s): 2024, 2025. Source: [Singapore population by residential status](https://data.gov.sg/datasets/d_3d227e5d9fdec73f3bcadce671c333a6/view) (`non_resident_population`).
 
 <!-- claim:CLAIM-004 -->
-- **Private non-landed vacancy rate**: 5.39 percent in 2026-Q2. Frequency: quarterly; update frequency: quarterly. Source: [Available and vacant private residential properties (M400841)](https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view) (`private_non_landed_vacancy_rate`).
+- **Private non-landed vacancy rate**: 5.39 percent in 2026-Q2. Frequency: quarterly; update frequency: quarterly. Derivation: `ratio of approved input series; scale=100`; input period(s): 2026-Q2, 2026-Q2. Source: [Available and vacant private residential properties (M400841)](https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view) (`private_non_landed_vacancy_rate`).
 
 <!-- claim:CLAIM-005 -->
 - **Private non-landed vacancy rate (qoq_percentage_point_change)**: 0.021 percentage points in 2026-Q2. Frequency: quarterly; update frequency: quarterly. Derivation: `percentage_point_change using calendar lag 1`; input period(s): 2026-Q1, 2026-Q2. Source: [Available and vacant private residential properties (M400841)](https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view) (`private_non_landed_vacancy_rate`).

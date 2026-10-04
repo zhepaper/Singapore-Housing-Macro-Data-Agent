@@ -91,7 +91,7 @@
     },
     {
       "claim_id": "CLAIM-004",
-      "derivation": null,
+      "derivation": "ratio of approved input series; scale=100",
       "literature_reference_ids": [
         "DiPasqualeWheaton1992",
         "URAHDB2026"
@@ -101,22 +101,24 @@
       "period": "2026-Q2",
       "portfolio_role": "predictor",
       "quality_notes": [
-        "No observation-level release date was supplied; the workflow relies on the approved availability rule."
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+        "Derived deterministically from the recorded source periods."
       ],
       "rationale": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
-      "raw_record_reference": "record:41/field:value",
-      "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+      "raw_record_reference": "input:numerator/record:0/field:20262Q|input:denominator/record:0/field:20262Q",
+      "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
       "series_id": "private_non_landed_vacancy_rate",
       "series_label": "Private non-landed vacancy rate",
       "source_id": "private_non_landed_vacancy_rate",
       "source_periods": [
+        "2026-Q2",
         "2026-Q2"
       ],
       "source_title": "Available and vacant private residential properties (M400841)",
       "source_url": "https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view",
       "unit": "percent",
       "update_frequency": "quarterly",
-      "value": "5.390114606235332",
+      "value": "5.390114606235332027295617930",
       "value_text": "5.39"
     },
     {
@@ -135,8 +137,8 @@
         "Derived deterministically from the recorded source periods."
       ],
       "rationale": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
-      "raw_record_reference": "record:40/field:value|record:41/field:value",
-      "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+      "raw_record_reference": "input:numerator/record:0/field:20261Q|input:denominator/record:0/field:20261Q|input:numerator/record:0/field:20262Q|input:denominator/record:0/field:20262Q",
+      "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
       "series_id": "private_non_landed_vacancy_rate__qoq_percentage_point_change",
       "series_label": "Private non-landed vacancy rate (qoq_percentage_point_change)",
       "source_id": "private_non_landed_vacancy_rate",
@@ -148,7 +150,7 @@
       "source_url": "https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view",
       "unit": "percentage points",
       "update_frequency": "quarterly",
-      "value": "0.0206883816381105",
+      "value": "0.020688381638110320206092305",
       "value_text": "0.021"
     },
     {
@@ -167,8 +169,8 @@
         "Derived deterministically from the recorded source periods."
       ],
       "rationale": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
-      "raw_record_reference": "record:37/field:value|record:41/field:value",
-      "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+      "raw_record_reference": "input:numerator/record:0/field:20252Q|input:denominator/record:0/field:20252Q|input:numerator/record:0/field:20262Q|input:denominator/record:0/field:20262Q",
+      "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
       "series_id": "private_non_landed_vacancy_rate__yoy_percentage_point_change",
       "series_label": "Private non-landed vacancy rate (yoy_percentage_point_change)",
       "source_id": "private_non_landed_vacancy_rate",
@@ -180,7 +182,7 @@
       "source_url": "https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view",
       "unit": "percentage points",
       "update_frequency": "quarterly",
-      "value": "-1.4857096298403085",
+      "value": "-1.485709629840308676475740065",
       "value_text": "-1.486"
     },
     {
@@ -610,7 +612,7 @@
       "value_text": "6.608"
     }
   ],
-  "evidence_sha256": "0aced77e6e4e9eac02514461070e48d0a8d70522feb1f95bb9ade76761ab7bb1",
+  "evidence_sha256": "65cdefc3c662d346f780e66a3ac54bcefa76e7e520f780efb2715da2f7f2e936",
   "literature_records": [
     {
       "citation": "Chia, W.-M., Li, M. and Tang, Y. (2017). Public and private housing markets dynamics in Singapore: The role of fundamentals. Journal of Housing Economics, 36, 44-61.",

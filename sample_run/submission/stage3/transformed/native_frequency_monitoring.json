@@ -52,1096 +52,4316 @@
     "value": "9200"
   },
   {
-    "available_date": "2016-03-31",
-    "derivation": null,
-    "eligibility_status": "eligible",
+    "available_date": "1988-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2016-Q1",
-    "original_value": "8.702508349541647",
-    "period": "2016-Q1",
+    "original_period": "19881Q",
+    "original_value": "numerator=3816;denominator=35802",
+    "period": "1988-Q1",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:0/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:19881Q|input:denominator/record:0/field:19881Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "1988-Q1",
+      "1988-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "10.65862242332830568124685772"
+  },
+  {
+    "available_date": "1988-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19882Q",
+    "original_value": "numerator=2820;denominator=35914",
+    "period": "1988-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19882Q|input:denominator/record:0/field:19882Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1988-Q2",
+      "1988-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.852091106532271537561953556"
+  },
+  {
+    "available_date": "1988-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19883Q",
+    "original_value": "numerator=2676;denominator=36004",
+    "period": "1988-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19883Q|input:denominator/record:0/field:19883Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1988-Q3",
+      "1988-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.432507499166759248972336407"
+  },
+  {
+    "available_date": "1988-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19884Q",
+    "original_value": "numerator=2393;denominator=36333",
+    "period": "1988-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19884Q|input:denominator/record:0/field:19884Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1988-Q4",
+      "1988-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.586298956871163955632620483"
+  },
+  {
+    "available_date": "1989-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19891Q",
+    "original_value": "numerator=2366;denominator=36646",
+    "period": "1989-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19891Q|input:denominator/record:0/field:19891Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1989-Q1",
+      "1989-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.456366315559679091851770998"
+  },
+  {
+    "available_date": "1989-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19892Q",
+    "original_value": "numerator=2750;denominator=37139",
+    "period": "1989-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19892Q|input:denominator/record:0/field:19892Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1989-Q2",
+      "1989-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.404615094644443846091709524"
+  },
+  {
+    "available_date": "1989-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19893Q",
+    "original_value": "numerator=2164;denominator=37529",
+    "period": "1989-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19893Q|input:denominator/record:0/field:19893Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1989-Q3",
+      "1989-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.766207466226118468384449359"
+  },
+  {
+    "available_date": "1989-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19894Q",
+    "original_value": "numerator=2042;denominator=38066",
+    "period": "1989-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19894Q|input:denominator/record:0/field:19894Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1989-Q4",
+      "1989-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.364367151788998056007986129"
+  },
+  {
+    "available_date": "1990-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19901Q",
+    "original_value": "numerator=2372;denominator=38412",
+    "period": "1990-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19901Q|input:denominator/record:0/field:19901Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1990-Q1",
+      "1990-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.175153597834010205144225763"
+  },
+  {
+    "available_date": "1990-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19902Q",
+    "original_value": "numerator=2745;denominator=38930",
+    "period": "1990-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19902Q|input:denominator/record:0/field:19902Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1990-Q2",
+      "1990-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.051117390187516054456717185"
+  },
+  {
+    "available_date": "1990-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19903Q",
+    "original_value": "numerator=2741;denominator=39324",
+    "period": "1990-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19903Q|input:denominator/record:0/field:19903Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1990-Q3",
+      "1990-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.970298036822296816193673075"
+  },
+  {
+    "available_date": "1990-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19904Q",
+    "original_value": "numerator=2674;denominator=39931",
+    "period": "1990-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19904Q|input:denominator/record:0/field:19904Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1990-Q4",
+      "1990-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.696551551426210212616763918"
+  },
+  {
+    "available_date": "1991-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19911Q",
+    "original_value": "numerator=2414;denominator=40324",
+    "period": "1991-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19911Q|input:denominator/record:0/field:19911Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1991-Q1",
+      "1991-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.986509274873524451939291737"
+  },
+  {
+    "available_date": "1991-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19912Q",
+    "original_value": "numerator=2631;denominator=40662",
+    "period": "1991-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19912Q|input:denominator/record:0/field:19912Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1991-Q2",
+      "1991-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.470414637745315036151689538"
+  },
+  {
+    "available_date": "1991-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19913Q",
+    "original_value": "numerator=3095;denominator=41445",
+    "period": "1991-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19913Q|input:denominator/record:0/field:19913Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1991-Q3",
+      "1991-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.467728314633852093135480758"
+  },
+  {
+    "available_date": "1991-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19914Q",
+    "original_value": "numerator=2603;denominator=41699",
+    "period": "1991-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19914Q|input:denominator/record:0/field:19914Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1991-Q4",
+      "1991-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.242355931796925585745461522"
+  },
+  {
+    "available_date": "1992-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19921Q",
+    "original_value": "numerator=2904;denominator=42226",
+    "period": "1992-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19921Q|input:denominator/record:0/field:19921Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1992-Q1",
+      "1992-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.877279401316724293089565670"
+  },
+  {
+    "available_date": "1992-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19922Q",
+    "original_value": "numerator=2932;denominator=42801",
+    "period": "1992-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19922Q|input:denominator/record:0/field:19922Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1992-Q2",
+      "1992-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.850307235812247377397724352"
+  },
+  {
+    "available_date": "1992-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19923Q",
+    "original_value": "numerator=2944;denominator=43503",
+    "period": "1992-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19923Q|input:denominator/record:0/field:19923Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1992-Q3",
+      "1992-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.767349378203802036641151185"
+  },
+  {
+    "available_date": "1992-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19924Q",
+    "original_value": "numerator=3713;denominator=44650",
+    "period": "1992-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19924Q|input:denominator/record:0/field:19924Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1992-Q4",
+      "1992-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.315789473684210526315789474"
+  },
+  {
+    "available_date": "1993-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19931Q",
+    "original_value": "numerator=4022;denominator=45475",
+    "period": "1993-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19931Q|input:denominator/record:0/field:19931Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1993-Q1",
+      "1993-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.844420010995052226498075866"
+  },
+  {
+    "available_date": "1993-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19932Q",
+    "original_value": "numerator=4083;denominator=46243",
+    "period": "1993-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19932Q|input:denominator/record:0/field:19932Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1993-Q2",
+      "1993-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.829444456458274765910516186"
+  },
+  {
+    "available_date": "1993-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19933Q",
+    "original_value": "numerator=4105;denominator=47260",
+    "period": "1993-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19933Q|input:denominator/record:0/field:19933Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1993-Q3",
+      "1993-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.685992382564536606009310199"
+  },
+  {
+    "available_date": "1993-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19934Q",
+    "original_value": "numerator=3765;denominator=47928",
+    "period": "1993-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19934Q|input:denominator/record:0/field:19934Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1993-Q4",
+      "1993-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.855533299949924887330996495"
+  },
+  {
+    "available_date": "1994-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19941Q",
+    "original_value": "numerator=3536;denominator=48605",
+    "period": "1994-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19941Q|input:denominator/record:0/field:19941Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1994-Q1",
+      "1994-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.274971710729348832424647670"
+  },
+  {
+    "available_date": "1994-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19942Q",
+    "original_value": "numerator=3581;denominator=49932",
+    "period": "1994-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19942Q|input:denominator/record:0/field:19942Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1994-Q2",
+      "1994-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.171753584875430585596411119"
+  },
+  {
+    "available_date": "1994-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19943Q",
+    "original_value": "numerator=4476;denominator=51621",
+    "period": "1994-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19943Q|input:denominator/record:0/field:19943Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1994-Q3",
+      "1994-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.670889754169814610333004010"
+  },
+  {
+    "available_date": "1994-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19944Q",
+    "original_value": "numerator=4155;denominator=53429",
+    "period": "1994-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19944Q|input:denominator/record:0/field:19944Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1994-Q4",
+      "1994-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.776675588163731306968125924"
+  },
+  {
+    "available_date": "1995-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19951Q",
+    "original_value": "numerator=4242;denominator=65383",
+    "period": "1995-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19951Q|input:denominator/record:0/field:19951Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1995-Q1",
+      "1995-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.487924995794013734456968937"
+  },
+  {
+    "available_date": "1995-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19952Q",
+    "original_value": "numerator=4884;denominator=66457",
+    "period": "1995-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19952Q|input:denominator/record:0/field:19952Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1995-Q2",
+      "1995-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.349112960260017755842123478"
+  },
+  {
+    "available_date": "1995-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19953Q",
+    "original_value": "numerator=4440;denominator=67676",
+    "period": "1995-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19953Q|input:denominator/record:0/field:19953Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1995-Q3",
+      "1995-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.560671434481943377268160057"
+  },
+  {
+    "available_date": "1995-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19954Q",
+    "original_value": "numerator=4418;denominator=69310",
+    "period": "1995-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19954Q|input:denominator/record:0/field:19954Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1995-Q4",
+      "1995-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.374260568460539604674650123"
+  },
+  {
+    "available_date": "1996-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19961Q",
+    "original_value": "numerator=5097;denominator=70707",
+    "period": "1996-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19961Q|input:denominator/record:0/field:19961Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1996-Q1",
+      "1996-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.208621494335780050065764351"
+  },
+  {
+    "available_date": "1996-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19962Q",
+    "original_value": "numerator=5170;denominator=84345",
+    "period": "1996-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19962Q|input:denominator/record:0/field:19962Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1996-Q2",
+      "1996-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.129586816053115181694232023"
+  },
+  {
+    "available_date": "1996-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19963Q",
+    "original_value": "numerator=5005;denominator=85732",
+    "period": "1996-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19963Q|input:denominator/record:0/field:19963Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1996-Q3",
+      "1996-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.837960154901320393785284375"
+  },
+  {
+    "available_date": "1996-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19964Q",
+    "original_value": "numerator=5464;denominator=87520",
+    "period": "1996-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19964Q|input:denominator/record:0/field:19964Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1996-Q4",
+      "1996-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.243144424131627056672760512"
+  },
+  {
+    "available_date": "1997-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19971Q",
+    "original_value": "numerator=7357;denominator=90056",
+    "period": "1997-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19971Q|input:denominator/record:0/field:19971Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1997-Q1",
+      "1997-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.169361286310739984009949365"
+  },
+  {
+    "available_date": "1997-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19972Q",
+    "original_value": "numerator=9082;denominator=92422",
+    "period": "1997-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19972Q|input:denominator/record:0/field:19972Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1997-Q2",
+      "1997-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.826664646945532448984008137"
+  },
+  {
+    "available_date": "1997-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19973Q",
+    "original_value": "numerator=10259;denominator=95704",
+    "period": "1997-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19973Q|input:denominator/record:0/field:19973Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1997-Q3",
+      "1997-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "10.71951015631530552536989050"
+  },
+  {
+    "available_date": "1997-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19974Q",
+    "original_value": "numerator=10677;denominator=98042",
+    "period": "1997-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19974Q|input:denominator/record:0/field:19974Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1997-Q4",
+      "1997-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "10.89023071744762448746455601"
+  },
+  {
+    "available_date": "1998-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19981Q",
+    "original_value": "numerator=10290;denominator=100612",
+    "period": "1998-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19981Q|input:denominator/record:0/field:19981Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1998-Q1",
+      "1998-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "10.22740826143998727785949986"
+  },
+  {
+    "available_date": "1998-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19982Q",
+    "original_value": "numerator=12067;denominator=103416",
+    "period": "1998-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19982Q|input:denominator/record:0/field:19982Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1998-Q2",
+      "1998-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "11.66840720971609808927051907"
+  },
+  {
+    "available_date": "1998-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19983Q",
+    "original_value": "numerator=12459;denominator=106059",
+    "period": "1998-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19983Q|input:denominator/record:0/field:19983Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1998-Q3",
+      "1998-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "11.74723502955901903657398241"
+  },
+  {
+    "available_date": "1998-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19984Q",
+    "original_value": "numerator=12171;denominator=109315",
+    "period": "1998-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19984Q|input:denominator/record:0/field:19984Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1998-Q4",
+      "1998-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "11.13387915656588757261126103"
+  },
+  {
+    "available_date": "1999-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19991Q",
+    "original_value": "numerator=11453;denominator=111770",
+    "period": "1999-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19991Q|input:denominator/record:0/field:19991Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1999-Q1",
+      "1999-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "10.24693567146819361188154245"
+  },
+  {
+    "available_date": "1999-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19992Q",
+    "original_value": "numerator=11147;denominator=114444",
+    "period": "1999-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19992Q|input:denominator/record:0/field:19992Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1999-Q2",
+      "1999-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.740134913145293768131138373"
+  },
+  {
+    "available_date": "1999-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19993Q",
+    "original_value": "numerator=10048;denominator=115946",
+    "period": "1999-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19993Q|input:denominator/record:0/field:19993Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1999-Q3",
+      "1999-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.666103185965880668587100892"
+  },
+  {
+    "available_date": "1999-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "19994Q",
+    "original_value": "numerator=11212;denominator=118575",
+    "period": "1999-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:19994Q|input:denominator/record:0/field:19994Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "1999-Q4",
+      "1999-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.455618806662449926207041957"
+  },
+  {
+    "available_date": "2000-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20001Q",
+    "original_value": "numerator=11410;denominator=120036",
+    "period": "2000-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20001Q|input:denominator/record:0/field:20001Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2000-Q1",
+      "2000-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.505481688826685327735012829"
+  },
+  {
+    "available_date": "2000-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20002Q",
+    "original_value": "numerator=13016;denominator=124376",
+    "period": "2000-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20002Q|input:denominator/record:0/field:20002Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2000-Q2",
+      "2000-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "10.46504148710362127741686499"
+  },
+  {
+    "available_date": "2000-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20003Q",
+    "original_value": "numerator=11221;denominator=125097",
+    "period": "2000-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20003Q|input:denominator/record:0/field:20003Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2000-Q3",
+      "2000-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.969839404622013317665491579"
+  },
+  {
+    "available_date": "2000-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20004Q",
+    "original_value": "numerator=10475;denominator=127001",
+    "period": "2000-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20004Q|input:denominator/record:0/field:20004Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2000-Q4",
+      "2000-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.247966551444476815143187849"
+  },
+  {
+    "available_date": "2001-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20011Q",
+    "original_value": "numerator=9554;denominator=127896",
+    "period": "2001-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20011Q|input:denominator/record:0/field:20011Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2001-Q1",
+      "2001-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.470131982235566397698129730"
+  },
+  {
+    "available_date": "2001-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20012Q",
+    "original_value": "numerator=10617;denominator=128821",
+    "period": "2001-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20012Q|input:denominator/record:0/field:20012Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2001-Q2",
+      "2001-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.241668672033286498319373394"
+  },
+  {
+    "available_date": "2001-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20013Q",
+    "original_value": "numerator=11194;denominator=129682",
+    "period": "2001-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20013Q|input:denominator/record:0/field:20013Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2001-Q3",
+      "2001-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.631884147375888712388766367"
+  },
+  {
+    "available_date": "2001-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20014Q",
+    "original_value": "numerator=12428;denominator=132142",
+    "period": "2001-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20014Q|input:denominator/record:0/field:20014Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2001-Q4",
+      "2001-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.405033978598780100195244510"
+  },
+  {
+    "available_date": "2002-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20021Q",
+    "original_value": "numerator=11604;denominator=133450",
+    "period": "2002-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20021Q|input:denominator/record:0/field:20021Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2002-Q1",
+      "2002-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.695391532409142000749344324"
+  },
+  {
+    "available_date": "2002-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20022Q",
+    "original_value": "numerator=12820;denominator=135417",
+    "period": "2002-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20022Q|input:denominator/record:0/field:20022Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2002-Q2",
+      "2002-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.467053619560321082286566679"
+  },
+  {
+    "available_date": "2002-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20023Q",
+    "original_value": "numerator=12765;denominator=137116",
+    "period": "2002-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20023Q|input:denominator/record:0/field:20023Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2002-Q3",
+      "2002-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.309635636978908369555704659"
+  },
+  {
+    "available_date": "2002-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20024Q",
+    "original_value": "numerator=13754;denominator=138707",
+    "period": "2002-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20024Q|input:denominator/record:0/field:20024Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2002-Q4",
+      "2002-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.915865817875089216838371531"
+  },
+  {
+    "available_date": "2003-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20031Q",
+    "original_value": "numerator=12632;denominator=139708",
+    "period": "2003-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20031Q|input:denominator/record:0/field:20031Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2003-Q1",
+      "2003-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.041715578205972456838548974"
+  },
+  {
+    "available_date": "2003-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20032Q",
+    "original_value": "numerator=12534;denominator=140918",
+    "period": "2003-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20032Q|input:denominator/record:0/field:20032Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2003-Q2",
+      "2003-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.894534410082459302573127635"
+  },
+  {
+    "available_date": "2003-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20033Q",
+    "original_value": "numerator=13755;denominator=142836",
+    "period": "2003-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20033Q|input:denominator/record:0/field:20033Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2003-Q3",
+      "2003-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.629925228933882214567756028"
+  },
+  {
+    "available_date": "2003-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20034Q",
+    "original_value": "numerator=13094;denominator=143842",
+    "period": "2003-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20034Q|input:denominator/record:0/field:20034Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2003-Q4",
+      "2003-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.103043617302317820942422936"
+  },
+  {
+    "available_date": "2004-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20041Q",
+    "original_value": "numerator=14702;denominator=146985",
+    "period": "2004-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20041Q|input:denominator/record:0/field:20041Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2004-Q1",
+      "2004-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "10.00238119536007075551927067"
+  },
+  {
+    "available_date": "2004-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20042Q",
+    "original_value": "numerator=14912;denominator=149363",
+    "period": "2004-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20042Q|input:denominator/record:0/field:20042Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2004-Q2",
+      "2004-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.983730910600349484142659159"
+  },
+  {
+    "available_date": "2004-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20043Q",
+    "original_value": "numerator=15517;denominator=152154",
+    "period": "2004-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20043Q|input:denominator/record:0/field:20043Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2004-Q3",
+      "2004-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "10.19822022424648711174205082"
+  },
+  {
+    "available_date": "2004-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20044Q",
+    "original_value": "numerator=15155;denominator=154265",
+    "period": "2004-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20044Q|input:denominator/record:0/field:20044Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2004-Q4",
+      "2004-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.824004148705150228502900852"
+  },
+  {
+    "available_date": "2005-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20051Q",
+    "original_value": "numerator=16423;denominator=156059",
+    "period": "2005-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20051Q|input:denominator/record:0/field:20051Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2005-Q1",
+      "2005-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "10.52358402911719285654784408"
+  },
+  {
+    "available_date": "2005-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20052Q",
+    "original_value": "numerator=16192;denominator=157766",
+    "period": "2005-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20052Q|input:denominator/record:0/field:20052Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2005-Q2",
+      "2005-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "10.26330134502998111126605225"
+  },
+  {
+    "available_date": "2005-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20053Q",
+    "original_value": "numerator=16077;denominator=159533",
+    "period": "2005-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20053Q|input:denominator/record:0/field:20053Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2005-Q3",
+      "2005-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "10.07753881642042712166134906"
+  },
+  {
+    "available_date": "2005-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20054Q",
+    "original_value": "numerator=15801;denominator=161410",
+    "period": "2005-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20054Q|input:denominator/record:0/field:20054Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2005-Q4",
+      "2005-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.789356297627160646800074345"
+  },
+  {
+    "available_date": "2006-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20061Q",
+    "original_value": "numerator=13619;denominator=162112",
+    "period": "2006-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20061Q|input:denominator/record:0/field:20061Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2006-Q1",
+      "2006-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.400982037110146071851559416"
+  },
+  {
+    "available_date": "2006-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20062Q",
+    "original_value": "numerator=11891;denominator=162590",
+    "period": "2006-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20062Q|input:denominator/record:0/field:20062Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2006-Q2",
+      "2006-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.313487914385878590319207823"
+  },
+  {
+    "available_date": "2006-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20063Q",
+    "original_value": "numerator=11737;denominator=163997",
+    "period": "2006-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20063Q|input:denominator/record:0/field:20063Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2006-Q3",
+      "2006-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.156838234845759373647078910"
+  },
+  {
+    "available_date": "2006-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20064Q",
+    "original_value": "numerator=10847;denominator=164954",
+    "period": "2006-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20064Q|input:denominator/record:0/field:20064Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2006-Q4",
+      "2006-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.575772639644991937146113462"
+  },
+  {
+    "available_date": "2007-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20071Q",
+    "original_value": "numerator=8893;denominator=164793",
+    "period": "2007-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20071Q|input:denominator/record:0/field:20071Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2007-Q1",
+      "2007-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.396467082946484377370398014"
+  },
+  {
+    "available_date": "2007-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20072Q",
+    "original_value": "numerator=8562;denominator=164783",
+    "period": "2007-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20072Q|input:denominator/record:0/field:20072Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2007-Q2",
+      "2007-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.195924336855136755611925988"
+  },
+  {
+    "available_date": "2007-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20073Q",
+    "original_value": "numerator=9349;denominator=165576",
+    "period": "2007-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20073Q|input:denominator/record:0/field:20073Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2007-Q3",
+      "2007-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.646349712518722520172005605"
+  },
+  {
+    "available_date": "2007-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20074Q",
+    "original_value": "numerator=9993;denominator=166352",
+    "period": "2007-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20074Q|input:denominator/record:0/field:20074Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2007-Q4",
+      "2007-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.007141483120130806963547177"
+  },
+  {
+    "available_date": "2008-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20081Q",
+    "original_value": "numerator=11939;denominator=168410",
+    "period": "2008-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20081Q|input:denominator/record:0/field:20081Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2008-Q1",
+      "2008-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.089246481800368149159788611"
+  },
+  {
+    "available_date": "2008-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20082Q",
+    "original_value": "numerator=11646;denominator=169178",
+    "period": "2008-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20082Q|input:denominator/record:0/field:20082Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2008-Q2",
+      "2008-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.883873789736254122876496944"
+  },
+  {
+    "available_date": "2008-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20083Q",
+    "original_value": "numerator=11552;denominator=170300",
+    "period": "2008-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20083Q|input:denominator/record:0/field:20083Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2008-Q3",
+      "2008-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.783323546682325308279506753"
+  },
+  {
+    "available_date": "2008-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20084Q",
+    "original_value": "numerator=12215;denominator=172443",
+    "period": "2008-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20084Q|input:denominator/record:0/field:20084Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2008-Q4",
+      "2008-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.083500055090667640901631264"
+  },
+  {
+    "available_date": "2009-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20091Q",
+    "original_value": "numerator=11898;denominator=174243",
+    "period": "2009-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20091Q|input:denominator/record:0/field:20091Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2009-Q1",
+      "2009-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.828394827912742549198533083"
+  },
+  {
+    "available_date": "2009-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20092Q",
+    "original_value": "numerator=11984;denominator=176757",
+    "period": "2009-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20092Q|input:denominator/record:0/field:20092Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2009-Q2",
+      "2009-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.779929507742267632965031088"
+  },
+  {
+    "available_date": "2009-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20093Q",
+    "original_value": "numerator=13084;denominator=180159",
+    "period": "2009-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20093Q|input:denominator/record:0/field:20093Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2009-Q3",
+      "2009-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.262473703783879795069910468"
+  },
+  {
+    "available_date": "2009-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20094Q",
+    "original_value": "numerator=9913;denominator=179991",
+    "period": "2009-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20094Q|input:denominator/record:0/field:20094Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2009-Q4",
+      "2009-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.507497597102077326088526649"
+  },
+  {
+    "available_date": "2010-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20101Q",
+    "original_value": "numerator=9097;denominator=180882",
+    "period": "2010-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20101Q|input:denominator/record:0/field:20101Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2010-Q1",
+      "2010-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.029245585519841664731703542"
+  },
+  {
+    "available_date": "2010-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20102Q",
+    "original_value": "numerator=11343;denominator=184682",
+    "period": "2010-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20102Q|input:denominator/record:0/field:20102Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2010-Q2",
+      "2010-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.141908794576623601650404479"
+  },
+  {
+    "available_date": "2010-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20103Q",
+    "original_value": "numerator=10881;denominator=186812",
+    "period": "2010-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20103Q|input:denominator/record:0/field:20103Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2010-Q3",
+      "2010-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.824572297282829796801062030"
+  },
+  {
+    "available_date": "2010-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20104Q",
+    "original_value": "numerator=10589;denominator=188500",
+    "period": "2010-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20104Q|input:denominator/record:0/field:20104Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2010-Q4",
+      "2010-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.617506631299734748010610080"
+  },
+  {
+    "available_date": "2011-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20111Q",
+    "original_value": "numerator=10504;denominator=190413",
+    "period": "2011-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20111Q|input:denominator/record:0/field:20111Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2011-Q1",
+      "2011-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.516430075677606045805696040"
+  },
+  {
+    "available_date": "2011-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20112Q",
+    "original_value": "numerator=10952;denominator=192372",
+    "period": "2011-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20112Q|input:denominator/record:0/field:20112Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2011-Q2",
+      "2011-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.693136215249620526895806042"
+  },
+  {
+    "available_date": "2011-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20113Q",
+    "original_value": "numerator=12975;denominator=196106",
+    "period": "2011-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20113Q|input:denominator/record:0/field:20113Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2011-Q3",
+      "2011-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.616319745443790603041212406"
+  },
+  {
+    "available_date": "2011-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20114Q",
+    "original_value": "numerator=13586;denominator=198623",
+    "period": "2011-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20114Q|input:denominator/record:0/field:20114Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2011-Q4",
+      "2011-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.840094047517155616419045126"
+  },
+  {
+    "available_date": "2012-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20121Q",
+    "original_value": "numerator=13707;denominator=200761",
+    "period": "2012-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20121Q|input:denominator/record:0/field:20121Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2012-Q1",
+      "2012-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.827521281523801933642490324"
+  },
+  {
+    "available_date": "2012-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20122Q",
+    "original_value": "numerator=13838;denominator=202773",
+    "period": "2012-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20122Q|input:denominator/record:0/field:20122Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2012-Q2",
+      "2012-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.824379971692483713314889063"
+  },
+  {
+    "available_date": "2012-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20123Q",
+    "original_value": "numerator=14198;denominator=206008",
+    "period": "2012-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20123Q|input:denominator/record:0/field:20123Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2012-Q3",
+      "2012-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.891965360568521610811230632"
+  },
+  {
+    "available_date": "2012-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20124Q",
+    "original_value": "numerator=12584;denominator=207232",
+    "period": "2012-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20124Q|input:denominator/record:0/field:20124Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2012-Q4",
+      "2012-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.072421247683755404570722668"
+  },
+  {
+    "available_date": "2013-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20131Q",
+    "original_value": "numerator=12205;denominator=209246",
+    "period": "2013-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20131Q|input:denominator/record:0/field:20131Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2013-Q1",
+      "2013-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "5.832847461839174942412280283"
+  },
+  {
+    "available_date": "2013-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20132Q",
+    "original_value": "numerator=13447;denominator=211923",
+    "period": "2013-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20132Q|input:denominator/record:0/field:20132Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2013-Q2",
+      "2013-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "6.345229163422563855740056530"
+  },
+  {
+    "available_date": "2013-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20133Q",
+    "original_value": "numerator=15080;denominator=215281",
+    "period": "2013-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20133Q|input:denominator/record:0/field:20133Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2013-Q3",
+      "2013-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.004798379791992790817582601"
+  },
+  {
+    "available_date": "2013-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20134Q",
+    "original_value": "numerator=15564;denominator=218321",
+    "period": "2013-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20134Q|input:denominator/record:0/field:20134Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2013-Q4",
+      "2013-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.128952322497606735036941018"
+  },
+  {
+    "available_date": "2014-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20141Q",
+    "original_value": "numerator=16918;denominator=222158",
+    "period": "2014-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20141Q|input:denominator/record:0/field:20141Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2014-Q1",
+      "2014-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "7.615300821937539949045274084"
+  },
+  {
+    "available_date": "2014-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20142Q",
+    "original_value": "numerator=18761;denominator=226687",
+    "period": "2014-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20142Q|input:denominator/record:0/field:20142Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2014-Q2",
+      "2014-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.276169343632409445623260266"
+  },
+  {
+    "available_date": "2014-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20143Q",
+    "original_value": "numerator=19060;denominator=231039",
+    "period": "2014-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20143Q|input:denominator/record:0/field:20143Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2014-Q3",
+      "2014-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.249689446370526188219304966"
+  },
+  {
+    "available_date": "2014-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20144Q",
+    "original_value": "numerator=21656;denominator=237274",
+    "period": "2014-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20144Q|input:denominator/record:0/field:20144Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2014-Q4",
+      "2014-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.127000851336429613021232836"
+  },
+  {
+    "available_date": "2015-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20151Q",
+    "original_value": "numerator=19899;denominator=239980",
+    "period": "2015-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20151Q|input:denominator/record:0/field:20151Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2015-Q1",
+      "2015-Q1"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "8.291940995082923576964747062"
+  },
+  {
+    "available_date": "2015-06-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20152Q",
+    "original_value": "numerator=22797;denominator=246825",
+    "period": "2015-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20152Q|input:denominator/record:0/field:20152Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2015-Q2",
+      "2015-Q2"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.236098450319051959890610757"
+  },
+  {
+    "available_date": "2015-09-30",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20153Q",
+    "original_value": "numerator=22776;denominator=250323",
+    "period": "2015-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20153Q|input:denominator/record:0/field:20153Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2015-Q3",
+      "2015-Q3"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.098644551239798180750470392"
+  },
+  {
+    "available_date": "2015-12-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20154Q",
+    "original_value": "numerator=23964;denominator=255456",
+    "period": "2015-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20154Q|input:denominator/record:0/field:20154Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2015-Q4",
+      "2015-Q4"
+    ],
+    "unit": "percent",
+    "update_frequency": "quarterly",
+    "value": "9.380871852686959789552799699"
+  },
+  {
+    "available_date": "2016-03-31",
+    "derivation": "ratio of approved input series; scale=100",
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "quarterly",
+    "original_period": "20161Q",
+    "original_value": "numerator=22461;denominator=258098",
+    "period": "2016-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "input:numerator/record:0/field:20161Q|input:denominator/record:0/field:20161Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
+    "release_date": null,
+    "series_id": "private_non_landed_vacancy_rate",
+    "series_label": "Private non-landed vacancy rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "source_periods": [
+      "2016-Q1",
       "2016-Q1"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "8.702508349541647"
+    "value": "8.702508349541646971305473115"
   },
   {
     "available_date": "2016-06-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2016-Q2",
-    "original_value": "10.401219388578745",
+    "original_period": "20162Q",
+    "original_value": "numerator=27705;denominator=266363",
     "period": "2016-Q2",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:1/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20162Q|input:denominator/record:0/field:20162Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2016-Q2",
       "2016-Q2"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "10.401219388578745"
+    "value": "10.40121938857874404478099436"
   },
   {
     "available_date": "2016-09-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2016-Q3",
-    "original_value": "10.01342450192885",
+    "original_period": "20163Q",
+    "original_value": "numerator=27151;denominator=271146",
     "period": "2016-Q3",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:2/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20163Q|input:denominator/record:0/field:20163Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2016-Q3",
       "2016-Q3"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "10.01342450192885"
+    "value": "10.01342450192885013977709426"
   },
   {
     "available_date": "2016-12-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2016-Q4",
-    "original_value": "9.506506706354248",
+    "original_period": "20164Q",
+    "original_value": "numerator=26189;denominator=275485",
     "period": "2016-Q4",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:3/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20164Q|input:denominator/record:0/field:20164Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2016-Q4",
       "2016-Q4"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "9.506506706354248"
+    "value": "9.506506706354247962683993684"
   },
   {
     "available_date": "2017-03-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2017-Q1",
-    "original_value": "9.090649005106785",
+    "original_period": "20171Q",
+    "original_value": "numerator=25420;denominator=279628",
     "period": "2017-Q1",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:4/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20171Q|input:denominator/record:0/field:20171Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2017-Q1",
       "2017-Q1"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "9.090649005106785"
+    "value": "9.090649005106784728281860186"
   },
   {
     "available_date": "2017-06-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2017-Q2",
-    "original_value": "9.052154611125424",
+    "original_period": "20172Q",
+    "original_value": "numerator=25651;denominator=283369",
     "period": "2017-Q2",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:5/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20172Q|input:denominator/record:0/field:20172Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2017-Q2",
       "2017-Q2"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "9.052154611125424"
+    "value": "9.052154611125423034982655125"
   },
   {
     "available_date": "2017-09-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2017-Q3",
-    "original_value": "9.270486041024284",
+    "original_period": "20173Q",
+    "original_value": "numerator=26638;denominator=287342",
     "period": "2017-Q3",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:6/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20173Q|input:denominator/record:0/field:20173Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2017-Q3",
       "2017-Q3"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "9.270486041024284"
+    "value": "9.270486041024284650346973293"
   },
   {
     "available_date": "2017-12-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2017-Q4",
-    "original_value": "8.702243992124417",
+    "original_period": "20174Q",
+    "original_value": "numerator=25370;denominator=291534",
     "period": "2017-Q4",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:7/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20174Q|input:denominator/record:0/field:20174Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2017-Q4",
       "2017-Q4"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "8.702243992124417"
+    "value": "8.702243992124417735152675160"
   },
   {
     "available_date": "2018-03-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2018-Q1",
-    "original_value": "8.02858860828687",
+    "original_period": "20181Q",
+    "original_value": "numerator=23500;denominator=292704",
     "period": "2018-Q1",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:8/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20181Q|input:denominator/record:0/field:20181Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2018-Q1",
       "2018-Q1"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "8.02858860828687"
+    "value": "8.028588608286870012025800809"
   },
   {
     "available_date": "2018-06-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2018-Q2",
-    "original_value": "7.626544229596755",
+    "original_period": "20182Q",
+    "original_value": "numerator=22391;denominator=293593",
     "period": "2018-Q2",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:9/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20182Q|input:denominator/record:0/field:20182Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2018-Q2",
       "2018-Q2"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "7.626544229596755"
+    "value": "7.626544229596754691017837619"
   },
   {
     "available_date": "2018-09-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2018-Q3",
-    "original_value": "7.306601476982162",
+    "original_period": "20183Q",
+    "original_value": "numerator=21460;denominator=293707",
     "period": "2018-Q3",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:10/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20183Q|input:denominator/record:0/field:20183Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2018-Q3",
       "2018-Q3"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "7.306601476982162"
+    "value": "7.306601476982162495275904217"
   },
   {
     "available_date": "2018-12-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2018-Q4",
-    "original_value": "6.831350302507647",
+    "original_period": "20184Q",
+    "original_value": "numerator=20279;denominator=296852",
     "period": "2018-Q4",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:11/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20184Q|input:denominator/record:0/field:20184Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2018-Q4",
       "2018-Q4"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.831350302507647"
+    "value": "6.831350302507646908223626588"
   },
   {
     "available_date": "2019-03-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2019-Q1",
-    "original_value": "6.741225964363297",
+    "original_period": "20191Q",
+    "original_value": "numerator=20078;denominator=297839",
     "period": "2019-Q1",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:12/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20191Q|input:denominator/record:0/field:20191Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2019-Q1",
       "2019-Q1"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.741225964363297"
+    "value": "6.741225964363296949022794194"
   },
   {
     "available_date": "2019-06-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2019-Q2",
-    "original_value": "6.724144283556244",
+    "original_period": "20192Q",
+    "original_value": "numerator=20075;denominator=298551",
     "period": "2019-Q2",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:13/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20192Q|input:denominator/record:0/field:20192Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2019-Q2",
       "2019-Q2"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.724144283556244"
+    "value": "6.724144283556243321911499208"
   },
   {
     "available_date": "2019-09-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2019-Q3",
-    "original_value": "6.384502860356364",
+    "original_period": "20193Q",
+    "original_value": "numerator=19073;denominator=298739",
     "period": "2019-Q3",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:14/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20193Q|input:denominator/record:0/field:20193Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2019-Q3",
       "2019-Q3"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.384502860356364"
+    "value": "6.384502860356364585809017236"
   },
   {
     "available_date": "2019-12-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2019-Q4",
-    "original_value": "5.658334416092805",
+    "original_period": "20194Q",
+    "original_value": "numerator=16984;denominator=300159",
     "period": "2019-Q4",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:15/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20194Q|input:denominator/record:0/field:20194Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2019-Q4",
       "2019-Q4"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "5.658334416092805"
+    "value": "5.658334416092804147135351597"
   },
   {
     "available_date": "2020-03-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2020-Q1",
-    "original_value": "5.633840193190563",
+    "original_period": "20201Q",
+    "original_value": "numerator=16984;denominator=301464",
     "period": "2020-Q1",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:16/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20201Q|input:denominator/record:0/field:20201Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2020-Q1",
       "2020-Q1"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "5.633840193190563"
+    "value": "5.633840193190563384019319056"
   },
   {
     "available_date": "2020-06-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2020-Q2",
-    "original_value": "5.582550050448728",
+    "original_period": "20202Q",
+    "original_value": "numerator=16820;denominator=301296",
     "period": "2020-Q2",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:17/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20202Q|input:denominator/record:0/field:20202Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2020-Q2",
       "2020-Q2"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "5.582550050448728"
+    "value": "5.582550050448728161011098720"
   },
   {
     "available_date": "2020-09-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2020-Q3",
-    "original_value": "6.4829945276220835",
+    "original_period": "20203Q",
+    "original_value": "numerator=19559;denominator=301697",
     "period": "2020-Q3",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:18/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20203Q|input:denominator/record:0/field:20203Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2020-Q3",
       "2020-Q3"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.4829945276220835"
+    "value": "6.482994527622084409192003898"
   },
   {
     "available_date": "2020-12-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2020-Q4",
-    "original_value": "7.491899711659461",
+    "original_period": "20204Q",
+    "original_value": "numerator=22683;denominator=302767",
     "period": "2020-Q4",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:19/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20204Q|input:denominator/record:0/field:20204Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2020-Q4",
       "2020-Q4"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "7.491899711659461"
+    "value": "7.491899711659460905580859209"
   },
   {
     "available_date": "2021-03-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2021-Q1",
-    "original_value": "6.80583920515363",
+    "original_period": "20211Q",
+    "original_value": "numerator=20728;denominator=304562",
     "period": "2021-Q1",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:20/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20211Q|input:denominator/record:0/field:20211Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2021-Q1",
       "2021-Q1"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.80583920515363"
+    "value": "6.805839205153630459479514844"
   },
   {
     "available_date": "2021-06-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2021-Q2",
-    "original_value": "6.65155666739604",
+    "original_period": "20212Q",
+    "original_value": "numerator=20367;denominator=306199",
     "period": "2021-Q2",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:21/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20212Q|input:denominator/record:0/field:20212Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2021-Q2",
       "2021-Q2"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.65155666739604"
+    "value": "6.651556667396039830306434704"
   },
   {
     "available_date": "2021-09-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2021-Q3",
-    "original_value": "6.699725989906264",
+    "original_period": "20213Q",
+    "original_value": "numerator=20563;denominator=306923",
     "period": "2021-Q3",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:22/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20213Q|input:denominator/record:0/field:20213Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2021-Q3",
       "2021-Q3"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.699725989906264"
+    "value": "6.699725989906263134401788071"
   },
   {
     "available_date": "2021-12-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2021-Q4",
-    "original_value": "6.347330974677358",
+    "original_period": "20214Q",
+    "original_value": "numerator=19609;denominator=308933",
     "period": "2021-Q4",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:23/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20214Q|input:denominator/record:0/field:20214Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2021-Q4",
       "2021-Q4"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.347330974677358"
+    "value": "6.347330974677357226324154428"
   },
   {
     "available_date": "2022-03-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2022-Q1",
-    "original_value": "5.448240904262704",
+    "original_period": "20221Q",
+    "original_value": "numerator=16875;denominator=309733",
     "period": "2022-Q1",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:24/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20221Q|input:denominator/record:0/field:20221Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2022-Q1",
       "2022-Q1"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "5.448240904262704"
+    "value": "5.448240904262703683495139362"
   },
   {
     "available_date": "2022-06-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2022-Q2",
-    "original_value": "5.556925264078024",
+    "original_period": "20222Q",
+    "original_value": "numerator=17355;denominator=312313",
     "period": "2022-Q2",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:25/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20222Q|input:denominator/record:0/field:20222Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2022-Q2",
       "2022-Q2"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "5.556925264078024"
+    "value": "5.556925264078024289734977410"
   },
   {
     "available_date": "2022-09-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2022-Q3",
-    "original_value": "5.755826738779166",
+    "original_period": "20223Q",
+    "original_value": "numerator=18060;denominator=313769",
     "period": "2022-Q3",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:26/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20223Q|input:denominator/record:0/field:20223Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2022-Q3",
       "2022-Q3"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "5.755826738779166"
+    "value": "5.755826738779165564475776766"
   },
   {
     "available_date": "2022-12-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2022-Q4",
-    "original_value": "5.59227185650969",
+    "original_period": "20224Q",
+    "original_value": "numerator=17778;denominator=317903",
     "period": "2022-Q4",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:27/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20224Q|input:denominator/record:0/field:20224Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2022-Q4",
       "2022-Q4"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "5.59227185650969"
+    "value": "5.592271856509690062692079030"
   },
   {
     "available_date": "2023-03-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2023-Q1",
-    "original_value": "6.120247204604841",
+    "original_period": "20231Q",
+    "original_value": "numerator=19628;denominator=320706",
     "period": "2023-Q1",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:28/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20231Q|input:denominator/record:0/field:20231Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2023-Q1",
       "2023-Q1"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.120247204604841"
+    "value": "6.120247204604840570491353451"
   },
   {
     "available_date": "2023-06-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2023-Q2",
-    "original_value": "6.486350035094632",
+    "original_period": "20232Q",
+    "original_value": "numerator=21070;denominator=324836",
     "period": "2023-Q2",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:29/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20232Q|input:denominator/record:0/field:20232Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2023-Q2",
       "2023-Q2"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.486350035094632"
+    "value": "6.486350035094632368333559088"
   },
   {
     "available_date": "2023-09-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2023-Q3",
-    "original_value": "8.977791116446578",
+    "original_period": "20233Q",
+    "original_value": "numerator=29914;denominator=333200",
     "period": "2023-Q3",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:30/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20233Q|input:denominator/record:0/field:20233Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2023-Q3",
       "2023-Q3"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "8.977791116446578"
+    "value": "8.977791116446578631452581032"
   },
   {
     "available_date": "2023-12-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2023-Q4",
-    "original_value": "8.56714823934261",
+    "original_period": "20234Q",
+    "original_value": "numerator=28879;denominator=337090",
     "period": "2023-Q4",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:31/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20234Q|input:denominator/record:0/field:20234Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2023-Q4",
       "2023-Q4"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "8.56714823934261"
+    "value": "8.567148239342608798837105817"
   },
   {
     "available_date": "2024-03-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2024-Q1",
-    "original_value": "6.896162762739586",
+    "original_period": "20241Q",
+    "original_value": "numerator=23232;denominator=336883",
     "period": "2024-Q1",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:32/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20241Q|input:denominator/record:0/field:20241Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2024-Q1",
       "2024-Q1"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.896162762739586"
+    "value": "6.896162762739586147119326294"
   },
   {
     "available_date": "2024-06-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2024-Q2",
-    "original_value": "6.066380675506394",
+    "original_period": "20242Q",
+    "original_value": "numerator=20533;denominator=338472",
     "period": "2024-Q2",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:33/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20242Q|input:denominator/record:0/field:20242Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2024-Q2",
       "2024-Q2"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.066380675506394"
+    "value": "6.066380675506393438748256872"
   },
   {
     "available_date": "2024-09-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2024-Q3",
-    "original_value": "7.226549331488489",
+    "original_period": "20243Q",
+    "original_value": "numerator=24652;denominator=341131",
     "period": "2024-Q3",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:34/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20243Q|input:denominator/record:0/field:20243Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2024-Q3",
       "2024-Q3"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "7.226549331488489"
+    "value": "7.226549331488489759066165198"
   },
   {
     "available_date": "2024-12-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2024-Q4",
-    "original_value": "6.437863014176258",
+    "original_period": "20244Q",
+    "original_value": "numerator=22157;denominator=344167",
     "period": "2024-Q4",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:35/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20244Q|input:denominator/record:0/field:20244Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2024-Q4",
       "2024-Q4"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.437863014176258"
+    "value": "6.437863014176257456409243187"
   },
   {
     "available_date": "2025-03-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2025-Q1",
-    "original_value": "6.26043212835633",
+    "original_period": "20251Q",
+    "original_value": "numerator=21679;denominator=346286",
     "period": "2025-Q1",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:36/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20251Q|input:denominator/record:0/field:20251Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2025-Q1",
       "2025-Q1"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.26043212835633"
+    "value": "6.260432128356329739001865510"
   },
   {
     "available_date": "2025-06-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2025-Q2",
-    "original_value": "6.8758242360756405",
+    "original_period": "20252Q",
+    "original_value": "numerator=23827;denominator=346533",
     "period": "2025-Q2",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:37/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20252Q|input:denominator/record:0/field:20252Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2025-Q2",
       "2025-Q2"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.8758242360756405"
+    "value": "6.875824236075640703771357995"
   },
   {
     "available_date": "2025-09-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2025-Q3",
-    "original_value": "6.442020095218119",
+    "original_period": "20253Q",
+    "original_value": "numerator=22421;denominator=348043",
     "period": "2025-Q3",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:38/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20253Q|input:denominator/record:0/field:20253Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2025-Q3",
       "2025-Q3"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "6.442020095218119"
+    "value": "6.442020095218119600164347509"
   },
   {
     "available_date": "2025-12-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2025-Q4",
-    "original_value": "5.3786962452067835",
+    "original_period": "20254Q",
+    "original_value": "numerator=18810;denominator=349713",
     "period": "2025-Q4",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:39/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20254Q|input:denominator/record:0/field:20254Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2025-Q4",
       "2025-Q4"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "5.3786962452067835"
+    "value": "5.378696245206783848470031140"
   },
   {
     "available_date": "2026-03-31",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2026-Q1",
-    "original_value": "5.3694262245972215",
+    "original_period": "20261Q",
+    "original_value": "numerator=18820;denominator=350503",
     "period": "2026-Q1",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:40/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20261Q|input:denominator/record:0/field:20261Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2026-Q1",
       "2026-Q1"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "5.3694262245972215"
+    "value": "5.369426224597221707089525625"
   },
   {
     "available_date": "2026-06-30",
-    "derivation": null,
+    "derivation": "ratio of approved input series; scale=100",
     "eligibility_status": "eligible",
     "input_series_ids": [
-      "private_non_landed_vacancy_rate"
+      "private_non_landed_vacancy_rate:numerator",
+      "private_non_landed_vacancy_rate:denominator"
     ],
     "market_role": "rent",
     "observation_frequency": "quarterly",
-    "original_period": "2026-Q2",
-    "original_value": "5.390114606235332",
+    "original_period": "20262Q",
+    "original_value": "numerator=18902;denominator=350679",
     "period": "2026-Q2",
     "portfolio_role": "predictor",
-    "raw_record_reference": "record:41/field:value",
-    "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+    "raw_record_reference": "input:numerator/record:0/field:20262Q|input:denominator/record:0/field:20262Q",
+    "raw_snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
     "release_date": null,
     "series_id": "private_non_landed_vacancy_rate",
     "series_label": "Private non-landed vacancy rate",
     "source_id": "private_non_landed_vacancy_rate",
     "source_periods": [
+      "2026-Q2",
       "2026-Q2"
     ],
     "unit": "percent",
     "update_frequency": "quarterly",
-    "value": "5.390114606235332"
+    "value": "5.390114606235332027295617930"
   },
   {
     "available_date": "1993-06-30",

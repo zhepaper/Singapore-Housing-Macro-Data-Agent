@@ -1,9 +1,9 @@
 {
   "artifacts": {
-    "normalized/excluded_observations.json": "be7ea74ef6137755d301cb3808b8ec7d120c0d384117f5b14b44a25ffa49a858",
-    "normalized/observations.csv": "57ca689b0f43eda5662f3e6a0b4a3b6757bb633c2b44e5a48bf6f96c5ce27424",
-    "normalized/observations.json": "acd6188e9862d25ac95e5bed20a16b047055baa0478d49424eecd2244d848e2a"
+    "normalized/excluded_observations.json": "bb03fd7f3b26e0d865f770da23f2fffc8a4533c340697f277944ba60df16131d",
+    "normalized/observations.csv": "ba4c2e588ea213ed2bff4be69358f2925c7909dcc5f76fb4c33b0fba585cce1a",
+    "normalized/observations.json": "f81a8ac251c1cbb41459beb428e934ebec0a3bd121fb7d026315ab256130e900"
   },
   "checkpoint": "normalized",
-  "plan_sha256": "2f0926d8a196ed1e3c92e6e38142e59856f4e6a83c3c717695c1e65f75d66f6b"
+  "plan_sha256": "686033f07ae4640a11078e65c0fbacd39b17e33c403bcf50470aef98333a8a36"
 }

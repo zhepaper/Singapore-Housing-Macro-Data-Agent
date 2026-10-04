@@ -1,12 +1,12 @@
 {
   "artifacts": {
-    "lineage/transformation_trace.json": "f54599c8456c265f46df0211588dd123ddcc13f2f4589ab9f59cd55c3a8b9a4a",
-    "transformed/changes.json": "996bf58e79b67caf6006e6417c0b5238ad81c2d92464c749b4bcb83625a1890a",
-    "transformed/native_frequency_monitoring.json": "c34b976dde0dfc196349fcb6eba804a06b169ef6adcc9e085534b754f95ef25d",
-    "transformed/native_views.json": "acd6188e9862d25ac95e5bed20a16b047055baa0478d49424eecd2244d848e2a",
-    "transformed/quarterly_views.json": "595e04dab719d29515c93b68d47fb1dbb4adf2624b9bb53f0aa45038322f8421",
+    "lineage/transformation_trace.json": "a0e61b6c2c17bd2cdaae133226e519f72cd7c9bd9f0cae5bcfd79c65f1666b3b",
+    "transformed/changes.json": "533e481e7ac9dfa96ab19eea8b3486534cdb2b61eeb95191aa9a3496b4993590",
+    "transformed/native_frequency_monitoring.json": "10e21702b72d0c8da33af512e3b7e9f2354634bbddeb64a52006084fbe7b49ed",
+    "transformed/native_views.json": "f81a8ac251c1cbb41459beb428e934ebec0a3bd121fb7d026315ab256130e900",
+    "transformed/quarterly_views.json": "1b80465280a6fcb9dd96988f3e40ccabbda14bff2b6dfc916a201eaff03cbed8",
     "transformed/structural_context.json": "e7d7c1c946d22b9a259ef26b73ba9ace0155a04b1496f19c4f1b043e042c8f99"
   },
   "checkpoint": "transformed",
-  "plan_sha256": "2f0926d8a196ed1e3c92e6e38142e59856f4e6a83c3c717695c1e65f75d66f6b"
+  "plan_sha256": "686033f07ae4640a11078e65c0fbacd39b17e33c403bcf50470aef98333a8a36"
 }

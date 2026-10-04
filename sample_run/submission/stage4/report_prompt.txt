@@ -80,7 +80,8 @@ QUALITATIVE EVIDENCE
       "URAHDB2026"
     ],
     "quality_notes": [
-      "No observation-level release date was supplied; the workflow relies on the approved availability rule."
+      "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+      "Derived deterministically from the recorded source periods."
     ]
   },
   {

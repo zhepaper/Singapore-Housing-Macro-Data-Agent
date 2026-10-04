@@ -7,13 +7,14 @@
   "historical_start_date": "2016-01-01",
   "minimum_quarterly_observations": 2,
   "plan_id": "singapore_private_housing_submission",
-  "plan_sha256": "2f0926d8a196ed1e3c92e6e38142e59856f4e6a83c3c717695c1e65f75d66f6b",
+  "plan_sha256": "686033f07ae4640a11078e65c0fbacd39b17e33c403bcf50470aef98333a8a36",
   "plan_version": 1,
   "reporting_as_of_date": "2026-10-01",
   "schema_version": "1.0",
   "series": [
     {
       "definition": "URA quality-adjusted price index for Singapore private non-landed residential properties.",
+      "derived_series_contract": null,
       "duplicate_policy": "error",
       "mapping_contract": {
         "additional_series_filters": {},
@@ -94,6 +95,7 @@
     },
     {
       "definition": "URA rental index for registered tenancies of private non-landed homes, whole island.",
+      "derived_series_contract": null,
       "duplicate_policy": "error",
       "mapping_contract": {
         "additional_series_filters": {
@@ -176,6 +178,7 @@
     },
     {
       "definition": "Number of planned and under-construction private non-landed residential units.",
+      "derived_series_contract": null,
       "duplicate_policy": "error",
       "mapping_contract": {
         "additional_series_filters": {},
@@ -256,6 +259,7 @@
     },
     {
       "definition": "Singapore non-resident population stock measured at end-June.",
+      "derived_series_contract": null,
       "duplicate_policy": "error",
       "mapping_contract": {
         "additional_series_filters": {},
@@ -329,6 +333,7 @@
     },
     {
       "definition": "Published quarterly net change in non-resident employment from the MOM final report.",
+      "derived_series_contract": null,
       "duplicate_policy": "error",
       "mapping_contract": {
         "additional_series_filters": {},
@@ -399,13 +404,22 @@
     },
     {
       "definition": "Share of available private non-landed residential units that are vacant.",
+      "derived_series_contract": {
+        "input_series_filters": {
+          "denominator": "    Available Non-Landed Properties",
+          "numerator": "    Vacant Non-Landed Properties"
+        },
+        "operation": "ratio",
+        "scale": "100",
+        "zero_denominator_policy": "error"
+      },
       "duplicate_policy": "error",
       "mapping_contract": {
         "additional_series_filters": {},
         "contract_version": "1",
-        "date_field": "period",
+        "date_field": null,
         "header_row": 1,
-        "layout": "long",
+        "layout": "wide",
         "missing_markers": [
           "",
           "-",
@@ -414,19 +428,22 @@
           "n.a.",
           "null"
         ],
-        "period_format": "quarter",
-        "records_path": [],
+        "period_format": "singstat_quarter",
+        "records_path": [
+          "result",
+          "records"
+        ],
         "release_date_field": null,
         "revision_field": null,
-        "series_filter_field": null,
-        "series_filter_value": null,
+        "series_filter_field": "DataSeries",
+        "series_filter_value": "    Available Non-Landed Properties",
         "series_id": "private_non_landed_vacancy_rate",
         "sheet_name": null,
-        "source_format": "csv",
+        "source_format": "json",
         "source_id": "private_non_landed_vacancy_rate",
         "unit_scale": "1",
-        "value_field": "value",
-        "wide_period_pattern": null
+        "value_field": null,
+        "wide_period_pattern": "\\d{5}Q"
       },
       "market_role": "rent",
       "max_staleness_periods": 2,
@@ -468,14 +485,15 @@
       "series_id": "private_non_landed_vacancy_rate",
       "series_label": "Private non-landed vacancy rate",
       "series_type": "rate",
-      "snapshot_path": "sample_run/stage3_inputs/private_non_landed_vacancy_rate.csv",
-      "snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+      "snapshot_path": "sample_run/raw/private_non_landed_vacancy_rate.json",
+      "snapshot_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b",
       "source_id": "private_non_landed_vacancy_rate",
       "unit": "percent",
       "update_frequency": "quarterly"
     },
     {
       "definition": "Three-month compounded Singapore Overnight Rate Average reported at month end.",
+      "derived_series_contract": null,
       "duplicate_policy": "error",
       "mapping_contract": {
         "additional_series_filters": {},
@@ -554,6 +572,7 @@
     },
     {
       "definition": "Official year-on-year real GDP growth for Singapore in chained 2015 dollars.",
+      "derived_series_contract": null,
       "duplicate_policy": "error",
       "mapping_contract": {
         "additional_series_filters": {},
