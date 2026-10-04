@@ -134,7 +134,9 @@ def validate_series(
                 source_id=series.source_id,
                 series_id=series.series_id,
             ))
-    missing_values = sum(item.value is None for item in resolved)
+    missing_values = sum(
+        item.eligibility_status == "missing_at_source" for item in resolved
+    )
     if missing_values:
         issues.append(ProcessingIssue(
             code="MISSING_VALUES_PRESERVED",

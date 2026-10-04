@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import tempfile
 import unittest
 from datetime import date, datetime, timezone
@@ -51,6 +52,43 @@ def _make_plan(path: Path, mapping: MappingContract, *, market: str = "sale") ->
 
 
 class ProcessingNormalizationTests(unittest.TestCase):
+    def test_singstat_quarter_period_is_canonicalized(self) -> None:
+        from housing_agent.processing.normalization import parse_period
+
+        period, period_end = parse_period("20262Q", "quarterly")
+
+        self.assertEqual(period, "2026-Q2")
+        self.assertEqual(period_end.isoformat(), "2026-06-30")
+
+    def test_multiple_approved_series_filters_select_one_exact_series(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            raw = root / "rental.json"
+            raw.write_text(json.dumps({"result": {"records": [
+                {"period": "2026-01", "type": "Non-Landed", "area": "Whole Island", "value": "100"},
+                {"period": "2026-01", "type": "Non-Landed", "area": "Core", "value": "110"},
+                {"period": "2026-01", "type": "Landed", "area": "Whole Island", "value": "90"},
+            ]}}), encoding="utf-8")
+            mapping = MappingContract(
+                contract_version="1",
+                source_id="rental_source",
+                series_id="rental_index",
+                source_format="json",
+                layout="long",
+                records_path=("result", "records"),
+                date_field="period",
+                value_field="value",
+                series_filter_field="type",
+                series_filter_value="Non-Landed",
+                additional_series_filters={"area": "Whole Island"},
+            )
+            plan, series = _make_plan(raw, mapping)
+
+            rows = normalize_series(plan, series)
+
+            self.assertEqual(len(rows), 1)
+            self.assertEqual(str(rows[0].value), "100")
+
     def test_xlsx_long_layout_uses_approved_sheet_and_header(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "series.xlsx"

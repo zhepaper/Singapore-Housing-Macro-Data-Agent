@@ -97,7 +97,16 @@ def aggregate_monthly_to_quarterly(
         }
         complete = {item.period for item in rows if item.value is not None} == expected
         if not complete and view.incomplete_period_policy == "reject":
-            raise TransformationFailure(f"incomplete quarter {quarter} under approved reject policy")
+            traces.append(TransformationTrace(
+                operation_id=f"{series.series_id}:exclude_incomplete:{quarter}",
+                operation="incomplete_period_excluded",
+                source_id=series.source_id,
+                output_series_id=f"{series.series_id}__quarterly_{method.value}",
+                parameters={"method": method.value, "incomplete_policy": "reject"},
+                input_periods=tuple(item.period for item in rows),
+                output_period=quarter,
+            ))
+            continue
         available = [item for item in rows if item.value is not None]
         value: Decimal | None = None
         if available:

@@ -45,6 +45,29 @@ def _contract() -> PreparationContract:
 
 
 class ProcessingTransformationTests(unittest.TestCase):
+    def test_reject_policy_excludes_incomplete_quarter_without_aborting_series(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "series.csv"
+            path.write_text("period,value\n2026-01,1.0\n2026-02,1.1\n", encoding="utf-8")
+            mapping = MappingContract(
+                contract_version="1",
+                source_id="test_source",
+                series_id="test_index",
+                source_format="csv",
+                layout="long",
+                date_field="period",
+                value_field="value",
+            )
+            plan, base_series = _make_plan(path, mapping)
+            series = base_series.model_copy(update={"preparation_contract": _contract()})
+            incomplete = normalize_series(plan, series)
+
+            output, trace = transform_series(incomplete, series)
+
+            self.assertEqual(output, [])
+            self.assertEqual(trace[0].operation, "incomplete_period_excluded")
+            self.assertEqual(trace[0].output_period, "2026-Q1")
+
     def test_approved_mean_change_and_lag_are_calendar_based(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "series.csv"

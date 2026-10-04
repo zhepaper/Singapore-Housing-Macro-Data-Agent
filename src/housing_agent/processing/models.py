@@ -37,6 +37,7 @@ class MappingContract(FrozenStrictModel):
     header_row: int = Field(default=1, ge=1)
     series_filter_field: str | None = None
     series_filter_value: str | None = None
+    additional_series_filters: dict[str, str] = Field(default_factory=dict)
     date_field: str | None = None
     value_field: str | None = None
     release_date_field: str | None = None

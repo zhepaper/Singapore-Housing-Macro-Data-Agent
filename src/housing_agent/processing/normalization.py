@@ -103,6 +103,13 @@ def load_mapping_records(
             if str(get_record_value(item, contract.series_filter_field))
             == contract.series_filter_value
         ]
+    for field, expected in contract.additional_series_filters.items():
+        if not any(get_record_value(item, field) is not None for item in records):
+            raise MappingFailure(f"approved additional series filter field {field!r} is missing")
+        records = [
+            item for item in records
+            if str(get_record_value(item, field)) == expected
+        ]
     if not records:
         raise MappingFailure("approved mapping selected no records")
     return records
@@ -136,8 +143,13 @@ def parse_period(value: Any, frequency: str) -> tuple[str, date]:
             return str(year), date(year, 12, 31)
     elif frequency == "quarterly":
         match = re.fullmatch(r"(\d{4})[- ]?Q([1-4])", text, re.IGNORECASE)
+        singstat_match = re.fullmatch(r"(\d{4})([1-4])Q", text, re.IGNORECASE)
         if match:
             year, quarter = int(match.group(1)), int(match.group(2))
+            month = quarter * 3
+            return f"{year}-Q{quarter}", date(year, month, monthrange(year, month)[1])
+        if singstat_match:
+            year, quarter = int(singstat_match.group(1)), int(singstat_match.group(2))
             month = quarter * 3
             return f"{year}-Q{quarter}", date(year, month, monthrange(year, month)[1])
     elif frequency == "monthly":
@@ -171,10 +183,10 @@ def _eligibility(
     available_date: date,
     plan: FrozenDataPlan,
 ) -> str:
-    if value is None:
-        return "missing_at_source"
     if period_end < plan.historical_start_date:
         return "before_window"
+    if value is None:
+        return "missing_at_source"
     if period_end > plan.historical_end_date or available_date > plan.reporting_as_of_date:
         return "after_as_of"
     return "eligible"

@@ -152,9 +152,13 @@ def validate_cross_series(
         ):
             issues.append(ProcessingIssue(
                 code="POTENTIAL_LOOK_AHEAD",
-                severity="error",
+                severity="warning",
                 route=RecoveryRoute.HUMAN_REVIEW,
-                message="Predictor was not available by the end of its aligned outcome quarter.",
+                message=(
+                    "Predictor was not available by the end of its aligned outcome quarter; "
+                    "the contemporaneous alignment is descriptive and must not be treated as "
+                    "a real-time forecasting feature."
+                ),
                 source_id=item.source_id,
                 series_id=item.series_id,
                 period=item.period,
