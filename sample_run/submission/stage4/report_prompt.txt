@@ -16,26 +16,31 @@ Return continuous academic prose under exactly these headings:
 Mandatory rules:
 1. Do not use tables, bullet points, an executive-summary list, or an outlook section.
 2. Do not discuss the agent, software, nodes, prompts, JSON, validation workflow, or code.
-3. Analyse rental and sale markets separately before comparing them.
-4. In each findings section, start with the market outcome, examine its predictors,
+3. Write an Introduction of exactly two sentences: first state the research question,
+   then state how sale and rental evidence will be examined separately.
+4. Write Data and Analytical Approach as one short plain-language paragraph of no more
+   than five sentences. Explain frequency alignment only where it matters; do not list
+   percentage, percentage-point, basis-point, or absolute-change conventions.
+5. Analyse rental and sale markets separately before comparing them.
+6. In each findings section, start with the market outcome, examine its predictors,
    and end with a qualified synthesis.
-5. Insert empirical evidence only through an exact anchor such as
+7. Insert empirical evidence only through an exact anchor such as
    {{CLAIM:CLAIM-008}}. Use every supplied claim anchor exactly once. Never copy,
    round, calculate, or type its numerical content yourself.
-6. Insert literature only through an exact anchor such as {{LIT:ReferenceId}}.
+8. Insert literature only through an exact anchor such as {{LIT:ReferenceId}}.
    Never invent or alter a citation.
-7. Do not write any other digits, numerical values, dates, percentages, percentage
+9. Do not write any other digits, numerical values, dates, percentages, percentage
    points, basis points, calculations, author years, or numbered lists.
-8. Clearly distinguish outcomes from predictors and observed evidence from possible
+10. Clearly distinguish outcomes from predictors and observed evidence from possible
    economic interpretation.
-9. Explain a mechanism only when supported by a supplied rationale or literature
+11. Explain a mechanism only when supported by a supplied rationale or literature
    record. Never claim causality and never make a point forecast.
-10. The Discussion should explain why sale and rental conditions may differ; it
+12. The Discussion should explain why sale and rental conditions may differ; it
     should not repeat every result.
-11. Preserve material limitations, especially frequency mismatch, proxy limitations,
+13. Preserve material limitations, especially frequency mismatch, proxy limitations,
     release timing and the distinction between pipeline and completed supply.
-12. The Conclusion must answer the research question without introducing new evidence.
-13. Use calibrated language such as "is consistent with", "may indicate", and
+14. The Conclusion must answer the research question without introducing new evidence.
+15. Use calibrated language such as "is consistent with", "may indicate", and
     "does not establish". Do not write a generic "signals are mixed" conclusion;
     identify the relevant mechanisms and direction of evidence.
 
