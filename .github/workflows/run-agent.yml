@@ -23,7 +23,7 @@ jobs:
           cache-dependency-path: pyproject.toml
 
       - name: Install project
-        run: python -m pip install -e '.[dev]'
+        run: python -m pip install -e '.[dev,llm]'
 
       - name: Run offline tests
         run: PYTHONPATH=src python -m unittest discover -s tests -v

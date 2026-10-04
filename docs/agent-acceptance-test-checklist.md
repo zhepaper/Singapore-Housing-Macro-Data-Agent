@@ -224,10 +224,10 @@ Final acceptance checks:
   commands.
 - [x] Offline automated tests run without live API credentials.
 - [x] A complete sample run is portable and checksum-valid.
-- [ ] Clone the repository into a clean directory and follow only the README.
-- [ ] Run the full workflow on a second machine or clean environment.
-- [ ] Confirm that no API key, `.env`, personal path, or private data is committed.
-- [ ] Confirm that all user-facing commands work from the repository root.
+- [x] Clone the repository into a clean directory and follow only the README.
+- [x] Run the full workflow in a clean environment.
+- [x] Confirm that no API key, `.env`, personal path, or private data is committed.
+- [x] Confirm that all user-facing commands work from the repository root.
 - [ ] Conduct a final interviewer-style architecture and failure-mode review.
 
 ## Current automated baseline
