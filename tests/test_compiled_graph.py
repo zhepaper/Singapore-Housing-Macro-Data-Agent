@@ -7,7 +7,7 @@ from unittest.mock import patch
 
 from jsonschema import Draft202012Validator, FormatChecker
 
-from housing_agent.workflow import (
+from housing_agent.legacy.workflow import (
     build_graph,
     checkpoint_retrieved_node,
     checkpoint_validated_node,
@@ -98,7 +98,7 @@ class CompiledGraphTests(unittest.TestCase):
             shutil.copytree(repository / "config", root / "config")
             shutil.copytree(repository / "data", root / "data")
             with patch(
-                "housing_agent.workflow.derive_vacancy_rate",
+                "housing_agent.legacy.workflow.derive_vacancy_rate",
                 side_effect=ValueError("Zero available-unit denominator in 2026-Q2"),
             ):
                 result = build_graph().invoke({

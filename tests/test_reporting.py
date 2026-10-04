@@ -7,9 +7,9 @@ from langchain_core.messages import AIMessage
 from langchain_core.runnables import RunnableLambda
 from jsonschema import Draft202012Validator, FormatChecker
 
-from housing_agent.reporting import DeterministicWriter, LangChainWriter, compose_report
-from housing_agent.verification import verify_report
-from housing_agent.workflow import route_after_verification, route_after_writer, writer_node
+from housing_agent.legacy.reporting import DeterministicWriter, LangChainWriter, compose_report
+from housing_agent.legacy.verification import verify_report
+from housing_agent.legacy.workflow import route_after_verification, route_after_writer, writer_node
 
 
 def evidence_fixture():

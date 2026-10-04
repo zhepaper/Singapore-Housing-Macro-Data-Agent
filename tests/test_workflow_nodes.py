@@ -1,7 +1,7 @@
 import unittest
 from pathlib import Path
 
-from housing_agent.workflow import (
+from housing_agent.legacy.workflow import (
     build_evidence_node,
     discover_snapshots_node,
     load_catalog_node,

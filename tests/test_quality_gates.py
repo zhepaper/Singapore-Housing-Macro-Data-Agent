@@ -4,7 +4,7 @@ from datetime import date
 from housing_agent.models import Observation
 from housing_agent.transforms import derive_vacancy_rate
 from housing_agent.transforms import percent_change
-from housing_agent.workflow import freshness_status, validate_node
+from housing_agent.legacy.workflow import freshness_status, validate_node
 
 
 class QualityGateTests(unittest.TestCase):

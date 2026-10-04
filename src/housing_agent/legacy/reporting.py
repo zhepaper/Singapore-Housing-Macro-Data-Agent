@@ -1,3 +1,5 @@
+"""Legacy report composer used by the catalog-specific compatibility workflow."""
+
 from __future__ import annotations
 
 import json

@@ -33,19 +33,21 @@ The repository includes a manually triggered GitHub Actions workflow, so a revie
 
 `snapshots` is the recommended reproducible demonstration and requires no API key. `live` retrieves the configured official public sources and may fail if a public endpoint is temporarily unavailable. The optional OpenAI writer is intentionally not used by this browser workflow, so no repository secret is required.
 
-Run a fully offline, reproducible workflow over preserved official snapshots:
+The browser workflow currently runs the preserved legacy compatibility pipeline. Run that
+fully offline pipeline over official snapshots with:
 
 ```bash
-.venv/bin/python scripts/run_workflow.py \
+.venv/bin/python old/run_workflow.py \
   --mode snapshots \
   --as-of 2026-10-01 \
   --output outputs/report.md
 ```
 
-Run against the official live endpoints. Requests are serial and rate-limited by default:
+Run the same legacy compatibility pipeline against the official live endpoints. Requests
+are serial and rate-limited by default:
 
 ```bash
-.venv/bin/python scripts/run_workflow.py \
+.venv/bin/python old/run_workflow.py \
   --mode live \
   --as-of 2026-10-01 \
   --output outputs/live-report.md
@@ -54,7 +56,7 @@ Run against the official live endpoints. Requests are serial and rate-limited by
 Cached fallback is never silent. It must be explicitly enabled; a run that uses it is labelled `partial` and the report includes an operational warning:
 
 ```bash
-.venv/bin/python scripts/run_workflow.py \
+.venv/bin/python old/run_workflow.py \
   --mode live \
   --as-of 2026-10-01 \
   --allow-cached-fallback
@@ -64,7 +66,7 @@ The deterministic writer is the default and requires no API key. To use the opti
 
 ## Optional predictor-research node
 
-Before source discovery and catalog freezing, an isolated LangGraph SearchNode can research candidate predictors for a human-approved scope. It supports Gemini, OpenAI/ChatGPT, Anthropic/Claude, and DeepSeek. The node reads a compiled, human-governed project memory so it retains scope and preferences across stages. This step proposes literature-backed predictor concepts and source-frequency requirements; it does not choose aggregation, lag, interpolation, missing-value treatment, production endpoints, or approved predictors.
+Before source discovery and catalog freezing, an isolated LangGraph SearchNode can research candidate predictors for a human-approved scope. It supports Gemini, OpenAI/ChatGPT, Anthropic/Claude, DeepSeek, Groq, and local Ollama. The node reads a compiled, human-governed project memory so it retains scope and preferences across stages. This step proposes literature-backed predictor concepts and source-frequency requirements; it does not choose aggregation, lag, interpolation, missing-value treatment, production endpoints, or approved predictors.
 
 Check the available providers and required environment variables:
 
@@ -92,7 +94,12 @@ Then run the node:
   --request "Identify publicly accessible predictors for Singapore private residential sale prices and rents."
 ```
 
-Use `--provider openai`, `--provider anthropic`, or `--provider deepseek` to select another provider. DeepSeek also requires `TAVILY_API_KEY` because its provider path uses Tavily for web retrieval before DeepSeek synthesis. The CLI loads `.env` from the repository root, while variables explicitly set in the calling shell take precedence. `.env` is Git-ignored and must never be committed. Detailed scope, validation, and output rules are documented in [`docs/search-node-review.md`](docs/search-node-review.md); memory and decision governance are documented in [`docs/project-memory.md`](docs/project-memory.md).
+Use `--provider openai`, `--provider anthropic`, `--provider deepseek`, `--provider groq`, or `--provider ollama` to select another provider. DeepSeek, Groq, and Ollama use Tavily for the auditable web-search trace and therefore require `TAVILY_API_KEY`; Groq additionally requires `GROQ_API_KEY`. Ollama runs the synthesis model locally, requires no model-provider key, and defaults to `qwen3:4b` at `http://127.0.0.1:11434`. Install and start Ollama, then run `ollama pull qwen3:4b` before selecting it. The CLI loads `.env` from the repository root, while variables explicitly set in the calling shell take precedence. `.env` is Git-ignored and must never be committed. Detailed scope, validation, and output rules are documented in [`docs/search-node-review.md`](docs/search-node-review.md); memory and decision governance are documented in [`docs/project-memory.md`](docs/project-memory.md).
+
+Ollama is an optional local fallback, not the reviewer-critical path. The strict research
+schema is generation-intensive and may time out on resource-constrained machines. The
+packaged snapshot workflow and deterministic report regeneration do not require Ollama,
+Tavily, or any model-provider API.
 
 SearchNode output does not enter production automatically. The human-governed onboarding
 path now supports predictor approval, bounded Gemini source discovery, independent official
@@ -115,7 +122,7 @@ Add `--print-summary` to print a citation-rich academic synthesis after a succes
 Each run creates `runs/<run_id>/` with raw responses, checksums, normalized observations, derived metrics, checkpoints, an evidence bundle, a claim ledger, verification results, and the final report. Resume an interrupted running workflow with:
 
 ```bash
-.venv/bin/python scripts/run_workflow.py \
+.venv/bin/python old/run_workflow.py \
   --as-of 2026-10-01 \
   --resume-run-id <run_id>
 ```
@@ -154,7 +161,8 @@ still comes exclusively from the validated evidence bundle.
 
 The optional brief supplies scope wording, predictor rationales, literature identifiers,
 and source links; it cannot add numeric evidence. Use `--provider gemini`, `openai`,
-`anthropic`, or `deepseek` for LLM-written qualitative prose. All values, periods, units,
+`anthropic`, `deepseek`, `groq`, or `ollama` for LLM-written qualitative prose. Ollama
+requires no API key and defaults to the local `qwen3:4b` model. All values, periods, units,
 lineage, and citations remain deterministically rendered and verified. A failed draft is
 revised at most three times and is otherwise saved as `blocked_report.md`, never as a final
 report. See [`docs/stage-4-report-generation-plan.md`](docs/stage-4-report-generation-plan.md).

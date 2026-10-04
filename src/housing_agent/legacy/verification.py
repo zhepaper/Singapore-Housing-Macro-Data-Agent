@@ -1,3 +1,5 @@
+"""Legacy report verifier used by the catalog-specific compatibility workflow."""
+
 from __future__ import annotations
 
 import re

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the LangGraph workflow over preserved official-source snapshots."""
+"""Run the legacy catalog-specific workflow over preserved official-source snapshots."""
 
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
 from housing_agent.run_context import load_latest_checkpoint, load_run  # noqa: E402
-from housing_agent.workflow import build_graph  # noqa: E402
+from housing_agent.legacy.workflow import build_graph  # noqa: E402
 
 
 def main() -> int:

@@ -46,9 +46,9 @@ jobs:
       - name: Run offline tests
         run: PYTHONPATH=src python -m unittest discover -s tests -v
 
-      - name: Run agent
+      - name: Run legacy compatibility workflow
         run: >-
-          python scripts/run_workflow.py
+          python old/run_workflow.py
           --mode "$EXECUTION_MODE"
           --as-of "$REPORT_AS_OF"
           --output outputs/github-report.md

@@ -1,3 +1,5 @@
+"""Legacy catalog-specific LangGraph retained for sample-run reproducibility."""
+
 from __future__ import annotations
 
 import json
@@ -15,13 +17,13 @@ from housing_agent.adapters.mom import parse_mom_non_resident_employment
 from housing_agent.models import Observation
 from housing_agent.run_context import RunPaths, finalize_manifest, initialize_run, save_checkpoint
 from housing_agent.retrieval import retrieve_catalog_sources, use_approved_cached_fallback
-from housing_agent.reporting import (
+from housing_agent.legacy.reporting import (
     DeterministicWriter,
     LangChainWriter,
     PROMPT_VERSION,
     compose_report,
 )
-from housing_agent.verification import verify_report
+from housing_agent.legacy.verification import verify_report
 from housing_agent.transforms import (
     absolute_change,
     derive_pipeline_under_construction_share,
