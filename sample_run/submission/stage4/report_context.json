@@ -285,7 +285,7 @@
       "quality_notes": [
         "No observation-level release date was supplied; the workflow relies on the approved availability rule."
       ],
-      "rationale": "Broad economic activity may affect income expectations, purchasing capacity, and buyer confidence.",
+      "rationale": "Year-on-year real GDP growth provides a broad measure of economic activity that may affect income expectations, purchasing capacity, and buyer confidence.",
       "raw_record_reference": "record:0/field:20262Q",
       "raw_snapshot_sha256": "695aae88e47d1683639b57cd05936d428346b9ca248d8c928dbf74acf739b203",
       "series_id": "real_gdp_growth",
@@ -303,7 +303,7 @@
     },
     {
       "claim_id": "CLAIM-011",
-      "derivation": "percentage_point_change using calendar lag 1",
+      "derivation": null,
       "literature_reference_ids": [
         "Tu2004",
         "IMF2018",
@@ -314,25 +314,23 @@
       "period": "2026-Q2",
       "portfolio_role": "predictor",
       "quality_notes": [
-        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
-        "Derived deterministically from the recorded source periods."
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule."
       ],
-      "rationale": "Broad economic activity may affect income expectations, purchasing capacity, and buyer confidence.",
-      "raw_record_reference": "record:0/field:20261Q|record:0/field:20262Q",
-      "raw_snapshot_sha256": "695aae88e47d1683639b57cd05936d428346b9ca248d8c928dbf74acf739b203",
-      "series_id": "real_gdp_growth__qoq_percentage_point_change",
-      "series_label": "Real GDP growth (qoq_percentage_point_change)",
-      "source_id": "real_gdp_growth",
+      "rationale": "Seasonally adjusted quarter-on-quarter real GDP growth captures economic momentum relative to the immediately preceding quarter.",
+      "raw_record_reference": "record:0/field:20262Q",
+      "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+      "series_id": "real_gdp_qoq_growth",
+      "series_label": "Real GDP quarter-on-quarter growth",
+      "source_id": "real_gdp_qoq_growth",
       "source_periods": [
-        "2026-Q1",
         "2026-Q2"
       ],
-      "source_title": "Quarterly real GDP growth (M015631)",
-      "source_url": "https://data.gov.sg/datasets/d_a5ff719648a0e6d4b4c623ee383ab686/view",
-      "unit": "percentage points",
+      "source_title": "Seasonally adjusted quarter-on-quarter real GDP growth (M015922)",
+      "source_url": "https://data.gov.sg/datasets/d_17702de81b268ab5d6100a1aab3805bf/view",
+      "unit": "seasonally adjusted quarter-on-quarter percent change",
       "update_frequency": "quarterly",
-      "value": "-0.4",
-      "value_text": "-0.4"
+      "value": "1.4",
+      "value_text": "1.4"
     },
     {
       "claim_id": "CLAIM-012",
@@ -581,7 +579,7 @@
       "value_text": "6.6"
     }
   ],
-  "evidence_sha256": "65cdefc3c662d346f780e66a3ac54bcefa76e7e520f780efb2715da2f7f2e936",
+  "evidence_sha256": "6f06da2c689d1725d7c87fc90de0ec3725135a4f872b8bba39d6ba3450eceb9b",
   "literature_records": [
     {
       "citation": "Chia, W.-M., Li, M. and Tang, Y. (2017). Public and private housing markets dynamics in Singapore: The role of fundamentals. Journal of Housing Economics, 36, 44-61.",
@@ -677,6 +675,12 @@
       "source_id": "real_gdp_growth",
       "title": "Quarterly real GDP growth (M015631)",
       "url": "https://data.gov.sg/datasets/d_a5ff719648a0e6d4b4c623ee383ab686/view"
+    },
+    {
+      "publisher": "Singapore Department of Statistics via data.gov.sg",
+      "source_id": "real_gdp_qoq_growth",
+      "title": "Seasonally adjusted quarter-on-quarter real GDP growth (M015922)",
+      "url": "https://data.gov.sg/datasets/d_17702de81b268ab5d6100a1aab3805bf/view"
     }
   ],
   "title": "Singapore Private Non-Landed Residential Market: Indicator Analysis",

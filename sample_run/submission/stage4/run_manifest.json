@@ -1,11 +1,11 @@
 {
   "attempts": 1,
-  "evidence_sha256": "65cdefc3c662d346f780e66a3ac54bcefa76e7e520f780efb2715da2f7f2e936",
-  "generated_at": "2026-10-04T06:38:36.845999+00:00",
+  "evidence_sha256": "6f06da2c689d1725d7c87fc90de0ec3725135a4f872b8bba39d6ba3450eceb9b",
+  "generated_at": "2026-10-04T07:17:25.084577+00:00",
   "model": null,
   "prompt_version": "stage4-grounded-academic-writer-v2",
   "provider": "deterministic",
-  "report_sha256": "790f2506992772351bac1aefef504441452c7297613067751951d47dce2174d2",
+  "report_sha256": "dec48ad9c165ebe72b19551d1203620b3c4528096be5183709ca4493391964af",
   "stage": "report_generation",
   "status": "success"
 }

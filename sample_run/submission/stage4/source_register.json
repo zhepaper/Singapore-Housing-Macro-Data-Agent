@@ -46,5 +46,11 @@
     "source_id": "real_gdp_growth",
     "title": "Quarterly real GDP growth (M015631)",
     "url": "https://data.gov.sg/datasets/d_a5ff719648a0e6d4b4c623ee383ab686/view"
+  },
+  {
+    "publisher": "Singapore Department of Statistics via data.gov.sg",
+    "source_id": "real_gdp_qoq_growth",
+    "title": "Seasonally adjusted quarter-on-quarter real GDP growth (M015922)",
+    "url": "https://data.gov.sg/datasets/d_17702de81b268ab5d6100a1aab3805bf/view"
   }
 ]

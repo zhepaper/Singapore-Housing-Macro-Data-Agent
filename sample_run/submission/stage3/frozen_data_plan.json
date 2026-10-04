@@ -7,7 +7,7 @@
   "historical_start_date": "2016-01-01",
   "minimum_quarterly_observations": 2,
   "plan_id": "singapore_private_housing_submission",
-  "plan_sha256": "686033f07ae4640a11078e65c0fbacd39b17e33c403bcf50470aef98333a8a36",
+  "plan_sha256": "956e8e879e3e41fb98844357fbd0337caa266bdeabf8afc65aab512c35391fdb",
   "plan_version": 1,
   "reporting_as_of_date": "2026-10-01",
   "schema_version": "1.0",
@@ -611,15 +611,7 @@
       "observation_frequency": "quarterly",
       "portfolio_role": "predictor",
       "preparation_contract": {
-        "change_calculations": [
-          {
-            "horizon": "qoq",
-            "input_view": "native",
-            "lag_periods": 1,
-            "method": "percentage_point_change",
-            "rationale": "The published values are year-on-year rates, so quarter comparison uses percentage points."
-          }
-        ],
+        "change_calculations": [],
         "decision_basis": [
           "Human-approved macroeconomic predictor",
           "Official quarterly source"
@@ -631,7 +623,7 @@
         "predictor_id": "real_gdp_growth",
         "preserve_native_view": true,
         "quarterly_comparison": null,
-        "rationale": "Preserve the official published year-on-year GDP growth rate and compare adjacent releases.",
+        "rationale": "Preserve the official published year-on-year GDP growth rate without mislabelling changes between adjacent year-on-year releases as quarter-on-quarter GDP growth.",
         "source_id": "real_gdp_growth"
       },
       "release_lag_days": 0,
@@ -642,6 +634,72 @@
       "snapshot_sha256": "695aae88e47d1683639b57cd05936d428346b9ca248d8c928dbf74acf739b203",
       "source_id": "real_gdp_growth",
       "unit": "year-on-year percent change",
+      "update_frequency": "quarterly"
+    },
+    {
+      "definition": "Official seasonally adjusted quarter-on-quarter real GDP growth for Singapore in chained 2015 dollars.",
+      "derived_series_contract": null,
+      "duplicate_policy": "error",
+      "mapping_contract": {
+        "additional_series_filters": {},
+        "contract_version": "1",
+        "date_field": null,
+        "header_row": 1,
+        "layout": "wide",
+        "missing_markers": [
+          "",
+          "-",
+          "..",
+          "na",
+          "n.a.",
+          "null"
+        ],
+        "period_format": "singstat_quarter",
+        "records_path": [
+          "result",
+          "records"
+        ],
+        "release_date_field": null,
+        "revision_field": null,
+        "series_filter_field": "DataSeries",
+        "series_filter_value": "GDP In Chained (2015) Dollars",
+        "series_id": "real_gdp_qoq_growth",
+        "sheet_name": null,
+        "source_format": "json",
+        "source_id": "real_gdp_qoq_growth",
+        "unit_scale": "1",
+        "value_field": null,
+        "wide_period_pattern": "\\d{4}[1-4]Q"
+      },
+      "market_role": "sale",
+      "max_staleness_periods": 2,
+      "minimum_observations": 8,
+      "observation_frequency": "quarterly",
+      "portfolio_role": "predictor",
+      "preparation_contract": {
+        "change_calculations": [],
+        "decision_basis": [
+          "Human-approved macroeconomic predictor",
+          "Official seasonally adjusted quarterly source"
+        ],
+        "interpolation_allowed": false,
+        "missing_value_policy": "preserve_null",
+        "native_frequency": "quarterly",
+        "predictive_alignment": null,
+        "predictor_id": "real_gdp_qoq_growth",
+        "preserve_native_view": true,
+        "quarterly_comparison": null,
+        "rationale": "Preserve the official seasonally adjusted quarter-on-quarter real GDP growth series as the direct measure of sequential quarterly momentum.",
+        "source_id": "real_gdp_qoq_growth"
+      },
+      "release_lag_days": 0,
+      "series_id": "real_gdp_qoq_growth",
+      "series_label": "Real GDP quarter-on-quarter growth",
+      "series_type": "rate",
+      "snapshot_path": "sample_run/raw/real_gdp_qoq_growth.json",
+      "snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+      "source_id": "real_gdp_qoq_growth",
+      "unit": "seasonally adjusted quarter-on-quarter percent change",
       "update_frequency": "quarterly"
     }
   ]

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "reporting_as_of_date": "2026-10-01",
+  "note": "Retrieval metadata for the nine immutable raw snapshots used by the formal submission workflow. Transformation contracts and exact calculation lineage are preserved in stage3/frozen_data_plan.json and stage3/lineage/transformation_trace.json.",
+  "sources": [
+    {
+      "source_id": "ura_non_landed_price_index",
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_97f8a2e995022d311c6c68cfda6d034c&limit=5000",
+      "retrieved_at": "2026-10-02T05:15:49.307064+00:00",
+      "raw_snapshot_path": "sample_run/raw/ura_non_landed_price_index.json",
+      "raw_file_sha256": "bc5706937c186504c8f766e14f5be3ae9f993148c88391587176f88058e6b003"
+    },
+    {
+      "source_id": "ura_non_landed_rental_index",
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_8e4c50283fb7052a391dfb746a05c853&limit=5000",
+      "retrieved_at": "2026-10-02T05:16:02.302172+00:00",
+      "raw_snapshot_path": "sample_run/raw/ura_non_landed_rental_index.json",
+      "raw_file_sha256": "83b9cc2091b8f56e7dd9323316fe8b772634d791922d7676f1855840cd836fa6"
+    },
+    {
+      "source_id": "private_residential_pipeline_supply",
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_055b6549444dedb341c50805d9682a41&limit=500",
+      "retrieved_at": "2026-10-02T05:16:15.033278+00:00",
+      "raw_snapshot_path": "sample_run/raw/private_residential_pipeline_supply.json",
+      "raw_file_sha256": "f095d6e78baa050d53f5a6b0b9dce599fdf0411ba3587f923ac98f21429e9c17"
+    },
+    {
+      "source_id": "non_resident_population",
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_3d227e5d9fdec73f3bcadce671c333a6&limit=500",
+      "retrieved_at": "2026-10-02T05:16:28.091375+00:00",
+      "raw_snapshot_path": "sample_run/raw/non_resident_population.json",
+      "raw_file_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e"
+    },
+    {
+      "source_id": "non_resident_employment_change",
+      "source_url": "https://stats.mom.gov.sg/Pages/Labour-Market-Report-2Q-2026.aspx?PageVersion=512",
+      "retrieved_at": "2026-10-02T05:16:40.964480+00:00",
+      "raw_snapshot_path": "sample_run/raw/non_resident_employment_change.html",
+      "raw_file_sha256": "7e9dd3d4e0d7ec68c0d4541800a7d3f8df3b5a3d730f617334d8515a1dedceb2"
+    },
+    {
+      "source_id": "private_non_landed_vacancy_rate",
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_01e3556fb916ca19a7e29fc39520fa78&limit=500",
+      "retrieved_at": "2026-10-02T05:16:54.025806+00:00",
+      "raw_snapshot_path": "sample_run/raw/private_non_landed_vacancy_rate.json",
+      "raw_file_sha256": "438e023cdfe19b687820e480be8f28953afc6e1343ed70bc39921700490eb54b"
+    },
+    {
+      "source_id": "three_month_compounded_sora",
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_5fe5a4bb4a1ecc4d8a56a095832e2b24&limit=500",
+      "retrieved_at": "2026-10-02T05:17:07.355007+00:00",
+      "raw_snapshot_path": "sample_run/raw/three_month_compounded_sora.json",
+      "raw_file_sha256": "51dc6f246693b96e61307b2d5d54ce35226467632daa4e1bddfae03636325947"
+    },
+    {
+      "source_id": "real_gdp_growth",
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_a5ff719648a0e6d4b4c623ee383ab686&limit=500",
+      "retrieved_at": "2026-10-02T05:17:20.583062+00:00",
+      "raw_snapshot_path": "sample_run/raw/real_gdp_growth.json",
+      "raw_file_sha256": "695aae88e47d1683639b57cd05936d428346b9ca248d8c928dbf74acf739b203"
+    },
+    {
+      "source_id": "real_gdp_qoq_growth",
+      "source_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_17702de81b268ab5d6100a1aab3805bf&limit=500",
+      "retrieved_at": "2026-10-04T06:54:17+00:00",
+      "raw_snapshot_path": "sample_run/raw/real_gdp_qoq_growth.json",
+      "raw_file_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f"
+    }
+  ]
+}

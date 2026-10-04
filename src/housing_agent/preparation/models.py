@@ -39,7 +39,7 @@ class PreparationContract(StrictModel):
     native_frequency: Literal["monthly", "quarterly", "annual"]
     preserve_native_view: Literal[True] = True
     quarterly_comparison: QuarterlyComparisonView | None
-    change_calculations: list[ChangeCalculation] = Field(min_length=1)
+    change_calculations: list[ChangeCalculation] = Field(default_factory=list)
     predictive_alignment: PredictiveAlignment | None
     missing_value_policy: Literal["preserve_null"] = "preserve_null"
     interpolation_allowed: Literal[False] = False

@@ -9,7 +9,6 @@ Return continuous academic prose under exactly these headings:
 ## Data and Analytical Approach
 ## Rental-Market Findings
 ## Sale-Market Findings
-## Discussion
 ## Limitations
 ## Conclusion
 
@@ -21,7 +20,7 @@ Mandatory rules:
 4. Write Data and Analytical Approach as one short plain-language paragraph of no more
    than five sentences. Explain frequency alignment only where it matters; do not list
    percentage, percentage-point, basis-point, or absolute-change conventions.
-5. Analyse rental and sale markets separately before comparing them.
+5. Analyse rental and sale markets separately; the Conclusion may provide a brief synthesis.
 6. In each findings section, start with the market outcome, examine its predictors,
    and end with a qualified synthesis.
 7. Insert empirical evidence only through an exact anchor such as
@@ -35,12 +34,10 @@ Mandatory rules:
    economic interpretation.
 11. Explain a mechanism only when supported by a supplied rationale or literature
    record. Never claim causality and never make a point forecast.
-12. The Discussion should explain why sale and rental conditions may differ; it
-    should not repeat every result.
-13. Preserve material limitations, especially frequency mismatch, proxy limitations,
+12. Preserve material limitations, especially frequency mismatch, proxy limitations,
     release timing and the distinction between pipeline and completed supply.
-14. The Conclusion must answer the research question without introducing new evidence.
-15. Use calibrated language such as "is consistent with", "may indicate", and
+13. The Conclusion must answer the research question without introducing new evidence.
+14. Use calibrated language such as "is consistent with", "may indicate", and
     "does not establish". Do not write a generic "signals are mixed" conclusion;
     identify the relevant mechanisms and direction of evidence.
 
@@ -248,7 +245,7 @@ VALIDATED EVIDENCE CATALOG
     "unit": "year-on-year percent change",
     "derivation": null,
     "direction": "latest validated level",
-    "selection_rationale": "Broad economic activity may affect income expectations, purchasing capacity, and buyer confidence.",
+    "selection_rationale": "Year-on-year real GDP growth provides a broad measure of economic activity that may affect income expectations, purchasing capacity, and buyer confidence.",
     "permitted_literature_ids": [
       "Tu2004",
       "IMF2018",
@@ -261,24 +258,23 @@ VALIDATED EVIDENCE CATALOG
   {
     "anchor": "{{CLAIM:CLAIM-011}}",
     "claim_id": "CLAIM-011",
-    "series_id": "real_gdp_growth__qoq_percentage_point_change",
-    "series_label": "Real GDP growth (qoq_percentage_point_change)",
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
     "market": "sale",
     "analytical_role": "predictor",
     "period": "2026-Q2",
-    "validated_value": "-0.4",
-    "unit": "percentage points",
-    "derivation": "percentage_point_change using calendar lag 1",
-    "direction": "decrease",
-    "selection_rationale": "Broad economic activity may affect income expectations, purchasing capacity, and buyer confidence.",
+    "validated_value": "1.4",
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "derivation": null,
+    "direction": "latest validated level",
+    "selection_rationale": "Seasonally adjusted quarter-on-quarter real GDP growth captures economic momentum relative to the immediately preceding quarter.",
     "permitted_literature_ids": [
       "Tu2004",
       "IMF2018",
       "RangelNg2017"
     ],
     "quality_notes": [
-      "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
-      "Derived deterministically from the recorded source periods."
+      "No observation-level release date was supplied; the workflow relies on the approved availability rule."
     ]
   },
   {
@@ -512,6 +508,5 @@ REQUIRED HEADINGS
 ## Data and Analytical Approach
 ## Rental-Market Findings
 ## Sale-Market Findings
-## Discussion
 ## Limitations
 ## Conclusion

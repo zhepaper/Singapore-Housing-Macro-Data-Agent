@@ -24,17 +24,13 @@ Taken together, the rental evidence indicates a firm market rather than a renewe
 
 In 2026 Q2, the private non-landed price index was 210.6, with its level in the first quarter of 2009 set to 100. Compared with the previous quarter, the private non-landed price index was 0.1% lower in 2026 Q2. Compared with a year earlier, the private non-landed price index was 1.8% higher in 2026 Q2. The price outcome therefore combines a marginal quarterly decline with positive annual growth. This is more consistent with a loss of short-term momentum than with a broad annual contraction.
 
-Real GDP growth was 5.9% year on year in 2026 Q2. Compared with the preceding quarter, the year-on-year real GDP growth rate was 0.4 percentage points lower in 2026 Q2. Economic activity remained supportive in annual terms, although the change from the preceding quarter indicates some moderation in the reported growth rate. The potential income and confidence channel is consistent with [Tu, Y. (2004)](https://journals.sagepub.com/doi/10.1080/0042098042000178708), [International Monetary Fund (2018)](https://www.imf.org/-/media/files/publications/cr/2018/cr18245.pdf) and [Rangel, G. J. and Ng, J. W. J. (2017)](https://www.mfa.com.my/wp-content/uploads/2017/12/vol252_pp.15-31-Rangel-Ng.pdf), but the descriptive evidence cannot isolate it from other influences.
+Real GDP growth was 5.9% year on year in 2026 Q2. Real GDP increased by 1.4% quarter on quarter on a seasonally adjusted basis in 2026 Q2. Economic activity was positive both relative to a year earlier and relative to the immediately preceding quarter. The potential income and confidence channel is consistent with [Tu, Y. (2004)](https://journals.sagepub.com/doi/10.1080/0042098042000178708), [International Monetary Fund (2018)](https://www.imf.org/-/media/files/publications/cr/2018/cr18245.pdf) and [Rangel, G. J. and Ng, J. W. J. (2017)](https://www.mfa.com.my/wp-content/uploads/2017/12/vol252_pp.15-31-Rangel-Ng.pdf), but the descriptive evidence cannot isolate it from other influences.
 
 At the end of 2026 Q2, three-month Compounded SORA was 1.08% per annum. Compared with the previous quarter, three-month Compounded SORA was 1.17 basis points higher in 2026 Q2. The financing evidence shows that the approved quarter-end rate did not fall over the latest quarter. It therefore provided little additional easing in borrowing conditions during the period, although the movement itself was small and should not be treated as a standalone explanation of prices.
 
 In 2026 Q2, the private non-landed residential pipeline was 51,677 dwelling units. Compared with the previous quarter, the private non-landed residential pipeline was 3,566 dwelling units higher in 2026 Q2. Compared with a year earlier, the private non-landed residential pipeline was 6.6% higher in 2026 Q2. The prospective supply pipeline increased over both the quarter and the year. Pipeline units are not completed homes, so their immediate effect on available supply cannot be inferred from these figures. Even so, the increase may moderate expectations of future scarcity as projects progress toward completion.
 
 Overall, sale-market conditions were less firm at the quarterly horizon than rental-market conditions. Economic activity remained supportive, but financing did not provide further easing and prospective supply expanded, which is consistent with prices remaining above their year-earlier level while changing little in the latest quarter.
-
-## Discussion
-
-The findings illustrate why sale prices and rents should not be treated as a single housing-market outcome. Rental conditions are linked more directly to current occupancy and tenant demand, whereas purchase decisions also reflect mortgage costs and expectations about future stock. The expanding pipeline may therefore affect purchase-market expectations before completed units materially change the rental stock. The contemporaneous alignment of these series is descriptive: their economic effects may occur with different lags, and agreement in direction does not prove a causal relationship.
 
 ## Limitations
 
@@ -54,6 +50,7 @@ The latest evidence indicates that the private non-landed rental market remained
 - [Available and vacant private residential properties (M400841)](https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view), Urban Redevelopment Authority via SingStat and data.gov.sg.
 - [Singapore dollar interest rate benchmarks (M700071)](https://data.gov.sg/datasets/d_5fe5a4bb4a1ecc4d8a56a095832e2b24/view), Monetary Authority of Singapore via SingStat and data.gov.sg.
 - [Quarterly real GDP growth (M015631)](https://data.gov.sg/datasets/d_a5ff719648a0e6d4b4c623ee383ab686/view), Singapore Department of Statistics via data.gov.sg.
+- [Seasonally adjusted quarter-on-quarter real GDP growth (M015922)](https://data.gov.sg/datasets/d_17702de81b268ab5d6100a1aab3805bf/view), Singapore Department of Statistics via data.gov.sg.
 
 ## References
 

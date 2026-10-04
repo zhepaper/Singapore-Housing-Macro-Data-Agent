@@ -2,7 +2,7 @@
 
 ## Result
 
-The read-only spike confirmed that all eight required source series can be retrieved from official public endpoints as of 1 October 2026. Seven structured series are available through data.gov.sg JSON endpoints. Quarterly non-resident employment change is available in the final Ministry of Manpower Labour Market Report and therefore needs a report parser rather than a stable time-series API.
+The read-only spike confirmed that all nine required source series can be retrieved from official public endpoints. Eight structured series are available through data.gov.sg JSON endpoints. Quarterly non-resident employment change is available in the final Ministry of Manpower Labour Market Report and therefore needs a report parser rather than a stable time-series API.
 
 | Source | Access result | Contract checked |
 |---|---|---|
@@ -14,6 +14,7 @@ The read-only spike confirmed that all eight required source series can be retri
 | Private non-landed vacancy inputs | Pass | Separate available and vacant non-landed series both exist |
 | 3-month Compounded SORA | Pass | Exact 3-month compounded SORA series exists |
 | Real GDP growth | Pass | Exact `GDP In Chained (2015) Dollars` series exists in YoY-growth table `M015631` |
+| Real GDP quarter-on-quarter growth | Pass | Exact `GDP In Chained (2015) Dollars` series exists in seasonally adjusted QoQ table `M015922` |
 
 ## Reliability finding
 
@@ -23,4 +24,4 @@ The successful targeted verification is recorded in `data/raw/spike_20261001T084
 
 ## Production retrieval follow-up
 
-An early production-layer integration check downloaded the URA price-index response but received HTTP 403 from the MOM report page. The retrieval layer correctly classified that response as non-retryable and did not substitute another value. A subsequent rate-limited live run on 2 October 2026 retrieved all eight configured sources with HTTP 200 and produced the packaged sample run. The contrast is retained because public-page access can be intermittent: future live failures must still halt or use an explicitly approved, visibly labelled cached fallback.
+An early production-layer integration check downloaded the URA price-index response but received HTTP 403 from the MOM report page. The retrieval layer correctly classified that response as non-retryable and did not substitute another value. A subsequent rate-limited live run retrieved the original eight configured sources with HTTP 200; the official GDP QoQ source was then added and independently verified against SingStat table M015922. The contrast is retained because public-page access can be intermittent: future live failures must still halt or use an explicitly approved, visibly labelled cached fallback.

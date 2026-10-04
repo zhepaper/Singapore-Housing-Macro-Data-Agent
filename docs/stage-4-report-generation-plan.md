@@ -66,7 +66,7 @@ brief. The plan maps memory predictor IDs to the final source and series IDs; me
 overrides evidence values.
 
 The prompt instructs the writer to produce continuous prose under Introduction, Data and
-Analytical Approach, Rental-Market Findings, Sale-Market Findings, Discussion, Limitations,
+Analytical Approach, Rental-Market Findings, Sale-Market Findings, Limitations,
 and Conclusion. Each findings section must proceed from outcome to predictors to a qualified
 synthesis. The writer may place only supplied `{{CLAIM:...}}` and `{{LIT:...}}` anchors; it
 may not copy numbers, invent citations, expose workflow internals, claim causality, or add an

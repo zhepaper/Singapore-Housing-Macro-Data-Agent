@@ -55,6 +55,17 @@
     "status": "pass"
   },
   {
+    "eligible_observation_count": 42,
+    "issues": [],
+    "missing_periods": [],
+    "observation_count": 205,
+    "period_end": "2026-Q2",
+    "period_start": "1975-Q2",
+    "series_id": "real_gdp_qoq_growth",
+    "source_id": "real_gdp_qoq_growth",
+    "status": "pass"
+  },
+  {
     "eligible_observation_count": 126,
     "issues": [],
     "missing_periods": [],

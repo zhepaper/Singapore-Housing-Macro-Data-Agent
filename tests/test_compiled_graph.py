@@ -50,7 +50,7 @@ class CompiledGraphTests(unittest.TestCase):
             writer_metadata = json.loads((run_root / "report/writer_metadata.json").read_text())
             self.assertEqual(manifest["prompt_version"], writer_metadata["prompt_version"])
             self.assertTrue(all(not Path(path).is_absolute() for path in manifest["artifacts"].values()))
-            self.assertEqual(len(list((run_root / "raw").glob("*"))), 8)
+            self.assertEqual(len(list((run_root / "raw").glob("*"))), 9)
             for source in manifest["sources"]:
                 self.assertIsNotNone(source["latest_available_period"])
                 self.assertEqual(source["validation_status"], "pass")

@@ -67,7 +67,7 @@ flowchart LR
 - [x] Define stable `source_id` values.
 - [x] Record official pages and machine-readable endpoints.
 - [x] Record exact series labels, selectors, units, and frequencies.
-- [x] Test all eight source series against official endpoints.
+- [x] Test all nine source series against official endpoints.
 - [x] Preserve successful and failed spike manifests.
 - [x] Document direct SingStat failures and data.gov.sg mirrors.
 - [x] Confirm MOM employment is report-based rather than a stable JSON series.
@@ -127,7 +127,7 @@ runs/<run_id>/
 - [x] Derive private non-landed vacancy rate.
 - [x] Select the final available monthly SORA observation in each quarter.
 - [x] Mark incomplete SORA quarters.
-- [x] Preserve GDP as official YoY growth and calculate the previous-quarter percentage-point change.
+- [x] Preserve GDP as official YoY growth and retain the separate official seasonally adjusted QoQ growth series for the immediately preceding-quarter comparison.
 - [x] Write normalized and derived records into the current run directory.
 - [x] Link each processed record to its source-run provenance.
 - [x] Record formula inputs and exact source periods for each derived observation.
@@ -211,7 +211,7 @@ runs/<run_id>/
 - [x] Test report-number mismatch detection.
 - [x] Add one live integration test that is excluded from the default offline suite.
 
-The first production-layer integration check on 1 October 2026 recorded an explicit MOM HTTP 403 diagnostic. A subsequent full live run on 2 October retrieved all eight official sources successfully, and the separate opt-in live smoke test passed.
+The first production-layer integration check on 1 October 2026 recorded an explicit MOM HTTP 403 diagnostic. A subsequent full live run on 2 October retrieved the original eight official sources successfully, and the separately added official GDP QoQ source was verified against SingStat table M015922.
 
 **Exit criterion:** Both successful and expected-failure paths are covered, and live-source changes do not make the offline suite nondeterministic.
 

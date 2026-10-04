@@ -1,0 +1,17 @@
+{
+  "run_id": "20261004T065417Z",
+  "retrieved_at": "2026-10-04T06:54:17+00:00",
+  "catalog_path": "config/data_catalog.yaml",
+  "results": [
+    {
+      "source_id": "real_gdp_qoq_growth",
+      "status": "pass",
+      "http_status": 200,
+      "content_type": "application/json",
+      "bytes_received": 31741,
+      "raw_snapshot_path": "data/raw/spike_20261004T065417Z/real_gdp_qoq_growth.json",
+      "sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+      "detail": "8 records; 1 matches the exact Overall Economy series selector"
+    }
+  ]
+}

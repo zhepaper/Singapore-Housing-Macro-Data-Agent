@@ -34,6 +34,12 @@ class SubmissionPipelineTests(unittest.TestCase):
             self.assertEqual(summary["stage3_status"], "success")
             self.assertEqual(summary["stage4_status"], "success")
             self.assertTrue((output / "stage4" / "final_report.md").exists())
+            report_text = (output / "stage4" / "final_report.md").read_text()
+            self.assertIn(
+                "Real GDP increased by 1.4% quarter on quarter on a seasonally adjusted basis in 2026 Q2.",
+                report_text,
+            )
+            self.assertNotIn("## Discussion", report_text)
             verification = json.loads(
                 (output / "stage4" / "verification_report.json").read_text()
             )

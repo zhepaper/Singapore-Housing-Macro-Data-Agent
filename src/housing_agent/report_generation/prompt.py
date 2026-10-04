@@ -10,7 +10,6 @@ REQUIRED_NARRATIVE_HEADINGS = (
     "## Data and Analytical Approach",
     "## Rental-Market Findings",
     "## Sale-Market Findings",
-    "## Discussion",
     "## Limitations",
     "## Conclusion",
 )
@@ -26,7 +25,6 @@ Return continuous academic prose under exactly these headings:
 ## Data and Analytical Approach
 ## Rental-Market Findings
 ## Sale-Market Findings
-## Discussion
 ## Limitations
 ## Conclusion
 
@@ -38,7 +36,7 @@ Mandatory rules:
 4. Write Data and Analytical Approach as one short plain-language paragraph of no more
    than five sentences. Explain frequency alignment only where it matters; do not list
    percentage, percentage-point, basis-point, or absolute-change conventions.
-5. Analyse rental and sale markets separately before comparing them.
+5. Analyse rental and sale markets separately; the Conclusion may provide a brief synthesis.
 6. In each findings section, start with the market outcome, examine its predictors,
    and end with a qualified synthesis.
 7. Insert empirical evidence only through an exact anchor such as
@@ -52,12 +50,10 @@ Mandatory rules:
    economic interpretation.
 11. Explain a mechanism only when supported by a supplied rationale or literature
    record. Never claim causality and never make a point forecast.
-12. The Discussion should explain why sale and rental conditions may differ; it
-    should not repeat every result.
-13. Preserve material limitations, especially frequency mismatch, proxy limitations,
+12. Preserve material limitations, especially frequency mismatch, proxy limitations,
     release timing and the distinction between pipeline and completed supply.
-14. The Conclusion must answer the research question without introducing new evidence.
-15. Use calibrated language such as "is consistent with", "may indicate", and
+13. The Conclusion must answer the research question without introducing new evidence.
+14. Use calibrated language such as "is consistent with", "may indicate", and
     "does not establish". Do not write a generic "signals are mixed" conclusion;
     identify the relevant mechanisms and direction of evidence.
 """

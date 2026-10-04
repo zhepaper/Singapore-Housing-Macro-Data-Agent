@@ -172,6 +172,29 @@ def observations(months=6):
 
 
 class PreparationAdvisorTests(unittest.TestCase):
+    def test_official_growth_rate_can_be_preserved_without_second_order_change(self) -> None:
+        contract = PreparationContract(
+            source_id="real_gdp_qoq_growth",
+            predictor_id="real_gdp_qoq_growth",
+            native_frequency="quarterly",
+            preserve_native_view=True,
+            quarterly_comparison=None,
+            change_calculations=[],
+            predictive_alignment=None,
+            missing_value_policy="preserve_null",
+            interpolation_allowed=False,
+            rationale=(
+                "Preserve the official seasonally adjusted quarter-on-quarter growth "
+                "rate without calculating a second-order change."
+            ),
+            decision_basis=[
+                "Official source already publishes a change rate",
+                "Human-approved native view",
+            ],
+        )
+
+        self.assertEqual(contract.change_calculations, [])
+
     def test_advisor_input_uses_validated_full_snapshot_mapping_coverage(self):
         memory, manifest = memory_bundle()
         mapped = MappingExecutionReport(

@@ -6,7 +6,7 @@ An auditable LangGraph workflow for public indicators that may help explain chan
 
 - **Shared:** private non-landed residential pipeline supply
 - **Rental:** annual non-resident population stock, quarterly non-resident employment change, and private non-landed vacancy
-- **Sale:** 3-month Compounded SORA and real GDP growth
+- **Sale:** 3-month Compounded SORA, year-on-year real GDP growth, and official seasonally adjusted quarter-on-quarter real GDP growth
 - **Benchmarks:** URA private non-landed price and rental indices
 
 Population and employment are deliberately separate: population is an annual stock; employment change is a quarterly flow and a higher-frequency proxy for one part of non-resident demand.
@@ -30,7 +30,7 @@ Run the complete reviewer-facing workflow from the approved data plan to a verif
 ```
 
 This command is offline, deterministic, and requires no API key. It verifies every raw
-snapshot checksum, normalizes and validates all eight series, applies only the approved
+snapshot checksum, normalizes and validates all nine series, applies only the approved
 transformations, writes a validated evidence bundle, and generates a claim-checked report.
 The Stage 3 policy registry restricts aggregation, change, and derived-series operations to
 approved methods. For example, the vacancy rate is calculated inside Stage 3 directly from
@@ -155,7 +155,10 @@ The preserved legacy workflow creates `runs/<run_id>/`. Resume an interrupted le
 ```
 
 [`sample_run/raw/`](sample_run/raw/) contains the official snapshots captured on 2 October
-2026. Their checksums are pinned in the frozen plan. The current submission run passes the
+2026, plus the separately verified official GDP QoQ snapshot captured on 4 October 2026.
+Their source URLs, retrieval times and checksums are recorded in
+[`sample_run/submission/input_provenance.json`](sample_run/submission/input_provenance.json),
+and the checksums are pinned again in the frozen plan. The current submission run passes the
 Stage 3 data gates and Stage 4 claim verification; its two timing warnings disclose that the
 Q1/Q2 non-resident employment releases were not available at the corresponding quarter ends.
 
@@ -173,8 +176,8 @@ Start with [`SUBMISSION_REPORT.md`](SUBMISSION_REPORT.md) for the concise analyt
 
 The Stage 4 LangGraph reads `validated_evidence_bundle.json` directly. It does not read raw
 snapshots or recalculate metrics. It produces a prose-only applied social-science report:
-introduction, data and analytical approach, rental findings, sale findings, discussion,
-limitations, conclusion, sources, and references. The default writer is a readable
+introduction, data and analytical approach, rental findings, sale findings, limitations,
+conclusion, sources, and references. The default writer is a readable
 deterministic fallback and requires no API key:
 
 ```bash

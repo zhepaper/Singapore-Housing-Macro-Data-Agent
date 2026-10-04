@@ -1,5 +1,5 @@
 {
-  "catalog_version": 1,
+  "catalog_version": 2,
   "scope": {
     "geography": "Singapore",
     "property_segment": "Private non-landed residential",
@@ -228,11 +228,39 @@
       "series_field": "DataSeries",
       "exact_series_label": "GDP In Chained (2015) Dollars",
       "selected_series_labels": ["GDP In Chained (2015) Dollars"],
-      "transformations": ["official_yoy_growth", "previous_quarter_percentage_point_change"],
+      "transformations": ["official_yoy_growth"],
       "freshness_rule": {"expected_lag_days": 50}
       ,"minimum_normalized_observations": 100
       ,"mechanism": "Stronger real activity may support purchasing capacity and buyer confidence in the sale market."
       ,"limitations": ["Aggregate GDP is broader than household income, disposable income, or GDP per capita.", "Published GDP values may be revised."]
+    },
+    {
+      "source_id": "real_gdp_qoq_growth",
+      "factor": "real_gdp_short_term_momentum",
+      "role": "predictor",
+      "market": "sale",
+      "provider": "Singapore Department of Statistics via data.gov.sg",
+      "source_type": "datagov_json",
+      "table_id": "M015922",
+      "dataset_id": "d_17702de81b268ab5d6100a1aab3805bf",
+      "page_url": "https://data.gov.sg/datasets/d_17702de81b268ab5d6100a1aab3805bf/view",
+      "definition_url": "https://tablebuilder.singstat.gov.sg/table/TS/M015922",
+      "retrieval_url": "https://data.gov.sg/api/action/datastore_search?resource_id=d_17702de81b268ab5d6100a1aab3805bf&limit=500",
+      "native_frequency": "quarterly",
+      "update_frequency": "quarterly",
+      "unit": "seasonally adjusted quarter-on-quarter percent change",
+      "definition": "Official seasonally adjusted quarter-on-quarter real GDP growth for Singapore's overall economy in chained 2015 dollars.",
+      "series_identifier": "SingStat M015922; GDP In Chained (2015) Dollars",
+      "potential_lag": "This sequential quarterly measure provides a short-term activity signal; the lag to housing demand is not estimated.",
+      "point_in_time_availability": "Current-vintage history; GDP observations may be revised during advance and preliminary releases.",
+      "series_field": "DataSeries",
+      "exact_series_label": "GDP In Chained (2015) Dollars",
+      "selected_series_labels": ["GDP In Chained (2015) Dollars"],
+      "transformations": ["official_seasonally_adjusted_qoq_growth"],
+      "freshness_rule": {"expected_lag_days": 50},
+      "minimum_normalized_observations": 100,
+      "mechanism": "Quarter-on-quarter real GDP growth captures recent economic momentum that may affect purchasing capacity and buyer confidence.",
+      "limitations": ["Seasonally adjusted estimates may be revised.", "This is an official quarter-on-quarter growth series, not the difference between two year-on-year growth rates."]
     }
   ]
 }

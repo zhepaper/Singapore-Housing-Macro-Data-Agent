@@ -4,12 +4,12 @@
     {
       "attempt": 1,
       "path": "prompts/attempt_1.txt",
-      "prompt_sha256": "802f0594cecc1d88923bbf7edc0459bd741258f5fe102e846d283e17901fb0c4"
+      "prompt_sha256": "593aea68d46b873e50a458b60af9b715f2d1d503d8b0c5bf2faead113c1692e6"
     }
   ],
-  "evidence_sha256": "65cdefc3c662d346f780e66a3ac54bcefa76e7e520f780efb2715da2f7f2e936",
+  "evidence_sha256": "6f06da2c689d1725d7c87fc90de0ec3725135a4f872b8bba39d6ba3450eceb9b",
   "model": null,
-  "prompt_sha256": "802f0594cecc1d88923bbf7edc0459bd741258f5fe102e846d283e17901fb0c4",
+  "prompt_sha256": "593aea68d46b873e50a458b60af9b715f2d1d503d8b0c5bf2faead113c1692e6",
   "prompt_version": "stage4-grounded-academic-writer-v2",
   "provider": "deterministic"
 }

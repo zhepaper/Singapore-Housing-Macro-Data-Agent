@@ -235,11 +235,11 @@ Final acceptance checks:
 Last recorded on 4 October 2026:
 
 ```text
-185 tests passed in the full regression checkpoint
+186 tests passed in the full regression checkpoint
 11 Stage 4 acceptance tests passed across targeted final-change runs
 1 optional live-source test skipped as designed
-Snapshot end-to-end workflow completed with 8 sources, 2,012 observations,
-1,846 derived observations, and no validation errors
+Snapshot end-to-end workflow completed with 9 sources, 1,531 normalized observations,
+408 transformed observations, 19 verified report claims, and no validation errors
 ```
 
 ## J. Final submission integration audit

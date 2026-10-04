@@ -8,7 +8,7 @@ The workflow treats the URA non-landed price and rental indices as outcome bench
 
 - **Shared:** private non-landed pipeline supply.
 - **Rental:** non-resident demand, represented separately by annual non-resident population stock and quarterly non-resident employment change; and the private non-landed vacancy rate.
-- **Sale:** three-month Compounded SORA and real GDP growth.
+- **Sale:** three-month Compounded SORA, year-on-year real GDP growth, and seasonally adjusted quarter-on-quarter real GDP growth.
 
 Population and employment are deliberately not combined. Population is an annual end-June stock, whereas employment change is a quarterly flow and a timely proxy for one component of foreign-facing rental demand.
 
@@ -28,7 +28,7 @@ Using the frozen-plan run over official snapshots retrieved on 2 October 2026, w
 - The non-resident population was **1,906,660 at end-June 2025**, up **2.730% year-on-year**. The configured MOM report recorded a **9,200-person increase in non-resident employment in 2026 Q2**. These remain distinct stock and flow measures.
 - The derived private non-landed vacancy rate was **5.390% in 2026 Q2**, up **0.021 percentage points quarter-on-quarter** but down **1.486 percentage points year-on-year**.
 - The complete-quarter SORA representation was **1.083% per annum for 2026 Q2**, using the June month-end observation, up **1.17 basis points quarter-on-quarter**. The approved `reject` policy excludes partial 2026 Q3 rather than presenting July as a complete-quarter value.
-- Official year-on-year real GDP growth was **5.9% in 2026 Q2**, **0.4 percentage points lower** than in the preceding quarter.
+- Official real GDP growth was **5.9% year-on-year in 2026 Q2**. On a seasonally adjusted basis, real GDP also increased **1.4% relative to 2026 Q1**; this direct official QoQ series is kept distinct from changes between adjacent YoY growth rates.
 
 These observations are descriptive. Mixed directions across horizons are retained rather than collapsed into a single positive or negative signal.
 

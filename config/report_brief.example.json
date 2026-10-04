@@ -7,7 +7,8 @@
     "ura_non_landed_price_index": "The official URA non-landed price index is the sale-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
     "ura_non_landed_rental_index": "The official URA non-landed whole-island rental index is the rental-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
     "three_month_compounded_sora": "Short-term financing conditions may affect mortgage affordability and leveraged purchase demand in the sale market.",
-    "real_gdp_growth": "Broad economic activity may affect income expectations, purchasing capacity, and buyer confidence.",
+    "real_gdp_growth": "Year-on-year real GDP growth provides a broad measure of economic activity that may affect income expectations, purchasing capacity, and buyer confidence.",
+    "real_gdp_qoq_growth": "Seasonally adjusted quarter-on-quarter real GDP growth captures economic momentum relative to the immediately preceding quarter.",
     "non_resident_population": "The non-resident population is a structural measure of part of the potential foreign-facing tenant base.",
     "non_resident_employment_change": "Quarterly non-resident employment change is a timely demand signal, but it is an employment flow rather than a population stock.",
     "private_non_landed_vacancy_rate": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
@@ -18,6 +19,7 @@
     "ura_non_landed_rental_index": [],
     "three_month_compounded_sora": ["Tu2004", "IMF2018", "RangelNg2017"],
     "real_gdp_growth": ["Tu2004", "IMF2018", "RangelNg2017"],
+    "real_gdp_qoq_growth": ["Tu2004", "IMF2018", "RangelNg2017"],
     "non_resident_population": ["ChiaLiTang2017", "JiBhandari2022"],
     "non_resident_employment_change": ["JiBhandari2022"],
     "private_non_landed_vacancy_rate": ["DiPasqualeWheaton1992", "URAHDB2026"],
@@ -108,6 +110,12 @@
       "title": "Quarterly real GDP growth (M015631)",
       "publisher": "Singapore Department of Statistics via data.gov.sg",
       "url": "https://data.gov.sg/datasets/d_a5ff719648a0e6d4b4c623ee383ab686/view"
+    },
+    {
+      "source_id": "real_gdp_qoq_growth",
+      "title": "Seasonally adjusted quarter-on-quarter real GDP growth (M015922)",
+      "publisher": "Singapore Department of Statistics via data.gov.sg",
+      "url": "https://data.gov.sg/datasets/d_17702de81b268ab5d6100a1aab3805bf/view"
     }
   ]
 }

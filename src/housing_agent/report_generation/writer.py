@@ -72,6 +72,7 @@ def _academic_fallback(context: ReportContext) -> str:
         "private_non_landed_vacancy_rate",
         "ura_non_landed_price_index",
         "real_gdp_growth",
+        "real_gdp_qoq_growth",
         "three_month_compounded_sora",
         "private_residential_pipeline_supply",
     }
@@ -84,6 +85,7 @@ def _academic_fallback(context: ReportContext) -> str:
         vacancy = take("private_non_landed_vacancy_rate")
         sale_outcome = take("ura_non_landed_price_index")
         gdp = take("real_gdp_growth")
+        gdp_qoq = take("real_gdp_qoq_growth")
         sora = take("three_month_compounded_sora")
         pipeline = take("private_residential_pipeline_supply")
         rent_extra = remaining("rent")
@@ -119,17 +121,13 @@ Taken together, the rental evidence indicates a firm market rather than a renewe
 
 {sale_outcome} The price outcome therefore combines a marginal quarterly decline with positive annual growth. This is more consistent with a loss of short-term momentum than with a broad annual contraction.
 
-{gdp} Economic activity remained supportive in annual terms, although the change from the preceding quarter indicates some moderation in the reported growth rate. The potential income and confidence channel is consistent with {sale_lit}, but the descriptive evidence cannot isolate it from other influences.
+{gdp} {gdp_qoq} Economic activity was positive both relative to a year earlier and relative to the immediately preceding quarter. The potential income and confidence channel is consistent with {sale_lit}, but the descriptive evidence cannot isolate it from other influences.
 
 {sora} The financing evidence shows that the approved quarter-end rate did not fall over the latest quarter. It therefore provided little additional easing in borrowing conditions during the period, although the movement itself was small and should not be treated as a standalone explanation of prices.
 
 {pipeline} {shared_extra} The prospective supply pipeline increased over both the quarter and the year. Pipeline units are not completed homes, so their immediate effect on available supply cannot be inferred from these figures. Even so, the increase may moderate expectations of future scarcity as projects progress toward completion. {sale_extra}
 
 Overall, sale-market conditions were less firm at the quarterly horizon than rental-market conditions. Economic activity remained supportive, but financing did not provide further easing and prospective supply expanded, which is consistent with prices remaining above their year-earlier level while changing little in the latest quarter.
-
-## Discussion
-
-The findings illustrate why sale prices and rents should not be treated as a single housing-market outcome. Rental conditions are linked more directly to current occupancy and tenant demand, whereas purchase decisions also reflect mortgage costs and expectations about future stock. The expanding pipeline may therefore affect purchase-market expectations before completed units materially change the rental stock. The contemporaneous alignment of these series is descriptive: their economic effects may occur with different lags, and agreement in direction does not prove a causal relationship.
 
 ## Limitations
 
@@ -166,17 +164,13 @@ Official outcome series and approved predictor series are retained at their vali
 
 {sale} The sale evidence should be interpreted jointly, with outcome movements distinguished from possible macroeconomic, financing and supply mechanisms.
 
-## Discussion
-
-{shared} {rationales} Sale prices and rents may respond to shared conditions with different timing. Agreement strengthens a descriptive reading, while disagreement should remain visible rather than being forced into one conclusion. {literature}
-
 ## Limitations
 
-The indicators differ in frequency, timing and economic interpretation. Their association with the market outcomes does not establish causality, and the analysis should not be read as a point forecast.
+{rationales} The indicators differ in frequency, timing and economic interpretation. Their association with the market outcomes does not establish causality, and the analysis should not be read as a point forecast. {literature}
 
 ## Conclusion
 
-The validated evidence provides a reproducible basis for monitoring the two markets, subject to the stated data-quality and timing limitations.
+{shared} The validated evidence provides a reproducible basis for monitoring the two markets, subject to the stated data-quality and timing limitations.
 """)
 
 

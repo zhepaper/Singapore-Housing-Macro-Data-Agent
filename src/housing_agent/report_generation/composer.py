@@ -21,6 +21,7 @@ def _reader_label(claim: EvidenceClaim) -> str:
         "non_resident_population": "the non-resident population",
         "non_resident_employment_change": "non-resident employment",
         "real_gdp_growth": "the year-on-year real GDP growth rate",
+        "real_gdp_qoq_growth": "real GDP",
         "three_month_compounded_sora": "three-month Compounded SORA",
         "private_residential_pipeline_supply": "the private non-landed residential pipeline",
     }
@@ -60,6 +61,8 @@ def _value_and_unit(value_text: str, unit: str) -> str:
         return f"{value_text}% per annum"
     if normalized == "year-on-year percent change":
         return f"{value_text}% year on year"
+    if normalized == "seasonally adjusted quarter-on-quarter percent change":
+        return f"{value_text}% quarter on quarter on a seasonally adjusted basis"
     if normalized.startswith("index;"):
         base = unit.split(";", 1)[1].strip().replace("-", " ").replace("=", " = ")
         return f"{value_text} index points ({base})"
@@ -103,6 +106,11 @@ def claim_sentence(claim: EvidenceClaim) -> str:
     elif claim.series_id == "real_gdp_growth":
         visible = (
             f"Real GDP growth was {_value_and_unit(claim.value_text, claim.unit)} "
+            f"in {period}."
+        )
+    elif claim.series_id == "real_gdp_qoq_growth":
+        visible = (
+            f"Real GDP increased by {_value_and_unit(claim.value_text, claim.unit)} "
             f"in {period}."
         )
     elif claim.series_id.endswith("__quarterly_last"):

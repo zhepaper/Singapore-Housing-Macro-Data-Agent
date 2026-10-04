@@ -15050,6 +15050,5336 @@
     "value": "5.9"
   },
   {
+    "available_date": "1975-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19752Q",
+    "original_value": "1.8",
+    "period": "1975-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19752Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1975-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.8"
+  },
+  {
+    "available_date": "1975-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19753Q",
+    "original_value": "2",
+    "period": "1975-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19753Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1975-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2"
+  },
+  {
+    "available_date": "1975-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19754Q",
+    "original_value": "1.4",
+    "period": "1975-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19754Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1975-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.4"
+  },
+  {
+    "available_date": "1976-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19761Q",
+    "original_value": "2.8",
+    "period": "1976-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19761Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1976-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.8"
+  },
+  {
+    "available_date": "1976-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19762Q",
+    "original_value": "0.9",
+    "period": "1976-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19762Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1976-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.9"
+  },
+  {
+    "available_date": "1976-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19763Q",
+    "original_value": "2",
+    "period": "1976-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19763Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1976-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2"
+  },
+  {
+    "available_date": "1976-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19764Q",
+    "original_value": "1",
+    "period": "1976-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19764Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1976-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1"
+  },
+  {
+    "available_date": "1977-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19771Q",
+    "original_value": "2.2",
+    "period": "1977-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19771Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1977-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.2"
+  },
+  {
+    "available_date": "1977-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19772Q",
+    "original_value": "2.1",
+    "period": "1977-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19772Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1977-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.1"
+  },
+  {
+    "available_date": "1977-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19773Q",
+    "original_value": "1",
+    "period": "1977-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19773Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1977-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1"
+  },
+  {
+    "available_date": "1977-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19774Q",
+    "original_value": "1.7",
+    "period": "1977-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19774Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1977-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.7"
+  },
+  {
+    "available_date": "1978-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19781Q",
+    "original_value": "0.8",
+    "period": "1978-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19781Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1978-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.8"
+  },
+  {
+    "available_date": "1978-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19782Q",
+    "original_value": "2.4",
+    "period": "1978-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19782Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1978-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.4"
+  },
+  {
+    "available_date": "1978-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19783Q",
+    "original_value": "3.9",
+    "period": "1978-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19783Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1978-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.9"
+  },
+  {
+    "available_date": "1978-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19784Q",
+    "original_value": "2.7",
+    "period": "1978-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19784Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1978-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.7"
+  },
+  {
+    "available_date": "1979-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19791Q",
+    "original_value": "0.2",
+    "period": "1979-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19791Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1979-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.2"
+  },
+  {
+    "available_date": "1979-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19792Q",
+    "original_value": "3.3",
+    "period": "1979-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19792Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1979-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.3"
+  },
+  {
+    "available_date": "1979-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19793Q",
+    "original_value": "1.8",
+    "period": "1979-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19793Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1979-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.8"
+  },
+  {
+    "available_date": "1979-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19794Q",
+    "original_value": "4.3",
+    "period": "1979-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19794Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1979-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "4.3"
+  },
+  {
+    "available_date": "1980-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19801Q",
+    "original_value": "1.6",
+    "period": "1980-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19801Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1980-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.6"
+  },
+  {
+    "available_date": "1980-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19802Q",
+    "original_value": "2",
+    "period": "1980-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19802Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1980-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2"
+  },
+  {
+    "available_date": "1980-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19803Q",
+    "original_value": "2.2",
+    "period": "1980-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19803Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1980-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.2"
+  },
+  {
+    "available_date": "1980-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19804Q",
+    "original_value": "2.5",
+    "period": "1980-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19804Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1980-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.5"
+  },
+  {
+    "available_date": "1981-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19811Q",
+    "original_value": "3",
+    "period": "1981-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19811Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1981-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3"
+  },
+  {
+    "available_date": "1981-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19812Q",
+    "original_value": "3.1",
+    "period": "1981-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19812Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1981-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.1"
+  },
+  {
+    "available_date": "1981-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19813Q",
+    "original_value": "2.2",
+    "period": "1981-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19813Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1981-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.2"
+  },
+  {
+    "available_date": "1981-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19814Q",
+    "original_value": "2",
+    "period": "1981-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19814Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1981-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2"
+  },
+  {
+    "available_date": "1982-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19821Q",
+    "original_value": "1.3",
+    "period": "1982-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19821Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1982-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.3"
+  },
+  {
+    "available_date": "1982-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19822Q",
+    "original_value": "1.6",
+    "period": "1982-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19822Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1982-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.6"
+  },
+  {
+    "available_date": "1982-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19823Q",
+    "original_value": "1.5",
+    "period": "1982-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19823Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1982-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.5"
+  },
+  {
+    "available_date": "1982-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19824Q",
+    "original_value": "1.5",
+    "period": "1982-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19824Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1982-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.5"
+  },
+  {
+    "available_date": "1983-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19831Q",
+    "original_value": "2.6",
+    "period": "1983-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19831Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1983-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.6"
+  },
+  {
+    "available_date": "1983-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19832Q",
+    "original_value": "2.1",
+    "period": "1983-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19832Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1983-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.1"
+  },
+  {
+    "available_date": "1983-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19833Q",
+    "original_value": "2.1",
+    "period": "1983-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19833Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1983-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.1"
+  },
+  {
+    "available_date": "1983-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19834Q",
+    "original_value": "3",
+    "period": "1983-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19834Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1983-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3"
+  },
+  {
+    "available_date": "1984-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19841Q",
+    "original_value": "3.2",
+    "period": "1984-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19841Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1984-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.2"
+  },
+  {
+    "available_date": "1984-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19842Q",
+    "original_value": "1.2",
+    "period": "1984-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19842Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1984-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.2"
+  },
+  {
+    "available_date": "1984-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19843Q",
+    "original_value": "1.2",
+    "period": "1984-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19843Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1984-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.2"
+  },
+  {
+    "available_date": "1984-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19844Q",
+    "original_value": "0.4",
+    "period": "1984-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19844Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1984-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.4"
+  },
+  {
+    "available_date": "1985-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19851Q",
+    "original_value": "1.2",
+    "period": "1985-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19851Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1985-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.2"
+  },
+  {
+    "available_date": "1985-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19852Q",
+    "original_value": "-2.7",
+    "period": "1985-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19852Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1985-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-2.7"
+  },
+  {
+    "available_date": "1985-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19853Q",
+    "original_value": "-1.1",
+    "period": "1985-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19853Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1985-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-1.1"
+  },
+  {
+    "available_date": "1985-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19854Q",
+    "original_value": "-1.1",
+    "period": "1985-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19854Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1985-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-1.1"
+  },
+  {
+    "available_date": "1986-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19861Q",
+    "original_value": "1",
+    "period": "1986-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19861Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1986-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1"
+  },
+  {
+    "available_date": "1986-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19862Q",
+    "original_value": "1.3",
+    "period": "1986-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19862Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1986-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.3"
+  },
+  {
+    "available_date": "1986-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19863Q",
+    "original_value": "1.6",
+    "period": "1986-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19863Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1986-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.6"
+  },
+  {
+    "available_date": "1986-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19864Q",
+    "original_value": "2.6",
+    "period": "1986-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19864Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1986-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.6"
+  },
+  {
+    "available_date": "1987-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19871Q",
+    "original_value": "2.4",
+    "period": "1987-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19871Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1987-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.4"
+  },
+  {
+    "available_date": "1987-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19872Q",
+    "original_value": "3.2",
+    "period": "1987-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19872Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1987-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.2"
+  },
+  {
+    "available_date": "1987-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19873Q",
+    "original_value": "3.5",
+    "period": "1987-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19873Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1987-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.5"
+  },
+  {
+    "available_date": "1987-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19874Q",
+    "original_value": "2.9",
+    "period": "1987-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19874Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1987-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.9"
+  },
+  {
+    "available_date": "1988-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19881Q",
+    "original_value": "1.1",
+    "period": "1988-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19881Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1988-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.1"
+  },
+  {
+    "available_date": "1988-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19882Q",
+    "original_value": "4",
+    "period": "1988-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19882Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1988-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "4"
+  },
+  {
+    "available_date": "1988-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19883Q",
+    "original_value": "2.7",
+    "period": "1988-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19883Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1988-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.7"
+  },
+  {
+    "available_date": "1988-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19884Q",
+    "original_value": "2.6",
+    "period": "1988-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19884Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1988-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.6"
+  },
+  {
+    "available_date": "1989-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19891Q",
+    "original_value": "0.1",
+    "period": "1989-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19891Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1989-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.1"
+  },
+  {
+    "available_date": "1989-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19892Q",
+    "original_value": "5.7",
+    "period": "1989-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19892Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1989-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "5.7"
+  },
+  {
+    "available_date": "1989-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19893Q",
+    "original_value": "1.2",
+    "period": "1989-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19893Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1989-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.2"
+  },
+  {
+    "available_date": "1989-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19894Q",
+    "original_value": "2.3",
+    "period": "1989-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19894Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1989-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.3"
+  },
+  {
+    "available_date": "1990-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19901Q",
+    "original_value": "4.1",
+    "period": "1990-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19901Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1990-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "4.1"
+  },
+  {
+    "available_date": "1990-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19902Q",
+    "original_value": "1",
+    "period": "1990-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19902Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1990-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1"
+  },
+  {
+    "available_date": "1990-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19903Q",
+    "original_value": "1.1",
+    "period": "1990-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19903Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1990-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.1"
+  },
+  {
+    "available_date": "1990-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19904Q",
+    "original_value": "1.6",
+    "period": "1990-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19904Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1990-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.6"
+  },
+  {
+    "available_date": "1991-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19911Q",
+    "original_value": "2.4",
+    "period": "1991-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19911Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1991-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.4"
+  },
+  {
+    "available_date": "1991-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19912Q",
+    "original_value": "1.4",
+    "period": "1991-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19912Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1991-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.4"
+  },
+  {
+    "available_date": "1991-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19913Q",
+    "original_value": "1.6",
+    "period": "1991-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19913Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1991-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.6"
+  },
+  {
+    "available_date": "1991-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19914Q",
+    "original_value": "0.8",
+    "period": "1991-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19914Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1991-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.8"
+  },
+  {
+    "available_date": "1992-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19921Q",
+    "original_value": "1.8",
+    "period": "1992-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19921Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1992-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.8"
+  },
+  {
+    "available_date": "1992-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19922Q",
+    "original_value": "1.2",
+    "period": "1992-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19922Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1992-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.2"
+  },
+  {
+    "available_date": "1992-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19923Q",
+    "original_value": "2.7",
+    "period": "1992-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19923Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1992-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.7"
+  },
+  {
+    "available_date": "1992-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19924Q",
+    "original_value": "2.7",
+    "period": "1992-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19924Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1992-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.7"
+  },
+  {
+    "available_date": "1993-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19931Q",
+    "original_value": "2.2",
+    "period": "1993-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19931Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1993-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.2"
+  },
+  {
+    "available_date": "1993-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19932Q",
+    "original_value": "4.3",
+    "period": "1993-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19932Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1993-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "4.3"
+  },
+  {
+    "available_date": "1993-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19933Q",
+    "original_value": "1.7",
+    "period": "1993-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19933Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1993-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.7"
+  },
+  {
+    "available_date": "1993-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19934Q",
+    "original_value": "3.9",
+    "period": "1993-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19934Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1993-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.9"
+  },
+  {
+    "available_date": "1994-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19941Q",
+    "original_value": "3.1",
+    "period": "1994-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19941Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1994-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.1"
+  },
+  {
+    "available_date": "1994-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19942Q",
+    "original_value": "1.1",
+    "period": "1994-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19942Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1994-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.1"
+  },
+  {
+    "available_date": "1994-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19943Q",
+    "original_value": "3.1",
+    "period": "1994-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19943Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1994-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.1"
+  },
+  {
+    "available_date": "1994-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19944Q",
+    "original_value": "1.5",
+    "period": "1994-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19944Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1994-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.5"
+  },
+  {
+    "available_date": "1995-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19951Q",
+    "original_value": "-0.4",
+    "period": "1995-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19951Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1995-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.4"
+  },
+  {
+    "available_date": "1995-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19952Q",
+    "original_value": "3",
+    "period": "1995-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19952Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1995-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3"
+  },
+  {
+    "available_date": "1995-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19953Q",
+    "original_value": "4",
+    "period": "1995-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19953Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1995-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "4"
+  },
+  {
+    "available_date": "1995-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19954Q",
+    "original_value": "1",
+    "period": "1995-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19954Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1995-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1"
+  },
+  {
+    "available_date": "1996-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19961Q",
+    "original_value": "3.4",
+    "period": "1996-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19961Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1996-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.4"
+  },
+  {
+    "available_date": "1996-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19962Q",
+    "original_value": "-0.1",
+    "period": "1996-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19962Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1996-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.1"
+  },
+  {
+    "available_date": "1996-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19963Q",
+    "original_value": "0",
+    "period": "1996-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19963Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1996-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0"
+  },
+  {
+    "available_date": "1996-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19964Q",
+    "original_value": "2.7",
+    "period": "1996-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19964Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1996-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.7"
+  },
+  {
+    "available_date": "1997-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19971Q",
+    "original_value": "3.1",
+    "period": "1997-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19971Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1997-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.1"
+  },
+  {
+    "available_date": "1997-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19972Q",
+    "original_value": "3.3",
+    "period": "1997-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19972Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1997-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.3"
+  },
+  {
+    "available_date": "1997-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19973Q",
+    "original_value": "1.6",
+    "period": "1997-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19973Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1997-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.6"
+  },
+  {
+    "available_date": "1997-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19974Q",
+    "original_value": "-0.8",
+    "period": "1997-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19974Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1997-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.8"
+  },
+  {
+    "available_date": "1998-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19981Q",
+    "original_value": "-2.6",
+    "period": "1998-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19981Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1998-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-2.6"
+  },
+  {
+    "available_date": "1998-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19982Q",
+    "original_value": "-0.7",
+    "period": "1998-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19982Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1998-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.7"
+  },
+  {
+    "available_date": "1998-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19983Q",
+    "original_value": "-0.8",
+    "period": "1998-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19983Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1998-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.8"
+  },
+  {
+    "available_date": "1998-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19984Q",
+    "original_value": "1.8",
+    "period": "1998-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19984Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1998-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.8"
+  },
+  {
+    "available_date": "1999-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19991Q",
+    "original_value": "1.8",
+    "period": "1999-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19991Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1999-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.8"
+  },
+  {
+    "available_date": "1999-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19992Q",
+    "original_value": "2.5",
+    "period": "1999-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19992Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1999-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.5"
+  },
+  {
+    "available_date": "1999-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19993Q",
+    "original_value": "1.9",
+    "period": "1999-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19993Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1999-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.9"
+  },
+  {
+    "available_date": "1999-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "19994Q",
+    "original_value": "0.8",
+    "period": "1999-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:19994Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "1999-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.8"
+  },
+  {
+    "available_date": "2000-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20001Q",
+    "original_value": "3.3",
+    "period": "2000-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20001Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2000-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.3"
+  },
+  {
+    "available_date": "2000-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20002Q",
+    "original_value": "1.9",
+    "period": "2000-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20002Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2000-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.9"
+  },
+  {
+    "available_date": "2000-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20003Q",
+    "original_value": "3.3",
+    "period": "2000-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20003Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2000-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.3"
+  },
+  {
+    "available_date": "2000-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20004Q",
+    "original_value": "0.6",
+    "period": "2000-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20004Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2000-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.6"
+  },
+  {
+    "available_date": "2001-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20011Q",
+    "original_value": "-0.7",
+    "period": "2001-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20011Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2001-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.7"
+  },
+  {
+    "available_date": "2001-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20012Q",
+    "original_value": "-2.6",
+    "period": "2001-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20012Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2001-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-2.6"
+  },
+  {
+    "available_date": "2001-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20013Q",
+    "original_value": "-2.2",
+    "period": "2001-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20013Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2001-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-2.2"
+  },
+  {
+    "available_date": "2001-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20014Q",
+    "original_value": "0.6",
+    "period": "2001-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20014Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2001-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.6"
+  },
+  {
+    "available_date": "2002-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20021Q",
+    "original_value": "3",
+    "period": "2002-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20021Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2002-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3"
+  },
+  {
+    "available_date": "2002-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20022Q",
+    "original_value": "2.9",
+    "period": "2002-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20022Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2002-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.9"
+  },
+  {
+    "available_date": "2002-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20023Q",
+    "original_value": "0.1",
+    "period": "2002-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20023Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2002-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.1"
+  },
+  {
+    "available_date": "2002-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20024Q",
+    "original_value": "-0.1",
+    "period": "2002-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20024Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2002-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.1"
+  },
+  {
+    "available_date": "2003-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20031Q",
+    "original_value": "1.3",
+    "period": "2003-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20031Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2003-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.3"
+  },
+  {
+    "available_date": "2003-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20032Q",
+    "original_value": "-1.3",
+    "period": "2003-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20032Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2003-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-1.3"
+  },
+  {
+    "available_date": "2003-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20033Q",
+    "original_value": "5.7",
+    "period": "2003-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20033Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2003-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "5.7"
+  },
+  {
+    "available_date": "2003-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20034Q",
+    "original_value": "2.9",
+    "period": "2003-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20034Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2003-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.9"
+  },
+  {
+    "available_date": "2004-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20041Q",
+    "original_value": "3",
+    "period": "2004-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20041Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2004-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3"
+  },
+  {
+    "available_date": "2004-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20042Q",
+    "original_value": "1.6",
+    "period": "2004-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20042Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2004-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.6"
+  },
+  {
+    "available_date": "2004-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20043Q",
+    "original_value": "0.7",
+    "period": "2004-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20043Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2004-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.7"
+  },
+  {
+    "available_date": "2004-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20044Q",
+    "original_value": "2.3",
+    "period": "2004-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20044Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2004-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.3"
+  },
+  {
+    "available_date": "2005-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20051Q",
+    "original_value": "0.7",
+    "period": "2005-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20051Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2005-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.7"
+  },
+  {
+    "available_date": "2005-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20052Q",
+    "original_value": "2.5",
+    "period": "2005-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20052Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2005-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.5"
+  },
+  {
+    "available_date": "2005-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20053Q",
+    "original_value": "2.5",
+    "period": "2005-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20053Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2005-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.5"
+  },
+  {
+    "available_date": "2005-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20054Q",
+    "original_value": "3.2",
+    "period": "2005-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20054Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2005-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.2"
+  },
+  {
+    "available_date": "2006-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20061Q",
+    "original_value": "1.8",
+    "period": "2006-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20061Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2006-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.8"
+  },
+  {
+    "available_date": "2006-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20062Q",
+    "original_value": "1.1",
+    "period": "2006-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20062Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2006-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.1"
+  },
+  {
+    "available_date": "2006-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20063Q",
+    "original_value": "1.9",
+    "period": "2006-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20063Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2006-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.9"
+  },
+  {
+    "available_date": "2006-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20064Q",
+    "original_value": "3.9",
+    "period": "2006-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20064Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2006-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.9"
+  },
+  {
+    "available_date": "2007-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20071Q",
+    "original_value": "1.5",
+    "period": "2007-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20071Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2007-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.5"
+  },
+  {
+    "available_date": "2007-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20072Q",
+    "original_value": "2.3",
+    "period": "2007-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20072Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2007-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.3"
+  },
+  {
+    "available_date": "2007-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20073Q",
+    "original_value": "2.7",
+    "period": "2007-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20073Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2007-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.7"
+  },
+  {
+    "available_date": "2007-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20074Q",
+    "original_value": "0.4",
+    "period": "2007-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20074Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2007-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.4"
+  },
+  {
+    "available_date": "2008-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20081Q",
+    "original_value": "2.5",
+    "period": "2008-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20081Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2008-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.5"
+  },
+  {
+    "available_date": "2008-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20082Q",
+    "original_value": "-2.5",
+    "period": "2008-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20082Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2008-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-2.5"
+  },
+  {
+    "available_date": "2008-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20083Q",
+    "original_value": "-0.6",
+    "period": "2008-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20083Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2008-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.6"
+  },
+  {
+    "available_date": "2008-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20084Q",
+    "original_value": "-2.3",
+    "period": "2008-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20084Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2008-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-2.3"
+  },
+  {
+    "available_date": "2009-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20091Q",
+    "original_value": "-2.6",
+    "period": "2009-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20091Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2009-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-2.6"
+  },
+  {
+    "available_date": "2009-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20092Q",
+    "original_value": "4.2",
+    "period": "2009-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20092Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2009-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "4.2"
+  },
+  {
+    "available_date": "2009-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20093Q",
+    "original_value": "3.9",
+    "period": "2009-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20093Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2009-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.9"
+  },
+  {
+    "available_date": "2009-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20094Q",
+    "original_value": "1.5",
+    "period": "2009-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20094Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2009-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.5"
+  },
+  {
+    "available_date": "2010-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20101Q",
+    "original_value": "5.8",
+    "period": "2010-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20101Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2010-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "5.8"
+  },
+  {
+    "available_date": "2010-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20102Q",
+    "original_value": "6",
+    "period": "2010-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20102Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2010-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "6"
+  },
+  {
+    "available_date": "2010-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20103Q",
+    "original_value": "-2.8",
+    "period": "2010-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20103Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2010-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-2.8"
+  },
+  {
+    "available_date": "2010-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20104Q",
+    "original_value": "3.9",
+    "period": "2010-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20104Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2010-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.9"
+  },
+  {
+    "available_date": "2011-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20111Q",
+    "original_value": "1.9",
+    "period": "2011-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20111Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2011-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.9"
+  },
+  {
+    "available_date": "2011-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20112Q",
+    "original_value": "-0.2",
+    "period": "2011-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20112Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2011-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.2"
+  },
+  {
+    "available_date": "2011-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20113Q",
+    "original_value": "2.6",
+    "period": "2011-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20113Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2011-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.6"
+  },
+  {
+    "available_date": "2011-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20114Q",
+    "original_value": "0.6",
+    "period": "2011-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20114Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2011-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.6"
+  },
+  {
+    "available_date": "2012-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20121Q",
+    "original_value": "1.8",
+    "period": "2012-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20121Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2012-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.8"
+  },
+  {
+    "available_date": "2012-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20122Q",
+    "original_value": "0.9",
+    "period": "2012-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20122Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2012-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.9"
+  },
+  {
+    "available_date": "2012-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20123Q",
+    "original_value": "-1",
+    "period": "2012-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20123Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2012-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-1"
+  },
+  {
+    "available_date": "2012-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20124Q",
+    "original_value": "2.6",
+    "period": "2012-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20124Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2012-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.6"
+  },
+  {
+    "available_date": "2013-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20131Q",
+    "original_value": "0.9",
+    "period": "2013-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20131Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2013-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.9"
+  },
+  {
+    "available_date": "2013-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20132Q",
+    "original_value": "2",
+    "period": "2013-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20132Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2013-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2"
+  },
+  {
+    "available_date": "2013-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20133Q",
+    "original_value": "0.7",
+    "period": "2013-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20133Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2013-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.7"
+  },
+  {
+    "available_date": "2013-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20134Q",
+    "original_value": "0.9",
+    "period": "2013-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20134Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2013-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.9"
+  },
+  {
+    "available_date": "2014-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20141Q",
+    "original_value": "0.8",
+    "period": "2014-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20141Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2014-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.8"
+  },
+  {
+    "available_date": "2014-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20142Q",
+    "original_value": "1",
+    "period": "2014-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20142Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2014-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1"
+  },
+  {
+    "available_date": "2014-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20143Q",
+    "original_value": "0.9",
+    "period": "2014-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20143Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2014-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.9"
+  },
+  {
+    "available_date": "2014-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20144Q",
+    "original_value": "1.5",
+    "period": "2014-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20144Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2014-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.5"
+  },
+  {
+    "available_date": "2015-03-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20151Q",
+    "original_value": "-0.4",
+    "period": "2015-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20151Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2015-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.4"
+  },
+  {
+    "available_date": "2015-06-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20152Q",
+    "original_value": "1.2",
+    "period": "2015-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20152Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2015-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.2"
+  },
+  {
+    "available_date": "2015-09-30",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20153Q",
+    "original_value": "1.2",
+    "period": "2015-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20153Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2015-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.2"
+  },
+  {
+    "available_date": "2015-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20154Q",
+    "original_value": "0",
+    "period": "2015-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20154Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2015-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0"
+  },
+  {
+    "available_date": "2016-03-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20161Q",
+    "original_value": "1.1",
+    "period": "2016-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20161Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2016-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.1"
+  },
+  {
+    "available_date": "2016-06-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20162Q",
+    "original_value": "1.2",
+    "period": "2016-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20162Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2016-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.2"
+  },
+  {
+    "available_date": "2016-09-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20163Q",
+    "original_value": "1",
+    "period": "2016-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20163Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2016-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1"
+  },
+  {
+    "available_date": "2016-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20164Q",
+    "original_value": "1.8",
+    "period": "2016-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20164Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2016-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.8"
+  },
+  {
+    "available_date": "2017-03-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20171Q",
+    "original_value": "0.5",
+    "period": "2017-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20171Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2017-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.5"
+  },
+  {
+    "available_date": "2017-06-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20172Q",
+    "original_value": "0.3",
+    "period": "2017-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20172Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2017-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.3"
+  },
+  {
+    "available_date": "2017-09-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20173Q",
+    "original_value": "2.4",
+    "period": "2017-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20173Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2017-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.4"
+  },
+  {
+    "available_date": "2017-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20174Q",
+    "original_value": "1",
+    "period": "2017-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20174Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2017-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1"
+  },
+  {
+    "available_date": "2018-03-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20181Q",
+    "original_value": "0.5",
+    "period": "2018-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20181Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2018-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.5"
+  },
+  {
+    "available_date": "2018-06-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20182Q",
+    "original_value": "0.7",
+    "period": "2018-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20182Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2018-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.7"
+  },
+  {
+    "available_date": "2018-09-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20183Q",
+    "original_value": "0.7",
+    "period": "2018-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20183Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2018-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.7"
+  },
+  {
+    "available_date": "2018-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20184Q",
+    "original_value": "-0.8",
+    "period": "2018-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20184Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2018-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.8"
+  },
+  {
+    "available_date": "2019-03-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20191Q",
+    "original_value": "0.5",
+    "period": "2019-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20191Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2019-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.5"
+  },
+  {
+    "available_date": "2019-06-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20192Q",
+    "original_value": "0.6",
+    "period": "2019-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20192Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2019-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.6"
+  },
+  {
+    "available_date": "2019-09-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20193Q",
+    "original_value": "0.4",
+    "period": "2019-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20193Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2019-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.4"
+  },
+  {
+    "available_date": "2019-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20194Q",
+    "original_value": "0.1",
+    "period": "2019-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20194Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2019-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.1"
+  },
+  {
+    "available_date": "2020-03-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20201Q",
+    "original_value": "-0.1",
+    "period": "2020-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20201Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2020-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.1"
+  },
+  {
+    "available_date": "2020-06-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20202Q",
+    "original_value": "-12.1",
+    "period": "2020-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20202Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2020-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-12.1"
+  },
+  {
+    "available_date": "2020-09-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20203Q",
+    "original_value": "9.4",
+    "period": "2020-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20203Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2020-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "9.4"
+  },
+  {
+    "available_date": "2020-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20204Q",
+    "original_value": "3.8",
+    "period": "2020-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20204Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2020-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "3.8"
+  },
+  {
+    "available_date": "2021-03-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20211Q",
+    "original_value": "5.2",
+    "period": "2021-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20211Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2021-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "5.2"
+  },
+  {
+    "available_date": "2021-06-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20212Q",
+    "original_value": "-0.3",
+    "period": "2021-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20212Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2021-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.3"
+  },
+  {
+    "available_date": "2021-09-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20213Q",
+    "original_value": "0.9",
+    "period": "2021-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20213Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2021-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.9"
+  },
+  {
+    "available_date": "2021-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20214Q",
+    "original_value": "2",
+    "period": "2021-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20214Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2021-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2"
+  },
+  {
+    "available_date": "2022-03-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20221Q",
+    "original_value": "1.7",
+    "period": "2022-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20221Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2022-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.7"
+  },
+  {
+    "available_date": "2022-06-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20222Q",
+    "original_value": "0.4",
+    "period": "2022-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20222Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2022-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.4"
+  },
+  {
+    "available_date": "2022-09-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20223Q",
+    "original_value": "0.2",
+    "period": "2022-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20223Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2022-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.2"
+  },
+  {
+    "available_date": "2022-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20224Q",
+    "original_value": "-0.1",
+    "period": "2022-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20224Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2022-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "-0.1"
+  },
+  {
+    "available_date": "2023-03-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20231Q",
+    "original_value": "0.1",
+    "period": "2023-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20231Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2023-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.1"
+  },
+  {
+    "available_date": "2023-06-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20232Q",
+    "original_value": "0.5",
+    "period": "2023-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20232Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2023-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.5"
+  },
+  {
+    "available_date": "2023-09-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20233Q",
+    "original_value": "1",
+    "period": "2023-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20233Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2023-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1"
+  },
+  {
+    "available_date": "2023-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20234Q",
+    "original_value": "1.5",
+    "period": "2023-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20234Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2023-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.5"
+  },
+  {
+    "available_date": "2024-03-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20241Q",
+    "original_value": "1.3",
+    "period": "2024-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20241Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2024-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.3"
+  },
+  {
+    "available_date": "2024-06-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20242Q",
+    "original_value": "1",
+    "period": "2024-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20242Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2024-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1"
+  },
+  {
+    "available_date": "2024-09-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20243Q",
+    "original_value": "2.9",
+    "period": "2024-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20243Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2024-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "2.9"
+  },
+  {
+    "available_date": "2024-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20244Q",
+    "original_value": "0",
+    "period": "2024-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20244Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2024-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0"
+  },
+  {
+    "available_date": "2025-03-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20251Q",
+    "original_value": "0.6",
+    "period": "2025-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20251Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2025-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "0.6"
+  },
+  {
+    "available_date": "2025-06-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20252Q",
+    "original_value": "1.8",
+    "period": "2025-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20252Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2025-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.8"
+  },
+  {
+    "available_date": "2025-09-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20253Q",
+    "original_value": "1.9",
+    "period": "2025-Q3",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20253Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2025-Q3"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.9"
+  },
+  {
+    "available_date": "2025-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20254Q",
+    "original_value": "1.3",
+    "period": "2025-Q4",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20254Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2025-Q4"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.3"
+  },
+  {
+    "available_date": "2026-03-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20261Q",
+    "original_value": "1.2",
+    "period": "2026-Q1",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20261Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2026-Q1"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.2"
+  },
+  {
+    "available_date": "2026-06-30",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "real_gdp_qoq_growth"
+    ],
+    "market_role": "sale",
+    "observation_frequency": "quarterly",
+    "original_period": "20262Q",
+    "original_value": "1.4",
+    "period": "2026-Q2",
+    "portfolio_role": "predictor",
+    "raw_record_reference": "record:0/field:20262Q",
+    "raw_snapshot_sha256": "ed83eab56678f1c5cfa1c4f918bed0c5770dc5e65083f32d77f7dd438a95fb3f",
+    "release_date": null,
+    "series_id": "real_gdp_qoq_growth",
+    "series_label": "Real GDP quarter-on-quarter growth",
+    "source_id": "real_gdp_qoq_growth",
+    "source_periods": [
+      "2026-Q2"
+    ],
+    "unit": "seasonally adjusted quarter-on-quarter percent change",
+    "update_frequency": "quarterly",
+    "value": "1.4"
+  },
+  {
     "available_date": "1988-01-31",
     "derivation": null,
     "eligibility_status": "before_window",
