@@ -88,6 +88,8 @@ class Stage4ReportGenerationTests(unittest.TestCase):
             self.assertIn("## Data and Analytical Approach", report)
             self.assertNotIn("## Validated Evidence", report)
             self.assertNotIn("| Indicator |", report)
+            self.assertNotIn("<!-- claim:", report)
+            self.assertNotIn("percentage-point, basis-point or absolute terms", report)
             self.assertIn("**Information cut-off:** 2026-06-30", report)
             verification = json.loads(Path(result.verification_path or "").read_text())
             self.assertEqual(verification["status"], "pass")

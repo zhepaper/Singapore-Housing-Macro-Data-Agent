@@ -13,6 +13,21 @@ def _base_label(claim: EvidenceClaim) -> str:
     return claim.series_label.split(" (", 1)[0]
 
 
+def _reader_label(claim: EvidenceClaim) -> str:
+    labels = {
+        "ura_non_landed_rental_index": "the private non-landed rental index",
+        "ura_non_landed_price_index": "the private non-landed price index",
+        "private_non_landed_vacancy_rate": "the private non-landed vacancy rate",
+        "non_resident_population": "the non-resident population",
+        "non_resident_employment_change": "non-resident employment",
+        "real_gdp_growth": "the year-on-year real GDP growth rate",
+        "three_month_compounded_sora": "three-month Compounded SORA",
+        "private_residential_pipeline_supply": "the private non-landed residential pipeline",
+    }
+    base_id = claim.series_id.split("__", 1)[0]
+    return labels.get(base_id, _base_label(claim).lower())
+
+
 def _absolute_text(claim: EvidenceClaim) -> str:
     if claim.value >= 0:
         return claim.value_text
@@ -63,29 +78,27 @@ def _horizon(claim: EvidenceClaim) -> str | None:
 def claim_sentence(claim: EvidenceClaim) -> str:
     """Render an immutable, reader-facing empirical sentence for one claim."""
 
-    label = _base_label(claim)
+    label = _reader_label(claim)
     horizon = _horizon(claim)
-    metadata = (
-        f"<!-- claim:{claim.claim_id}; source:{claim.source_id}; "
-        f"frequency:{claim.observation_frequency}; update:{claim.update_frequency} -->"
-    )
     period = _display_period(claim.period)
     value_and_unit = _value_and_unit(_absolute_text(claim), claim.unit)
     if horizon:
         if claim.series_id.startswith("real_gdp_growth__qoq_"):
             visible = (
-                f"The year-on-year real GDP growth rate {_direction(claim)} by "
-                f"{value_and_unit} relative to the preceding quarter in {period}."
+                f"Compared with the preceding quarter, the year-on-year real GDP growth "
+                f"rate was {value_and_unit} {'higher' if claim.value > 0 else 'lower'} "
+                f"in {period}."
             )
         else:
+            comparison = "the previous quarter" if horizon == "quarter on quarter" else "a year earlier"
             visible = (
-                f"{label} {_direction(claim)} by {value_and_unit} "
-                f"{horizon} in {period}."
+                f"Compared with {comparison}, {label} was {value_and_unit} "
+                f"{'higher' if claim.value > 0 else 'lower' if claim.value < 0 else 'unchanged'} "
+                f"in {period}."
             )
     elif claim.series_id == "non_resident_employment_change":
         visible = (
-            f"Non-resident employment increased by "
-            f"{_value_and_unit(claim.value_text, claim.unit)} in {period}."
+            f"Non-resident employment increased by {claim.value_text} in {period}."
         )
     elif claim.series_id == "real_gdp_growth":
         visible = (
@@ -94,15 +107,24 @@ def claim_sentence(claim: EvidenceClaim) -> str:
         )
     elif claim.series_id.endswith("__quarterly_last"):
         visible = (
-            f"The quarter-end {label} was "
+            f"At the end of {period}, {label} was "
             f"{_value_and_unit(claim.value_text, claim.unit)} in {period}."
         )
+        visible = visible.replace(f" in {period}.", ".")
+    elif claim.source_id in {"ura_non_landed_rental_index", "ura_non_landed_price_index"}:
+        visible = (
+            f"In {period}, {label} was {claim.value_text}, with its level in "
+            f"the first quarter of 2009 set to 100."
+        )
+    elif claim.series_id == "non_resident_population":
+        visible = f"The non-resident population was {claim.value_text} in {period}."
     else:
         visible = (
-            f"{label} stood at {_value_and_unit(claim.value_text, claim.unit)} "
+            f"In {period}, {label} was {_value_and_unit(claim.value_text, claim.unit)} "
             f"in {period}."
         )
-    return f"{metadata} {visible}"
+        visible = visible.replace(f" in {period}.", ".")
+    return visible
 
 
 def _inline_literature(record: LiteratureRecord) -> str:

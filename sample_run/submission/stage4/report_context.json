@@ -87,7 +87,7 @@
       "unit": "percent",
       "update_frequency": "annual",
       "value": "2.729968663658033008762968800",
-      "value_text": "2.73"
+      "value_text": "2.7"
     },
     {
       "claim_id": "CLAIM-004",
@@ -119,7 +119,7 @@
       "unit": "percent",
       "update_frequency": "quarterly",
       "value": "5.390114606235332027295617930",
-      "value_text": "5.39"
+      "value_text": "5.4"
     },
     {
       "claim_id": "CLAIM-005",
@@ -151,7 +151,7 @@
       "unit": "percentage points",
       "update_frequency": "quarterly",
       "value": "0.020688381638110320206092305",
-      "value_text": "0.021"
+      "value_text": "0.02"
     },
     {
       "claim_id": "CLAIM-006",
@@ -183,7 +183,7 @@
       "unit": "percentage points",
       "update_frequency": "quarterly",
       "value": "-1.485709629840308676475740065",
-      "value_text": "-1.486"
+      "value_text": "-1.49"
     },
     {
       "claim_id": "CLAIM-007",
@@ -239,7 +239,7 @@
       "unit": "percent",
       "update_frequency": "quarterly",
       "value": "0.370599135268684373069796200",
-      "value_text": "0.371"
+      "value_text": "0.4"
     },
     {
       "claim_id": "CLAIM-009",
@@ -268,7 +268,7 @@
       "unit": "percent",
       "update_frequency": "quarterly",
       "value": "1.753287413901064495929868500",
-      "value_text": "1.753"
+      "value_text": "1.8"
     },
     {
       "claim_id": "CLAIM-010",
@@ -366,7 +366,7 @@
       "unit": "percent per annum",
       "update_frequency": "monthly",
       "value": "1.0825",
-      "value_text": "1.083"
+      "value_text": "1.08"
     },
     {
       "claim_id": "CLAIM-013",
@@ -455,7 +455,7 @@
       "unit": "percent",
       "update_frequency": "quarterly",
       "value": "-0.0948766603415559772296015200",
-      "value_text": "-0.095"
+      "value_text": "-0.1"
     },
     {
       "claim_id": "CLAIM-016",
@@ -484,7 +484,7 @@
       "unit": "percent",
       "update_frequency": "quarterly",
       "value": "1.837524177949709864603481600",
-      "value_text": "1.838"
+      "value_text": "1.8"
     },
     {
       "claim_id": "CLAIM-017",
@@ -578,7 +578,7 @@
       "unit": "percent",
       "update_frequency": "quarterly",
       "value": "6.607665965259726863885794400",
-      "value_text": "6.608"
+      "value_text": "6.6"
     }
   ],
   "evidence_sha256": "65cdefc3c662d346f780e66a3ac54bcefa76e7e520f780efb2715da2f7f2e936",

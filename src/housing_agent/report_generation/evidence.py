@@ -30,7 +30,14 @@ def evidence_sha256(bundle: ValidatedEvidenceBundle) -> str:
 def _format_decimal(value: Decimal, unit: str) -> str:
     if unit.lower() in {"persons", "units", "dwelling units"}:
         return f"{value.quantize(Decimal('1'), rounding=ROUND_HALF_UP):,.0f}"
-    displayed = value.quantize(Decimal("0.001"), rounding=ROUND_HALF_UP)
+    normalized_unit = unit.lower()
+    if normalized_unit in {"percent", "year-on-year percent change"}:
+        precision = Decimal("0.1")
+    elif normalized_unit in {"percent per annum", "percentage points", "basis points"}:
+        precision = Decimal("0.01")
+    else:
+        precision = Decimal("0.1")
+    displayed = value.quantize(precision, rounding=ROUND_HALF_UP)
     normalized = format(displayed, "f")
     if "." in normalized:
         normalized = normalized.rstrip("0").rstrip(".")

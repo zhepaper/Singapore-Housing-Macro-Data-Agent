@@ -99,11 +99,11 @@ def _academic_fallback(context: ReportContext) -> str:
         )
         narrative = f"""## Introduction
 
-This report examines recent conditions in Singapore's private non-landed residential sale and rental markets. The markets are considered separately because rents primarily reflect demand for housing services and the utilisation of existing stock, whereas purchase prices are also exposed to financing conditions and expectations of future supply. The analysis asks whether recent movements in the selected indicators are consistent with the observed price and rental outcomes.
+This report asks what the latest public data suggest about Singapore's private non-landed residential sale and rental markets. It examines the two markets separately and considers whether recent changes in demand, financing, vacancy and prospective supply are consistent with the observed movements in prices and rents.
 
 ## Data and Analytical Approach
 
-The official private non-landed price and rental indices are treated as market outcomes. The explanatory evidence covers macroeconomic activity, financing conditions, potential tenant demand, vacancy and prospective housing supply. Published quarterly observations are retained at their native frequency. Monthly financing data are represented by the approved quarter-end observation, while annual population data remain annual rather than being interpolated. Changes are measured in percentage, percentage-point, basis-point or absolute terms according to the definition of each series. The analysis is descriptive and evaluates consistency between indicators and outcomes; it does not estimate causal effects or a forecasting model.
+The official URA price and rental indices show how the two markets moved. These outcomes are considered alongside economic growth, borrowing conditions, non-resident demand, vacancy and the residential pipeline. Most observations are quarterly. Monthly SORA is represented by its value at the end of each quarter so that it can be compared with the housing indices, while annual population data remain annual rather than being converted into artificial quarterly estimates. The results describe how the indicators moved together; they do not establish causal effects or constitute a forecast.
 
 ## Rental-Market Findings
 
