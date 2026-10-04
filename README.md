@@ -2,6 +2,11 @@
 
 An auditable LangGraph workflow for public indicators that may help explain changes in Singapore's **private non-landed residential** sale and rental markets. It retrieves official data, preserves raw evidence, performs deterministic transformations and quality checks, and generates a concise verified report. It is an evidence workflow, not a trained forecasting model or a property-transaction database.
 
+The formal five-page reviewer report is provided in
+[`ENGINEERING_REPORT.pdf`](ENGINEERING_REPORT.pdf). Its editable Markdown source is
+[`ENGINEERING_REPORT.md`](ENGINEERING_REPORT.md), while the generated analytical sample is
+available at [`sample_run/submission/stage4/final_report.md`](sample_run/submission/stage4/final_report.md).
+
 ## Research scope
 
 - **Shared:** private non-landed residential pipeline supply
@@ -43,7 +48,9 @@ editing a finished run.
 
 ## Run in GitHub without local setup
 
-The repository includes a manually triggered GitHub Actions workflow, so a reviewer can run the agent entirely in the browser:
+The repository includes a manually triggered GitHub Actions workflow. A repository owner
+can run it directly; a reviewer without write access can first fork the public repository,
+enable Actions in the fork, and then run the same workflow entirely in the browser:
 
 1. Open the repository's **Actions** tab.
 2. Select **Run Housing Data Agent**.
@@ -129,7 +136,7 @@ URL probing, versioned catalog-fragment approval, pre-mapping raw preservation, 
 JSON/CSV/Excel schema profiling, multi-provider Mapping Contracts, bounded mapping repair,
 memory-aware preparation advice, unified approval, FrozenDataPlan creation, and deterministic
 Stage 3 execution. Start with
-[`docs/data-onboarding-workflow.md`](docs/data-onboarding-workflow.md). Discovery artifacts
+[`docs/end-to-end-workflow.md`](docs/end-to-end-workflow.md). Discovery artifacts
 remain drafts and never overwrite `config/data_catalog.yaml`.
 
 Add `--print-summary` to print a citation-rich academic synthesis after a successful live run. To render an existing run without calling an API again:

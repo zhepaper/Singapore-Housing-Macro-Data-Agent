@@ -264,9 +264,8 @@ representation fallback remains a separate robustness enhancement.
 
 ## 7. Definition of Done
 
-The detailed, evidence-based final test list is maintained in
-[`agent-acceptance-test-checklist.md`](agent-acceptance-test-checklist.md). An implementation
-checkbox in this plan does not replace acceptance testing in that checklist.
+Implementation checkboxes in this plan do not replace the automated test suite and
+reviewer-facing validation artifacts produced by the submission pipeline.
 
 The agent is complete only when all of the following are true:
 
