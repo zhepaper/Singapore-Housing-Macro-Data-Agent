@@ -14,26 +14,31 @@ stages:
 Internal capabilities such as project memory, checkpoints, provider adapters, and audit
 manifests support these stages but are not separate user tasks.
 
+The repository exposes two related paths. The **interactive Agent Flow** covers research,
+source discovery, mapping and preparation recommendations, with human approval before the
+predictor portfolio and data plan are frozen. The **reviewer reproduction flow** starts from
+the approved `FrozenDataPlan` and preserved raw snapshots, then runs deterministic Stage 3
+and evidence-bound Stage 4 without network access or an API key. The second path is the
+submitted demonstration; it does not replace the earlier agent-assisted stages.
+
 ## Current Implementation Map
 
-The four stages describe the user experience. Adaptive onboarding now freezes a typed plan
-that the deterministic processor consumes directly, and Stage 4 now consumes the resulting
-validated evidence bundle. The remaining work is a live demonstration across the complete
-final portfolio and a single reviewer-facing command that chains all four stages after the
-two human approvals.
+The four stages describe the user experience. Adaptive onboarding freezes a typed plan that
+the deterministic processor consumes directly, and Stage 4 consumes the resulting validated
+evidence bundle. The implemented components support the complete governed flow, while the
+reviewer-facing command deliberately begins after the two human approvals so that the
+submitted result can be reproduced offline from fixed inputs.
 
 | Workflow capability | Current implementation | Status |
 |---|---|---|
 | Scope-aware literature and predictor research | `PredictorSearchNode` | Implemented and tested |
 | Human predictor selection and rationale | `PredictorReviewNode` | Implemented and tested |
 | Official-source discovery and deterministic endpoint probe | `DataDiscoveryNode` | Implemented and tested |
-| Separate source approval | `CatalogReviewNode` | Implemented; planned to move into the unified data-plan review |
 | Raw response preservation and profiling | Reusable unmapped capture plus `SchemaProfiler` | Implemented and tested for JSON, CSV, and Excel |
 | Data inventory table and preparation recommendation | `DataPreparationAdvisorNode` | Implemented and accepts validated full-snapshot mapping evidence |
-| Preparation approval and deterministic contract execution | `PreparationReviewNode` and preparation executor | Implemented and tested |
-| Fixed-catalog retrieval, normalization, transformation, and reporting | Production LangGraph | Implemented and tested |
+| Reviewer reproduction from approved snapshots | `run_submission_pipeline.py` | Implemented and tested end to end |
 | Adaptive schema mapping and recovery for previously unseen sources | `AdaptiveMappingNode` | Implemented; repair bounded to three attempts |
-| Unified review and plan freeze | `UnifiedPlanReviewNode` | Implemented and tested |
+| Unified source, mapping, and preparation review | `UnifiedPlanReviewNode` | Implemented and tested as one approval boundary |
 | Adaptive onboarding handoff to deterministic processing | `FrozenDataPlan` → Stage 3 | Implemented and tested |
 | Evidence-bound report generation and verification | `ValidatedEvidenceBundle` → Stage 4 LangGraph | Implemented and tested |
 
@@ -50,6 +55,24 @@ flowchart TD
     C -->|"Source or data structure needs revision"| C
     D -->|"Replace a source"| C
     D -->|"Change the predictor set"| A
+```
+
+The submitted reviewer path is intentionally narrower:
+
+```text
+FrozenDataPlan + preserved raw snapshots
+→ Stage 3 deterministic processing
+→ ValidatedEvidenceBundle
+→ Stage 4 composition and verification
+→ verified final report
+```
+
+Run it with:
+
+```bash
+.venv/bin/python scripts/run_submission_pipeline.py \
+  --output outputs/submission_run \
+  --print-report
 ```
 
 ## 1. Scope and Predictor Research
@@ -361,9 +384,10 @@ missingness evidence comes from the complete mapped snapshot rather than a guess
 
 #### Raw-first execution
 
-Before the LLM is called, deterministic code:
+Before the LLM is called, deterministic code either reuses an approved preserved snapshot
+or captures the approved source response, then:
 
-1. downloads every approved source again;
+1. identifies the approved snapshot and retrieval metadata;
 2. verifies the URL against the official-source allowlist;
 3. saves the unmodified response bytes;
 4. records retrieval time, HTTP status, content type, and byte count;
@@ -372,9 +396,6 @@ Before the LLM is called, deterministic code:
 7. extracts a three-observation preview;
 8. profiles actual observed coverage and non-null observation count;
 9. stops before recommendation if any raw snapshot cannot be saved or inspected.
-
-The successfully tested live SORA capture returned 250 non-null monthly observations from
-2005Oct to 2026Jul and preserved 77,680 bytes with a SHA-256 checksum.
 
 #### Human-facing output
 
@@ -420,14 +441,14 @@ unknown memory events and source profiles.
 #### Human interaction and stopping point
 
 The recommendation always stops for human review. A review remains a draft until the user
-explicitly confirms it. An approved contract is validated again, versioned, written to the
-approved preparation plan, and appended to project memory. No numerical processing is
-performed by the LLM.
+explicitly confirms it. In the governed end-to-end path, source identity, mapping, and the
+preparation contract are presented at one unified approval boundary. Approval triggers
+deterministic revalidation, plan versioning, `FrozenDataPlan` creation, and a confirmed
+project-memory event. No numerical processing is performed by the LLM.
 
-Custom instructions can already be recorded and paired with a manually edited typed
-contract. The planned `PreparationRevisionNode` will add the missing conversational step:
-convert the user's free text into a proposed contract change, display a before-and-after
-diff, and pause for confirmation.
+Custom instructions can be recorded and reflected in an edited typed contract. They do not
+take effect until the revised contract has been shown to the user, validated, and explicitly
+approved.
 
 #### Persisted artifacts
 
@@ -443,7 +464,7 @@ The current Advisor preserves:
 - approved preparation plan after confirmation;
 - project-memory approval event.
 
-#### Implemented adaptive sequence and remaining boundary
+#### Implemented adaptive sequence and operational boundary
 
 The Stage 2 sequence is:
 
@@ -458,9 +479,12 @@ Source discovery
 ```
 
 JSON, CSV, and Excel profiling, invalid-mapping repair, unified freezing, and direct Stage 3
-handoff are covered by offline tests. A live complete-portfolio run remains pending.
-Automatic switching to another official representation after three failed mapping attempts
-is also pending; the current router returns a source-replacement decision to the user.
+handoff are covered by offline tests. The submitted complete portfolio uses the preserved,
+approved snapshots so that it remains reproducible. A new live retrieval is treated as an
+operational run: changed content or structure must pass the same validation and may reopen
+the relevant human approval. Automatic switching to another official representation after
+three failed mapping attempts is not performed silently; the current router returns a
+source-replacement decision to the user.
 
 #### Current command
 
@@ -475,9 +499,8 @@ is also pending; the current router returns a source-replacement decision to the
 
 The command saves raw files under `outputs/preparation_review/raw/` and prints the
 human-facing inventory and recommendation when raw capture, LLM generation, and
-deterministic validation all pass. The current live raw capture has passed; the most recent
-live Gemini recommendation attempt was externally blocked by the provider project's monthly
-spending cap and correctly produced no fabricated recommendation.
+deterministic validation all pass. It is an interactive-stage command and therefore requires
+a configured provider; it is not needed for the offline reviewer reproduction path.
 
 ## 3. Deterministic Data Processing
 
@@ -572,10 +595,14 @@ mechanisms, and produce concise qualitative interpretation. It cannot calculate 
 alter deterministic results, or introduce unsupported quantitative claims.
 
 The report writer receives a generated prompt containing the confirmed scope, objective,
-qualitative signal cards, predictor rationales, literature identifiers, and data-quality
-notes. All numeric text is rendered separately by deterministic code. Gemini, OpenAI,
-Anthropic, and DeepSeek writers share the same contract; a deterministic no-key writer is
-the reproducible default.
+and structured evidence cards. Each card includes a claim anchor, validated value, period,
+unit, direction, derivation, predictor rationale, permitted literature identifiers, and
+data-quality notes. The writer may decide how to organise and interpret this evidence, but
+it must represent quantitative evidence through the supplied anchors rather than typing or
+altering the numerical statements. Deterministic code resolves those anchors and renders
+the final values, units, periods, sources, and citations. Gemini, OpenAI, Anthropic,
+DeepSeek, Groq, and Ollama writers share this contract; a deterministic no-key writer is the
+reproducible default.
 
 ### 4.3 Verify the report
 
@@ -599,10 +626,9 @@ three attempts.
 ### Stage output
 
 - final concise analytical report;
-- supporting tables or charts;
-- claim and source ledger;
-- report-verification result;
-- reproducibility artifacts.
+- selected evidence and source register;
+- claim ledger;
+- report-verification result, prompt manifest, writer metadata, and run manifest.
 
 ### Current command
 
@@ -629,10 +655,10 @@ The frozen plan maps approved predictor IDs in memory to the source and series I
 the evidence bundle. A separate brief can still add reviewed literature citations and source
 page links.
 
-Use `--provider gemini`, `openai`, `anthropic`, or `deepseek` to use an LLM writer. The
-corresponding API key is read from the shell or local `.env`; it is never saved in an
-artifact. Provider choice changes only qualitative prose, not selected evidence or numeric
-claims.
+Use `--provider gemini`, `openai`, `anthropic`, `deepseek`, `groq`, or `ollama` to use an
+optional LLM writer. Required credentials are read from the shell or local `.env`; they are
+never saved in an artifact. Provider choice changes only the proposed narrative, not the
+selected evidence or deterministically rendered numeric claims.
 
 ## User Decision Points
 
@@ -653,11 +679,11 @@ The following capabilities support the workflow but are not separate user-facing
   approved data plans across stages.
 - **Provider abstraction:** allows supported LLM providers to be selected without changing
   the workflow contract.
-- **Checkpointing:** allows a run to resume after successful retrieval, normalization,
-  transformation, or validation.
+- **Checkpoints:** preserve intermediate normalization, transformation, and validation
+  state for inspection and recovery.
 - **Recovery routing:** repairs mappings, tries another official representation, or returns
   to data discovery without silently changing the predictor.
 - **Audit manifests:** record versions, timestamps, checksums, prompts, models, and human
   decisions.
-- **Acceptance testing:** verifies each stage and the complete workflow before final
-  submission.
+- **Acceptance testing:** verifies the stage contracts and the complete reviewer
+  reproduction path before final submission.
