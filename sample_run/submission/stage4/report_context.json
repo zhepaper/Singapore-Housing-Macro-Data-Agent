@@ -1,0 +1,713 @@
+{
+  "claims": [
+    {
+      "claim_id": "CLAIM-001",
+      "derivation": null,
+      "literature_reference_ids": [
+        "JiBhandari2022"
+      ],
+      "market_role": "rent",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "predictor",
+      "quality_notes": [],
+      "rationale": "Quarterly non-resident employment change is a timely demand signal, but it is an employment flow rather than a population stock.",
+      "raw_record_reference": "record:1/field:value",
+      "raw_snapshot_sha256": "6c541202c41a7452c4fdb2f28584c356738dcedcf861b511fd552e982128c45e",
+      "series_id": "non_resident_employment_change",
+      "series_label": "Non-resident employment change",
+      "source_id": "non_resident_employment_change",
+      "source_periods": [
+        "2026-Q2"
+      ],
+      "source_title": "Labour Market Report 2Q 2026",
+      "source_url": "https://stats.mom.gov.sg/Pages/Labour-Market-Report-2Q-2026.aspx",
+      "unit": "persons",
+      "update_frequency": "quarterly final Labour Market Report",
+      "value": "9200",
+      "value_text": "9,200"
+    },
+    {
+      "claim_id": "CLAIM-002",
+      "derivation": null,
+      "literature_reference_ids": [
+        "ChiaLiTang2017",
+        "JiBhandari2022"
+      ],
+      "market_role": "rent",
+      "observation_frequency": "annual",
+      "period": "2025",
+      "portfolio_role": "structural_context",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule."
+      ],
+      "rationale": "The non-resident population is a structural measure of part of the potential foreign-facing tenant base.",
+      "raw_record_reference": "record:0/field:2025",
+      "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+      "series_id": "non_resident_population",
+      "series_label": "Non-resident population",
+      "source_id": "non_resident_population",
+      "source_periods": [
+        "2025"
+      ],
+      "source_title": "Singapore population by residential status",
+      "source_url": "https://data.gov.sg/datasets/d_3d227e5d9fdec73f3bcadce671c333a6/view",
+      "unit": "persons",
+      "update_frequency": "annual",
+      "value": "1906660",
+      "value_text": "1,906,660"
+    },
+    {
+      "claim_id": "CLAIM-003",
+      "derivation": "percentage_change using calendar lag 1",
+      "literature_reference_ids": [
+        "ChiaLiTang2017",
+        "JiBhandari2022"
+      ],
+      "market_role": "rent",
+      "observation_frequency": "annual",
+      "period": "2025",
+      "portfolio_role": "structural_context",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+        "Derived deterministically from the recorded source periods."
+      ],
+      "rationale": "The non-resident population is a structural measure of part of the potential foreign-facing tenant base.",
+      "raw_record_reference": "record:0/field:2024|record:0/field:2025",
+      "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+      "series_id": "non_resident_population__yoy_percentage_change",
+      "series_label": "Non-resident population (yoy_percentage_change)",
+      "source_id": "non_resident_population",
+      "source_periods": [
+        "2024",
+        "2025"
+      ],
+      "source_title": "Singapore population by residential status",
+      "source_url": "https://data.gov.sg/datasets/d_3d227e5d9fdec73f3bcadce671c333a6/view",
+      "unit": "percent",
+      "update_frequency": "annual",
+      "value": "2.729968663658033008762968800",
+      "value_text": "2.73"
+    },
+    {
+      "claim_id": "CLAIM-004",
+      "derivation": null,
+      "literature_reference_ids": [
+        "DiPasqualeWheaton1992",
+        "URAHDB2026"
+      ],
+      "market_role": "rent",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "predictor",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule."
+      ],
+      "rationale": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
+      "raw_record_reference": "record:41/field:value",
+      "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+      "series_id": "private_non_landed_vacancy_rate",
+      "series_label": "Private non-landed vacancy rate",
+      "source_id": "private_non_landed_vacancy_rate",
+      "source_periods": [
+        "2026-Q2"
+      ],
+      "source_title": "Available and vacant private residential properties (M400841)",
+      "source_url": "https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view",
+      "unit": "percent",
+      "update_frequency": "quarterly",
+      "value": "5.390114606235332",
+      "value_text": "5.39"
+    },
+    {
+      "claim_id": "CLAIM-005",
+      "derivation": "percentage_point_change using calendar lag 1",
+      "literature_reference_ids": [
+        "DiPasqualeWheaton1992",
+        "URAHDB2026"
+      ],
+      "market_role": "rent",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "predictor",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+        "Derived deterministically from the recorded source periods."
+      ],
+      "rationale": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
+      "raw_record_reference": "record:40/field:value|record:41/field:value",
+      "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+      "series_id": "private_non_landed_vacancy_rate__qoq_percentage_point_change",
+      "series_label": "Private non-landed vacancy rate (qoq_percentage_point_change)",
+      "source_id": "private_non_landed_vacancy_rate",
+      "source_periods": [
+        "2026-Q1",
+        "2026-Q2"
+      ],
+      "source_title": "Available and vacant private residential properties (M400841)",
+      "source_url": "https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view",
+      "unit": "percentage points",
+      "update_frequency": "quarterly",
+      "value": "0.0206883816381105",
+      "value_text": "0.021"
+    },
+    {
+      "claim_id": "CLAIM-006",
+      "derivation": "percentage_point_change using calendar lag 4",
+      "literature_reference_ids": [
+        "DiPasqualeWheaton1992",
+        "URAHDB2026"
+      ],
+      "market_role": "rent",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "predictor",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+        "Derived deterministically from the recorded source periods."
+      ],
+      "rationale": "Vacancy measures completed-market tightness and may be informative for rental pressure.",
+      "raw_record_reference": "record:37/field:value|record:41/field:value",
+      "raw_snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+      "series_id": "private_non_landed_vacancy_rate__yoy_percentage_point_change",
+      "series_label": "Private non-landed vacancy rate (yoy_percentage_point_change)",
+      "source_id": "private_non_landed_vacancy_rate",
+      "source_periods": [
+        "2025-Q2",
+        "2026-Q2"
+      ],
+      "source_title": "Available and vacant private residential properties (M400841)",
+      "source_url": "https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view",
+      "unit": "percentage points",
+      "update_frequency": "quarterly",
+      "value": "-1.4857096298403085",
+      "value_text": "-1.486"
+    },
+    {
+      "claim_id": "CLAIM-007",
+      "derivation": null,
+      "literature_reference_ids": [],
+      "market_role": "rent",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "outcome",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule."
+      ],
+      "rationale": "The official URA non-landed whole-island rental index is the rental-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
+      "raw_record_reference": "record:89/field:index",
+      "raw_snapshot_sha256": "83b9cc2091b8f56e7dd9323316fe8b772634d791922d7676f1855840cd836fa6",
+      "series_id": "ura_non_landed_rental_index",
+      "series_label": "URA private non-landed rental index",
+      "source_id": "ura_non_landed_rental_index",
+      "source_periods": [
+        "2026-Q2"
+      ],
+      "source_title": "URA private residential rental index by type and locality",
+      "source_url": "https://data.gov.sg/datasets/d_8e4c50283fb7052a391dfb746a05c853/view",
+      "unit": "index; 2009-Q1=100",
+      "update_frequency": "quarterly",
+      "value": "162.5",
+      "value_text": "162.5"
+    },
+    {
+      "claim_id": "CLAIM-008",
+      "derivation": "percentage_change using calendar lag 1",
+      "literature_reference_ids": [],
+      "market_role": "rent",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "outcome",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+        "Derived deterministically from the recorded source periods."
+      ],
+      "rationale": "The official URA non-landed whole-island rental index is the rental-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
+      "raw_record_reference": "record:88/field:index|record:89/field:index",
+      "raw_snapshot_sha256": "83b9cc2091b8f56e7dd9323316fe8b772634d791922d7676f1855840cd836fa6",
+      "series_id": "ura_non_landed_rental_index__qoq_percentage_change",
+      "series_label": "URA private non-landed rental index (qoq_percentage_change)",
+      "source_id": "ura_non_landed_rental_index",
+      "source_periods": [
+        "2026-Q1",
+        "2026-Q2"
+      ],
+      "source_title": "URA private residential rental index by type and locality",
+      "source_url": "https://data.gov.sg/datasets/d_8e4c50283fb7052a391dfb746a05c853/view",
+      "unit": "percent",
+      "update_frequency": "quarterly",
+      "value": "0.370599135268684373069796200",
+      "value_text": "0.371"
+    },
+    {
+      "claim_id": "CLAIM-009",
+      "derivation": "percentage_change using calendar lag 4",
+      "literature_reference_ids": [],
+      "market_role": "rent",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "outcome",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+        "Derived deterministically from the recorded source periods."
+      ],
+      "rationale": "The official URA non-landed whole-island rental index is the rental-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
+      "raw_record_reference": "record:85/field:index|record:89/field:index",
+      "raw_snapshot_sha256": "83b9cc2091b8f56e7dd9323316fe8b772634d791922d7676f1855840cd836fa6",
+      "series_id": "ura_non_landed_rental_index__yoy_percentage_change",
+      "series_label": "URA private non-landed rental index (yoy_percentage_change)",
+      "source_id": "ura_non_landed_rental_index",
+      "source_periods": [
+        "2025-Q2",
+        "2026-Q2"
+      ],
+      "source_title": "URA private residential rental index by type and locality",
+      "source_url": "https://data.gov.sg/datasets/d_8e4c50283fb7052a391dfb746a05c853/view",
+      "unit": "percent",
+      "update_frequency": "quarterly",
+      "value": "1.753287413901064495929868500",
+      "value_text": "1.753"
+    },
+    {
+      "claim_id": "CLAIM-010",
+      "derivation": null,
+      "literature_reference_ids": [
+        "Tu2004",
+        "IMF2018",
+        "RangelNg2017"
+      ],
+      "market_role": "sale",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "predictor",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule."
+      ],
+      "rationale": "Broad economic activity may affect income expectations, purchasing capacity, and buyer confidence.",
+      "raw_record_reference": "record:0/field:20262Q",
+      "raw_snapshot_sha256": "695aae88e47d1683639b57cd05936d428346b9ca248d8c928dbf74acf739b203",
+      "series_id": "real_gdp_growth",
+      "series_label": "Real GDP growth",
+      "source_id": "real_gdp_growth",
+      "source_periods": [
+        "2026-Q2"
+      ],
+      "source_title": "Quarterly real GDP growth (M015631)",
+      "source_url": "https://data.gov.sg/datasets/d_a5ff719648a0e6d4b4c623ee383ab686/view",
+      "unit": "year-on-year percent change",
+      "update_frequency": "quarterly",
+      "value": "5.9",
+      "value_text": "5.9"
+    },
+    {
+      "claim_id": "CLAIM-011",
+      "derivation": "percentage_point_change using calendar lag 1",
+      "literature_reference_ids": [
+        "Tu2004",
+        "IMF2018",
+        "RangelNg2017"
+      ],
+      "market_role": "sale",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "predictor",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+        "Derived deterministically from the recorded source periods."
+      ],
+      "rationale": "Broad economic activity may affect income expectations, purchasing capacity, and buyer confidence.",
+      "raw_record_reference": "record:0/field:20261Q|record:0/field:20262Q",
+      "raw_snapshot_sha256": "695aae88e47d1683639b57cd05936d428346b9ca248d8c928dbf74acf739b203",
+      "series_id": "real_gdp_growth__qoq_percentage_point_change",
+      "series_label": "Real GDP growth (qoq_percentage_point_change)",
+      "source_id": "real_gdp_growth",
+      "source_periods": [
+        "2026-Q1",
+        "2026-Q2"
+      ],
+      "source_title": "Quarterly real GDP growth (M015631)",
+      "source_url": "https://data.gov.sg/datasets/d_a5ff719648a0e6d4b4c623ee383ab686/view",
+      "unit": "percentage points",
+      "update_frequency": "quarterly",
+      "value": "-0.4",
+      "value_text": "-0.4"
+    },
+    {
+      "claim_id": "CLAIM-012",
+      "derivation": null,
+      "literature_reference_ids": [
+        "Tu2004",
+        "IMF2018",
+        "RangelNg2017"
+      ],
+      "market_role": "sale",
+      "observation_frequency": "monthly",
+      "period": "2026-06",
+      "portfolio_role": "predictor",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule."
+      ],
+      "rationale": "Short-term financing conditions may affect mortgage affordability and leveraged purchase demand in the sale market.",
+      "raw_record_reference": "record:0/field:2026Jun",
+      "raw_snapshot_sha256": "51dc6f246693b96e61307b2d5d54ce35226467632daa4e1bddfae03636325947",
+      "series_id": "three_month_compounded_sora",
+      "series_label": "Three-month Compounded SORA",
+      "source_id": "three_month_compounded_sora",
+      "source_periods": [
+        "2026-06"
+      ],
+      "source_title": "Singapore dollar interest rate benchmarks (M700071)",
+      "source_url": "https://data.gov.sg/datasets/d_5fe5a4bb4a1ecc4d8a56a095832e2b24/view",
+      "unit": "percent per annum",
+      "update_frequency": "monthly",
+      "value": "1.0825",
+      "value_text": "1.083"
+    },
+    {
+      "claim_id": "CLAIM-013",
+      "derivation": "monthly to quarterly last; policy=reject",
+      "literature_reference_ids": [
+        "Tu2004",
+        "IMF2018",
+        "RangelNg2017"
+      ],
+      "market_role": "sale",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "predictor",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+        "Derived deterministically from the recorded source periods."
+      ],
+      "rationale": "Short-term financing conditions may affect mortgage affordability and leveraged purchase demand in the sale market.",
+      "raw_record_reference": "record:0/field:2026Apr|record:0/field:2026May|record:0/field:2026Jun",
+      "raw_snapshot_sha256": "51dc6f246693b96e61307b2d5d54ce35226467632daa4e1bddfae03636325947",
+      "series_id": "three_month_compounded_sora__quarterly_last",
+      "series_label": "Three-month Compounded SORA (quarterly last)",
+      "source_id": "three_month_compounded_sora",
+      "source_periods": [
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "source_title": "Singapore dollar interest rate benchmarks (M700071)",
+      "source_url": "https://data.gov.sg/datasets/d_5fe5a4bb4a1ecc4d8a56a095832e2b24/view",
+      "unit": "percent per annum",
+      "update_frequency": "monthly",
+      "value": "1.0825",
+      "value_text": "1.083"
+    },
+    {
+      "claim_id": "CLAIM-014",
+      "derivation": "basis_point_change using calendar lag 1",
+      "literature_reference_ids": [
+        "Tu2004",
+        "IMF2018",
+        "RangelNg2017"
+      ],
+      "market_role": "sale",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "predictor",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+        "Derived deterministically from the recorded source periods."
+      ],
+      "rationale": "Short-term financing conditions may affect mortgage affordability and leveraged purchase demand in the sale market.",
+      "raw_record_reference": "record:0/field:2026Jan|record:0/field:2026Feb|record:0/field:2026Mar|record:0/field:2026Apr|record:0/field:2026May|record:0/field:2026Jun",
+      "raw_snapshot_sha256": "51dc6f246693b96e61307b2d5d54ce35226467632daa4e1bddfae03636325947",
+      "series_id": "three_month_compounded_sora__quarterly_last__qoq_basis_point_change",
+      "series_label": "Three-month Compounded SORA (quarterly last) (qoq_basis_point_change)",
+      "source_id": "three_month_compounded_sora",
+      "source_periods": [
+        "2026-Q1",
+        "2026-Q2"
+      ],
+      "source_title": "Singapore dollar interest rate benchmarks (M700071)",
+      "source_url": "https://data.gov.sg/datasets/d_5fe5a4bb4a1ecc4d8a56a095832e2b24/view",
+      "unit": "basis points",
+      "update_frequency": "monthly",
+      "value": "1.1700",
+      "value_text": "1.17"
+    },
+    {
+      "claim_id": "CLAIM-015",
+      "derivation": null,
+      "literature_reference_ids": [],
+      "market_role": "sale",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "outcome",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule."
+      ],
+      "rationale": "The official URA non-landed price index is the sale-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
+      "raw_record_reference": "record:205/field:index",
+      "raw_snapshot_sha256": "bc5706937c186504c8f766e14f5be3ae9f993148c88391587176f88058e6b003",
+      "series_id": "ura_non_landed_price_index",
+      "series_label": "URA private non-landed price index",
+      "source_id": "ura_non_landed_price_index",
+      "source_periods": [
+        "2026-Q2"
+      ],
+      "source_title": "URA private residential property price index by type",
+      "source_url": "https://data.gov.sg/datasets/d_97f8a2e995022d311c6c68cfda6d034c/view",
+      "unit": "index; 2009-Q1=100",
+      "update_frequency": "quarterly",
+      "value": "210.6",
+      "value_text": "210.6"
+    },
+    {
+      "claim_id": "CLAIM-016",
+      "derivation": "percentage_change using calendar lag 1",
+      "literature_reference_ids": [],
+      "market_role": "sale",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "outcome",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+        "Derived deterministically from the recorded source periods."
+      ],
+      "rationale": "The official URA non-landed price index is the sale-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
+      "raw_record_reference": "record:204/field:index|record:205/field:index",
+      "raw_snapshot_sha256": "bc5706937c186504c8f766e14f5be3ae9f993148c88391587176f88058e6b003",
+      "series_id": "ura_non_landed_price_index__qoq_percentage_change",
+      "series_label": "URA private non-landed price index (qoq_percentage_change)",
+      "source_id": "ura_non_landed_price_index",
+      "source_periods": [
+        "2026-Q1",
+        "2026-Q2"
+      ],
+      "source_title": "URA private residential property price index by type",
+      "source_url": "https://data.gov.sg/datasets/d_97f8a2e995022d311c6c68cfda6d034c/view",
+      "unit": "percent",
+      "update_frequency": "quarterly",
+      "value": "-0.0948766603415559772296015200",
+      "value_text": "-0.095"
+    },
+    {
+      "claim_id": "CLAIM-017",
+      "derivation": "percentage_change using calendar lag 4",
+      "literature_reference_ids": [],
+      "market_role": "sale",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "outcome",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+        "Derived deterministically from the recorded source periods."
+      ],
+      "rationale": "The official URA non-landed price index is the sale-market outcome benchmark; it is reported as an outcome and is not used as a predictor.",
+      "raw_record_reference": "record:201/field:index|record:205/field:index",
+      "raw_snapshot_sha256": "bc5706937c186504c8f766e14f5be3ae9f993148c88391587176f88058e6b003",
+      "series_id": "ura_non_landed_price_index__yoy_percentage_change",
+      "series_label": "URA private non-landed price index (yoy_percentage_change)",
+      "source_id": "ura_non_landed_price_index",
+      "source_periods": [
+        "2025-Q2",
+        "2026-Q2"
+      ],
+      "source_title": "URA private residential property price index by type",
+      "source_url": "https://data.gov.sg/datasets/d_97f8a2e995022d311c6c68cfda6d034c/view",
+      "unit": "percent",
+      "update_frequency": "quarterly",
+      "value": "1.837524177949709864603481600",
+      "value_text": "1.838"
+    },
+    {
+      "claim_id": "CLAIM-018",
+      "derivation": null,
+      "literature_reference_ids": [
+        "Tu2004",
+        "IMF2018"
+      ],
+      "market_role": "shared",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "predictor",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule."
+      ],
+      "rationale": "The future housing pipeline may affect sale and rental conditions after projects are completed.",
+      "raw_record_reference": "record:0/field:20262Q",
+      "raw_snapshot_sha256": "f095d6e78baa050d53f5a6b0b9dce599fdf0411ba3587f923ac98f21429e9c17",
+      "series_id": "private_residential_pipeline_supply",
+      "series_label": "Private non-landed residential pipeline",
+      "source_id": "private_residential_pipeline_supply",
+      "source_periods": [
+        "2026-Q2"
+      ],
+      "source_title": "Private residential units in the pipeline (M400391)",
+      "source_url": "https://data.gov.sg/datasets/d_055b6549444dedb341c50805d9682a41/view",
+      "unit": "dwelling units",
+      "update_frequency": "quarterly",
+      "value": "51677",
+      "value_text": "51,677"
+    },
+    {
+      "claim_id": "CLAIM-019",
+      "derivation": "absolute_change using calendar lag 1",
+      "literature_reference_ids": [
+        "Tu2004",
+        "IMF2018"
+      ],
+      "market_role": "shared",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "predictor",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+        "Derived deterministically from the recorded source periods."
+      ],
+      "rationale": "The future housing pipeline may affect sale and rental conditions after projects are completed.",
+      "raw_record_reference": "record:0/field:20261Q|record:0/field:20262Q",
+      "raw_snapshot_sha256": "f095d6e78baa050d53f5a6b0b9dce599fdf0411ba3587f923ac98f21429e9c17",
+      "series_id": "private_residential_pipeline_supply__qoq_absolute_change",
+      "series_label": "Private non-landed residential pipeline (qoq_absolute_change)",
+      "source_id": "private_residential_pipeline_supply",
+      "source_periods": [
+        "2026-Q1",
+        "2026-Q2"
+      ],
+      "source_title": "Private residential units in the pipeline (M400391)",
+      "source_url": "https://data.gov.sg/datasets/d_055b6549444dedb341c50805d9682a41/view",
+      "unit": "dwelling units",
+      "update_frequency": "quarterly",
+      "value": "3566",
+      "value_text": "3,566"
+    },
+    {
+      "claim_id": "CLAIM-020",
+      "derivation": "percentage_change using calendar lag 4",
+      "literature_reference_ids": [
+        "Tu2004",
+        "IMF2018"
+      ],
+      "market_role": "shared",
+      "observation_frequency": "quarterly",
+      "period": "2026-Q2",
+      "portfolio_role": "predictor",
+      "quality_notes": [
+        "No observation-level release date was supplied; the workflow relies on the approved availability rule.",
+        "Derived deterministically from the recorded source periods."
+      ],
+      "rationale": "The future housing pipeline may affect sale and rental conditions after projects are completed.",
+      "raw_record_reference": "record:0/field:20252Q|record:0/field:20262Q",
+      "raw_snapshot_sha256": "f095d6e78baa050d53f5a6b0b9dce599fdf0411ba3587f923ac98f21429e9c17",
+      "series_id": "private_residential_pipeline_supply__yoy_percentage_change",
+      "series_label": "Private non-landed residential pipeline (yoy_percentage_change)",
+      "source_id": "private_residential_pipeline_supply",
+      "source_periods": [
+        "2025-Q2",
+        "2026-Q2"
+      ],
+      "source_title": "Private residential units in the pipeline (M400391)",
+      "source_url": "https://data.gov.sg/datasets/d_055b6549444dedb341c50805d9682a41/view",
+      "unit": "percent",
+      "update_frequency": "quarterly",
+      "value": "6.607665965259726863885794400",
+      "value_text": "6.608"
+    }
+  ],
+  "evidence_sha256": "0aced77e6e4e9eac02514461070e48d0a8d70522feb1f95bb9ade76761ab7bb1",
+  "literature_records": [
+    {
+      "citation": "Chia, W.-M., Li, M. and Tang, Y. (2017). Public and private housing markets dynamics in Singapore: The role of fundamentals. Journal of Housing Economics, 36, 44-61.",
+      "reference_id": "ChiaLiTang2017",
+      "url": "https://ideas.repec.org/a/eee/jhouse/v36y2017icp44-61.html"
+    },
+    {
+      "citation": "DiPasquale, D. and Wheaton, W. C. (1992). The Markets for Real Estate Assets and Space: A Conceptual Framework. Real Estate Economics, 20(2), 181-198.",
+      "reference_id": "DiPasqualeWheaton1992",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/1540-6229.00579"
+    },
+    {
+      "citation": "International Monetary Fund (2018). Singapore: 2018 Article IV Consultation—Staff Report, Appendix VII.",
+      "reference_id": "IMF2018",
+      "url": "https://www.imf.org/-/media/files/publications/cr/2018/cr18245.pdf"
+    },
+    {
+      "citation": "Ji, P. I. and Bhandari, S. B. (2022). The price-rent dynamics and linkage of urban housing: evidence from Singapore. International Journal of Housing Markets and Analysis, 15(3), 504-520.",
+      "reference_id": "JiBhandari2022",
+      "url": "https://ideas.repec.org/a/eme/ijhmap/ijhma-02-2021-0023.html"
+    },
+    {
+      "citation": "Rangel, G. J. and Ng, J. W. J. (2017). Macroeconomic Drivers of Singapore Private Residential Prices: A Markov-Switching Approach. Capital Markets Review, 25(2), 15-31.",
+      "reference_id": "RangelNg2017",
+      "url": "https://www.mfa.com.my/wp-content/uploads/2017/12/vol252_pp.15-31-Rangel-Ng.pdf"
+    },
+    {
+      "citation": "Tu, Y. (2004). The Dynamics of the Singapore Private Housing Market. Urban Studies, 41(3), 605-619.",
+      "reference_id": "Tu2004",
+      "url": "https://journals.sagepub.com/doi/10.1080/0042098042000178708"
+    },
+    {
+      "citation": "Urban Redevelopment Authority and Housing & Development Board (2026). Extension of temporary relaxation of occupancy cap for rental of HDB flats and private residential properties until 31 December 2028.",
+      "reference_id": "URAHDB2026",
+      "url": "https://www.ura.gov.sg/news/media/pr26-03/"
+    }
+  ],
+  "prompt_version": "stage4-evidence-writer-v1",
+  "quality_notes": [
+    "Information is limited to data available by 2026-10-01.",
+    "The report is descriptive and does not estimate causal effects or produce a formal forecast.",
+    "Displayed values are rounded to at most three decimal places; exact decimal values remain in the claim ledger.",
+    "POTENTIAL_LOOK_AHEAD: Predictor was not available by the end of its aligned outcome quarter; the contemporaneous alignment is descriptive and must not be treated as a real-time forecasting feature."
+  ],
+  "report_length": "concise",
+  "reporting_as_of_date": "2026-10-01",
+  "scope_summary": "Singapore private non-landed residential sale prices and rents, using public macroeconomic, financial, demographic, and market-level indicators.",
+  "source_records": [
+    {
+      "publisher": "Urban Redevelopment Authority via data.gov.sg",
+      "source_id": "ura_non_landed_price_index",
+      "title": "URA private residential property price index by type",
+      "url": "https://data.gov.sg/datasets/d_97f8a2e995022d311c6c68cfda6d034c/view"
+    },
+    {
+      "publisher": "Urban Redevelopment Authority via data.gov.sg",
+      "source_id": "ura_non_landed_rental_index",
+      "title": "URA private residential rental index by type and locality",
+      "url": "https://data.gov.sg/datasets/d_8e4c50283fb7052a391dfb746a05c853/view"
+    },
+    {
+      "publisher": "Urban Redevelopment Authority via SingStat and data.gov.sg",
+      "source_id": "private_residential_pipeline_supply",
+      "title": "Private residential units in the pipeline (M400391)",
+      "url": "https://data.gov.sg/datasets/d_055b6549444dedb341c50805d9682a41/view"
+    },
+    {
+      "publisher": "Singapore Department of Statistics via data.gov.sg",
+      "source_id": "non_resident_population",
+      "title": "Singapore population by residential status",
+      "url": "https://data.gov.sg/datasets/d_3d227e5d9fdec73f3bcadce671c333a6/view"
+    },
+    {
+      "publisher": "Ministry of Manpower",
+      "source_id": "non_resident_employment_change",
+      "title": "Labour Market Report 2Q 2026",
+      "url": "https://stats.mom.gov.sg/Pages/Labour-Market-Report-2Q-2026.aspx"
+    },
+    {
+      "publisher": "Urban Redevelopment Authority via SingStat and data.gov.sg",
+      "source_id": "private_non_landed_vacancy_rate",
+      "title": "Available and vacant private residential properties (M400841)",
+      "url": "https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view"
+    },
+    {
+      "publisher": "Monetary Authority of Singapore via SingStat and data.gov.sg",
+      "source_id": "three_month_compounded_sora",
+      "title": "Singapore dollar interest rate benchmarks (M700071)",
+      "url": "https://data.gov.sg/datasets/d_5fe5a4bb4a1ecc4d8a56a095832e2b24/view"
+    },
+    {
+      "publisher": "Singapore Department of Statistics via data.gov.sg",
+      "source_id": "real_gdp_growth",
+      "title": "Quarterly real GDP growth (M015631)",
+      "url": "https://data.gov.sg/datasets/d_a5ff719648a0e6d4b4c623ee383ab686/view"
+    }
+  ],
+  "title": "Singapore Private Residential Market Predictor Report",
+  "user_objective": "Describe recent validated movements in the selected indicators and explain how they may be informative for sale-price and rental-market monitoring."
+}

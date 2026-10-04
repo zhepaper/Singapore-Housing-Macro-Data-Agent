@@ -1,0 +1,47 @@
+{
+  "market": "rent",
+  "periods": [
+    "2026-Q1",
+    "2026-Q2"
+  ],
+  "rows": [
+    {
+      "non_resident_employment_change": "4100",
+      "period": "2026-Q1",
+      "private_non_landed_vacancy_rate": "5.3694262245972215",
+      "private_non_landed_vacancy_rate__qoq_percentage_point_change": "-0.0092700206095620",
+      "private_non_landed_vacancy_rate__yoy_percentage_point_change": "-0.8910059037591085",
+      "private_residential_pipeline_supply": "48111",
+      "private_residential_pipeline_supply__qoq_absolute_change": "753",
+      "private_residential_pipeline_supply__yoy_percentage_change": "9.011193184392985000226582700",
+      "ura_non_landed_rental_index": "161.9",
+      "ura_non_landed_rental_index__qoq_percentage_change": "0.371977681339119652820830800",
+      "ura_non_landed_rental_index__yoy_percentage_change": "2.209595959595959595959596000"
+    },
+    {
+      "non_resident_employment_change": "9200",
+      "period": "2026-Q2",
+      "private_non_landed_vacancy_rate": "5.390114606235332",
+      "private_non_landed_vacancy_rate__qoq_percentage_point_change": "0.0206883816381105",
+      "private_non_landed_vacancy_rate__yoy_percentage_point_change": "-1.4857096298403085",
+      "private_residential_pipeline_supply": "51677",
+      "private_residential_pipeline_supply__qoq_absolute_change": "3566",
+      "private_residential_pipeline_supply__yoy_percentage_change": "6.607665965259726863885794400",
+      "ura_non_landed_rental_index": "162.5",
+      "ura_non_landed_rental_index__qoq_percentage_change": "0.370599135268684373069796200",
+      "ura_non_landed_rental_index__yoy_percentage_change": "1.753287413901064495929868500"
+    }
+  ],
+  "series_ids": [
+    "non_resident_employment_change",
+    "private_non_landed_vacancy_rate",
+    "private_non_landed_vacancy_rate__qoq_percentage_point_change",
+    "private_non_landed_vacancy_rate__yoy_percentage_point_change",
+    "private_residential_pipeline_supply",
+    "private_residential_pipeline_supply__qoq_absolute_change",
+    "private_residential_pipeline_supply__yoy_percentage_change",
+    "ura_non_landed_rental_index",
+    "ura_non_landed_rental_index__qoq_percentage_change",
+    "ura_non_landed_rental_index__yoy_percentage_change"
+  ]
+}

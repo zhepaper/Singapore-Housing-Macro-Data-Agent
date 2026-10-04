@@ -1,0 +1,12 @@
+{
+  "artifacts": {
+    "lineage/transformation_trace.json": "f54599c8456c265f46df0211588dd123ddcc13f2f4589ab9f59cd55c3a8b9a4a",
+    "transformed/changes.json": "996bf58e79b67caf6006e6417c0b5238ad81c2d92464c749b4bcb83625a1890a",
+    "transformed/native_frequency_monitoring.json": "c34b976dde0dfc196349fcb6eba804a06b169ef6adcc9e085534b754f95ef25d",
+    "transformed/native_views.json": "acd6188e9862d25ac95e5bed20a16b047055baa0478d49424eecd2244d848e2a",
+    "transformed/quarterly_views.json": "595e04dab719d29515c93b68d47fb1dbb4adf2624b9bb53f0aa45038322f8421",
+    "transformed/structural_context.json": "e7d7c1c946d22b9a259ef26b73ba9ace0155a04b1496f19c4f1b043e042c8f99"
+  },
+  "checkpoint": "transformed",
+  "plan_sha256": "2f0926d8a196ed1e3c92e6e38142e59856f4e6a83c3c717695c1e65f75d66f6b"
+}

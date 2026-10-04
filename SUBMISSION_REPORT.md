@@ -20,26 +20,28 @@ The mechanisms are hypotheses supported by the literature review, not estimated 
 
 ## 3. Current descriptive signals
 
-Using the packaged live official-source run retrieved on 2 October 2026 with an information cut-off of 1 October 2026:
+Using the frozen-plan run over official snapshots retrieved on 2 October 2026, with an information cut-off of 1 October 2026 and a complete-quarter analytical window ending in 2026 Q2:
 
 - The URA private non-landed price index was **210.6 in 2026 Q2**, down **0.095% quarter-on-quarter** but up **1.838% year-on-year**.
 - The URA private non-landed rental index was **162.5 in 2026 Q2**, up **0.371% quarter-on-quarter** and **1.753% year-on-year**.
-- The non-landed pipeline contained **51,677 units**, up **3,566 units quarter-on-quarter** and **6.608% year-on-year**; **64.075%** of the pipeline was under construction.
+- The non-landed pipeline contained **51,677 units**, up **3,566 units quarter-on-quarter** and **6.608% year-on-year**.
 - The non-resident population was **1,906,660 at end-June 2025**, up **2.730% year-on-year**. The configured MOM report recorded a **9,200-person increase in non-resident employment in 2026 Q2**. These remain distinct stock and flow measures.
 - The derived private non-landed vacancy rate was **5.390% in 2026 Q2**, up **0.021 percentage points quarter-on-quarter** but down **1.486 percentage points year-on-year**.
-- The latest SORA quarterly representation was **1.135% per annum for 2026 Q3**, using the July month-end observation. It is explicitly marked incomplete because the quarter-ending month was not yet present in the source snapshot.
+- The complete-quarter SORA representation was **1.083% per annum for 2026 Q2**, using the June month-end observation, up **1.17 basis points quarter-on-quarter**. The approved `reject` policy excludes partial 2026 Q3 rather than presenting July as a complete-quarter value.
 - Official year-on-year real GDP growth was **5.9% in 2026 Q2**, **0.4 percentage points lower** than in the preceding quarter.
 
 These observations are descriptive. Mixed directions across horizons are retained rather than collapsed into a single positive or negative signal.
 
 ## 4. End-to-end data processing
 
-LangGraph controls the workflow sequence, while deterministic Python performs retrieval, parsing, calculation, validation, numeric rendering, and verification:
+LangGraph controls the agent-enabled research, onboarding, and report-writing stages. The reviewer-facing reproduction starts from preserved raw snapshots and a human-approved FrozenDataPlan; deterministic Python performs parsing, calculation, validation, numeric rendering, and verification:
 
 ```text
-official source
-  -> immutable raw snapshot and checksum
-  -> exact series selection
+LLM-assisted literature and source discovery
+  -> human scope, source, mapping, and preparation approval
+  -> FrozenDataPlan
+  -> immutable raw snapshot and checksum verification
+  -> exact series selection from Mapping Contracts
   -> period, number, unit, and label normalization
   -> information-cut-off filtering
   -> deterministic transformations
@@ -50,15 +52,15 @@ official source
   -> report and run manifest
 ```
 
-Every run stores the exact URL, retrieval timestamp, HTTP result, raw path, SHA-256 checksum, record count, latest available period, freshness status, and validation status. Derived observations also store the formula, input series identifiers, and exact source periods.
+The acquisition run stores the exact URL, retrieval timestamp, HTTP result, raw path, SHA-256 checksum, record count, latest available period, freshness status, and validation status. The frozen plan then pins the approved snapshot hash, definitions, units, observation and update frequencies, mappings, change methods, aggregation policy, and time window. Derived observations store the formula and exact source periods.
 
-Lagged calculations use calendar periods rather than row positions. Quarter-on-quarter metrics require the actual preceding quarter, year-on-year quarterly metrics require the same quarter one year earlier, and annual growth requires the preceding year. Missing periods are not bridged. Annual population is not interpolated. Monthly SORA is represented by the last available month-end observation in each quarter and is labelled incomplete when the quarter-ending month is absent.
+Lagged calculations use calendar periods rather than row positions. Quarter-on-quarter metrics require the actual preceding quarter, year-on-year quarterly metrics require the same quarter one year earlier, and annual growth requires the preceding year. Missing periods are not bridged. Annual population is not interpolated. Monthly SORA is represented by the last month-end observation only for a complete quarter. Under the approved policy, an incomplete quarter is recorded in the transformation trace and excluded from quarterly comparison.
 
 ## 5. Reliability and failure handling
 
-The workflow fails closed when a required source cannot be retrieved or parsed, an exact series disappears, a numeric value is ambiguous, units change, history collapses, periods are duplicated or malformed, a denominator is zero, freshness fails, or the writer/verifier contract is violated. A failed run preserves raw evidence and writes `failure_diagnostics.json`; it does not publish a report as current.
+The workflow fails closed when a snapshot hash does not match the approved plan, an exact series disappears, a numeric value is ambiguous, units change, history collapses, periods are duplicated or malformed, an approved transformation fails, or the writer/verifier contract is violated. A failed run preserves diagnostics and does not publish a report as final.
 
-HTTP requests use an official-domain allowlist, bounded retries, rate limiting, and `Retry-After` handling. Cached official snapshots may be used only with an explicit command-line option, and such a run is labelled `partial` rather than `complete`.
+The discovery and acquisition stages use an official-domain allowlist, bounded retries, rate limiting, and `Retry-After` handling. The submitted deterministic reproduction performs no network call: it verifies and processes the pinned evidence already stored in the repository.
 
 The report writer never controls quantitative statements. The composer renders values directly from validated evidence and creates a claim ledger. The verifier checks every reported value, unit, period, source URL, and incomplete-quarter disclosure against that evidence.
 
@@ -74,7 +76,7 @@ The offline suite additionally covers source adapters, missing labels, changed M
 
 Codex was used during development to help structure the literature review, inspect official-source formats, draft and review code, generate tests, and identify reliability gaps. Its suggestions were checked against official source pages, preserved raw responses, deterministic calculations, and automated tests before inclusion.
 
-The submitted sample report uses the default deterministic writer and requires no LLM credentials. An optional LangChain writer can produce only the qualitative narrative from a reduced view of already validated evidence. It cannot browse, select new indicators, calculate values, modify evidence, bypass failed validation, or write the quantitative evidence section. Its model name, prompt version, timestamp, and token usage are recorded when used.
+The submitted sample report uses the default deterministic writer and requires no LLM credentials. Optional LangChain adapters support Gemini, OpenAI, Anthropic, DeepSeek, Groq, and local Ollama for research or qualitative prose. A report writer receives only validated evidence and cannot select indicators, calculate values, modify evidence, bypass failed validation, or write unverified quantitative claims. Its provider, model, prompt version, prompt hash, attempts, and available usage metadata are recorded.
 
 ## 8. Limitations
 
@@ -95,3 +97,14 @@ The submitted sample report uses the default deterministic writer and requires n
 ## 10. Reproduction
 
 Installation, offline and live run commands, optional LLM configuration, test commands, and artifact locations are provided in [`README.md`](README.md). The machine-readable source catalogue is in [`config/data_catalog.yaml`](config/data_catalog.yaml), and detailed system decisions are in [`docs/architecture.md`](docs/architecture.md), [`docs/data-contract.md`](docs/data-contract.md), and [`docs/limitations.md`](docs/limitations.md).
+
+The complete submission workflow is reproduced with one command:
+
+```bash
+.venv/bin/python scripts/run_submission_pipeline.py \
+  --output outputs/submission_run \
+  --print-report
+```
+
+The command requires no API key or network access. It writes the validated evidence bundle,
+lineage, validation records, claim ledger, verification report, and final Markdown report.

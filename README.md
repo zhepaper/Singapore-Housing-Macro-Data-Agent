@@ -21,20 +21,38 @@ python3 -m venv .venv
 PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
 ```
 
+Run the complete reviewer-facing workflow from the approved data plan to a verified report:
+
+```bash
+.venv/bin/python scripts/run_submission_pipeline.py \
+  --output outputs/submission_run \
+  --print-report
+```
+
+This command is offline, deterministic, and requires no API key. It verifies every raw
+snapshot checksum, normalizes and validates all eight series, applies only the approved
+transformations, writes a validated evidence bundle, and generates a claim-checked report.
+The included plan uses an information cut-off of **2026-10-01** and excludes observations
+outside its approved historical window. To use a different cut-off or series selection,
+complete the discovery/review stages and freeze a new approved plan rather than silently
+editing a finished run.
+
 ## Run in GitHub without local setup
 
 The repository includes a manually triggered GitHub Actions workflow, so a reviewer can run the agent entirely in the browser:
 
 1. Open the repository's **Actions** tab.
 2. Select **Run Housing Data Agent**.
-3. Click **Run workflow**, enter the reporting as-of date, and choose `snapshots` or `live`.
+3. Click **Run workflow**.
 4. Open the completed workflow run to read the report in the job summary.
-5. Download the `housing-agent-report-<date>` artifact for the report and complete run audit trail.
+5. Download the `housing-agent-submission-run` artifact for the report and complete audit trail.
 
-`snapshots` is the recommended reproducible demonstration and requires no API key. `live` retrieves the configured official public sources and may fail if a public endpoint is temporarily unavailable. The optional OpenAI writer is intentionally not used by this browser workflow, so no repository secret is required.
+The browser run uses the preserved official snapshots and approved frozen plan, so it is
+reproducible and requires no API key. LLM-backed research and prose are optional; the
+reviewer-critical numerical path and deterministic report do not depend on a paid service.
 
-The browser workflow currently runs the preserved legacy compatibility pipeline. Run that
-fully offline pipeline over official snapshots with:
+The earlier monolithic implementation is retained only for compatibility and comparison.
+Run it with:
 
 ```bash
 .venv/bin/python old/run_workflow.py \
@@ -119,7 +137,12 @@ Add `--print-summary` to print a citation-rich academic synthesis after a succes
 
 ## Outputs and audit trail
 
-Each run creates `runs/<run_id>/` with raw responses, checksums, normalized observations, derived metrics, checkpoints, an evidence bundle, a claim ledger, verification results, and the final report. Resume an interrupted running workflow with:
+The formal submission command creates `outputs/submission_run/stage3/` and `stage4/` with
+the frozen plan, normalized and excluded observations, transformations, lineage, validation
+results, evidence bundle, report prompt, claim ledger, verification result, and final report.
+[`sample_run/submission/`](sample_run/submission/) is a committed successful run.
+
+The preserved legacy workflow creates `runs/<run_id>/`. Resume an interrupted legacy run with:
 
 ```bash
 .venv/bin/python old/run_workflow.py \
@@ -127,7 +150,10 @@ Each run creates `runs/<run_id>/` with raw responses, checksums, normalized obse
   --resume-run-id <run_id>
 ```
 
-[`sample_run/`](sample_run/) is a complete live run captured on 2 October 2026: all eight official sources returned HTTP 200, all quality gates passed, and every quantitative report statement passed deterministic verification.
+[`sample_run/raw/`](sample_run/raw/) contains the official snapshots captured on 2 October
+2026. Their checksums are pinned in the frozen plan. The current submission run passes the
+Stage 3 data gates and Stage 4 claim verification; its two timing warnings disclose that the
+Q1/Q2 non-resident employment releases were not available at the corresponding quarter ends.
 
 ## Tests
 

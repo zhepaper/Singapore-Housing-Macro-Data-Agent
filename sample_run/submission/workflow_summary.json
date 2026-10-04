@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "plan_id": "singapore_private_housing_submission",
+  "plan_sha256": "2f0926d8a196ed1e3c92e6e38142e59856f4e6a83c3c717695c1e65f75d66f6b",
+  "reporting_as_of_date": "2026-10-01",
+  "stage3_status": "success",
+  "evidence_bundle": "stage3/evidence/validated_evidence_bundle.json",
+  "stage4_status": "success",
+  "report": "stage4/final_report.md",
+  "verification": "stage4/verification_report.json"
+}

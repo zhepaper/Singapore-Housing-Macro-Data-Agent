@@ -1,0 +1,1978 @@
+[
+  {
+    "available_date": "1950-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1950",
+    "original_value": "na",
+    "period": "1950",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1950",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1950"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1951-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1951",
+    "original_value": "na",
+    "period": "1951",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1951",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1951"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1952-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1952",
+    "original_value": "na",
+    "period": "1952",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1952",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1952"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1953-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1953",
+    "original_value": "na",
+    "period": "1953",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1953",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1953"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1954-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1954",
+    "original_value": "na",
+    "period": "1954",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1954",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1954"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1955-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1955",
+    "original_value": "na",
+    "period": "1955",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1955",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1955"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1956-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1956",
+    "original_value": "na",
+    "period": "1956",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1956",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1956"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1957-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1957",
+    "original_value": "na",
+    "period": "1957",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1957",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1957"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1958-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1958",
+    "original_value": "na",
+    "period": "1958",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1958",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1958"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1959-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1959",
+    "original_value": "na",
+    "period": "1959",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1959",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1959"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1960-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1960",
+    "original_value": "na",
+    "period": "1960",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1960",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1960"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1961-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1961",
+    "original_value": "na",
+    "period": "1961",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1961",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1961"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1962-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1962",
+    "original_value": "na",
+    "period": "1962",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1962",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1962"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1963-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1963",
+    "original_value": "na",
+    "period": "1963",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1963",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1963"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1964-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1964",
+    "original_value": "na",
+    "period": "1964",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1964",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1964"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1965-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1965",
+    "original_value": "na",
+    "period": "1965",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1965",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1965"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1966-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1966",
+    "original_value": "na",
+    "period": "1966",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1966",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1966"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1967-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1967",
+    "original_value": "na",
+    "period": "1967",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1967",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1967"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1968-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1968",
+    "original_value": "na",
+    "period": "1968",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1968",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1968"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1969-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1969",
+    "original_value": "na",
+    "period": "1969",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1969",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1969"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1970-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1970",
+    "original_value": "60944",
+    "period": "1970",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1970",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1970"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "60944"
+  },
+  {
+    "available_date": "1971-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1971",
+    "original_value": "na",
+    "period": "1971",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1971",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1971"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1972-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1972",
+    "original_value": "na",
+    "period": "1972",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1972",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1972"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1973-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1973",
+    "original_value": "na",
+    "period": "1973",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1973",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1973"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1974-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1974",
+    "original_value": "na",
+    "period": "1974",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1974",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1974"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1975-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1975",
+    "original_value": "na",
+    "period": "1975",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1975",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1975"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1976-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1976",
+    "original_value": "na",
+    "period": "1976",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1976",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1976"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1977-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1977",
+    "original_value": "na",
+    "period": "1977",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1977",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1977"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1978-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1978",
+    "original_value": "na",
+    "period": "1978",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1978",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1978"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1979-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1979",
+    "original_value": "na",
+    "period": "1979",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1979",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1979"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": null
+  },
+  {
+    "available_date": "1980-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1980",
+    "original_value": "131820",
+    "period": "1980",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1980",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1980"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "131820"
+  },
+  {
+    "available_date": "1981-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1981",
+    "original_value": "208432",
+    "period": "1981",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1981",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1981"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "208432"
+  },
+  {
+    "available_date": "1982-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1982",
+    "original_value": "280759",
+    "period": "1982",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1982",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1982"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "280759"
+  },
+  {
+    "available_date": "1983-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1983",
+    "original_value": "274896",
+    "period": "1983",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1983",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1983"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "274896"
+  },
+  {
+    "available_date": "1984-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1984",
+    "original_value": "288516",
+    "period": "1984",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1984",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1984"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "288516"
+  },
+  {
+    "available_date": "1985-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1985",
+    "original_value": "253342",
+    "period": "1985",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1985",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1985"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "253342"
+  },
+  {
+    "available_date": "1986-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1986",
+    "original_value": "214775",
+    "period": "1986",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1986",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1986"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "214775"
+  },
+  {
+    "available_date": "1987-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1987",
+    "original_value": "220925",
+    "period": "1987",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1987",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1987"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "220925"
+  },
+  {
+    "available_date": "1988-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1988",
+    "original_value": "247650",
+    "period": "1988",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1988",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1988"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "247650"
+  },
+  {
+    "available_date": "1989-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1989",
+    "original_value": "283274",
+    "period": "1989",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1989",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1989"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "283274"
+  },
+  {
+    "available_date": "1990-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1990",
+    "original_value": "311264",
+    "period": "1990",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1990",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1990"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "311264"
+  },
+  {
+    "available_date": "1991-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1991",
+    "original_value": "340379",
+    "period": "1991",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1991",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1991"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "340379"
+  },
+  {
+    "available_date": "1992-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1992",
+    "original_value": "380944",
+    "period": "1992",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1992",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1992"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "380944"
+  },
+  {
+    "available_date": "1993-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1993",
+    "original_value": "408924",
+    "period": "1993",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1993",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1993"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "408924"
+  },
+  {
+    "available_date": "1994-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1994",
+    "original_value": "459698",
+    "period": "1994",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1994",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1994"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "459698"
+  },
+  {
+    "available_date": "1995-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1995",
+    "original_value": "510991",
+    "period": "1995",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1995",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1995"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "510991"
+  },
+  {
+    "available_date": "1996-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1996",
+    "original_value": "602572",
+    "period": "1996",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1996",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1996"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "602572"
+  },
+  {
+    "available_date": "1997-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1997",
+    "original_value": "672635",
+    "period": "1997",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1997",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1997"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "672635"
+  },
+  {
+    "available_date": "1998-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1998",
+    "original_value": "747195",
+    "period": "1998",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1998",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1998"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "747195"
+  },
+  {
+    "available_date": "1999-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "1999",
+    "original_value": "729042",
+    "period": "1999",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:1999",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "1999"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "729042"
+  },
+  {
+    "available_date": "2000-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2000",
+    "original_value": "754524",
+    "period": "2000",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2000",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2000"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "754524"
+  },
+  {
+    "available_date": "2001-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2001",
+    "original_value": "812110",
+    "period": "2001",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2001",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2001"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "812110"
+  },
+  {
+    "available_date": "2002-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2002",
+    "original_value": "793006",
+    "period": "2002",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2002",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2002"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "793006"
+  },
+  {
+    "available_date": "2003-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2003",
+    "original_value": "747935",
+    "period": "2003",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2003",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2003"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "747935"
+  },
+  {
+    "available_date": "2004-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2004",
+    "original_value": "753398",
+    "period": "2004",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2004",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2004"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "753398"
+  },
+  {
+    "available_date": "2005-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2005",
+    "original_value": "797948",
+    "period": "2005",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2005",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2005"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "797948"
+  },
+  {
+    "available_date": "2006-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2006",
+    "original_value": "875471",
+    "period": "2006",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2006",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2006"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "875471"
+  },
+  {
+    "available_date": "2007-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2007",
+    "original_value": "1005517",
+    "period": "2007",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2007",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2007"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1005517"
+  },
+  {
+    "available_date": "2008-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2008",
+    "original_value": "1196737",
+    "period": "2008",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2008",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2008"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1196737"
+  },
+  {
+    "available_date": "2009-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2009",
+    "original_value": "1253697",
+    "period": "2009",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2009",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2009"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1253697"
+  },
+  {
+    "available_date": "2010-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2010",
+    "original_value": "1305011",
+    "period": "2010",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2010",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2010"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1305011"
+  },
+  {
+    "available_date": "2011-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2011",
+    "original_value": "1394437",
+    "period": "2011",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2011",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2011"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1394437"
+  },
+  {
+    "available_date": "2012-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2012",
+    "original_value": "1494232",
+    "period": "2012",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2012",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2012"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1494232"
+  },
+  {
+    "available_date": "2013-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2013",
+    "original_value": "1554411",
+    "period": "2013",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2013",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2013"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1554411"
+  },
+  {
+    "available_date": "2014-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2014",
+    "original_value": "1598985",
+    "period": "2014",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2014",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2014"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1598985"
+  },
+  {
+    "available_date": "2015-12-31",
+    "derivation": null,
+    "eligibility_status": "before_window",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2015",
+    "original_value": "1632312",
+    "period": "2015",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2015",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2015"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1632312"
+  },
+  {
+    "available_date": "2016-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2016",
+    "original_value": "1673724",
+    "period": "2016",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2016",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2016"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1673724"
+  },
+  {
+    "available_date": "2017-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2017",
+    "original_value": "1646457",
+    "period": "2017",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2017",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2017"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1646457"
+  },
+  {
+    "available_date": "2018-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2018",
+    "original_value": "1644393",
+    "period": "2018",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2018",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2018"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1644393"
+  },
+  {
+    "available_date": "2019-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2019",
+    "original_value": "1677360",
+    "period": "2019",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2019",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2019"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1677360"
+  },
+  {
+    "available_date": "2020-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2020",
+    "original_value": "1641597",
+    "period": "2020",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2020",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2020"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1641597"
+  },
+  {
+    "available_date": "2021-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2021",
+    "original_value": "1466724",
+    "period": "2021",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2021",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2021"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1466724"
+  },
+  {
+    "available_date": "2022-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2022",
+    "original_value": "1563783",
+    "period": "2022",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2022",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2022"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1563783"
+  },
+  {
+    "available_date": "2023-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2023",
+    "original_value": "1768395",
+    "period": "2023",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2023",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2023"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1768395"
+  },
+  {
+    "available_date": "2024-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2024",
+    "original_value": "1855992",
+    "period": "2024",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2024",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2024"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1855992"
+  },
+  {
+    "available_date": "2025-12-31",
+    "derivation": null,
+    "eligibility_status": "eligible",
+    "input_series_ids": [
+      "non_resident_population"
+    ],
+    "market_role": "rent",
+    "observation_frequency": "annual",
+    "original_period": "2025",
+    "original_value": "1906660",
+    "period": "2025",
+    "portfolio_role": "structural_context",
+    "raw_record_reference": "record:0/field:2025",
+    "raw_snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+    "release_date": null,
+    "series_id": "non_resident_population",
+    "series_label": "Non-resident population",
+    "source_id": "non_resident_population",
+    "source_periods": [
+      "2025"
+    ],
+    "unit": "persons",
+    "update_frequency": "annual",
+    "value": "1906660"
+  }
+]

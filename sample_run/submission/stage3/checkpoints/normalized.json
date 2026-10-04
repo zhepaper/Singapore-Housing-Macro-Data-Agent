@@ -1,0 +1,9 @@
+{
+  "artifacts": {
+    "normalized/excluded_observations.json": "be7ea74ef6137755d301cb3808b8ec7d120c0d384117f5b14b44a25ffa49a858",
+    "normalized/observations.csv": "57ca689b0f43eda5662f3e6a0b4a3b6757bb633c2b44e5a48bf6f96c5ce27424",
+    "normalized/observations.json": "acd6188e9862d25ac95e5bed20a16b047055baa0478d49424eecd2244d848e2a"
+  },
+  "checkpoint": "normalized",
+  "plan_sha256": "2f0926d8a196ed1e3c92e6e38142e59856f4e6a83c3c717695c1e65f75d66f6b"
+}

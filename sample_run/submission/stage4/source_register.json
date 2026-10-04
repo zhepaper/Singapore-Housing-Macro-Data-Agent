@@ -1,0 +1,50 @@
+[
+  {
+    "publisher": "Urban Redevelopment Authority via data.gov.sg",
+    "source_id": "ura_non_landed_price_index",
+    "title": "URA private residential property price index by type",
+    "url": "https://data.gov.sg/datasets/d_97f8a2e995022d311c6c68cfda6d034c/view"
+  },
+  {
+    "publisher": "Urban Redevelopment Authority via data.gov.sg",
+    "source_id": "ura_non_landed_rental_index",
+    "title": "URA private residential rental index by type and locality",
+    "url": "https://data.gov.sg/datasets/d_8e4c50283fb7052a391dfb746a05c853/view"
+  },
+  {
+    "publisher": "Urban Redevelopment Authority via SingStat and data.gov.sg",
+    "source_id": "private_residential_pipeline_supply",
+    "title": "Private residential units in the pipeline (M400391)",
+    "url": "https://data.gov.sg/datasets/d_055b6549444dedb341c50805d9682a41/view"
+  },
+  {
+    "publisher": "Singapore Department of Statistics via data.gov.sg",
+    "source_id": "non_resident_population",
+    "title": "Singapore population by residential status",
+    "url": "https://data.gov.sg/datasets/d_3d227e5d9fdec73f3bcadce671c333a6/view"
+  },
+  {
+    "publisher": "Ministry of Manpower",
+    "source_id": "non_resident_employment_change",
+    "title": "Labour Market Report 2Q 2026",
+    "url": "https://stats.mom.gov.sg/Pages/Labour-Market-Report-2Q-2026.aspx"
+  },
+  {
+    "publisher": "Urban Redevelopment Authority via SingStat and data.gov.sg",
+    "source_id": "private_non_landed_vacancy_rate",
+    "title": "Available and vacant private residential properties (M400841)",
+    "url": "https://data.gov.sg/datasets/d_01e3556fb916ca19a7e29fc39520fa78/view"
+  },
+  {
+    "publisher": "Monetary Authority of Singapore via SingStat and data.gov.sg",
+    "source_id": "three_month_compounded_sora",
+    "title": "Singapore dollar interest rate benchmarks (M700071)",
+    "url": "https://data.gov.sg/datasets/d_5fe5a4bb4a1ecc4d8a56a095832e2b24/view"
+  },
+  {
+    "publisher": "Singapore Department of Statistics via data.gov.sg",
+    "source_id": "real_gdp_growth",
+    "title": "Quarterly real GDP growth (M015631)",
+    "url": "https://data.gov.sg/datasets/d_a5ff719648a0e6d4b4c623ee383ab686/view"
+  }
+]

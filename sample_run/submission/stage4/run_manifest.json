@@ -1,0 +1,11 @@
+{
+  "attempts": 1,
+  "evidence_sha256": "0aced77e6e4e9eac02514461070e48d0a8d70522feb1f95bb9ade76761ab7bb1",
+  "generated_at": "2026-10-04T04:47:01.705712+00:00",
+  "model": null,
+  "prompt_version": "stage4-evidence-writer-v1",
+  "provider": "deterministic",
+  "report_sha256": "5591ca8dce05a59814e6695876beb24ab587acf0387c4b1f8155057ee6d6106d",
+  "stage": "report_generation",
+  "status": "success"
+}

@@ -235,7 +235,7 @@ Final acceptance checks:
 Last recorded on 4 October 2026:
 
 ```text
-176 tests passed in the full regression checkpoint
+180 tests passed in the full regression checkpoint
 11 Stage 4 acceptance tests passed across targeted final-change runs
 1 optional live-source test skipped as designed
 Snapshot end-to-end workflow completed with 8 sources, 2,012 observations,
@@ -244,29 +244,29 @@ Snapshot end-to-end workflow completed with 8 sources, 2,012 observations,
 
 ## J. Final submission integration audit
 
-- [ ] Make the FrozenDataPlan-driven Stage 3 path, rather than the legacy catalog-specific
+- [x] Make the FrozenDataPlan-driven Stage 3 path, rather than the legacy catalog-specific
   workflow, the documented primary end-to-end command.
-- [ ] Produce one reviewer-ready FrozenDataPlan covering every final predictor and both
+- [x] Produce one reviewer-ready FrozenDataPlan covering every final predictor and both
   sale and rental outcome benchmarks.
-- [ ] Run that frozen plan over preserved raw snapshots and pass its validated evidence
+- [x] Run that frozen plan over preserved raw snapshots and pass its validated evidence
   bundle directly to Stage 4.
-- [ ] Confirm that SORA's incomplete-quarter policy is explicitly human-approved in the
+- [x] Confirm that SORA's incomplete-quarter policy is explicitly human-approved in the
   frozen plan; do not rely only on the legacy catalog default.
-- [ ] Regenerate the committed sample report from the FrozenDataPlan-driven run and verify
+- [x] Regenerate the committed sample report from the FrozenDataPlan-driven run and verify
   every claim against lineage and raw checksums.
 - [x] Move the legacy catalog-specific entrypoint and orchestration modules under `old/`
   and `housing_agent.legacy`, clearly labelled as a compatibility demo.
-- [ ] Replace the legacy GitHub Actions command with the FrozenDataPlan-driven wrapper
+- [x] Replace the legacy GitHub Actions command with the FrozenDataPlan-driven wrapper
   after the current Stages 2–4 are integrated.
-- [ ] Document the observed local Ollama limitation: `qwen3:4b` timed out on the strict
+- [x] Document the observed local Ollama limitation: `qwen3:4b` timed out on the strict
   ResearchProposal schema, even when generation was split by factor category.
-- [ ] Keep Ollama optional unless a complete live SearchNode run passes; the required
+- [x] Keep Ollama optional unless a complete live SearchNode run passes; the required
   snapshot reproduction path must not depend on an LLM or search API.
 
 Run the offline suite:
 
 ```bash
-cd /Users/zhezhang/Desktop/cs5344/project
+cd /path/to/Singapore-Housing-Macro-Data-Agent
 PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
 ```
 

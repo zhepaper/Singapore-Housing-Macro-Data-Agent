@@ -1,0 +1,27 @@
+{
+  "common_period_end": "2026-Q2",
+  "common_period_start": "2017-Q1",
+  "issues": [
+    {
+      "code": "POTENTIAL_LOOK_AHEAD",
+      "message": "Predictor was not available by the end of its aligned outcome quarter; the contemporaneous alignment is descriptive and must not be treated as a real-time forecasting feature.",
+      "period": "2026-Q1",
+      "route": "human_review",
+      "series_id": "non_resident_employment_change",
+      "severity": "warning",
+      "source_id": "non_resident_employment_change"
+    },
+    {
+      "code": "POTENTIAL_LOOK_AHEAD",
+      "message": "Predictor was not available by the end of its aligned outcome quarter; the contemporaneous alignment is descriptive and must not be treated as a real-time forecasting feature.",
+      "period": "2026-Q2",
+      "route": "human_review",
+      "series_id": "non_resident_employment_change",
+      "severity": "warning",
+      "source_id": "non_resident_employment_change"
+    }
+  ],
+  "rent_observation_count": 2,
+  "sale_observation_count": 38,
+  "status": "warning"
+}

@@ -1,0 +1,629 @@
+{
+  "approval_status": "approved",
+  "approved_at": "2026-10-04T11:30:00+08:00",
+  "approved_by": "Project owner",
+  "feature_redundancy_threshold": "0.95",
+  "historical_end_date": "2026-06-30",
+  "historical_start_date": "2016-01-01",
+  "minimum_quarterly_observations": 2,
+  "plan_id": "singapore_private_housing_submission",
+  "plan_sha256": "2f0926d8a196ed1e3c92e6e38142e59856f4e6a83c3c717695c1e65f75d66f6b",
+  "plan_version": 1,
+  "reporting_as_of_date": "2026-10-01",
+  "schema_version": "1.0",
+  "series": [
+    {
+      "definition": "URA quality-adjusted price index for Singapore private non-landed residential properties.",
+      "duplicate_policy": "error",
+      "mapping_contract": {
+        "additional_series_filters": {},
+        "contract_version": "1",
+        "date_field": "quarter",
+        "header_row": 1,
+        "layout": "long",
+        "missing_markers": [
+          "",
+          "-",
+          "..",
+          "na",
+          "n.a.",
+          "null"
+        ],
+        "period_format": "quarter",
+        "records_path": [
+          "result",
+          "records"
+        ],
+        "release_date_field": null,
+        "revision_field": null,
+        "series_filter_field": "property_type",
+        "series_filter_value": "Non-Landed",
+        "series_id": "ura_non_landed_price_index",
+        "sheet_name": null,
+        "source_format": "json",
+        "source_id": "ura_non_landed_price_index",
+        "unit_scale": "1",
+        "value_field": "index",
+        "wide_period_pattern": null
+      },
+      "market_role": "sale",
+      "max_staleness_periods": 2,
+      "minimum_observations": 8,
+      "observation_frequency": "quarterly",
+      "portfolio_role": "outcome",
+      "preparation_contract": {
+        "change_calculations": [
+          {
+            "horizon": "qoq",
+            "input_view": "native",
+            "lag_periods": 1,
+            "method": "percentage_change",
+            "rationale": "Quarter-on-quarter percentage change describes recent sale-price momentum."
+          },
+          {
+            "horizon": "yoy",
+            "input_view": "native",
+            "lag_periods": 4,
+            "method": "percentage_change",
+            "rationale": "Year-on-year percentage change controls for quarterly seasonality."
+          }
+        ],
+        "decision_basis": [
+          "Human-approved benchmark",
+          "Official quarterly source"
+        ],
+        "interpolation_allowed": false,
+        "missing_value_policy": "preserve_null",
+        "native_frequency": "quarterly",
+        "predictive_alignment": null,
+        "predictor_id": "ura_non_landed_price_index",
+        "preserve_native_view": true,
+        "quarterly_comparison": null,
+        "rationale": "Preserve the official quarterly sale-price benchmark and calculate transparent changes.",
+        "source_id": "ura_non_landed_price_index"
+      },
+      "release_lag_days": 0,
+      "series_id": "ura_non_landed_price_index",
+      "series_label": "URA private non-landed price index",
+      "series_type": "index",
+      "snapshot_path": "sample_run/raw/ura_non_landed_price_index.json",
+      "snapshot_sha256": "bc5706937c186504c8f766e14f5be3ae9f993148c88391587176f88058e6b003",
+      "source_id": "ura_non_landed_price_index",
+      "unit": "index; 2009-Q1=100",
+      "update_frequency": "quarterly"
+    },
+    {
+      "definition": "URA rental index for registered tenancies of private non-landed homes, whole island.",
+      "duplicate_policy": "error",
+      "mapping_contract": {
+        "additional_series_filters": {
+          "locality": "Whole Island"
+        },
+        "contract_version": "1",
+        "date_field": "quarter",
+        "header_row": 1,
+        "layout": "long",
+        "missing_markers": [
+          "",
+          "-",
+          "..",
+          "na",
+          "n.a.",
+          "null"
+        ],
+        "period_format": "quarter",
+        "records_path": [
+          "result",
+          "records"
+        ],
+        "release_date_field": null,
+        "revision_field": null,
+        "series_filter_field": "property_type",
+        "series_filter_value": "Non-Landed",
+        "series_id": "ura_non_landed_rental_index",
+        "sheet_name": null,
+        "source_format": "json",
+        "source_id": "ura_non_landed_rental_index",
+        "unit_scale": "1",
+        "value_field": "index",
+        "wide_period_pattern": null
+      },
+      "market_role": "rent",
+      "max_staleness_periods": 2,
+      "minimum_observations": 8,
+      "observation_frequency": "quarterly",
+      "portfolio_role": "outcome",
+      "preparation_contract": {
+        "change_calculations": [
+          {
+            "horizon": "qoq",
+            "input_view": "native",
+            "lag_periods": 1,
+            "method": "percentage_change",
+            "rationale": "Quarter-on-quarter percentage change describes recent rental momentum."
+          },
+          {
+            "horizon": "yoy",
+            "input_view": "native",
+            "lag_periods": 4,
+            "method": "percentage_change",
+            "rationale": "Year-on-year percentage change controls for quarterly seasonality."
+          }
+        ],
+        "decision_basis": [
+          "Human-approved benchmark",
+          "Official quarterly source"
+        ],
+        "interpolation_allowed": false,
+        "missing_value_policy": "preserve_null",
+        "native_frequency": "quarterly",
+        "predictive_alignment": null,
+        "predictor_id": "ura_non_landed_rental_index",
+        "preserve_native_view": true,
+        "quarterly_comparison": null,
+        "rationale": "Preserve the official quarterly rental benchmark and calculate transparent changes.",
+        "source_id": "ura_non_landed_rental_index"
+      },
+      "release_lag_days": 0,
+      "series_id": "ura_non_landed_rental_index",
+      "series_label": "URA private non-landed rental index",
+      "series_type": "index",
+      "snapshot_path": "sample_run/raw/ura_non_landed_rental_index.json",
+      "snapshot_sha256": "83b9cc2091b8f56e7dd9323316fe8b772634d791922d7676f1855840cd836fa6",
+      "source_id": "ura_non_landed_rental_index",
+      "unit": "index; 2009-Q1=100",
+      "update_frequency": "quarterly"
+    },
+    {
+      "definition": "Number of planned and under-construction private non-landed residential units.",
+      "duplicate_policy": "error",
+      "mapping_contract": {
+        "additional_series_filters": {},
+        "contract_version": "1",
+        "date_field": null,
+        "header_row": 1,
+        "layout": "wide",
+        "missing_markers": [
+          "",
+          "-",
+          "..",
+          "na",
+          "n.a.",
+          "null"
+        ],
+        "period_format": "singstat_quarter",
+        "records_path": [
+          "result",
+          "records"
+        ],
+        "release_date_field": null,
+        "revision_field": null,
+        "series_filter_field": "DataSeries",
+        "series_filter_value": "Total Non-Landed Properties",
+        "series_id": "private_residential_pipeline_supply",
+        "sheet_name": null,
+        "source_format": "json",
+        "source_id": "private_residential_pipeline_supply",
+        "unit_scale": "1",
+        "value_field": null,
+        "wide_period_pattern": "\\d{4}[1-4]Q"
+      },
+      "market_role": "shared",
+      "max_staleness_periods": 2,
+      "minimum_observations": 8,
+      "observation_frequency": "quarterly",
+      "portfolio_role": "predictor",
+      "preparation_contract": {
+        "change_calculations": [
+          {
+            "horizon": "qoq",
+            "input_view": "native",
+            "lag_periods": 1,
+            "method": "absolute_change",
+            "rationale": "Quarter-on-quarter unit change describes additions to the future supply pipeline."
+          },
+          {
+            "horizon": "yoy",
+            "input_view": "native",
+            "lag_periods": 4,
+            "method": "percentage_change",
+            "rationale": "Year-on-year percentage change describes medium-term pipeline expansion."
+          }
+        ],
+        "decision_basis": [
+          "Human-approved shared supply predictor",
+          "Official quarterly source"
+        ],
+        "interpolation_allowed": false,
+        "missing_value_policy": "preserve_null",
+        "native_frequency": "quarterly",
+        "predictive_alignment": null,
+        "predictor_id": "private_residential_pipeline_supply",
+        "preserve_native_view": true,
+        "quarterly_comparison": null,
+        "rationale": "Preserve the official quarterly pipeline level and calculate transparent changes.",
+        "source_id": "private_residential_pipeline_supply"
+      },
+      "release_lag_days": 0,
+      "series_id": "private_residential_pipeline_supply",
+      "series_label": "Private non-landed residential pipeline",
+      "series_type": "stock",
+      "snapshot_path": "sample_run/raw/private_residential_pipeline_supply.json",
+      "snapshot_sha256": "f095d6e78baa050d53f5a6b0b9dce599fdf0411ba3587f923ac98f21429e9c17",
+      "source_id": "private_residential_pipeline_supply",
+      "unit": "dwelling units",
+      "update_frequency": "quarterly"
+    },
+    {
+      "definition": "Singapore non-resident population stock measured at end-June.",
+      "duplicate_policy": "error",
+      "mapping_contract": {
+        "additional_series_filters": {},
+        "contract_version": "1",
+        "date_field": null,
+        "header_row": 1,
+        "layout": "wide",
+        "missing_markers": [
+          "",
+          "-",
+          "..",
+          "na",
+          "n.a.",
+          "null"
+        ],
+        "period_format": "year",
+        "records_path": [
+          "result",
+          "records"
+        ],
+        "release_date_field": null,
+        "revision_field": null,
+        "series_filter_field": "DataSeries",
+        "series_filter_value": "Non-Resident Population",
+        "series_id": "non_resident_population",
+        "sheet_name": null,
+        "source_format": "json",
+        "source_id": "non_resident_population",
+        "unit_scale": "1",
+        "value_field": null,
+        "wide_period_pattern": "\\d{4}"
+      },
+      "market_role": "rent",
+      "max_staleness_periods": 2,
+      "minimum_observations": 5,
+      "observation_frequency": "annual",
+      "portfolio_role": "structural_context",
+      "preparation_contract": {
+        "change_calculations": [
+          {
+            "horizon": "yoy",
+            "input_view": "native",
+            "lag_periods": 1,
+            "method": "percentage_change",
+            "rationale": "Annual percentage change describes structural movement without interpolation."
+          }
+        ],
+        "decision_basis": [
+          "Human-approved demographic context",
+          "Annual interpolation prohibited"
+        ],
+        "interpolation_allowed": false,
+        "missing_value_policy": "preserve_null",
+        "native_frequency": "annual",
+        "predictive_alignment": null,
+        "predictor_id": "non_resident_population",
+        "preserve_native_view": true,
+        "quarterly_comparison": null,
+        "rationale": "Preserve the annual population stock as structural rental-demand context.",
+        "source_id": "non_resident_population"
+      },
+      "release_lag_days": 0,
+      "series_id": "non_resident_population",
+      "series_label": "Non-resident population",
+      "series_type": "stock",
+      "snapshot_path": "sample_run/raw/non_resident_population.json",
+      "snapshot_sha256": "8364b2799fbc1781413571f4acbc3b9a4693887ff6d6684b1dfaef47830a4a2e",
+      "source_id": "non_resident_population",
+      "unit": "persons",
+      "update_frequency": "annual"
+    },
+    {
+      "definition": "Published quarterly net change in non-resident employment from the MOM final report.",
+      "duplicate_policy": "error",
+      "mapping_contract": {
+        "additional_series_filters": {},
+        "contract_version": "1",
+        "date_field": "period",
+        "header_row": 1,
+        "layout": "long",
+        "missing_markers": [
+          "",
+          "-",
+          "..",
+          "na",
+          "n.a.",
+          "null"
+        ],
+        "period_format": "quarter",
+        "records_path": [],
+        "release_date_field": "release_date",
+        "revision_field": null,
+        "series_filter_field": null,
+        "series_filter_value": null,
+        "series_id": "non_resident_employment_change",
+        "sheet_name": null,
+        "source_format": "csv",
+        "source_id": "non_resident_employment_change",
+        "unit_scale": "1",
+        "value_field": "value",
+        "wide_period_pattern": null
+      },
+      "market_role": "rent",
+      "max_staleness_periods": 2,
+      "minimum_observations": 2,
+      "observation_frequency": "quarterly",
+      "portfolio_role": "predictor",
+      "preparation_contract": {
+        "change_calculations": [
+          {
+            "horizon": "period_change",
+            "input_view": "native",
+            "lag_periods": 1,
+            "method": "preserve_published_change",
+            "rationale": "The official observation is already a published quarterly employment change."
+          }
+        ],
+        "decision_basis": [
+          "Human-approved timely demographic signal",
+          "Official final MOM report"
+        ],
+        "interpolation_allowed": false,
+        "missing_value_policy": "preserve_null",
+        "native_frequency": "quarterly",
+        "predictive_alignment": null,
+        "predictor_id": "non_resident_employment_change",
+        "preserve_native_view": true,
+        "quarterly_comparison": null,
+        "rationale": "Preserve the published quarterly employment-change flow without recalculating it.",
+        "source_id": "non_resident_employment_change"
+      },
+      "release_lag_days": 0,
+      "series_id": "non_resident_employment_change",
+      "series_label": "Non-resident employment change",
+      "series_type": "flow",
+      "snapshot_path": "sample_run/stage3_inputs/non_resident_employment_change.csv",
+      "snapshot_sha256": "6c541202c41a7452c4fdb2f28584c356738dcedcf861b511fd552e982128c45e",
+      "source_id": "non_resident_employment_change",
+      "unit": "persons",
+      "update_frequency": "quarterly final Labour Market Report"
+    },
+    {
+      "definition": "Share of available private non-landed residential units that are vacant.",
+      "duplicate_policy": "error",
+      "mapping_contract": {
+        "additional_series_filters": {},
+        "contract_version": "1",
+        "date_field": "period",
+        "header_row": 1,
+        "layout": "long",
+        "missing_markers": [
+          "",
+          "-",
+          "..",
+          "na",
+          "n.a.",
+          "null"
+        ],
+        "period_format": "quarter",
+        "records_path": [],
+        "release_date_field": null,
+        "revision_field": null,
+        "series_filter_field": null,
+        "series_filter_value": null,
+        "series_id": "private_non_landed_vacancy_rate",
+        "sheet_name": null,
+        "source_format": "csv",
+        "source_id": "private_non_landed_vacancy_rate",
+        "unit_scale": "1",
+        "value_field": "value",
+        "wide_period_pattern": null
+      },
+      "market_role": "rent",
+      "max_staleness_periods": 2,
+      "minimum_observations": 8,
+      "observation_frequency": "quarterly",
+      "portfolio_role": "predictor",
+      "preparation_contract": {
+        "change_calculations": [
+          {
+            "horizon": "qoq",
+            "input_view": "native",
+            "lag_periods": 1,
+            "method": "percentage_point_change",
+            "rationale": "Quarter-on-quarter percentage-point change describes recent market tightness."
+          },
+          {
+            "horizon": "yoy",
+            "input_view": "native",
+            "lag_periods": 4,
+            "method": "percentage_point_change",
+            "rationale": "Year-on-year percentage-point change describes persistent market tightness."
+          }
+        ],
+        "decision_basis": [
+          "Human-approved rental tightness predictor",
+          "Deterministic ratio from official inputs"
+        ],
+        "interpolation_allowed": false,
+        "missing_value_policy": "preserve_null",
+        "native_frequency": "quarterly",
+        "predictive_alignment": null,
+        "predictor_id": "private_non_landed_vacancy_rate",
+        "preserve_native_view": true,
+        "quarterly_comparison": null,
+        "rationale": "Use the deterministic official vacant-to-available ratio and retain quarterly frequency.",
+        "source_id": "private_non_landed_vacancy_rate"
+      },
+      "release_lag_days": 0,
+      "series_id": "private_non_landed_vacancy_rate",
+      "series_label": "Private non-landed vacancy rate",
+      "series_type": "rate",
+      "snapshot_path": "sample_run/stage3_inputs/private_non_landed_vacancy_rate.csv",
+      "snapshot_sha256": "3c22c55348a5df8725a7467da520980639cb84930cfa1664c99158a25dfccc08",
+      "source_id": "private_non_landed_vacancy_rate",
+      "unit": "percent",
+      "update_frequency": "quarterly"
+    },
+    {
+      "definition": "Three-month compounded Singapore Overnight Rate Average reported at month end.",
+      "duplicate_policy": "error",
+      "mapping_contract": {
+        "additional_series_filters": {},
+        "contract_version": "1",
+        "date_field": null,
+        "header_row": 1,
+        "layout": "wide",
+        "missing_markers": [
+          "",
+          "-",
+          "..",
+          "na",
+          "n.a.",
+          "null"
+        ],
+        "period_format": "singstat_month",
+        "records_path": [
+          "result",
+          "records"
+        ],
+        "release_date_field": null,
+        "revision_field": null,
+        "series_filter_field": "DataSeries",
+        "series_filter_value": "Compounded Singapore Overnight Rate Average (SORA) - 3 Month",
+        "series_id": "three_month_compounded_sora",
+        "sheet_name": null,
+        "source_format": "json",
+        "source_id": "three_month_compounded_sora",
+        "unit_scale": "1",
+        "value_field": null,
+        "wide_period_pattern": "\\d{4}[A-Za-z]{3}"
+      },
+      "market_role": "sale",
+      "max_staleness_periods": 3,
+      "minimum_observations": 12,
+      "observation_frequency": "monthly",
+      "portfolio_role": "predictor",
+      "preparation_contract": {
+        "change_calculations": [
+          {
+            "horizon": "qoq",
+            "input_view": "quarterly_comparison",
+            "lag_periods": 1,
+            "method": "basis_point_change",
+            "rationale": "Quarter-on-quarter basis-point change is the natural interpretation for an interest rate."
+          }
+        ],
+        "decision_basis": [
+          "Human-approved financing predictor",
+          "Incomplete quarters rejected"
+        ],
+        "interpolation_allowed": false,
+        "missing_value_policy": "preserve_null",
+        "native_frequency": "monthly",
+        "predictive_alignment": null,
+        "predictor_id": "three_month_compounded_sora",
+        "preserve_native_view": true,
+        "quarterly_comparison": {
+          "aggregation_method": "last",
+          "incomplete_period_policy": "reject",
+          "rationale": "Quarter-end financing conditions use the final month only when all three months exist.",
+          "target_frequency": "quarterly"
+        },
+        "rationale": "Preserve monthly SORA and use an approved complete-quarter end-of-period comparison.",
+        "source_id": "three_month_compounded_sora"
+      },
+      "release_lag_days": 0,
+      "series_id": "three_month_compounded_sora",
+      "series_label": "Three-month Compounded SORA",
+      "series_type": "rate",
+      "snapshot_path": "sample_run/raw/three_month_compounded_sora.json",
+      "snapshot_sha256": "51dc6f246693b96e61307b2d5d54ce35226467632daa4e1bddfae03636325947",
+      "source_id": "three_month_compounded_sora",
+      "unit": "percent per annum",
+      "update_frequency": "monthly"
+    },
+    {
+      "definition": "Official year-on-year real GDP growth for Singapore in chained 2015 dollars.",
+      "duplicate_policy": "error",
+      "mapping_contract": {
+        "additional_series_filters": {},
+        "contract_version": "1",
+        "date_field": null,
+        "header_row": 1,
+        "layout": "wide",
+        "missing_markers": [
+          "",
+          "-",
+          "..",
+          "na",
+          "n.a.",
+          "null"
+        ],
+        "period_format": "singstat_quarter",
+        "records_path": [
+          "result",
+          "records"
+        ],
+        "release_date_field": null,
+        "revision_field": null,
+        "series_filter_field": "DataSeries",
+        "series_filter_value": "GDP In Chained (2015) Dollars",
+        "series_id": "real_gdp_growth",
+        "sheet_name": null,
+        "source_format": "json",
+        "source_id": "real_gdp_growth",
+        "unit_scale": "1",
+        "value_field": null,
+        "wide_period_pattern": "\\d{4}[1-4]Q"
+      },
+      "market_role": "sale",
+      "max_staleness_periods": 2,
+      "minimum_observations": 8,
+      "observation_frequency": "quarterly",
+      "portfolio_role": "predictor",
+      "preparation_contract": {
+        "change_calculations": [
+          {
+            "horizon": "qoq",
+            "input_view": "native",
+            "lag_periods": 1,
+            "method": "percentage_point_change",
+            "rationale": "The published values are year-on-year rates, so quarter comparison uses percentage points."
+          }
+        ],
+        "decision_basis": [
+          "Human-approved macroeconomic predictor",
+          "Official quarterly source"
+        ],
+        "interpolation_allowed": false,
+        "missing_value_policy": "preserve_null",
+        "native_frequency": "quarterly",
+        "predictive_alignment": null,
+        "predictor_id": "real_gdp_growth",
+        "preserve_native_view": true,
+        "quarterly_comparison": null,
+        "rationale": "Preserve the official published year-on-year GDP growth rate and compare adjacent releases.",
+        "source_id": "real_gdp_growth"
+      },
+      "release_lag_days": 0,
+      "series_id": "real_gdp_growth",
+      "series_label": "Real GDP growth",
+      "series_type": "rate",
+      "snapshot_path": "sample_run/raw/real_gdp_growth.json",
+      "snapshot_sha256": "695aae88e47d1683639b57cd05936d428346b9ca248d8c928dbf74acf739b203",
+      "source_id": "real_gdp_growth",
+      "unit": "year-on-year percent change",
+      "update_frequency": "quarterly"
+    }
+  ]
+}

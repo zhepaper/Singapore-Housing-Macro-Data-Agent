@@ -1,0 +1,90 @@
+[
+  {
+    "eligible_observation_count": 2,
+    "issues": [],
+    "missing_periods": [],
+    "observation_count": 2,
+    "period_end": "2026-Q2",
+    "period_start": "2026-Q1",
+    "series_id": "non_resident_employment_change",
+    "source_id": "non_resident_employment_change",
+    "status": "pass"
+  },
+  {
+    "eligible_observation_count": 10,
+    "issues": [],
+    "missing_periods": [],
+    "observation_count": 76,
+    "period_end": "2025",
+    "period_start": "1950",
+    "series_id": "non_resident_population",
+    "source_id": "non_resident_population",
+    "status": "pass"
+  },
+  {
+    "eligible_observation_count": 42,
+    "issues": [],
+    "missing_periods": [],
+    "observation_count": 42,
+    "period_end": "2026-Q2",
+    "period_start": "2016-Q1",
+    "series_id": "private_non_landed_vacancy_rate",
+    "source_id": "private_non_landed_vacancy_rate",
+    "status": "pass"
+  },
+  {
+    "eligible_observation_count": 42,
+    "issues": [],
+    "missing_periods": [],
+    "observation_count": 133,
+    "period_end": "2026-Q2",
+    "period_start": "1993-Q2",
+    "series_id": "private_residential_pipeline_supply",
+    "source_id": "private_residential_pipeline_supply",
+    "status": "pass"
+  },
+  {
+    "eligible_observation_count": 42,
+    "issues": [],
+    "missing_periods": [],
+    "observation_count": 202,
+    "period_end": "2026-Q2",
+    "period_start": "1976-Q1",
+    "series_id": "real_gdp_growth",
+    "source_id": "real_gdp_growth",
+    "status": "pass"
+  },
+  {
+    "eligible_observation_count": 126,
+    "issues": [],
+    "missing_periods": [],
+    "observation_count": 463,
+    "period_end": "2026-07",
+    "period_start": "1988-01",
+    "series_id": "three_month_compounded_sora",
+    "source_id": "three_month_compounded_sora",
+    "status": "pass"
+  },
+  {
+    "eligible_observation_count": 42,
+    "issues": [],
+    "missing_periods": [],
+    "observation_count": 206,
+    "period_end": "2026-Q2",
+    "period_start": "1975-Q1",
+    "series_id": "ura_non_landed_price_index",
+    "source_id": "ura_non_landed_price_index",
+    "status": "pass"
+  },
+  {
+    "eligible_observation_count": 42,
+    "issues": [],
+    "missing_periods": [],
+    "observation_count": 90,
+    "period_end": "2026-Q2",
+    "period_start": "2004-Q1",
+    "series_id": "ura_non_landed_rental_index",
+    "source_id": "ura_non_landed_rental_index",
+    "status": "pass"
+  }
+]

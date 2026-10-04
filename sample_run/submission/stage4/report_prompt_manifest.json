@@ -1,0 +1,15 @@
+{
+  "attempt": 1,
+  "attempts": [
+    {
+      "attempt": 1,
+      "path": "prompts/attempt_1.txt",
+      "prompt_sha256": "e0136b004a560e76dcbab26c334efffdccab9c49f9586db4ffcaf197a4a0bf8a"
+    }
+  ],
+  "evidence_sha256": "0aced77e6e4e9eac02514461070e48d0a8d70522feb1f95bb9ade76761ab7bb1",
+  "model": null,
+  "prompt_sha256": "e0136b004a560e76dcbab26c334efffdccab9c49f9586db4ffcaf197a4a0bf8a",
+  "prompt_version": "stage4-evidence-writer-v1",
+  "provider": "deterministic"
+}

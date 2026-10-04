@@ -1,0 +1,9 @@
+{
+  "artifacts": {
+    "transformed/rent_dataset.json": "b71f7259bb5a3d50e9431fc0705cc83dac7c623ccbafdf49ac92c9f8e23d7ad1",
+    "transformed/sale_dataset.json": "61d10006070e52d75ad4f03fed9a56521fe8a86bfc137f8542bf6f5c6578988b",
+    "validation/cross_series_validation.json": "71851623b95983d98be32e9ebea00d22644435124fa42f1b85bf371b6c40ad4c"
+  },
+  "checkpoint": "cross_series_validated",
+  "plan_sha256": "2f0926d8a196ed1e3c92e6e38142e59856f4e6a83c3c717695c1e65f75d66f6b"
+}
