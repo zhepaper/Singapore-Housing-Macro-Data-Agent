@@ -21,6 +21,8 @@ from housing_agent.research.providers import (
     AnthropicWebResearchClient,
     DeepSeekTavilyResearchClient,
     GeminiWebResearchClient,
+    GroqTavilyResearchClient,
+    OllamaTavilyResearchClient,
     OpenAIWebResearchClient,
     StructuredOutputError,
     canonical_provider,
@@ -364,6 +366,83 @@ class ProviderAdapterContractTests(unittest.TestCase):
         self.assertIn("EXTERNALLY RETRIEVED SEARCH EVIDENCE", captured["response"]["input"])
         self.assertEqual(metadata["search_backend"], "tavily")
 
+    def test_groq_adapter_uses_tavily_before_structured_synthesis(self):
+        captured = {"queries": [], "response": {}}
+
+        class SearchClient:
+            def search(self, **kwargs):
+                captured["queries"].append(kwargs["query"])
+                return {"results": [{"url": "https://evidence.example/groq"}]}
+
+        class Completions:
+            def create(self, **kwargs):
+                captured["response"].update(kwargs)
+                return SimpleNamespace(
+                    choices=[SimpleNamespace(message=SimpleNamespace(
+                        content=json.dumps(valid_proposal_dict())
+                    ))],
+                    model_dump=lambda **_: {
+                        "id": "groq-test",
+                        "model": "test-model",
+                        "usage": {},
+                    },
+                )
+
+        adapter = GroqTavilyResearchClient.__new__(GroqTavilyResearchClient)
+        adapter._search_client = SearchClient()
+        adapter._model_client = SimpleNamespace(
+            chat=SimpleNamespace(completions=Completions())
+        )
+        proposal, _, source_urls, metadata = adapter.search(**self._kwargs())
+        self.assertEqual(len(proposal.candidates), 4)
+        self.assertEqual(len(captured["queries"]), 8)
+        self.assertIn("https://evidence.example/groq", source_urls)
+        self.assertEqual(captured["response"]["response_format"]["type"], "json_object")
+        guarded = captured["response"]["messages"][1]["content"]
+        self.assertNotIn("raw_content", guarded)
+        self.assertEqual(metadata["provider"], "groq")
+
+    def test_ollama_adapter_uses_native_structured_output_and_disables_thinking(self):
+        captured = {"queries": [], "payload": {}}
+
+        class SearchClient:
+            def search(self, **kwargs):
+                captured["queries"].append(kwargs["query"])
+                return {"results": [{"url": "https://evidence.example/ollama"}]}
+
+        class Response:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                return False
+
+            def read(self):
+                return json.dumps({
+                    "model": "test-model",
+                    "message": {"content": json.dumps(valid_proposal_dict())},
+                    "prompt_eval_count": 10,
+                    "eval_count": 20,
+                }).encode("utf-8")
+
+        def fake_urlopen(request, timeout):
+            captured["payload"].update(json.loads(request.data.decode("utf-8")))
+            self.assertEqual(timeout, 420)
+            return Response()
+
+        adapter = OllamaTavilyResearchClient.__new__(OllamaTavilyResearchClient)
+        adapter._base_url = "http://127.0.0.1:11434"
+        adapter._search_client = SearchClient()
+        with patch("housing_agent.research.providers.urllib.request.urlopen", fake_urlopen):
+            proposal, _, source_urls, metadata = adapter.search(**self._kwargs())
+        self.assertEqual(len(proposal.candidates), 4)
+        self.assertIn("https://evidence.example/ollama", source_urls)
+        self.assertFalse(captured["payload"]["think"])
+        self.assertEqual(captured["payload"]["format"]["type"], "object")
+        self.assertEqual(metadata["provider"], "ollama")
+        self.assertEqual(metadata["model_call_count"], 4)
+        self.assertEqual(metadata["generation_strategy"], "one_factor_category_per_call")
+
 
 class ResearchModelTests(unittest.TestCase):
     def test_response_schema_avoids_unsupported_json_schema_formats(self):
@@ -649,6 +728,8 @@ class ResearchSearchNodeTests(unittest.TestCase):
         self.assertEqual(canonical_provider("claude"), "anthropic")
         self.assertEqual(provider_spec("gemini").default_model, "gemini-3.8-flash")
         self.assertEqual(provider_spec("deepseek").additional_key_envs, ("TAVILY_API_KEY",))
+        self.assertEqual(provider_spec("groq").default_model, "qwen/qwen3.8-27b")
+        self.assertIsNone(provider_spec("ollama").api_key_env)
 
     def test_unsupported_provider_is_rejected(self):
         with self.assertRaisesRegex(ValueError, "Unsupported research provider"):
@@ -804,6 +885,19 @@ class ResearchSearchNodeTests(unittest.TestCase):
         with patch.dict("os.environ", {"DEEPSEEK_API_KEY": "test"}, clear=True):
             with self.assertRaisesRegex(RuntimeError, "TAVILY_API_KEY"):
                 DeepSeekTavilyResearchClient()
+
+    def test_groq_client_requires_model_and_search_keys(self):
+        with patch.dict("os.environ", {}, clear=True):
+            with self.assertRaisesRegex(RuntimeError, "GROQ_API_KEY"):
+                GroqTavilyResearchClient()
+        with patch.dict("os.environ", {"GROQ_API_KEY": "test"}, clear=True):
+            with self.assertRaisesRegex(RuntimeError, "TAVILY_API_KEY"):
+                GroqTavilyResearchClient()
+
+    def test_ollama_client_requires_only_search_key(self):
+        with patch.dict("os.environ", {}, clear=True):
+            with self.assertRaisesRegex(RuntimeError, "TAVILY_API_KEY"):
+                OllamaTavilyResearchClient()
 
 
 if __name__ == "__main__":

@@ -31,7 +31,7 @@ def main() -> int:
     parser.add_argument("--request", help="The user's original research request.")
     parser.add_argument(
         "--provider",
-        choices=("gemini", "openai", "chatgpt", "anthropic", "claude", "deepseek"),
+        choices=("gemini", "openai", "chatgpt", "anthropic", "claude", "deepseek", "groq", "ollama"),
         default="gemini",
     )
     parser.add_argument(

@@ -30,7 +30,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--provider",
         default="deterministic",
-        choices=("deterministic", "gemini", "openai", "anthropic", "deepseek"),
+        choices=("deterministic", "gemini", "openai", "anthropic", "deepseek", "groq", "ollama"),
     )
     parser.add_argument("--model", default=None)
     parser.add_argument("--brief", default=None, help="Optional ReportBrief JSON file")

@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import os
+import json
+import urllib.error
+import urllib.request
 from typing import Any, Protocol
 
 from housing_agent.report_generation.models import ReportContext, WriterOutput
@@ -195,8 +198,65 @@ def create_report_writer(provider: str, model: str | None = None) -> ReportWrite
             return response.choices[0].message.content or "", usage
 
         return CallableReportWriter(name, selected, invoke)
+    if name == "groq":
+        from openai import OpenAI
+
+        selected = model or provider_spec(name).default_model
+        client = OpenAI(
+            api_key=_required_key("GROQ_API_KEY", name),
+            base_url="https://api.groq.com/openai/v1",
+        )
+
+        def invoke(system: str, human: str) -> tuple[str, dict[str, Any] | None]:
+            response = client.chat.completions.create(
+                model=selected,
+                temperature=0,
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": human},
+                ],
+            )
+            usage = response.usage.model_dump() if response.usage else None
+            return response.choices[0].message.content or "", usage
+
+        return CallableReportWriter(name, selected, invoke)
+    if name == "ollama":
+        selected = model or provider_spec(name).default_model
+        base_url = (os.environ.get("OLLAMA_BASE_URL") or "http://127.0.0.1:11434").rstrip("/")
+
+        def invoke(system: str, human: str) -> tuple[str, dict[str, Any] | None]:
+            payload = {
+                "model": selected,
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": human},
+                ],
+                "stream": False,
+                "think": False,
+                "options": {"temperature": 0},
+            }
+            request = urllib.request.Request(
+                f"{base_url}/api/chat",
+                data=json.dumps(payload).encode("utf-8"),
+                headers={"Content-Type": "application/json"},
+                method="POST",
+            )
+            try:
+                with urllib.request.urlopen(request, timeout=300) as response:
+                    raw = json.loads(response.read().decode("utf-8"))
+            except (urllib.error.URLError, TimeoutError) as error:
+                raise RuntimeError(
+                    f"Ollama is unavailable at {base_url}; start Ollama and ensure model {selected!r} is installed."
+                ) from error
+            usage = {
+                "prompt_eval_count": raw.get("prompt_eval_count"),
+                "eval_count": raw.get("eval_count"),
+            }
+            return str(raw.get("message", {}).get("content") or ""), usage
+
+        return CallableReportWriter(name, selected, invoke)
     raise ValueError(
-        f"Unsupported report provider {provider!r}; choose deterministic, gemini, openai, anthropic, or deepseek"
+        f"Unsupported report provider {provider!r}; choose deterministic, gemini, openai, anthropic, deepseek, groq, or ollama"
     )
 
 

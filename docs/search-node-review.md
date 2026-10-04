@@ -112,7 +112,7 @@ No API key is written to these files. Metadata records the memory version and ch
 
 ## API Boundary
 
-Live research supports four provider paths. Keys are read from the process environment and are never accepted as command-line arguments.
+Live research supports six provider paths. Keys are read from the process environment and are never accepted as command-line arguments.
 
 For local use, the CLI loads a Git-ignored `.env` file from the repository root. Existing shell environment variables take precedence over values in that file. `.env.example` documents the supported variable names without containing secrets.
 
@@ -122,6 +122,8 @@ For local use, the CLI loads a Git-ignored `.env` file from the repository root.
 | OpenAI / ChatGPT | `OPENAI_API_KEY` | Native OpenAI web search |
 | Anthropic / Claude | `ANTHROPIC_API_KEY` | Native Anthropic web search |
 | DeepSeek | `DEEPSEEK_API_KEY`, `TAVILY_API_KEY` | Tavily search followed by DeepSeek structured synthesis |
+| Groq | `GROQ_API_KEY`, `TAVILY_API_KEY` | Tavily search followed by Groq structured synthesis |
+| Ollama | `TAVILY_API_KEY` | Tavily search followed by local Ollama structured synthesis |
 
 Every provider must return the same `ResearchProposal` schema and passes through the same deterministic validation.
 
@@ -142,3 +144,5 @@ python scripts/run_research_search.py \
 After a human selects predictors, a separate source-discovery stage will locate and test official datasets and produce catalog candidates. Only a later human approval may freeze those candidates into the production catalog.
 
 The `--model` argument is optional. When it is omitted, the adapter uses the default model shown by `--list-providers`; an explicit override is useful when an account has access to a different compatible model.
+
+For Ollama, `OLLAMA_BASE_URL` is optional and defaults to `http://127.0.0.1:11434`. The local adapter disables extended thinking, uses temperature zero, supplies the complete Pydantic JSON schema to Ollama, and still sends the result through the same deterministic validation and human gate as hosted providers.
